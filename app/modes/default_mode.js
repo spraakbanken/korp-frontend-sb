@@ -2365,6 +2365,7 @@ settings.corpora["vivill"] = {
     structAttributes: {
         text_year: {label: "year",
             extendedComponent: "datasetSelect",
+            escape: false,
             dataset: {
                 "1887": "1887",
                 "1902": "1902",

@@ -63,6 +63,7 @@ attrs.pos = {
     },
     opts: liteOptions,
     extendedComponent: "datasetSelect",
+    escape: false,
     order: 0
 };
 
