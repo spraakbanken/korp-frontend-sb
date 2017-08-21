@@ -3399,15 +3399,15 @@ settings.corpora["coctaill"] = {
                 "writing": "writing"
             }
         },
-        extra_dummy:      {label: "+extra", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        subheading_dummy: {label: "+subheading", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        contents_dummy:   {label: "+contents", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        lessontext_dummy: {label: "+lessontext", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        list_dummy:       {label: "+list", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        activity_instruction_dummy: {label: "+activity_instruction", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        task_dummy: {label: "+task", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        language_example_dummy: {label: "+language_example", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'},
-        lesson_dummy: {label: "+lesson", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">'}
+        extra_dummy:      {label: "+extra", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        contents_dummy:   {label: "+contents", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        lessontext_dummy: {label: "+lessontext", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        list_dummy:       {label: "+list", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"}
     }
 };
 
