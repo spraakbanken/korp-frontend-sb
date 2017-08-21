@@ -33,8 +33,7 @@ settings.corpora["bibel1917"] = {
              label: "fab_texttype",
              type: "set",
              translationKey: "fab_",
-             extendedTemplate: selectType.extendedTemplate,
-             extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
              dataset: [
                  "info",
                  "footnote",

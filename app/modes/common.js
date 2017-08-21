@@ -2,35 +2,6 @@ settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' typ
 
 var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
-var selectType = {
-    extendedTemplate: "<select ng-model='input' escaper "
-     + "ng-options='tuple[0] as localize(tuple[1]) for tuple in dataset' ></select>",
-    extendedController: function($scope) {
-        $scope.localize = function(str) {
-            if($scope.localize === false) {
-                return str;
-            } else {
-                return util.getLocaleString( ($scope.translationKey || "") + str);
-            }
-        }
-
-        $scope.translationKey = $scope.translationKey || "";
-        var dataset;
-        if(_.isArray($scope.dataset)) {
-            // convert array datasets into objects
-            dataset = _.object(_.map($scope.dataset, function(item) {
-                return [item, item];
-            }));
-        }
-        $scope.dataset = dataset || $scope.dataset;
-
-        $scope.dataset = _.sortBy(_.pairs($scope.dataset), function(tuple) {
-            return $scope.localize(tuple[1]);
-        });
-        $scope.model = $scope.model || $scope.dataset[0][0]
-    }
-};
-
 var liteOptions = {
     "is": "=",
     "is_not": "!="
@@ -91,8 +62,7 @@ attrs.pos = {
         "VB": "VB"
     },
     opts: liteOptions,
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     order: 0
 };
 
@@ -187,8 +157,7 @@ attrs.dephead = {
 attrs.deprel = {
     label: "deprel",
     translationKey: "deprel_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     dataset: {
         "++": "++",
         "+A": "+A",
@@ -291,8 +260,7 @@ attrs.link = {
 attrs.ne_ex = {
     label: "ne_expr",
     translationKey: "ne_expr_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
        "ENAMEX",
@@ -303,8 +271,7 @@ attrs.ne_ex = {
 attrs.ne_type = {
     label: "ne_type",
     translationKey: "ne_type_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
        "LOC",
@@ -320,8 +287,7 @@ attrs.ne_type = {
 attrs.ne_subtype = {
     label: "ne_subtype",
     translationKey: "ne_subtype_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
         "AST",
@@ -474,8 +440,7 @@ settings.posset = {
    label: "posset",
    opts: setOptions,
    translationKey: "pos_",
-   extendedTemplate: selectType.extendedTemplate,
-   extendedController: selectType.extendedController,
+   extendedComponent: "datasetSelect",
    dataset:  {
         "AB": "AB",
         "MID|MAD|PAD": "DL",
@@ -552,9 +517,7 @@ var fsv_yngrelagar = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Kristoffers Landslag, nyskrivna flockar i förhållande till MEL",
                 "Kristoffers Landslag, innehållsligt ändrade flockar i förhållande til MEL",
@@ -582,9 +545,7 @@ var fsv_aldrelagar = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Yngre Västgötalagens äldsta fragment, Lydekini excerpter och anteckningar",
                 "Tillägg till Upplandslagen, hskr A (Ups B 12)",

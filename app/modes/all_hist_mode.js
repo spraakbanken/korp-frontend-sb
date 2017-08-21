@@ -44,7 +44,7 @@ settings.kubhistattributes = {
 settings.kubhiststruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
          opts: liteOptions
     },
     text_date: {label: "date"},
@@ -72,7 +72,7 @@ settings.kubhiststruct_attributes = {
 settings.aftonbladstruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
          opts: liteOptions
     },
     text_date: {label: "date"},
@@ -100,7 +100,7 @@ settings.ubkvtattributes = {
 settings.ubkvtstruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
         opts: liteOptions
     },
     text_year: {label: "year"},
@@ -122,8 +122,7 @@ settings.runebergattributes = {
         label: "typography",
         type: "set",
         translationKey: "fab_",
-        extendedTemplate: selectType.extendedTemplate,
-        extendedController: selectType.extendedController,
+        extendedComponent: "datasetSelect",
         dataset: [
             "footnote",
             "small",
@@ -136,7 +135,7 @@ settings.runebergattributes = {
 settings.runebergstruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
          opts: liteOptions
     },
     text_date: {label: "date"}
@@ -470,9 +469,7 @@ settings.corpora["fsv-aldrereligiosprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Birgittaautograferna",
                 "Fornsvenska legendariet enligt Codex Bureanus",
@@ -496,9 +493,7 @@ settings.corpora["fsv-profanprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Barlaam och Josaphat, ur Codex Holm A 49 Nådendals klosterbok",
                 "Sju vise mästare B, Nådendals klosterbok, Codex Holm A 49",
@@ -527,9 +522,7 @@ settings.corpora["fsv-verser"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Fornsvenska Ordspråk",
                 "Erikskrönikan, ur Spegelbergs bok, Codex Holm D2" ,
@@ -556,9 +549,7 @@ settings.corpora["fsv-yngrereligiosprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Johannes döparens födelse ur Codex Bildstenianus Ups C 528",
                 "Jesu lidandes bägare och hans blods utgjutelse",
@@ -667,9 +658,7 @@ settings.corpora["fsv-yngretankebocker"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Läkebok 1: blandad läkedom, ur Codex AM",
                 "Läkebok 11: Månaderna, efter KBs handskrift med gammal signatur K 45, supplerad på Danska ur codex Grensholmensis",
@@ -698,9 +687,7 @@ settings.corpora["fsv-nysvenskbibel"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Gustav Vasas Bibel, Markusevanguliet",
                 "Gustav Vasas Bibel, Lukasevangeliet"
@@ -720,9 +707,7 @@ settings.corpora["fsv-nysvenskdalin"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Dalin: Then Swänska Argus"
             ],
@@ -741,9 +726,7 @@ settings.corpora["fsv-nysvenskkronikor"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Peder Swarts krönika",
                 "Per Brahes krönika",
@@ -766,9 +749,7 @@ settings.corpora["fsv-nysvenskovrigt"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Runius: Prosastycken",
                 "Mag. Joh. Qvirfelds himmelska örtegårds-sällskap",
@@ -801,9 +782,7 @@ settings.corpora["fsv-nysvensklagar"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Missgiernings Balk",
                 "Giftermåls balk \\(1734\\)",
@@ -1859,9 +1838,7 @@ settings.corpora["tankebok"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Stockholms stads tänkebok - Koncept ",
                 "Stockholms stads tänkebok - Notariat",
@@ -1888,8 +1865,7 @@ settings.corpora["lag1734"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
                 "smallcaps",
@@ -1907,9 +1883,7 @@ settings.corpora["lag1734"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "1734 års lag Förord",
                 "1734 års lag Domareregler",
@@ -1934,8 +1908,7 @@ settings.corpora["forarbeten1734"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
                 "smallcaps",
@@ -1953,9 +1926,7 @@ settings.corpora["forarbeten1734"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "1734 års lag Förarbeten vol 1",
                 "1734 års lag Förarbeten vol 2",
@@ -1989,10 +1960,8 @@ settings.corpora["lag1800"] = {
     },
     structAttributes: {
         text_title: {
-            localize: false,
             label: "title",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Författningssamling 1800 Låssa kyrkas arkiv",
                 "Regeringsformen 1809 "
@@ -2184,8 +2153,7 @@ settings.corpora["kioping"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",
                 "smallcaps",
@@ -2204,9 +2172,7 @@ settings.corpora["kioping"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Een kort Beskriffning Uppå Trenne Reesor och Peregrinationer, sampt Konungarijket Japan",
                 "BESKRIFNING Om En RESA GENOM ASIA, AFRICA Och många andra HEDNA LÄNDER "
@@ -2243,9 +2209,7 @@ settings.corpora["akerbruk"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Engelska Åker-Mannen.",
                 "En kort beskrifning om jordförbättring med gräsfröen.",
@@ -2282,9 +2246,7 @@ settings.corpora["kvah"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Swar på den andra frågan, i 2. Qvartalet: huruledes säden på en åker må ständigt kunna ökas til 40 kornet.",
                 "Herr Inspectoren BRANDBERGS RÖN och Försök til Landtbrukets förbättrande.Framgifne Af SAM: SCHULTZE",

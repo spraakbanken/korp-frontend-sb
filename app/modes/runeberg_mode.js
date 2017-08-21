@@ -24,8 +24,7 @@ settings.runebergattributes = {
         label: "typography",
         type: "set",
         translationKey: "fab_",
-        extendedTemplate: selectType.extendedTemplate,
-        extendedController: selectType.extendedController,
+        extendedComponent: "datasetSelect",
         dataset: [
             "footnote",
             "small",
@@ -38,7 +37,7 @@ settings.runebergattributes = {
 settings.runebergstruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+        
          opts: liteOptions
     },
     "chapter_name": {label: "chapter"},

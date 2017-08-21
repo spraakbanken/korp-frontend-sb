@@ -13,14 +13,12 @@ settings.interfraStructs = {
     "u_who": {
         label: "speaker",
         dataset: {},
-        extendedController: selectType.extendedController,
-        extendedTemplate: selectType.extendedTemplate
+        extendedComponent: "datasetSelect"
     },
     "text_part": {
         label: "part",
         dataset: {"1A": "1A", "1B": "1B", "2": "2"},
-        extendedController: selectType.extendedController,
-        extendedTemplate: selectType.extendedTemplate
+        extendedComponent: "datasetSelect"
     },
     "text_group": {
         label: "group",
@@ -39,8 +37,7 @@ settings.interfraStructs = {
             "S": "Control group of senior NS (S)",
             "K": "Multi-task control group (K)"
         },
-        extendedController: selectType.extendedController,
-        extendedTemplate: selectType.extendedTemplate
+        extendedComponent: "datasetSelect"
     },
     "text_xmlurl": {label: "interview", pattern: '<a href="<%=val%>">XML</a>', hideStatistics: true, hideExtended: true, hideCompare: true},
     "text_rawurl": {label: "interview", pattern: '<a href="<%=val%>">TXT</a>', hideStatistics: true, hideExtended: true, hideCompare: true},
@@ -49,8 +46,7 @@ settings.interfraStructs = {
     "text_interviewee": {
         label: "interviewee",
         dataset: {},
-        extendedController: selectType.extendedController,
-        extendedTemplate: selectType.extendedTemplate
+        extendedComponent: "datasetSelect"
     },
     
     

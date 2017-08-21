@@ -24,8 +24,7 @@ settings.corpora["pe77"] = {
         text_title: {label: "title"},
         text_lang: {
             label: "lang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "spa": "spanish"
             }
@@ -49,8 +48,7 @@ settings.corpora["one71"] = {
         text_title: {label: "title"},
         text_lang: {
             label: "lang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "spa": "spanish"
             }
@@ -82,8 +80,7 @@ settings.corpora["cor92"] = {
         speaker_info: {label: "info"},
         text_lang: {
             label: "lang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "spa": "spanish"
             }

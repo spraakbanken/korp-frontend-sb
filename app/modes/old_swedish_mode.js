@@ -70,9 +70,7 @@ settings.corpora["fsv-aldrereligiosprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Birgittaautograferna",
                 "Fornsvenska legendariet enligt Codex Bureanus",
@@ -96,9 +94,7 @@ settings.corpora["fsv-profanprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Barlaam och Josaphat, ur Codex Holm A 49 Nådendals klosterbok",
                 "Sju vise mästare B, Nådendals klosterbok, Codex Holm A 49",
@@ -127,9 +123,7 @@ settings.corpora["fsv-verser"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Fornsvenska Ordspråk",
                 "Erikskrönikan, ur Spegelbergs bok, Codex Holm D2" ,
@@ -156,9 +150,7 @@ settings.corpora["fsv-yngrereligiosprosa"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Johannes döparens födelse ur Codex Bildstenianus Ups C 528",
                 "Jesu lidandes bägare och hans blods utgjutelse",
@@ -267,9 +259,7 @@ settings.corpora["fsv-yngretankebocker"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Läkebok 1: blandad läkedom, ur Codex AM",
                 "Läkebok 11: Månaderna, efter KBs handskrift med gammal signatur K 45, supplerad på Danska ur codex Grensholmensis",
@@ -298,9 +288,7 @@ settings.corpora["fsv-nysvenskbibel"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Gustav Vasas Bibel, Markusevanguliet",
                 "Gustav Vasas Bibel, Lukasevangeliet"
@@ -320,9 +308,7 @@ settings.corpora["fsv-nysvenskdalin"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Dalin: Then Swänska Argus"
             ],
@@ -341,9 +327,7 @@ settings.corpora["fsv-nysvenskkronikor"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Peder Swarts krönika",
                 "Per Brahes krönika",
@@ -366,7 +350,7 @@ settings.corpora["fsv-nysvenskovrigt"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
+
             dataset: [
                 "Runius: Prosastycken",
                 "Mag. Joh. Qvirfelds himmelska örtegårds-sällskap",
@@ -397,7 +381,7 @@ settings.corpora["fsv-nysvensklagar"] = {
     structAttributes: {
         text_title: {
             label: "title",
-            localize: false,
+
             dataset: [
                 "Missgiernings Balk",
                 "Giftermåls balk \\(1734\\)",
@@ -475,8 +459,7 @@ if(isLab){
             pos: {
                 label: "pos",
                 opts: liteOptions,
-                extendedTemplate: selectType.extendedTemplate,
-                extendedController: selectType.extendedController,
+                extendedComponent: "datasetSelect",
                 translationKey: "ogl_pos_",
                 dataset: [
                     "Nb",
@@ -504,8 +487,7 @@ if(isLab){
             morph: {
                 label: "msd",
                 opts: liteOptions,
-                extendedTemplate: selectType.extendedTemplate,
-                extendedController: selectType.extendedController,
+                extendedComponent: "datasetSelect",
                 translationKey: "ogl_msd_",
                 dataset: [
                     "A----------n",
@@ -970,8 +952,7 @@ if(isLab){
             },
             annotation: {
                 label: "annotation",
-                extendedTemplate: selectType.extendedTemplate,
-                extendedController: selectType.extendedController,
+                extendedComponent: "datasetSelect",
                 opts: liteOptions,
                 dataset: [
                     "automatic",
