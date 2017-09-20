@@ -480,6 +480,21 @@ settings.corpora["somali-qoraallo"] = {
     }
 };
 
+settings.corpora["somali-quraan"] = {
+    id: "somali-quraan",
+    title: "Qur’aan",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_author: somalis.author,
+        text_title: somalis.title,
+        text_source: somalis.source
+    }
+};
+
 settings.corpora["somali-saynis"] = {
     id: "somali-saynis",
     title: "Saynis 2001 Hargeysa",
