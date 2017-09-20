@@ -134,7 +134,7 @@ settings.corpora["somali-ah-1992-02-kanada"] = {
 
 settings.corpora["somali-2001"] = {
     id: "somali-2001",
-    title: "Af-Soomaali 2001",
+    title: "Af-Soomaali 2001 Soomaaliya",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
@@ -167,7 +167,7 @@ settings.corpora["somali-itoobiya"] = {
 
 settings.corpora["somali-hargeysa-2010"] = {
     id: "somali-hargeysa-2010",
-    title: "Af-Soomaali 2010 Hargeysa",
+    title: "Af-Soomaali 2010 Somaliland",
     description: "",
     within: spWithin,
     context: spContext,
@@ -184,7 +184,7 @@ settings.corpora["somali-hargeysa-2010"] = {
 
 settings.corpora["somali-hargeysa"] = {
     id: "somali-hargeysa",
-    title: "Cilmiga Bulshada 2001 Hargeysa",
+    title: "Cilmiga Bulshada 2001 Somaliland",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
@@ -275,7 +275,7 @@ settings.corpora["somali-bbc"] = {
 
 settings.corpora["somali-xisaab-2001-nayroobi"] = {
     id: "somali-xisaab-2001-nayroobi",
-    title: "Xisaab 2001 Nayroobi",
+    title: "Xisaab 2001 Soomaaliya",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
@@ -368,7 +368,7 @@ settings.corpora["somali-xisaab-1994-97"] = {
 
 settings.corpora["somali-xisaab-2001-hargeysa"] = {
     id: "somali-xisaab-2001-hargeysa",
-    title: "Xisaab 2001 Hargeysa",
+    title: "Xisaab 2001 Somaliland",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
@@ -482,7 +482,7 @@ settings.corpora["somali-quraan"] = {
 
 settings.corpora["somali-saynis"] = {
     id: "somali-saynis",
-    title: "Saynis 2001 Hargeysa",
+    title: "Saynis 2001 Somaliland",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
