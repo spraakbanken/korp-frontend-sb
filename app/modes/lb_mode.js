@@ -12,18 +12,7 @@ settings.corpora["lb"] = {
     description: 'Samtliga etexter och sökbara faksimiler från <a href="http://litteraturbanken.se/">Litteraturbanken.se</a>.',
     within: settings.defaultWithin,
     context: defaultContext,
-    attributes: {
-        pos: attrs.pos,
-        msd: attrs.msd,
-        baseform: attrs.baseform,
-        lex: attrs.lemgram,
-        saldo: attrs.saldo,
-        dephead: attrs.dephead,
-        deprel: attrs.deprel,
-        ref: attrs.ref,
-        prefix: attrs.prefix,
-        suffix: attrs.suffix
-    },
+    attributes: modernAttrs,
     structAttributes: {
         "text_title": {label: "title"},
         "text_author": {
