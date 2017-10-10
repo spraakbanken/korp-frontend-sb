@@ -2441,8 +2441,7 @@ settings.corpora["vivill"] = {
             }
         },
         text_type: {label: "type"}
-    },
-    defaultFilters: ["text_party", "text_year", "text_type"]
+    }
 };
 
 settings.corpora["wikipedia-sv"] = {
