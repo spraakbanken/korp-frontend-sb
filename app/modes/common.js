@@ -1,4 +1,4 @@
-settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense'/>";
+settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense' text-in-field='textInField'/>";
 
 var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
@@ -115,7 +115,7 @@ attrs.lemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)' text-in-field='textInField'/>"
                         + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
     extendedController: function($scope) {
         $scope.valueError = false;
@@ -238,7 +238,7 @@ attrs.prefix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
 };
 attrs.suffix = {
     label: "suffix",
@@ -249,7 +249,7 @@ attrs.suffix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
 };
 attrs.ref = {
     label: "ref",
