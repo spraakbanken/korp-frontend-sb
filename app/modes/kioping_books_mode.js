@@ -29,8 +29,7 @@ settings.corpora["kioping"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",
                 "smallcaps",
@@ -49,9 +48,7 @@ settings.corpora["kioping"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Een kort Beskriffning Uppå Trenne Reesor och Peregrinationer, sampt Konungarijket Japan",
                 "BESKRIFNING Om En RESA GENOM ASIA, AFRICA Och många andra HEDNA LÄNDER "

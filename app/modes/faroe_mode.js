@@ -32,8 +32,7 @@ settings.corpora["fts"] = {
         },
         text_authortype: {
             label: "author_type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 journalist: "journalist",
                 reader: "reader"
@@ -41,8 +40,7 @@ settings.corpora["fts"] = {
         },
         text_gender: {
             label: "gender",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 unknown: "unknown",
                 male: "male",

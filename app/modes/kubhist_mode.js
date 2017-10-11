@@ -18,7 +18,7 @@ settings.kubhistattributes = {
 settings.kubhiststruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
          opts: liteOptions
     },
     text_date: {label: "date"},
@@ -58,7 +58,7 @@ var aftonbladet_custom_attributes = {
 settings.aftonbladstruct_attributes = {
     text_title: {
         label: "title",
-        localize: false,
+
          opts: liteOptions
     },
     text_date: {label: "date"},

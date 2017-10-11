@@ -1,3 +1,6 @@
+settings.newMapEnabled = true;
+settings.enableMap = false;
+
 settings.corpora = {};
 settings.corporafolders = {};
 
@@ -9,8 +12,8 @@ settings.corporafolders.sweac = {
 };
 
 settings.corporafolders.strindberg = {
-        title: "August Strindberg",
-        contents: ["strindbergromaner", "strindbergbrev"]
+    title: "August Strindberg",
+    contents: ["strindbergromaner", "strindbergbrev"]
 };
 
 settings.corporafolders.fisk = {
@@ -467,26 +470,13 @@ settings.corpora["sweachum"] = {
     context: defaultContext,
     attributes: modernAttrs,
     structAttributes: {
-        text_type: {label: "type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: {
-                "Licentiat": "Licentiat",
-                "PhD": "PhD"
-            }
+        text_type: {
+            label: "type",
+            extendedComponent: "structServiceSelect"
         },
-        text_subject: {label: "subject",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: {
-                "Etnologi": "Etnologi",
-                "Filosofi": "Filosofi",
-                "Historia": "Historia",
-                "Jämförande språkvetenskap och lingvistik": "Jämförande språkvetenskap och lingvistik",
-                "Konst": "Konst",
-                "Litteraturvetenskap": "Litteraturvetenskap",
-                "Religionsvetenskap": "Religionsvetenskap"
-            }
+        text_subject: {
+            label: "subject",
+            extendedComponent: "structServiceSelect"
         }
     }
 };
@@ -499,17 +489,13 @@ settings.corpora["sweacsam"] = {
     context: defaultContext,
     attributes: modernAttrs,
     structAttributes: {
-        text_type: {label: "type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: {
-                "Licentiat": "Licentiat",
-                "PhD": "PhD"
-            }
+        text_type: {
+            label: "type",
+            extendedComponent: "structServiceSelect"
         },
-        text_subject: {label: "subject",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+        text_subject: {
+            label: "subject",
+            extendedComponent: "datasetSelect",
             dataset: {
                 "Ekonomi och näringsliv": "Ekonomi och näringsliv",
                 "Juridik": "Juridik",
@@ -1732,20 +1718,6 @@ settings.corpora["fragelistor"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    attributes: {
-        msd: attrs.msd,
-        lemma: attrs.baseform,
-        lex: attrs.lemgram,
-        saldo: attrs.saldo,
-        prefix: attrs.prefix,
-        suffix: attrs.suffix,
-        dephead: attrs.dephead,
-        deprel: attrs.deprel,
-        ref: attrs.ref,
-        ne_ex: attrs.ne_ex,
-        ne_type: attrs.ne_type,
-        ne_subtype: attrs.ne_subtype
-    },
     structAttributes: {
         "text_topicname": {label: "topic"},
         "text_topicid": {label: "topicid"},
@@ -1755,13 +1727,7 @@ settings.corpora["fragelistor"] = {
         "document_id": {label: "document_id"},
         "text_source": {
             label: "source",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: [
-                "frågelistor",
-                "specialfrågelistor"
-            ]
+            extendedComponent: "structServiceSelect"
         },
         "page_n": {label: "page"}
     }
@@ -1777,7 +1743,7 @@ settings.corpora["sprakfragor"] = {
         "1 text": "1 text"
     },
     within: settings.defaultWithin,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: {
         text_topic: {label: "topic", order: 10},
         text_datetime: {label: "date", order: 20},
@@ -1826,47 +1792,18 @@ settings.corpora["ivip"] = {
         w_type: {
             label: "annotation_type",
             isStructAttr: true,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: {
-                "shortened": "shortened",
-                "pause": "pause",
-                "overlap": "overlap"
-            }
+            extendedComponent: "structServiceSelect"
         },
         sentence_speaker_id: {
             label: "speaker",
             hideSidebar: true,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
-            dataset: {
-                "AS1": "AS1",
-                "AS2": "AS2",
-                "KU1": "KU1",
-                "KU2": "KU2",
-                "KU3": "KU3",
-                "PE": "PE",
-                "PE1": "PE1",
-                "PE10": "PE10",
-                "PE2": "PE2",
-                "PE3": "PE3",
-                "PE4": "PE4",
-                "PE5": "PE5",
-                "PE6": "PE6",
-                "PE8": "PE8",
-                "PE9": "PE9",
-                "UP1": "UP1",
-                "UP2": "UP2",
-                "comment": "comment",
-                "pause": "pause"
-            },
+            extendedComponent: "structServiceSelect",
             isStructAttr: true
         },
         sentence_speaker_role: {
             label: "speakerrole",
             hideSidebar: true,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "": "Odefinerat",
                 "Assistent": "Assistent",
@@ -1886,8 +1823,7 @@ settings.corpora["ivip"] = {
         sentence_speaker_gender: {
             label: "speakergender",
             order: 14,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "": "Odefinerat",
                 "female": "female",
@@ -1915,74 +1851,34 @@ settings.corpora["ivip"] = {
         },
     },
     structAttributes: {
-        text_country: {label: "country",
-                       order: 10,
-                       extendedTemplate: selectType.extendedTemplate,
-                       extendedController: selectType.extendedController,
-                       dataset: {
-                           "Sverige": "Sverige",
-                           "Finland": "Finland"
-                       }
-                   },
-        text_city: {label: "city",
-                    order: 20,
-                    extendedTemplate: selectType.extendedTemplate,
-                    extendedController: selectType.extendedController,
-                    dataset: {
-                        "Göteborg": "Göteborg",
-                        "Helsingfors": "Helsingfors",
-                        "Jakobstad": "Jakobstad",
-                        "Karleby": "Karleby",
-                        "Karlstad": "Karlstad",
-                        "Luleå": "Luleå",
-                        "Osby": "Osby",
-                        "Stockholm": "Stockholm",
-                        "Vasa": "Vasa",
-                        "Åbo": "Åbo"
-                    }
-                },
-        text_place: {label: "location",
-                     order: 30,
-                     extendedTemplate: selectType.extendedTemplate,
-                     extendedController: selectType.extendedController,
-                     dataset: {
-                         "GotEvent": "GotEvent",
-                         "Lipputoimisto": "Lipputoimisto",
-                         "Lorensbergsteatern": "Lorensbergsteatern",
-                         "Luckan": "Luckan",
-                         "Norrbottens Museum": "Norrbottens Museum",
-                         "Osby bibliotek": "Osby bibliotek",
-                         "Scala": "Scala",
-                         "Stadsteatern 1": "Stadsteatern 1",
-                         "Stadsteatern 2": "Stadsteatern 2",
-                         "Stockholms universitetsbibliotek": "Stockholms universitetsbibliotek",
-                         "Svenska handelshögskolans bibliotek": "Svenska handelshögskolans bibliotek",
-                         "Svenska teatern": "Svenska teatern",
-                         "Wasa teater": "Wasa teater",
-                         "Åbo Akademis bibliotek": "Åbo Akademis bibliotek",
-                         "Åbo Svenska Teater": "Åbo Svenska Teater"
-                     }
-                 },
+        text_country: {
+            label: "country",
+            order: 10,
+            extendedComponent: "structServiceSelect"
+        },
+        text_city: {
+            label: "city",
+            order: 20,
+            extendedComponent: "structServiceSelect"
+        },
+        text_place: {
+            label: "location",
+            order: 30,
+            extendedComponent: "structServiceSelect"
+         },
         text_participants: {label: "participants", order: 40},
         text_consentid: {label: "consentid", order: 50},
-        text_type: {label: "material_type",
-                    hideSidebar: true,
-                    extendedTemplate: selectType.extendedTemplate,
-                    extendedController: selectType.extendedController,
-                    dataset: {
-                        "service": "service"
-                    }
-                },
+        text_type: {
+            label: "material_type",
+            hideSidebar: true,
+            extendedComponent: "structServiceSelect"
+        },
         text_date: {label: "date", order: 60},
-        text_mediatype: {label: "mediatype",
-                         order: 70,
-                         extendedTemplate: selectType.extendedTemplate,
-                         extendedController: selectType.extendedController,
-                         dataset: {
-                             "filmad inspelning": "filmad inspelning",
-                             "telefoninspelning": "telefoninspelning"
-                         }
-                     },
+        text_mediatype: {
+            label: "mediatype",
+            order: 70,
+            extendedComponent: "structServiceSelect"
+        },
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
         text_mediafileext: {displayType: "hidden"}
@@ -2059,8 +1955,7 @@ settings.corpora["lawline"] = {
         "text_datum": {label: "date", order: 30},
         "textpart_type": {label: "type",
                           order: 40,
-                          extendedTemplate: selectType.extendedTemplate,
-                          extendedController: selectType.extendedController,
+                          extendedComponent: "datasetSelect",
                           dataset: {
                             "answer": "answer",
                             "question": "question"
@@ -2472,8 +2367,8 @@ settings.corpora["vivill"] = {
     attributes: modernAttrs,
     structAttributes: {
         text_year: {label: "year",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
+            escape: false,
             dataset: {
                 "1887": "1887",
                 "1902": "1902",
@@ -2539,40 +2434,14 @@ settings.corpora["vivill"] = {
         },
         text_party: {
             label: "party",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "structServiceSelect",
             translationKey: "party_",
-            dataset: [
-                "all",
-                "c",
-                "rg",
-                "fi",
-                "fp",
-                "jr",
-                "kd",
-                "la",
-                "labp",
-                "lisp",
-                "mp",
-                "m",
-                "npf",
-                "nyd",
-                "pp",
-                "sd",
-                "k_h",
-                "k_k",
-                "svp",
-                "lp",
-                "s",
-                "v"
-            ],
             stringify: function(val) {
                 return util.getLocaleString("party_" + val);
             }
         },
         text_type: {label: "type"}
-    },
-    defaultFilters: ["text_party", "text_year", "text_type"]
+    }
 };
 
 settings.corpora["wikipedia-sv"] = {
@@ -3183,8 +3052,7 @@ settings.corpora["klarsprak"] = {
         text_month: {label: "month"},
         type_type: {
             label: "type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "heading": "Heading",
                 "section_heading": "Section heading",
@@ -3205,8 +3073,7 @@ settings.corpora["sw1203"] = {
     structAttributes: {
         text_type: {
             label: "type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "A: Inträdesuppsats": "A: Inträdesuppsats",
                 "B: Mitterminsuppsats": "B: Mitterminsuppsats",
@@ -3217,8 +3084,7 @@ settings.corpora["sw1203"] = {
         text_l1: {label: "tisus_l1"},
         text_gender: {
             label: "gender",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "F": "Kvinna",
                 "M": "Man"
@@ -3230,8 +3096,7 @@ settings.corpora["sw1203"] = {
         text_cd: {label: "c/d"},
         text_semester: {
             label: "semester",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "HT12": "HT12",
                 "VT13": "VT13"
@@ -3294,8 +3159,7 @@ settings.corpora["coctaill"] = {
         text_title: {label: "title"},
         text_date: {label: "date"},
         lesson_level: {label: "coctaill_level",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "A1": "A1",
                 "A2": "A2",
@@ -3304,8 +3168,7 @@ settings.corpora["coctaill"] = {
                 "C1": "C1"}
         },
         lessontext_genre: {label: "coctaill_genre", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "evaluation/advertisement": "evaluation/advertisement",
                 "evaluation/argumentation": "evaluation/argumentation",
@@ -3344,8 +3207,7 @@ settings.corpora["coctaill"] = {
             }
         },
         list_unit: {label: "coctaill_list_unit", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "characters": "characters",
                 "dialogues": "dialogues",
@@ -3360,8 +3222,7 @@ settings.corpora["coctaill"] = {
             }
         },
         list_skill: {label: "coctaill_list_skill", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "grammar": "grammar",
                 "listening": "listening",
@@ -3374,8 +3235,7 @@ settings.corpora["coctaill"] = {
             }
         },
         lessontext_topic: {label: "coctaill_lessontext_topic", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "animals": "animals",
                 "arts": "arts",
@@ -3414,8 +3274,7 @@ settings.corpora["coctaill"] = {
             }
         },
         activity_instruction_skill: {label: "coctaill_activity_instruction_skill", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "grammar": "grammar",
                 "information_search": "information_search",
@@ -3429,8 +3288,7 @@ settings.corpora["coctaill"] = {
             }
         },
         activity_instruction_format: {label: "coctaill_activity_instruction_format", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "brainstorming": "brainstorming",
                 "category identification": "category identification",
@@ -3464,8 +3322,7 @@ settings.corpora["coctaill"] = {
             }
         },
         task_skill: {label: "coctaill_task_skill", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "essay": "essay",
                 "grammar": "grammar",
@@ -3479,8 +3336,7 @@ settings.corpora["coctaill"] = {
             }
         },
         task_format: {label: "coctaill_task_format", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "brainstorming": "brainstorming",
                 "category identification": "category identification",
@@ -3514,8 +3370,7 @@ settings.corpora["coctaill"] = {
             }
         },
         language_example_unit: {label: "coctaill_language_example_unit", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "characters": "characters",
                 "complete_sentences": "complete_sentences",
@@ -3534,8 +3389,7 @@ settings.corpora["coctaill"] = {
             }
         },
         language_example_skill: {label: "coctaill_language_example_skill", type: "set",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "grammar": "grammar",
                 "listening": "listening",
@@ -3547,15 +3401,15 @@ settings.corpora["coctaill"] = {
                 "writing": "writing"
             }
         },
-        extra_dummy:      {label: "+extra", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        subheading_dummy: {label: "+subheading", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        contents_dummy:   {label: "+contents", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        lessontext_dummy: {label: "+lessontext", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        list_dummy:       {label: "+list", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        activity_instruction_dummy: {label: "+activity_instruction", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        task_dummy: {label: "+task", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        language_example_dummy: {label: "+language_example", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController},
-        lesson_dummy: {label: "+lesson", dataset: {"-": "-"}, opts: {}, extendedTemplate: '<input type="hidden">', extendedController: selectType.extendedController}
+        extra_dummy:      {label: "+extra", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        contents_dummy:   {label: "+contents", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        lessontext_dummy: {label: "+lessontext", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        list_dummy:       {label: "+list", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
+        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"}
     }
 };
 
@@ -3802,8 +3656,7 @@ settings.corpora["mepac"] = {
         "text_source": {label: "source"},
         "text_date": {label: "date"},
         "text_type": {label: "type",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "patientblogg": "patientblogg",
                 "närståendeblogg": "närståendeblogg",
@@ -3826,14 +3679,9 @@ settings.corpora["mepac-i"] = {
     structAttributes: {
         "text_source": {label: "source"},
         "text_date": {label: "date"},
-        "text_type": {label: "type", displayType: "select",
-            extended_template: selectType.extended_template,
-            controller: selectType.controller,
-            dataset: {
-                "patientintervju": "patientintervju",
-                "fokusgrupp": "fokusgrupp",
-                "närståendeintervju": "närståendeintervju"
-            }
+        "text_type": {
+            label: "type",
+            extendedComponent: "structServiceSelect"
         }
     }
 };

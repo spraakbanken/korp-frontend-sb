@@ -2,6 +2,9 @@ settings.wordpicture = false;
 settings.enableMap = false;
 var start_lang = "swe";
 
+settings.hitsPerPageDefault = 10
+settings.hitsPerPageValues = [10,25,50,75,100,500,1000]
+
 korpApp.controller("SearchCtrl", function($rootScope, $scope, $controller, $location) {
     // resolve globalFilterDef since globalFilter-directive is not used
     $rootScope.globalFilterDef.resolve()
@@ -167,9 +170,6 @@ korpApp.controller("ParallelSearch", function($scope, $location, $rootScope, $ti
 
 });
 
-$("#search_options > div:last").remove();
-$("#num_hits").prepend("<option value='10'>10</option>");
-
 var c3 = view.KWICResults.prototype.constructor
 view.KWICResults = Subclass(view.KWICResults, function() {
     c3.apply(this, arguments);
@@ -332,8 +332,7 @@ settings.corpora["europarl-sv"] = {
         text_speaker: {label: "speaker"},
         text_speakerlang: {
             label: "lang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "EN": "engelska",
                 "FI": "finska",
@@ -570,8 +569,7 @@ settings.corpora["saltnld-sv"] = {
         text_year: {label: "year"},
         text_origlang: {
             label: "origlang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "swe": "swedish",
                 "nld": "dutch"
@@ -603,8 +601,7 @@ settings.corpora["saltnld-nl"] = {
         text_year: {label: "year"},
         text_origlang: {
             label: "origlang",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: {
                 "swe": "swedish",
                 "nld": "dutch"

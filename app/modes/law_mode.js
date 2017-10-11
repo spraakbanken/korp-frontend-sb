@@ -44,8 +44,7 @@ settings.corpora["lag1734"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
                 "smallcaps",
@@ -63,9 +62,7 @@ settings.corpora["lag1734"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "1734 års lag Förord",
                 "1734 års lag Domareregler",
@@ -90,8 +87,7 @@ settings.corpora["forarbeten1734"] = {
             label: "typography",
             type: "set",
             translationKey: "fab_",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
                 "smallcaps",
@@ -109,9 +105,7 @@ settings.corpora["forarbeten1734"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "1734 års lag Förarbeten vol 1",
                 "1734 års lag Förarbeten vol 2",
@@ -192,10 +186,8 @@ settings.corpora["lag1800"] = {
     },
     structAttributes: {
         text_title: {
-            localize: false,
             label: "title",
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Författningssamling 1800 Låssa kyrkas arkiv",
                 "Regeringsformen 1809 "
@@ -224,9 +216,7 @@ settings.corpora["tankebok"] = {
         text_date: {label: "date"},
         text_title: {
             label: "title",
-            localize: false,
-            extendedTemplate: selectType.extendedTemplate,
-            extendedController: selectType.extendedController,
+            extendedComponent: "datasetSelect",
             dataset: [
                 "Stockholms stads tänkebok - Koncept ",
                 "Stockholms stads tänkebok - Notariat",
