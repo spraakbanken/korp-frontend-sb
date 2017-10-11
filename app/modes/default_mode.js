@@ -1697,7 +1697,7 @@ settings.corpora["drama"] = {
         text_title: {label: "title"}
     }
 };
-
+/*
 settings.corpora["europarl-sv"] = {
     id: "europarl-sv",
     title: "Europarl svenska",
@@ -1709,7 +1709,7 @@ settings.corpora["europarl-sv"] = {
         text_date: {label: "date"},
         text_speaker: {label: "speaker"}
     }
-};
+};*/
 
 settings.corpora["fragelistor"] = {
     id: "fragelistor",
