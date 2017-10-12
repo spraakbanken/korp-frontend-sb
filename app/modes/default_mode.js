@@ -512,14 +512,16 @@ settings.corpora["sweacsam"] = {
 
 settings.corpora["attasidor"] = {
     id: "attasidor",
-    title: "8 SIDOR",
-    description: "<a target=\"_blank\" href=\"http://www.8sidor.se/\">8 SIDOR</a> är en lättläst nyhetstidning.",
+    title: "8 Sidor",
+    description: "<a target=\"_blank\" href=\"http://www.8sidor.se/\">8 Sidor</a> är en lättläst nyhetstidning.",
     within: settings.defaultWithin,
     context: defaultContext,
     attributes: modernAttrs,
     structAttributes: {
         text_date: sattrs.date,
-        text_title: {label: "title"}
+        text_title: {label: "title"},
+        text_url: {label: "url", type: "url"},
+        text_tags: {label: "tags", type: "set"}
     }
 };
 
