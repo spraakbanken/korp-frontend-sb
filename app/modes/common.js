@@ -101,7 +101,7 @@ attrs.msd = {
 attrs.baseform = {
     label: "baseform",
     type: "set",
-    opts: setOptions,
+    opts: settings.defaultOptions,
     extendedTemplate: "<input ng-model='model' >",
     order: 1
 };
