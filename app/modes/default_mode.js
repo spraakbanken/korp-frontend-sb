@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "sprakfragor", "coctaill", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
+    contents: ["ansokningar", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -3161,8 +3161,7 @@ settings.corpora["ansokningar"] = {
 settings.corpora["coctaill"] = {
     id: "coctaill",
     title: "COCTAILL",
-    description: 'För åtkomst kontakta <a href="mailto:elena.volodina@svenska.gu.se">Elena Volodina</a>.',
-    limitedAccess: true,
+    description: '',
     context: spContext,
     within: spWithin,
     attributes: modernAttrs,
@@ -3413,15 +3412,15 @@ settings.corpora["coctaill"] = {
                 "writing": "writing"
             }
         },
-        extra_dummy:      {label: "+extra", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        contents_dummy:   {label: "+contents", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        lessontext_dummy: {label: "+lessontext", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        list_dummy:       {label: "+list", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"},
-        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue"}
+        extra_dummy:      {label: "+extra", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        contents_dummy:   {label: "+contents", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        lessontext_dummy: {label: "+lessontext", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        list_dummy:       {label: "+list", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true}
     }
 };
 
