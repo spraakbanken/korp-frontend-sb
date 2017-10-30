@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "sprakfragor", "coctaill", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
+    contents: ["ansokningar", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -3161,8 +3161,7 @@ settings.corpora["ansokningar"] = {
 settings.corpora["coctaill"] = {
     id: "coctaill",
     title: "COCTAILL",
-    description: 'För åtkomst kontakta <a href="mailto:elena.volodina@svenska.gu.se">Elena Volodina</a>.',
-    limitedAccess: true,
+    description: '',
     context: spContext,
     within: spWithin,
     attributes: modernAttrs,
