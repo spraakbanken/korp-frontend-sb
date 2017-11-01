@@ -435,6 +435,70 @@ var modernAttrs = {
     }
 };
 
+var modernAttrs2 = {
+    pos: attrs.pos,
+    msd: attrs.msd,
+    lemma: attrs.baseform,
+    lex: attrs.lemgram,
+    dephead: attrs.dephead,
+    deprel: attrs.deprel,
+    ref: attrs.ref,
+    prefix: attrs.prefix,
+    suffix: attrs.suffix,
+    ne_ex: attrs.ne_ex,
+    ne_type: attrs.ne_type,
+    ne_subtype: attrs.ne_subtype,
+    ne_name: attrs.ne_name,
+    complemgram: modernAttrs.complemgram,
+    compwf: modernAttrs.compwf,
+    sense: modernAttrs.sense,
+    sentiment: {
+        label: "sentiment"
+    },
+    blingbring: {
+        label: "blingbring",
+        type: "set"
+    },
+    swefn: {
+        label: "swefn",
+        type: "set"
+    }
+};
+
+var lex_classes_text = {
+    text_blingbring: {
+        label: "blingbring",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 500
+    },
+    text_swefn: {
+        label: "swefn",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 501
+    }
+};
+
+var readability = {
+    lix: {
+        label: "lix",
+        isStructAttr: true,
+        order: 600
+    },
+    ovix: {
+        label: "ovix",
+        isStructAttr: true,
+        order: 601
+    },
+    nk: {
+        label: "nk",
+        isStructAttr: true,
+        order: 602
+    }
+};
 
 settings.posset = {
    type: "set",

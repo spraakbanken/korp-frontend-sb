@@ -1182,6 +1182,13 @@
     "complemgram_show_one": "Visa färre",
     "complemgram_show_all": "Visa fler",
 
+    "sentiment": "attityd",
+    "swefn": "Svenskt FrasNät",
+    "blingbring": "BlingBring",
+    "lix": "läsbarhetsindex",
+    "ovix": "ordvariationsindex",
+    "nk": "nominalkvot",
+
     "topic": "ämne",
     "topicid": "ämnes-ID",
     "document_id": "dokument-ID",

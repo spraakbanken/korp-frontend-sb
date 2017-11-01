@@ -2111,6 +2111,7 @@ settings.corpora["ivip"] = {
         },
         sentence_speaker_region: {
             label: "speakerregion",
+            extendedComponent: "structServiceSelect",
             order: 12,
             isStructAttr: true
         },
@@ -2243,6 +2244,187 @@ settings.corpora["lawline"] = {
                                pattern: "<a href='<%= struct_attrs.text_category_link %>' target='_blank'><%= struct_attrs.text_category_link %></a>"
                           }
     }
+};
+
+settings.corpora["ivip-demo"] = {
+    id: "ivip-demo",
+    title: "IVIP demo",
+    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska. Detta är en öppen delmängd av IVIP-korpusen.',
+    context: {
+        "1 sentence": "1 sentence",
+        "1 text": "1 text"
+    },
+    within: settings.defaultWithin,
+    attributes: {
+        pos: attrs.pos,
+        msd: attrs.msd,
+        lemma: attrs.baseform,
+        lex: attrs.lemgram,
+        sense: modernAttrs.sense,
+        prefix: attrs.prefix,
+        suffix: attrs.suffix,
+        compwf: modernAttrs.compwf,
+        complemgram: modernAttrs.complemgram,
+        ne_ex: attrs.ne_ex,
+        ne_type: attrs.ne_type,
+        ne_subtype: attrs.ne_subtype,
+        ne_name: attrs.ne_name,
+        sentiment: modernAttrs2.sentiment,
+        blingbring: modernAttrs2.blingbring,
+        swefn: modernAttrs2.swefn,
+        word_normalised: {
+            label: "normalized_wordform",
+            isStructAttr: true
+        },
+        word_full: {
+            label: "annotation",
+            isStructAttr: true
+        },
+        word_type: {
+            label: "annotation_type",
+            isStructAttr: true,
+            extendedComponent: "structServiceSelect"
+        },
+        sentence_speaker_id: {
+            label: "speaker",
+            hideSidebar: true,
+            extendedComponent: "structServiceSelect",
+            isStructAttr: true
+        },
+        sentence_speaker_role: {
+            label: "speakerrole",
+            hideSidebar: true,
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "": "Odefinerat",
+                "Kund": "Kund",
+                "Personal": "Personal"
+            },
+            isStructAttr: true
+        },
+        sentence_speaker_gender: {
+            label: "speakergender",
+            order: 14,
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "": "Odefinerat",
+                "female": "female"
+            },
+            isStructAttr: true
+        },
+        sentence_speaker_age: {
+            label: "speakerage",
+            order: 13,
+            isStructAttr: true
+        },
+        sentence_speaker_region: {
+            label: "speakerregion",
+            extendedComponent: "structServiceSelect",
+            order: 12,
+            isStructAttr: true
+        },
+        sentence_start: {
+            displayType: "hidden",
+            isStructAttr: true
+        },
+        sentence_end: {
+            displayType: "hidden",
+            isStructAttr: true
+        },
+    },
+    structAttributes: {
+        text_blingbring: lex_classes_text.text_blingbring,
+        text_swefn: lex_classes_text.text_swefn,
+        text_lix: readability.lix,
+        text_ovix: readability.ovix,
+        text_nk: readability.nk,
+        text_country: {
+            label: "country",
+            order: 10,
+            extendedComponent: "structServiceSelect"
+        },
+        text_city: {
+            label: "city",
+            order: 20,
+            extendedComponent: "structServiceSelect"
+        },
+        text_place: {
+            label: "location",
+            order: 30,
+            extendedComponent: "structServiceSelect"
+         },
+        text_participants: {label: "participants", order: 40},
+        text_consentid: {label: "consentid", order: 50},
+        text_type: {
+            label: "material_type",
+            hideSidebar: true,
+            extendedComponent: "structServiceSelect"
+        },
+        text_date: {label: "date", order: 60},
+        text_mediatype: {
+            label: "mediatype",
+            order: 70,
+            extendedComponent: "structServiceSelect"
+        },
+        text_mediafilepath: {displayType: "hidden"},
+        text_mediafile: {displayType: "hidden"},
+        text_mediafileext: {displayType: "hidden"}
+    },
+    customAttributes: {
+        video: {
+            label: "video",
+            renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
+
+                var startTime = wordData["sentence_start"];
+                var endTime = wordData["sentence_end"];
+                var path = sentenceData["text_mediafilepath"];
+                var file = sentenceData["text_mediafile"];
+                var ext = sentenceData["text_mediafileext"];
+
+                var videoLink = $('<span class="link">visa inspelning</span>');
+                videoLink.click(function () {
+                    var url = "https://spraakbanken.gu.se/korp/data/ivip-demo/" + path +  file + "." + ext;
+
+                    var scope = angular.element("#video-modal").scope();
+                    scope.videos = [{"url": url, "type": "video/mp4"}];
+                    scope.fileName = file + "." + ext;
+                    scope.startTime = startTime / 1000;
+                    scope.endTime = endTime / 1000;
+
+                    // find start of sentence
+                    var startIdx = 0
+                    for(var i = wordData.position; i >= 0; i--) {
+                        if(_.contains(tokens[i]._open, "sentence")) {
+                            startIdx = i;
+                            break;
+                        }
+                    }
+
+                    // find end of sentence
+                    var endIdx = tokens.length - 1
+                    for(var i = wordData.position; i < tokens.length; i++) {
+                        if(_.contains(tokens[i]._close, "sentence")) {
+                            endIdx = i;
+                            break;
+                        }
+                    }
+
+                    scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+                    scope.open();
+                    scope.$apply();
+                });
+                return videoLink;
+            },
+            customType: "struct"
+        },
+        text_speaker_custom: {
+            label: "speaker",
+            order: 45,
+            pattern: "<span><%= pos_attrs.sentence_speaker_id %> <%= pos_attrs.sentence_speaker_role %></span>",
+            customType: "struct"
+        }
+    },
+    defaultFilters: ["text_country", "text_city", "text_place"]
 };
 
 settings.corpora["lasbart"] = {
