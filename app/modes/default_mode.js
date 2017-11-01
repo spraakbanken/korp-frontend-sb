@@ -2036,6 +2036,55 @@ settings.corpora["sprakfragor"] = {
     }
 };
 
+var ivipVideo = function(baseURL) {
+    return {
+        label: "video",
+        renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
+
+            var startTime = wordData["sentence_start"];
+            var endTime = wordData["sentence_end"];
+            var path = sentenceData["text_mediafilepath"];
+            var file = sentenceData["text_mediafile"];
+            var ext = sentenceData["text_mediafileext"];
+
+            var videoLink = $('<span class="link">visa inspelning</span>');
+            videoLink.click(function () {
+                var url = baseURL + path +  file + "." + ext;
+
+                var scope = angular.element("#video-modal").scope();
+                scope.videos = [{"url": url, "type": "video/mp4"}];
+                scope.fileName = file + "." + ext;
+                scope.startTime = startTime / 1000;
+                scope.endTime = endTime / 1000;
+
+                // find start of sentence
+                var startIdx = 0
+                for(var i = wordData.position; i >= 0; i--) {
+                    if(_.contains(tokens[i]._open, "sentence")) {
+                        startIdx = i;
+                        break;
+                    }
+                }
+
+                // find end of sentence
+                var endIdx = tokens.length - 1
+                for(var i = wordData.position; i < tokens.length; i++) {
+                    if(_.contains(tokens[i]._close, "sentence")) {
+                        endIdx = i;
+                        break;
+                    }
+                }
+
+                scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+                scope.open();
+                scope.$apply();
+            });
+            return videoLink;
+        },
+        customType: "struct"
+    }
+};
+
 settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
@@ -2158,52 +2207,7 @@ settings.corpora["ivip"] = {
         text_mediafileext: {displayType: "hidden"}
     },
     customAttributes: {
-        video: {
-            label: "video",
-            renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
-
-                var startTime = wordData["sentence_start"];
-                var endTime = wordData["sentence_end"];
-                var path = sentenceData["text_mediafilepath"];
-                var file = sentenceData["text_mediafile"];
-                var ext = sentenceData["text_mediafileext"];
-
-                var videoLink = $('<span class="link">visa inspelning</span>');
-                videoLink.click(function () {
-                    var url = "http://k2xx.spraakdata.gu.se/ivip/data/" + path +  file + "." + ext;
-
-                    var scope = angular.element("#video-modal").scope();
-                    scope.videos = [{"url": url, "type": "video/mp4"}];
-                    scope.fileName = file + "." + ext;
-                    scope.startTime = startTime / 1000;
-                    scope.endTime = endTime / 1000;
-
-                    // find start of sentence
-                    var startIdx = 0
-                    for(var i = wordData.position; i >= 0; i--) {
-                        if(_.contains(tokens[i]._open, "sentence")) {
-                            startIdx = i;
-                            break;
-                        }
-                    }
-
-                    // find end of sentence
-                    var endIdx = tokens.length - 1
-                    for(var i = wordData.position; i < tokens.length; i++) {
-                        if(_.contains(tokens[i]._close, "sentence")) {
-                            endIdx = i;
-                            break;
-                        }
-                    }
-
-                    scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                    scope.open();
-                    scope.$apply();
-                });
-                return videoLink;
-            },
-            customType: "struct"
-        },
+        video: ivipVideo("http://k2xx.spraakdata.gu.se/ivip/data/"),
         text_speaker_custom: {
             label: "speaker",
             order: 45,
@@ -2371,52 +2375,7 @@ settings.corpora["ivip-demo"] = {
         text_mediafileext: {displayType: "hidden"}
     },
     customAttributes: {
-        video: {
-            label: "video",
-            renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
-
-                var startTime = wordData["sentence_start"];
-                var endTime = wordData["sentence_end"];
-                var path = sentenceData["text_mediafilepath"];
-                var file = sentenceData["text_mediafile"];
-                var ext = sentenceData["text_mediafileext"];
-
-                var videoLink = $('<span class="link">visa inspelning</span>');
-                videoLink.click(function () {
-                    var url = "https://spraakbanken.gu.se/korp/data/ivip-demo/" + path +  file + "." + ext;
-
-                    var scope = angular.element("#video-modal").scope();
-                    scope.videos = [{"url": url, "type": "video/mp4"}];
-                    scope.fileName = file + "." + ext;
-                    scope.startTime = startTime / 1000;
-                    scope.endTime = endTime / 1000;
-
-                    // find start of sentence
-                    var startIdx = 0
-                    for(var i = wordData.position; i >= 0; i--) {
-                        if(_.contains(tokens[i]._open, "sentence")) {
-                            startIdx = i;
-                            break;
-                        }
-                    }
-
-                    // find end of sentence
-                    var endIdx = tokens.length - 1
-                    for(var i = wordData.position; i < tokens.length; i++) {
-                        if(_.contains(tokens[i]._close, "sentence")) {
-                            endIdx = i;
-                            break;
-                        }
-                    }
-
-                    scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                    scope.open();
-                    scope.$apply();
-                });
-                return videoLink;
-            },
-            customType: "struct"
-        },
+        video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip-demo/"),
         text_speaker_custom: {
             label: "speaker",
             order: 45,
