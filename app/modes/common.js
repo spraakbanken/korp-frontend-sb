@@ -457,11 +457,14 @@ var modernAttrs2 = {
     },
     blingbring: {
         label: "blingbring",
-        type: "set"
+        type: "set",
+        internalSearch: true
     },
     swefn: {
         label: "swefn",
-        type: "set"
+        type: "set",
+        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
     }
 };
 
@@ -471,14 +474,31 @@ var lex_classes_text = {
         type: "set",
         isStructAttr: true,
         ranked: true,
-        order: 500
+        order: 500,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_blingbring highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        internalSearch: true
     },
     text_swefn: {
         label: "swefn",
         type: "set",
         isStructAttr: true,
         ranked: true,
-        order: 501
+        order: 501,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_swefn highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
     }
 };
 
