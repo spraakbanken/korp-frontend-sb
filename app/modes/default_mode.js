@@ -2287,6 +2287,8 @@ settings.corpora["ivip-demo"] = {
         word_type: {
             label: "annotation_type",
             isStructAttr: true,
+            type: "set",
+            opts: setOptions,
             extendedComponent: "structServiceSelect"
         },
         sentence_speaker_id: {
