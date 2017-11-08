@@ -2289,7 +2289,12 @@ settings.corpora["ivip-demo"] = {
             isStructAttr: true,
             type: "set",
             opts: setOptions,
-            extendedComponent: "structServiceSelect"
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "overlap": "overlap",
+                "pause": "pause",
+                "shortened": "shortened"
+            },
         },
         sentence_speaker_id: {
             label: "speaker",
