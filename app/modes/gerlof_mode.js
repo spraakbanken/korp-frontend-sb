@@ -19,15 +19,15 @@ settings.corpora["gerlof_minikorpus"] = {
     within: spWithin,
     context: spContext,
     attributes: {
-        wcat: {label: "gerlof_cat"},
-        did: {label: "gerlof_did"}
+        wcat: {label: "gerlof_cat"}
     },
     structAttributes: {
+        d_did: {label: "gerlof_did"},
+        np_npfunct: {label: "gerlof_s_npfunct"},
+        np_refstat: {label: "gerlof_s_refstat"},
+        np_phiagr: {label: "gerlof_s_phiagr"},
         sentence_npid: {label: "gerlof_s_npid"},
         sentence_sid: {label: "gerlof_s_sid"},
-        sentence_npfunct: {label: "gerlof_s_npfunct"},
-        sentence_refstat: {label: "gerlof_s_refstat"},
-        sentence_phiagr: {label: "gerlof_s_phiagr"},
         sentence_annotator: {label: "gerlof_s_annotator"},
         text_source: {label: "gerlof_text_source"},
         text_time: {label: "gerlof_text_time"},
