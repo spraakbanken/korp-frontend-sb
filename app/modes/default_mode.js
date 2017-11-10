@@ -2088,7 +2088,7 @@ var ivipVideo = function(baseURL) {
 settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
-    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:inga-lill.grahn@sprakochfolkminnen.se">Inga-Lill Grahn</a>.',
+    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>Korpusen kommer att finnas tillgänglig för forskare omkring 2021.</a>.',
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
