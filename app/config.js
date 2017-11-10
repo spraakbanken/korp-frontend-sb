@@ -56,6 +56,8 @@ settings.downloadFormatParams = {
     },
 };
 
+settings.groupStatistics = ["saldo", "prefix", "suffix", "lex", "lemma", "sense", "text_swefn", "text_blingbring"];
+
 // for extended search dropdown, can be 'union' or 'intersection'
 settings.wordAttributeSelector = "union";
 settings.structAttributeSelector = "union";
