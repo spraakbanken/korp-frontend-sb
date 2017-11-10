@@ -1286,5 +1286,17 @@
     "rd_votering_ledamot_url_xml": "votering ledamot-URL (XML)",
 
     "category_url": "kategori-URL",
-    "page_tables": "Sidtabeller"
+    "page_tables": "Sidtabeller",
+    
+    "gerlof_cat": "cat",
+    "gerlof_did": "did",
+    "gerlof_s_npid": "s_npid",
+    "gerlof_s_sid": "s_sid",
+    "gerlof_s_npfunct": "s_npfunct",
+    "gerlof_s_refstat": "s_refstat",
+    "gerlof_s_phiagr": "s_phiagr",
+    "gerlof_s_annotator": "s_annotator",
+    "gerlof_text_source": "text_source",
+    "gerlof_text_time": "text_time",
+    "gerlof_text_lang": "text_lang"
 }
