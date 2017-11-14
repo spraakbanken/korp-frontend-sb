@@ -42,6 +42,9 @@
     "day": "dag",
     "party": "parti",
     "normalized_wordform": "normaliserad ordform",
+    
+    "sentiment": "attityd",
+    "sentiment_class": "attitydklass",
 
     "url": "url",
     "referensnummer": "referensnummer",

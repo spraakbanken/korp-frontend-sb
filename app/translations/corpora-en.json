@@ -42,6 +42,9 @@
     "day": "day",
     "party": "party",
     "normalized_wordform": "normalized word form",
+    
+    "sentiment": "sentiment",
+    "sentiment_class": "sentiment class",
 
     "url": "url",
     "referensnummer": "reference number",
