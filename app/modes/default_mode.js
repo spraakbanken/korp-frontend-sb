@@ -2638,7 +2638,14 @@ settings.corpora["vivill"] = {
         "1 sentence": "1 sentence",
         "5 sentence": "5 sentences"
     },
-    attributes: modernAttrs,
+    attributes: _.extend({}, modernAttrs, {
+        sentiment: {
+            label: "sentiment"
+        },
+        sentimentclass: {
+            label: "sentiment_class"
+        }
+    }),
     structAttributes: {
         text_year: {label: "year",
             extendedComponent: "datasetSelect",
