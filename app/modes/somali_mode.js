@@ -22,7 +22,7 @@ settings.corporafolders.buugaag = {
 
 settings.corporafolders.warar = {
     title: "Warar",
-    contents: ["somali-bbc", "somali-radioden2014", "somali-radioswe2014", "somali-radiomuq", "somali-wardheer"]
+    contents: ["somali-bbc", "somali-radioden2014", "somali-radioswe2014", "somali-radiomuq", "somali-ogaden", "somali-wardheer"]
 };
 
 settings.corporafolders.wb = {
@@ -445,6 +445,21 @@ settings.corpora["somali-kqa"] = {
         text_edition: somalis.edition,
         text_date: somalis.year,
         text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-ogaden"] = {
+    id: "somali-ogaden",
+    title: "Ogaden Online",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_source: somalis.source,
+        page_purl: somalis.pagesource
     }
 };
 
