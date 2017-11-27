@@ -637,7 +637,7 @@ settings.corpora["somali-suugaan"] = {
     title: "Suugaan",
     description: "",
     within: settings.defaultWithin,
-    context: defaultContext,
+    context: spContext,
     attributes: {},
     structAttributes: {
         text_year: somalis.year,
