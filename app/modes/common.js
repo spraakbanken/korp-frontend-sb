@@ -111,7 +111,7 @@ attrs.lemgram = {
     opts: setOptions,
     stringify: function(lemgram) {
         // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
+        return util.lemgramToString(_.trim(lemgram), true);
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
@@ -132,7 +132,7 @@ attrs.dalinlemgram = {
     opts: setOptions,
     stringify: function(lemgram) {
         // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
+        return util.lemgramToString(_.trim(lemgram), true);
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
@@ -684,7 +684,7 @@ settings.commonStructTypes = {
                     var from, moments, ref, ref1, to;
                     moments = cl.getMomentInterval();
                     if (moments.length) {
-                        return ref = _.invoke(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
+                        return ref = _.invokeMap(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
                     } else {
                         ref1 = cl.getTimeInterval(), from = ref1[0], to = ref1[1];
                         s.minDate = moment(from.toString(), "YYYY").toDate();
@@ -714,7 +714,7 @@ settings.commonStructTypes = {
                 if (!s.model) {
                     s.from_date = s.minDate;
                     s.to_date = s.maxDate;
-                    ref = _.invoke(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
+                    ref = _.invokeMap(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
                 } else if (s.model.length === 4) {
                     ref1 = _.map(s.model.slice(0, 3), getYear), s.from_date = ref1[0], s.to_date = ref1[1];
                     ref2 = _.map(s.model.slice(2), getTime), s.from_time = ref2[0], s.to_time = ref2[1];

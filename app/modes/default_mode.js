@@ -2060,7 +2060,7 @@ var ivipVideo = function(baseURL) {
                 // find start of sentence
                 var startIdx = 0
                 for(var i = wordData.position; i >= 0; i--) {
-                    if(_.contains(tokens[i]._open, "sentence")) {
+                    if(_.includes(tokens[i]._open, "sentence")) {
                         startIdx = i;
                         break;
                     }
@@ -2069,13 +2069,13 @@ var ivipVideo = function(baseURL) {
                 // find end of sentence
                 var endIdx = tokens.length - 1
                 for(var i = wordData.position; i < tokens.length; i++) {
-                    if(_.contains(tokens[i]._close, "sentence")) {
+                    if(_.includes(tokens[i]._close, "sentence")) {
                         endIdx = i;
                         break;
                     }
                 }
 
-                scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+                scope.sentence = _.map(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
                 scope.open();
                 scope.$apply();
             });

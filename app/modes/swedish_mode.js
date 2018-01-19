@@ -1947,7 +1947,7 @@ settings.corpora["ivip"] = {
                     scope.fileName = file + "." + ext;
                     scope.startTime = startTime / 1000;
                     scope.endTime = endTime / 1000;
-                    scope.sentence = _.pluck(tokens, 'word').join(" ")
+                    scope.sentence = _.map(tokens, 'word').join(" ")
                     scope.open();
                     scope.$apply();
                 });

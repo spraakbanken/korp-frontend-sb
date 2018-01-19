@@ -1133,7 +1133,7 @@ settings.corpora["kubhist-ostgotaposten-1910"] = {
 settings.corpora = _(settings.corpora)
                         .sortBy("title")
                         .map(function(item) {return [item.id, item]})
-                        .object()
+                        .fromPairs()
                         .value()
 
 settings.corpusListing = new CorpusListing(settings.corpora);
