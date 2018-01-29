@@ -238,3 +238,5 @@ settings.mapCenter = {
   lng: 16.69921875,
   zoom: 4
 };
+
+module.exports = settings

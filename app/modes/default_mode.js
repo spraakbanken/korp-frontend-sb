@@ -2344,8 +2344,8 @@ settings.corpora["ivip-demo"] = {
         },
     },
     structAttributes: {
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk,

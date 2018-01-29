@@ -3632,8 +3632,9 @@ settings.corpora.mepac = {
     structAttributes: {
         "text_blog": {label: "author"},
         "text_date": {label: "date"},
-        "text_type": {label: "type",
-            extendedComponent: "datasetSelect"},
+        "text_type": {
+            label: "type",
+            extendedComponent: "datasetSelect",
             dataset: {
                 "patient": "patient",
                 "närstående": "närstående"

@@ -468,7 +468,7 @@ var modernAttrs2 = {
     }
 };
 
-var lex_classes_text = {
+var lexClassesText = {
     text_blingbring: {
         label: "blingbring",
         type: "set",
@@ -728,3 +728,18 @@ settings.commonStructTypes = {
         ]
     }
 };
+
+module.exports = {
+  spWithin,
+  spContext,
+  modernAttrs,
+  modernAttrs2,
+  defaultContext,
+  attrs,
+  sattrs,
+  modernAttrsOld,
+  setOptions,
+  liteOptions,
+  lexClassesText,
+  readability
+}
