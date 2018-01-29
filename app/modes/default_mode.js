@@ -2353,8 +2353,8 @@ settings.corpora["ivip-demo"] = {
         },
     },
     structAttributes: {
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk,
@@ -3788,8 +3788,8 @@ settings.corpora["twitter-2015"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk
@@ -3822,8 +3822,8 @@ settings.corpora["twitter-2016"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk
@@ -3856,8 +3856,8 @@ settings.corpora["twitter-2017"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk

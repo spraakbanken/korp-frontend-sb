@@ -1,33 +1,29 @@
 Release manual
 
 Begin with:
-* Make sure that all changed are commited to SVN
-* grunt test
+* Make sure that all changed are commited and pushed
+* yarn test
 
-Labb (release from trunk):
-* grunt release (build)
-* grunt serve:dist (test)
+Labb (always use dev-branch):
+* yarn build
 * rsync --delete -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korplabb (deploy)
 
 Release candidate
-  - Bump the version number in packages.json and app/markup/about.html, commit the changes
-  - Merge trunk into korp-current
-  - On korp-current:
-      > grunt release (build)
-      > grunt serve:dist (test)
+  - on dev: bump the version number in packages.json and app/markup/about.html
+  - on master: merge dev
+  - on master:
+      > yarn build
       > rsync --delete -r dist/ fkkorp@demo.spraakdata.gu.se:/export/htdocs/korprc (deploy)
 
     Available at: http://demo.spraakdata.gu.se/korprc/
 
-Production (release from korp-current branch):
+Production:
 
-  For major changes:
-    - Tag latest release
-    - We should release in the beginning of the week
-    - Run release.sh and upload zip to web
+  Skip first two steps for config-changes
 
-  On korp-current:
-    > grunt release (buld)
-    > grunt serve:dist (test)
+  On master:
+    > tag latest release
+    > run release.sh and upload zip to web
+    > yarn build
     > rsync --delete -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korp (deploy)
 

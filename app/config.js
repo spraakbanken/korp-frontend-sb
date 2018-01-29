@@ -2,7 +2,6 @@
  * lexem => lemgram, lemgram
  *
  */
-var settings = {};
 
 var isLab = window.isLab || false;
 
@@ -228,7 +227,7 @@ settings.defaultOptions = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/new2";
+settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v7";
 settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.strixUrl = "https://spraakbanken.gu.se/strix/"

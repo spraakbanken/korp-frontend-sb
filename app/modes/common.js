@@ -76,13 +76,14 @@ attrs.msd = {
         var modal = null;
 
         $scope.onIconClick = function() {
+            var msdHTML = settings.markup.msd;
             modal = $uibModal.open({
                 template: '<div>' +
                                 '<div class="modal-header">' +
                                     '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
                                     '<span ng-click="clickX()" class="close-x">×</span>' +
                                 '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'markup/msd.html\'"></div>' +
+                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="' + msdHTML + '"></div>' +
                             '</div>',
                 scope: $scope
             })
@@ -468,7 +469,7 @@ var modernAttrs2 = {
     }
 };
 
-var lex_classes_text = {
+var lexClassesText = {
     text_blingbring: {
         label: "blingbring",
         type: "set",
@@ -728,3 +729,20 @@ settings.commonStructTypes = {
         ]
     }
 };
+
+module.exports = {
+  spWithin,
+  spContext,
+  modernAttrs,
+  modernAttrs2,
+  defaultContext,
+  attrs,
+  sattrs,
+  modernAttrsOld,
+  setOptions,
+  liteOptions,
+  lexClassesText,
+  readability,
+  fsv_aldrelagar,
+  fsv_yngrelagar
+}

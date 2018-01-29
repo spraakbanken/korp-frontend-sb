@@ -18,10 +18,7 @@ rm -r release
 mkdir release
 
 cd $KORP_REPO
-grunt release
-
-grunt clean:server
-grunt clean:e2e
+yarn run build
 
 cd $SCRIPT_DIR
 
