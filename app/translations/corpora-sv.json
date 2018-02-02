@@ -42,7 +42,7 @@
     "day": "dag",
     "party": "parti",
     "normalized_wordform": "normaliserad ordform",
-    
+
     "sentiment": "attityd",
     "sentiment_class": "attitydklass",
 
@@ -66,6 +66,7 @@
     "description": "beskrivning",
     "tweets": "tweets",
     "website": "webbsida",
+    "favourite_count": "favoriter",
 
     "id": "id",
 
@@ -1290,7 +1291,7 @@
 
     "category_url": "kategori-URL",
     "page_tables": "Sidtabeller",
-    
+
     "gerlof_cat": "cat",
     "gerlof_did": "did",
     "gerlof_s_npid": "s_npid",

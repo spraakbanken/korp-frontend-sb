@@ -42,7 +42,7 @@
     "day": "day",
     "party": "party",
     "normalized_wordform": "normalized word form",
-    
+
     "sentiment": "sentiment",
     "sentiment_class": "sentiment class",
 
@@ -66,6 +66,7 @@
     "description": "description",
     "tweets": "tweets",
     "website": "website",
+    "favourite_count": "favourite count",
 
     "id": "id",
 
@@ -1290,7 +1291,7 @@
 
     "category_url": "category URL",
     "page_tables": "Page tables",
-    
+
     "gerlof_cat": "cat",
     "gerlof_did": "did",
     "gerlof_s_npid": "s_npid",
