@@ -435,6 +435,90 @@ var modernAttrs = {
     }
 };
 
+var modernAttrs2 = {
+    pos: attrs.pos,
+    msd: attrs.msd,
+    lemma: attrs.baseform,
+    lex: attrs.lemgram,
+    dephead: attrs.dephead,
+    deprel: attrs.deprel,
+    ref: attrs.ref,
+    prefix: attrs.prefix,
+    suffix: attrs.suffix,
+    ne_ex: attrs.ne_ex,
+    ne_type: attrs.ne_type,
+    ne_subtype: attrs.ne_subtype,
+    ne_name: attrs.ne_name,
+    complemgram: modernAttrs.complemgram,
+    compwf: modernAttrs.compwf,
+    sense: modernAttrs.sense,
+    sentiment: {
+        label: "sentiment"
+    },
+    blingbring: {
+        label: "blingbring",
+        type: "set",
+        internalSearch: true
+    },
+    swefn: {
+        label: "swefn",
+        type: "set",
+        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
+    }
+};
+
+var lex_classes_text = {
+    text_blingbring: {
+        label: "blingbring",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 500,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_blingbring highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        internalSearch: true
+    },
+    text_swefn: {
+        label: "swefn",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 501,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_swefn highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
+    }
+};
+
+var readability = {
+    lix: {
+        label: "lix",
+        isStructAttr: true,
+        order: 600
+    },
+    ovix: {
+        label: "ovix",
+        isStructAttr: true,
+        order: 601
+    },
+    nk: {
+        label: "nk",
+        isStructAttr: true,
+        order: 602
+    }
+};
 
 settings.posset = {
    type: "set",
