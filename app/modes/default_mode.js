@@ -157,7 +157,7 @@ settings.corporafolders.socialmedia.forum.flashback = {
 
 settings.corporafolders.socialmedia.twitter = {
     title: "Twitter",
-    contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015"]
+    contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016"]
 };
 
 settings.corporafolders.newspapertexts = {
@@ -3773,6 +3773,35 @@ settings.corpora["twitter-2015"] = {
     id: "twitter-2015",
     title: "Twitter - 2015",
     description: "Material från ett urval av svenskspråkiga Twitteranvändare från 2015.",
+    within: {
+        "sentence": "sentence",
+        "text": "text"
+    },
+    context: {
+        "1 sentence": "1 sentence",
+        "1 text": "1 text"
+    },
+    attributes: modernAttrs,
+    structAttributes: {
+        user_username: {label: "username2"},
+        text_datetime: {label: "date"},
+        text_retweets: {label: "retweets"},
+        text_favourite_count: {label: "favourite_count"},
+        text_id: {label: "id", displayType: "hidden"}
+    },
+    customAttributes: {
+        text_url: {
+            label: "url",
+            pattern: "<a href='http://twitter.com/<%= struct_attrs.user_username %>/status/<%= struct_attrs.text_id %>' target='_blank'>http://twitter.com/<%= struct_attrs.user_username %>/status/<%= struct_attrs.text_id %></a>",
+            customType: "struct"
+            }
+    }
+};
+
+settings.corpora["twitter-2016"] = {
+    id: "twitter-2016",
+    title: "Twitter - 2016",
+    description: "Material från ett urval av svenskspråkiga Twitteranvändare från 2016.",
     within: {
         "sentence": "sentence",
         "text": "text"
