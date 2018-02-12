@@ -136,7 +136,7 @@ attrs.dalinlemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin' text-in-field='textInField'/>",
     order: 2
 };
 attrs.saldo = {
@@ -564,7 +564,7 @@ settings.fsvlex = {
     type: "set",
     label: "lemgram",
     opts: setOptions,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
@@ -577,7 +577,7 @@ settings.fsvvariants = {
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
     opts: setOptions,
     externalSearch: karpLemgramLink,
     internalSearch: true,
