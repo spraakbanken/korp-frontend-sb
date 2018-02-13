@@ -2216,7 +2216,7 @@ settings.corpora["ivip"] = {
         text_mediafileext: {displayType: "hidden"}
     },
     customAttributes: {
-        video: ivipVideo("http://k2xx.spraakdata.gu.se/ivip/data/"),
+        video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip/"),
         text_speaker_custom: {
             label: "speaker",
             order: 45,
