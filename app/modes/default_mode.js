@@ -157,7 +157,7 @@ settings.corporafolders.socialmedia.forum.flashback = {
 
 settings.corporafolders.socialmedia.twitter = {
     title: "Twitter",
-    contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016"]
+    contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016", "twitter-2017"]
 };
 
 settings.corporafolders.newspapertexts = {
@@ -3781,13 +3781,18 @@ settings.corpora["twitter-2015"] = {
         "1 sentence": "1 sentence",
         "1 text": "1 text"
     },
-    attributes: modernAttrs,
+    attributes: modernAttrs2,
     structAttributes: {
         user_username: {label: "username2"},
         text_datetime: {label: "date"},
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
-        text_id: {label: "id", displayType: "hidden"}
+        text_id: {label: "id", displayType: "hidden"},
+        text_blingbring: lex_classes_text.text_blingbring,
+        text_swefn: lex_classes_text.text_swefn,
+        text_lix: readability.lix,
+        text_ovix: readability.ovix,
+        text_nk: readability.nk
     },
     customAttributes: {
         text_url: {
@@ -3810,13 +3815,52 @@ settings.corpora["twitter-2016"] = {
         "1 sentence": "1 sentence",
         "1 text": "1 text"
     },
-    attributes: modernAttrs,
+    attributes: modernAttrs2,
     structAttributes: {
         user_username: {label: "username2"},
         text_datetime: {label: "date"},
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
-        text_id: {label: "id", displayType: "hidden"}
+        text_id: {label: "id", displayType: "hidden"},
+        text_blingbring: lex_classes_text.text_blingbring,
+        text_swefn: lex_classes_text.text_swefn,
+        text_lix: readability.lix,
+        text_ovix: readability.ovix,
+        text_nk: readability.nk
+    },
+    customAttributes: {
+        text_url: {
+            label: "url",
+            pattern: "<a href='http://twitter.com/<%= struct_attrs.user_username %>/status/<%= struct_attrs.text_id %>' target='_blank'>http://twitter.com/<%= struct_attrs.user_username %>/status/<%= struct_attrs.text_id %></a>",
+            customType: "struct"
+            }
+    }
+};
+
+settings.corpora["twitter-2017"] = {
+    id: "twitter-2017",
+    title: "Twitter - 2017",
+    description: "Material från ett urval av svenskspråkiga Twitteranvändare från 2017.",
+    within: {
+        "sentence": "sentence",
+        "text": "text"
+    },
+    context: {
+        "1 sentence": "1 sentence",
+        "1 text": "1 text"
+    },
+    attributes: modernAttrs2,
+    structAttributes: {
+        user_username: {label: "username2"},
+        text_datetime: {label: "date"},
+        text_retweets: {label: "retweets"},
+        text_favourite_count: {label: "favourite_count"},
+        text_id: {label: "id", displayType: "hidden"},
+        text_blingbring: lex_classes_text.text_blingbring,
+        text_swefn: lex_classes_text.text_swefn,
+        text_lix: readability.lix,
+        text_ovix: readability.ovix,
+        text_nk: readability.nk
     },
     customAttributes: {
         text_url: {
