@@ -9,10 +9,6 @@ settings.mapCenter = {
   zoom: 4
 }
 
-
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 settings.corpora["lsi"] = {
@@ -20,9 +16,6 @@ settings.corpora["lsi"] = {
     title: "LSI",
     description: "",
     limitedAccess: true,
-    languages: {
-        lsi: "english"
-    },
     within: settings.defaultWithin,
     context: {
     "1 sentence": "1 sentence",
