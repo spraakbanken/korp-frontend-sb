@@ -12,9 +12,6 @@ settings.corpora["eddan"] = {
     id: "eddan",
     title: "Äldre Eddan",
     description: "",
-    languages: {
-        eddan: "svenska"
-    },
     within: settings.defaultWithin,
     context: defaultContext,
     attributes: {},
