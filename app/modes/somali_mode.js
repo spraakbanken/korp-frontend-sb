@@ -17,7 +17,12 @@ settings.corporafolders = {};
 // Skolböcker
 settings.corporafolders.buugaag = {
     title: "Buugaag Dugsiyeed",
-    contents: ["somali-1971-79", "somali-1993-94", "somali-2001", "somali-itoobiya", "somali-hargeysa-2010", "somali-caafimaad-1994", "somali-cb", "somali-hargeysa", "somali-cb-2001-03-soomaaliya", "somali-saynis-1972-77", "somali-saynis-1994-96", "somali-saynis", "somali-saynis-2011-soomaaliya", "somali-xisaab-1971-79", "somali-xisaab-1994-97", "somali-xisaab-2001-hargeysa", "somali-xisaab-2001-nayroobi", "somali-xisaab-2011-itoobiya"]
+    contents: ["somali-1971-79", "somali-1993-94", "somali-2001", "somali-itoobiya",
+        "somali-hargeysa-2010", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
+        "somali-cb-2001-03-soomaaliya", "somali-cd-2012-itoobiya", "somali-saynis-1972-77", "somali-saynis-1994-96",
+        "somali-saynis", "somali-saynis-2011-soomaaliya", "somali-xisaab-1971-79",
+        "somali-xisaab-1994-97", "somali-xisaab-2001-hargeysa", "somali-xisaab-2001-nayroobi",
+        "somali-xisaab-2011-itoobiya"]
 };
 
 settings.corporafolders.warar = {
@@ -647,6 +652,43 @@ settings.corpora["somali-radiomuq"] = {
     }
 };
 
+settings.corpora["somali-cb-1980-89"] = {
+    id: "somali-cb-1980-89",
+    title: "Cilmiga Bulshada 1980-89",
+    description: "",
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        page_n: somalis.page,
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_author: somalis.author,
+        text_source: somalis.source,
+        text_edition: somalis.edition,
+        text_publisher: somalis.publisher
+    }
+};
+
+settings.corpora["somali-cd-2012-itoobiya"] = {
+    id: "somali-cd-2012-itoobiya",
+    title: "Cilmiga Deegaanka 2012 Itoobiya",
+    description: "",
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        page_n: somalis.page,
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_author: somalis.author,
+        text_edition: somalis.edition,
+        text_publisher: somalis.publisher
+    }
+};
+
 settings.corpora["somali-suugaan"] = {
     id: "somali-suugaan",
     title: "Suugaan",
@@ -660,6 +702,23 @@ settings.corpora["somali-suugaan"] = {
         text_place: somalis.place,
         text_author: somalis.author,
         text_edition: somalis.edition
+    }
+};
+
+settings.corpora["somali-suugaan2"] = {
+    id: "somali-suugaan2",
+    title: "Suugaan 2",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_author: somalis.author,
+        text_publisher: somalis.publisher,
+        text_source: somalis.source
     }
 };
 
