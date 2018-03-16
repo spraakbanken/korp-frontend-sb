@@ -2036,7 +2036,6 @@ settings.corpora["sprakfragor"] = {
     }
 };
 
-
 var ivipVideo = function(baseURL) {
     return {
         label: "video",
@@ -2061,7 +2060,7 @@ var ivipVideo = function(baseURL) {
                 // find start of sentence
                 var startIdx = 0
                 for(var i = wordData.position; i >= 0; i--) {
-                    if(_.contains(tokens[i]._open, "sentence")) {
+                    if(_.includes(tokens[i]._open, "sentence")) {
                         startIdx = i;
                         break;
                     }
@@ -2070,13 +2069,13 @@ var ivipVideo = function(baseURL) {
                 // find end of sentence
                 var endIdx = tokens.length - 1
                 for(var i = wordData.position; i < tokens.length; i++) {
-                    if(_.contains(tokens[i]._close, "sentence")) {
+                    if(_.includes(tokens[i]._close, "sentence")) {
                         endIdx = i;
                         break;
                     }
                 }
 
-                scope.sentence = _.pluck(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+                scope.sentence = _.map(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
                 scope.open();
                 scope.$apply();
             });
@@ -2170,6 +2169,7 @@ settings.corpora["ivip"] = {
         },
         sentence_speaker_region: {
             label: "speakerregion",
+            extendedComponent: "structServiceSelect",
             order: 12,
             isStructAttr: true
         },
@@ -2353,8 +2353,8 @@ settings.corpora["ivip-demo"] = {
         },
     },
     structAttributes: {
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk,
@@ -3788,8 +3788,8 @@ settings.corpora["twitter-2015"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk
@@ -3822,8 +3822,8 @@ settings.corpora["twitter-2016"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk
@@ -3856,8 +3856,8 @@ settings.corpora["twitter-2017"] = {
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lex_classes_text.text_blingbring,
-        text_swefn: lex_classes_text.text_swefn,
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
         text_lix: readability.lix,
         text_ovix: readability.ovix,
         text_nk: readability.nk

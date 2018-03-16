@@ -2,7 +2,6 @@
  * lexem => lemgram, lemgram
  *
  */
-var settings = {};
 
 var isLab = window.isLab || false;
 
@@ -55,6 +54,8 @@ settings.downloadFormatParams = {
         attrs: "+"
     },
 };
+
+settings.groupStatistics = ["saldo", "prefix", "suffix", "lex", "lemma", "sense", "text_swefn", "text_blingbring"];
 
 // for extended search dropdown, can be 'union' or 'intersection'
 settings.wordAttributeSelector = "union";
@@ -226,7 +227,7 @@ settings.defaultOptions = {
     "matches_not": "!*=",
 }
 
-settings.cgiScript = "https://ws.spraakbanken.gu.se/ws/korp";
+settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v7";
 settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.strixUrl = "https://spraakbanken.gu.se/strix/"

@@ -76,13 +76,14 @@ attrs.msd = {
         var modal = null;
 
         $scope.onIconClick = function() {
+            var msdHTML = settings.markup.msd;
             modal = $uibModal.open({
                 template: '<div>' +
                                 '<div class="modal-header">' +
                                     '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
                                     '<span ng-click="clickX()" class="close-x">×</span>' +
                                 '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'markup/msd.html\'"></div>' +
+                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="' + msdHTML + '"></div>' +
                             '</div>',
                 scope: $scope
             })
@@ -101,7 +102,7 @@ attrs.msd = {
 attrs.baseform = {
     label: "baseform",
     type: "set",
-    opts: setOptions,
+    opts: settings.defaultOptions,
     extendedTemplate: "<input ng-model='model' >",
     order: 1
 };
@@ -111,7 +112,7 @@ attrs.lemgram = {
     opts: setOptions,
     stringify: function(lemgram) {
         // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
+        return util.lemgramToString(_.trim(lemgram), true);
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
@@ -132,7 +133,7 @@ attrs.dalinlemgram = {
     opts: setOptions,
     stringify: function(lemgram) {
         // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
+        return util.lemgramToString(_.trim(lemgram), true);
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
@@ -468,7 +469,7 @@ var modernAttrs2 = {
     }
 };
 
-var lex_classes_text = {
+var lexClassesText = {
     text_blingbring: {
         label: "blingbring",
         type: "set",
@@ -684,7 +685,7 @@ settings.commonStructTypes = {
                     var from, moments, ref, ref1, to;
                     moments = cl.getMomentInterval();
                     if (moments.length) {
-                        return ref = _.invoke(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
+                        return ref = _.invokeMap(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
                     } else {
                         ref1 = cl.getTimeInterval(), from = ref1[0], to = ref1[1];
                         s.minDate = moment(from.toString(), "YYYY").toDate();
@@ -714,7 +715,7 @@ settings.commonStructTypes = {
                 if (!s.model) {
                     s.from_date = s.minDate;
                     s.to_date = s.maxDate;
-                    ref = _.invoke(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
+                    ref = _.invokeMap(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
                 } else if (s.model.length === 4) {
                     ref1 = _.map(s.model.slice(0, 3), getYear), s.from_date = ref1[0], s.to_date = ref1[1];
                     ref2 = _.map(s.model.slice(2), getTime), s.from_time = ref2[0], s.to_time = ref2[1];
@@ -728,3 +729,20 @@ settings.commonStructTypes = {
         ]
     }
 };
+
+module.exports = {
+  spWithin,
+  spContext,
+  modernAttrs,
+  modernAttrs2,
+  defaultContext,
+  attrs,
+  sattrs,
+  modernAttrsOld,
+  setOptions,
+  liteOptions,
+  lexClassesText,
+  readability,
+  fsv_aldrelagar,
+  fsv_yngrelagar
+}

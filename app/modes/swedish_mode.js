@@ -1947,7 +1947,7 @@ settings.corpora["ivip"] = {
                     scope.fileName = file + "." + ext;
                     scope.startTime = startTime / 1000;
                     scope.endTime = endTime / 1000;
-                    scope.sentence = _.pluck(tokens, 'word').join(" ")
+                    scope.sentence = _.map(tokens, 'word').join(" ")
                     scope.open();
                     scope.$apply();
                 });
@@ -3632,8 +3632,9 @@ settings.corpora.mepac = {
     structAttributes: {
         "text_blog": {label: "author"},
         "text_date": {label: "date"},
-        "text_type": {label: "type",
-            extendedComponent: "datasetSelect"},
+        "text_type": {
+            label: "type",
+            extendedComponent: "datasetSelect",
             dataset: {
                 "patient": "patient",
                 "närstående": "närstående"

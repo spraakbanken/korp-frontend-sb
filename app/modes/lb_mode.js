@@ -16,10 +16,13 @@ settings.corpora["lb"] = {
     context: defaultContext,
     attributes: modernAttrs,
     structAttributes: {
-        "text_title": {label: "title"},
+        "text_title": {
+            label: "title",
+            extendedComponent: "structServiceAutocomplete"
+        },
         "text_author": {
             label: "author",
-            extendedComponent: "structServiceSelect"
+            extendedComponent: "structServiceAutocomplete"
         },
         "text_url": {label: "verk", type: "url"},
         "text_source": {label: "source"},
