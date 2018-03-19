@@ -72,7 +72,7 @@ attrs.msd = {
     opts: settings.defaultOptions,
     extendedTemplate: '<input ng-model="input" class="arg_value" escaper ng-model-options=\'{debounce : {default : 300, blur : 0}, updateOn: "default blur"}\'>' +
     '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
-    extendedController: function($scope, $uibModal) {
+    extendedController: ["$scope", "$uibModal", function($scope, $uibModal) {
         var modal = null;
 
         $scope.onIconClick = function() {
@@ -97,7 +97,7 @@ attrs.msd = {
             $scope.input = val;
             modal.close();
         }
-    }
+    }]
 };
 attrs.baseform = {
     label: "baseform",
@@ -118,13 +118,13 @@ attrs.lemgram = {
     internalSearch: true,
     extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)' text-in-field='textInField'/>"
                         + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
-    extendedController: function($scope) {
+    extendedController: ["$scope", function($scope) {
         $scope.valueError = false;
 
         $scope.checkForError = function(valueSelected) {
             $scope.valueError = !valueSelected;
         }
-    },
+    }],
     order: 2
 };
 attrs.dalinlemgram = {
