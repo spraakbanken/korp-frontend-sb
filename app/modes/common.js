@@ -74,17 +74,18 @@ attrs.msd = {
     '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
     extendedController: ["$scope", "$uibModal", function($scope, $uibModal) {
         var modal = null;
+        var msdHTML = settings.markup.msd;
+        var template = '<div>' +
+                         '<div class="modal-header">' +
+                            '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
+                            '<span ng-click="clickX()" class="close-x">×</span>' +
+                         '</div>' +
+                         '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'' + msdHTML + '\'"></div>' +
+                       '</div>'
 
         $scope.onIconClick = function() {
-            var msdHTML = settings.markup.msd;
             modal = $uibModal.open({
-                template: '<div>' +
-                                '<div class="modal-header">' +
-                                    '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
-                                    '<span ng-click="clickX()" class="close-x">×</span>' +
-                                '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="' + msdHTML + '"></div>' +
-                            '</div>',
+                template: template,
                 scope: $scope
             })
         }
