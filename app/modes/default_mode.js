@@ -525,8 +525,7 @@ settings.corpora["attasidor"] = {
         sentence_id: {
             displayType: "hidden"
         }
-    },
-    "inStrix": true
+    }
 };
 
 settings.corpora["dn1987"] = {

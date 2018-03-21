@@ -72,19 +72,20 @@ attrs.msd = {
     opts: settings.defaultOptions,
     extendedTemplate: '<input ng-model="input" class="arg_value" escaper ng-model-options=\'{debounce : {default : 300, blur : 0}, updateOn: "default blur"}\'>' +
     '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
-    extendedController: function($scope, $uibModal) {
+    extendedController: ["$scope", "$uibModal", function($scope, $uibModal) {
         var modal = null;
+        var msdHTML = settings.markup.msd;
+        var template = '<div>' +
+                         '<div class="modal-header">' +
+                            '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
+                            '<span ng-click="clickX()" class="close-x">×</span>' +
+                         '</div>' +
+                         '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'' + msdHTML + '\'"></div>' +
+                       '</div>'
 
         $scope.onIconClick = function() {
-            var msdHTML = settings.markup.msd;
             modal = $uibModal.open({
-                template: '<div>' +
-                                '<div class="modal-header">' +
-                                    '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
-                                    '<span ng-click="clickX()" class="close-x">×</span>' +
-                                '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="' + msdHTML + '"></div>' +
-                            '</div>',
+                template: template,
                 scope: $scope
             })
         }
@@ -97,12 +98,12 @@ attrs.msd = {
             $scope.input = val;
             modal.close();
         }
-    }
+    }]
 };
 attrs.baseform = {
     label: "baseform",
     type: "set",
-    opts: settings.defaultOptions,
+    opts: setOptions,
     extendedTemplate: "<input ng-model='model' >",
     order: 1
 };
@@ -118,13 +119,13 @@ attrs.lemgram = {
     internalSearch: true,
     extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)' text-in-field='textInField'/>"
                         + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
-    extendedController: function($scope) {
+    extendedController: ["$scope", function($scope) {
         $scope.valueError = false;
 
         $scope.checkForError = function(valueSelected) {
             $scope.valueError = !valueSelected;
         }
-    },
+    }],
     order: 2
 };
 attrs.dalinlemgram = {
