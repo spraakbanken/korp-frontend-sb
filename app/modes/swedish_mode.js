@@ -4298,7 +4298,7 @@ settings.corpora["fsv-yngrereligiosprosa"] = {
 settings.corpora["fsv-yngretankebocker"] = {
     morphology : 'fsvm',
     id : "fsv-yngretankebocker",
-    title : "Yngre tankeböcker – Fornsvenska textbankens material",
+    title : "Yngre tänkeböcker – Fornsvenska textbankens material",
     description : settings.fsvdescription,
     within : settings.defaultWithin,
     context : spContext,
@@ -5544,7 +5544,7 @@ settings.corpora["forarbeten1734"] = {
         text_date : {label : "date"},
         text_title : {
             label : "title",
-            
+
 
             extendedComponent: "datasetSelect",
             dataset : [
@@ -5579,7 +5579,7 @@ settings.corpora["lag1800"] = {
     },
     structAttributes: {
         text_title : {
-            
+
             label : "title",
 
             extendedComponent: "datasetSelect",
@@ -5797,7 +5797,7 @@ settings.corpora.kioping = {
         text_date : {label : "date"},
         text_title : {
             label : "title",
-            
+
 
             extendedComponent: "datasetSelect",
             dataset : [
@@ -5833,7 +5833,7 @@ settings.corpora['akerbruk'] = {
         text_date : {label : "date"},
         text_title : {
             label : "title",
-            
+
 
             extendedComponent: "datasetSelect",
             dataset : [
@@ -5872,7 +5872,7 @@ settings.corpora['kvah'] = {
         text_date : {label : "date"},
         text_title : {
             label : "title",
-            
+
 
             extendedComponent: "datasetSelect",
             dataset : [

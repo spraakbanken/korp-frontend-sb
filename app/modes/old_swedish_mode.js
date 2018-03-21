@@ -251,7 +251,7 @@ settings.corpora["fsv-yngrereligiosprosa"] = {
 settings.corpora["fsv-yngretankebocker"] = {
     morphology: "fsvm",
     id: "fsv-yngretankebocker",
-    title: "Yngre tankeböcker – Fornsvenska textbankens material",
+    title: "Yngre tänkeböcker – Fornsvenska textbankens material",
     description: settings.fsvdescription,
     within: settings.defaultWithin,
     context: spContext,
