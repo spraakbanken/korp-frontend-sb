@@ -10,7 +10,7 @@ settings.corpora = {};
 settings.corporafolders = {};
 settings.corpora["eddan"] = {
     id: "eddan",
-    title: "Äldre Eddan",
+    title: "Sæmundaredda",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,

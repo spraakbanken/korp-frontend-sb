@@ -80,7 +80,7 @@ settings.aftonbladstruct_attributes = {
     page_no: {label: "page"}
 };
 
-digidailydescription = '<a href="http://digidaily.kb.se/">Digidaily</a> är ett utvecklingsprojekt där Riksarkivet, Kungliga biblioteket och Mittuniversitetet tillsammans ska utveckla rationella metoder och processer för digitalisering av dagstidningar.'
+digidailydescription = '<a href="http://feedback.tidningar.kb.se/viewtopic.php?id=127" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
 
 
 //UB-KVT
@@ -650,7 +650,7 @@ settings.corpora["fsv-yngrereligiosprosa"] = {
 settings.corpora["fsv-yngretankebocker"] = {
     morphology: "fsvm",
     id: "fsv-yngretankebocker",
-    title: "Yngre tankeböcker – Fornsvenska textbankens material",
+    title: "Yngre tänkeböcker – Fornsvenska textbankens material",
     description: settings.fsvdescription,
     within: settings.defaultWithin,
     context: spContext,
@@ -2276,7 +2276,7 @@ settings.corpora["kvah"] = {
 
 settings.corpora["eddan"] = {
     id: "eddan",
-    title: "Äldre Eddan",
+    title: "Sæmundaredda",
     description: "",
     within: settings.defaultWithin,
     context: defaultContext,
