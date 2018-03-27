@@ -1311,5 +1311,7 @@
     "doc_inlg": "Meta Language",
     "doc_lgcode": "lgcode",
     "doc_macro_area": "Macro Area",
-    "doc_year": "Publication Year"
+    "doc_year": "Publication Year",
+
+    "more_metadata": "more meta data"
 }

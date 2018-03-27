@@ -1303,7 +1303,7 @@
     "gerlof_text_source": "text_source",
     "gerlof_text_time": "text_time",
     "gerlof_text_lang": "text_lang",
-    
+
     "doc_author": "Author",
     "doc_title": "Title",
     "doc_glottolog_ref_id": "Glottolog Reference ID",
@@ -1311,5 +1311,7 @@
     "doc_inlg": "Meta Language",
     "doc_lgcode": "lgcode",
     "doc_macro_area": "Macro Area",
-    "doc_year": "Publication Year"
+    "doc_year": "Publication Year",
+
+    "more_metadata": "mer metadata"
 }
