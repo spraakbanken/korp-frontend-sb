@@ -3616,27 +3616,22 @@ settings.corpora["asu"] = {
         swefn: modernAttrs2.swefn,
         lang: {
             label: "language",
-            isStructAttr: true,
             extendedComponent: "structServiceSelect"
         },
         msd_orig: {
             label: "msd_orig",
-            isStructAttr: true,
             extendedComponent: "structServiceSelect"
         },
         speaker: {
             label: "speaker",
-            isStructAttr: true,
             extendedComponent: "structServiceSelect"
         },
         type: {
             label: "utterance_type",
-            isStructAttr: true,
             extendedComponent: "structServiceSelect"
         }
         // annotation_type: {
         //     label: "annotation_type",
-        //     isStructAttr: true,
         //     extendedComponent: "structServiceSelect"
         // }
     },
