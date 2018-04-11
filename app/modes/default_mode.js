@@ -1697,17 +1697,12 @@ settings.corpora["coctaill"] = {
     within: spWithin,
     attributes: modernAttrs,
     structAttributes: {
-        text_author: {label: "author"},
-        text_title: {label: "title"},
+        text_author: {label: "author", extendedComponent: "structServiceSelect"},
+        text_title: {label: "title", extendedComponent: "structServiceSelect"},
         text_date: {label: "date"},
-        lesson_level: {label: "coctaill_level",
-            extendedComponent: "datasetSelect",
-            dataset: {
-                "A1": "A1",
-                "A2": "A2",
-                "B1": "B1",
-                "B2": "B2",
-                "C1": "C1"}
+        lesson_level: {
+            label: "coctaill_level",
+            extendedComponent: "structServiceSelect"
         },
         lessontext_genre: {label: "coctaill_genre", type: "set",
             extendedComponent: "datasetSelect",
@@ -3520,8 +3515,8 @@ settings.corpora["sw1203"] = {
                 "C: Slutprovsuppsats": "C: Slutprovsuppsats"
             }
         },
-        text_student: {label: "student"},
-        text_l1: {label: "tisus_l1"},
+        text_student: {label: "student", extendedComponent: "structServiceSelect"},
+        text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect"},
         text_gender: {
             label: "gender",
             extendedComponent: "datasetSelect",
@@ -3530,10 +3525,10 @@ settings.corpora["sw1203"] = {
                 "M": "Man"
             }
         },
-        text_birthyear: {label: "birthyear"},
-        text_a: {label: "a"},
-        text_b: {label: "b"},
-        text_cd: {label: "c/d"},
+        text_birthyear: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_a: {label: "a", extendedComponent: "structServiceSelect"},
+        text_b: {label: "b", extendedComponent: "structServiceSelect"},
+        text_cd: {label: "c/d", extendedComponent: "structServiceSelect"},
         text_semester: {
             label: "semester",
             extendedComponent: "datasetSelect",
@@ -3554,19 +3549,25 @@ settings.corpora["tisus"] = {
     context: spContext,
     attributes: modernAttrs,
     structAttributes: {
-        text_id: {label: "id"},
-        text_age: {label: "age"},
-        text_gender: {label: "gender"},
-        text_residencetime: {label: "residencetime"},
-        text_education: {label: "education"},
-        text_l1: {label: "tisus_l1", type: "set"},
-        text_lf1: {label: "tisus_lf1"},
-        text_lf2: {label: "tisus_lf2"},
-        text_sum: {label: "sum"},
-        text_written: {label: "tisus_written"},
-        text_oral: {label: "tisus_oral"},
-        text_finalgrade: {label: "finalgrade"},
-        text_proficiencylevel: {label: "proficiencylevel"},
+        text_id: {label: "id", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_gender: {
+            label: "gender",
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "F": "Kvinna",
+                "M": "Man"
+            }},
+        text_residencetime: {label: "residencetime", extendedComponent: "structServiceSelect"},
+        text_education: {label: "education", extendedComponent: "structServiceSelect"},
+        text_l1: {label: "tisus_l1", type: "set", extendedComponent: "structServiceSelect"},
+        text_lf1: {label: "tisus_lf1", extendedComponent: "structServiceSelect"},
+        text_lf2: {label: "tisus_lf2", extendedComponent: "structServiceSelect"},
+        text_sum: {label: "sum", extendedComponent: "structServiceSelect"},
+        text_written: {label: "tisus_written", extendedComponent: "structServiceSelect"},
+        text_oral: {label: "tisus_oral", extendedComponent: "structServiceSelect"},
+        text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
+        text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date"}
     }
 };
@@ -4111,11 +4112,11 @@ settings.corpora["soexempel"] = {
     context: spContext,
     attributes: modernAttrs,
     structAttributes: {
-        "text_date": {label: "year"},
+        "text_date": {label: "year", extendedComponent: "structServiceSelect"},
         "entry_word": {label: "entryword"},
-        "entry_entryno": {label: "entryno"},
-        "entry_sense1": {label: "sense1"},
-        "entry_sense2": {label: "sense2"}
+        "entry_entryno": {label: "entryno", extendedComponent: "structServiceSelect"},
+        "entry_sense1": {label: "sense1", extendedComponent: "structServiceSelect"},
+        "entry_sense2": {label: "sense2", extendedComponent: "structServiceSelect"}
     }
 };
 
