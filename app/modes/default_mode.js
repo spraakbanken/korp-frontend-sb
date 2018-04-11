@@ -4,7 +4,7 @@ settings.enableMap = false;
 settings.corpora = {};
 settings.corporafolders = {};
 
-settings.globalFilterCorpora = ["ivip"]
+settings.globalFilterCorpora = ["ivip", "asu"]
 
 settings.corporafolders.sweac = {
     title: "Akademiska texter",
@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -3585,6 +3585,123 @@ settings.corpora["ansokningar"] = {
         text_birthyear: {label: "birthyear"}
     }
 };
+
+settings.corpora["asu"] = {
+    id: "asu",
+    title: "ASU",
+    description: 'Andraspråkets strukturutveckling<br>För åtkomst kontakta <a href="ham@ling.su.se">Björn Hammarberg</a>.',
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "1 text": "1 text"
+    },
+    attributes: {
+        pos: attrs.pos,
+        msd: attrs.msd,
+        lemma: attrs.baseform,
+        lex: attrs.lemgram,
+        sense: modernAttrs.sense,
+        prefix: attrs.prefix,
+        suffix: attrs.suffix,
+        compwf: modernAttrs.compwf,
+        complemgram: modernAttrs.complemgram,
+        ne_ex: attrs.ne_ex,
+        ne_type: attrs.ne_type,
+        ne_subtype: attrs.ne_subtype,
+        ne_name: attrs.ne_name,
+        sentiment: modernAttrs2.sentiment,
+        blingbring: modernAttrs2.blingbring,
+        swefn: modernAttrs2.swefn,
+        lang: {
+            label: "language",
+            isStructAttr: true,
+            extendedComponent: "structServiceSelect"
+        },
+        msd_orig: {
+            label: "msd_orig",
+            isStructAttr: true,
+            extendedComponent: "structServiceSelect"
+        },
+        speaker: {
+            label: "speaker",
+            isStructAttr: true,
+            extendedComponent: "structServiceSelect"
+        },
+        type: {
+            label: "utterance_type",
+            isStructAttr: true,
+            extendedComponent: "structServiceSelect"
+        }
+        // annotation_type: {
+        //     label: "annotation_type",
+        //     isStructAttr: true,
+        //     extendedComponent: "structServiceSelect"
+        // }
+    },
+    structAttributes: {
+        text_mode: {
+            label: "mode",
+            order: 1,
+            extendedComponent: "structServiceSelect"
+                },
+        text_category: {
+            label: "category",
+            order: 2,
+            extendedComponent: "structServiceSelect"
+        },
+        // text_textid: {label: "text_id", order: 3},
+        // text_filename: {label: "filename"},
+        text_person: {
+            label: "person",
+            order: 3,
+            extendedComponent: "structServiceSelect"
+        },
+        line_id: {
+            label: "line_id",
+            order: 4
+        },
+        text_text: {
+            label: "text",
+            order: 5,
+            extendedComponent: "structServiceSelect"
+        },
+        text_date: {
+            label: "date",
+            order: 6
+        },
+        text_header: {
+            label: "header",
+            order: 7,
+            extendedComponent: "structServiceSelect"
+        },
+        text_transcriber: {
+            label: "transcriber",
+            order: 50,
+            extendedComponent: "structServiceSelect"
+        },
+        text_transcription_date: {
+            label: "transcription_date",
+            order: 51
+        },
+        text_transcription_check: {
+            label: "transcription_check",
+            order: 52,
+            extendedComponent: "structServiceSelect"
+        },
+        text_transcription_check_date: {
+            label: "transcription_check_date",
+            order: 53
+        },
+        text_giventext: {
+            label: "giventext",
+            order: 100,
+            extendedComponent: "structServiceSelect"
+        }
+    },
+    defaultFilters: ["text_mode", "text_category", "text_person", "text_text"]
+};
+
 
 settings.corpora["twitter"] = {
     id: "twitter",

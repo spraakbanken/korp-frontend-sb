@@ -1313,5 +1313,20 @@
     "doc_macro_area": "Macro Area",
     "doc_year": "Publication Year",
 
-    "more_metadata": "mer metadata"
+    "more_metadata": "mer metadata",
+
+    "text_id": "text-ID",
+    "mode": "läge",
+    "filename": "filnamn",
+    "text": "text",
+    "person": "person",
+    "header": "rubrik",
+    "transcriber": "transkribent",
+    "transcription_date": "transkriptionsdatum",
+    "transcription_check": "transkriptionskontroll",
+    "transcription_check_date": "transkriptionskontrolldatum",
+    "giventext": "given text",
+    "line_id": "rad-ID",
+    "utterance_type": "yttrandetyp",
+    "msd_orig": "original-msd"
 }

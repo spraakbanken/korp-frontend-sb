@@ -1313,5 +1313,20 @@
     "doc_macro_area": "Macro Area",
     "doc_year": "Publication Year",
 
-    "more_metadata": "more meta data"
+    "more_metadata": "more meta data",
+
+    "text_id": "text ID",
+    "mode": "mode",
+    "filename": "file name",
+    "text": "text",
+    "person": "person",
+    "header": "heading",
+    "transcriber": "transcriber",
+    "transcription_date": "transcription date",
+    "transcription_check": "transcription check",
+    "transcription_check_date": "transcription check date",
+    "giventext": "given text",
+    "line_id": "line ID",
+    "utterance_type": "utterance type",
+    "msd_orig": "original msd"
 }
