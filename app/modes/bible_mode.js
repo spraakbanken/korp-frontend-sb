@@ -1,8 +1,8 @@
 
 settings.primaryColor = "#F9D4D4";
 settings.primaryLight = "#F9EDED";
-settings.autocomplete = false;
-settings.wordpicture = false;
+settings.autocomplete = true;
+settings.wordpicture = true;
 
 $("#lemgram_list_item").remove();
 $("#showLineDiagram").remove();
@@ -80,7 +80,7 @@ settings.corpora["bibel1873dalin"] = {
 settings.corpora["vasabibel-nt"] = {
     morphology: "swedbergm|dalinm|saldom",
     id: "vasabibel-nt",
-    title: "Gustaf Vasas bibel - Nya testamentet",
+    title: "Gustaf Vasas bibel – Nya testamentet",
     description: "'Nya Testamentet i Gustaf Vasas Bibel /under jämförelse med texten av år 1526 utgivet av Natan Lindqvist' från 1941",
     within: spWithin,
     context: spContext,
