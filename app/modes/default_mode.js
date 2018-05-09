@@ -3569,6 +3569,14 @@ settings.corpora["tisus"] = {
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date"}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_explanations2.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
     }
 };
 
