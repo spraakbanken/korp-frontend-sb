@@ -3611,7 +3611,9 @@ settings.corpora["sw1203"] = {
             customType: "struct",
             order: 1
             }
-    }
+    },
+    defaultFilters: ["text_type", "text_level"]
+    // defaultFilters: ["text_type", "text_level", "text_l1"]
 };
 
 settings.corpora["tisus"] = {
