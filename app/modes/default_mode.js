@@ -1947,6 +1947,14 @@ settings.corpora["coctaill"] = {
         task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
         language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
         lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_COCTAILL.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
     }
 };
 
@@ -3512,11 +3520,11 @@ settings.corpora["sw1203"] = {
             dataset: {
                 "A: Inträdesuppsats": "A: Inträdesuppsats",
                 "B: Mitterminsuppsats": "B: Mitterminsuppsats",
-                "C: Slutprovsuppsats": "C: Slutprovsuppsats"
+                "C: Slutprovsuppsats": "C: Slutprovsuppsats",
+                "D: Omprov": "D: Omprov"
             }
         },
         text_student: {label: "student", extendedComponent: "structServiceSelect"},
-        text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect"},
         text_gender: {
             label: "gender",
             extendedComponent: "datasetSelect",
@@ -3536,7 +3544,73 @@ settings.corpora["sw1203"] = {
                 "HT12": "HT12",
                 "VT13": "VT13"
             }
+        },
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_level: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
+        text_task: {label: "task", extendedComponent: "structServiceSelect"},
+        text_task_url: {label: "task_url", extendedComponent: "structServiceSelect", type: "url"},
+        // text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
+        text_l1: {
+            label: "tisus_l1",
+            type: "set",
+            extendedComponent: "datasetSelect",
+            translationKey: "langcode_",
+            dataset: [
+                "ara",
+                "ben",
+                "bos",
+                "eng",
+                "est",
+                "fil",
+                "fin",
+                "vls",
+                "fra",
+                "ell",
+                "isl",
+                "jpn",
+                "cat",
+                "zho",
+                "lav",
+                "lit",
+                "mkd",
+                "nld",
+                "prp",
+                "ron",
+                "rus",
+                "sco",
+                "spa",
+                "deu",
+                "ukr",
+                "hun",
+                "srp",
+                "hrv",
+                "prd",
+                "prp",
+                "afr",
+                "aze",
+                "bul",
+                "ces",
+                "cmn",
+                "swe",
+                "por",
+                "glg",
+                "hbs",
+                "ita",
+                "kor",
+                "pol",
+                "tha",
+                "tur",
+                "swa"
+            ]
         }
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_SW1203_0.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
     }
 };
 
@@ -3560,7 +3634,6 @@ settings.corpora["tisus"] = {
             }},
         text_residencetime: {label: "residencetime", extendedComponent: "structServiceSelect"},
         text_education: {label: "education", extendedComponent: "structServiceSelect"},
-        text_l1: {label: "tisus_l1", type: "set", extendedComponent: "structServiceSelect"},
         text_lf1: {label: "tisus_lf1", extendedComponent: "structServiceSelect"},
         text_lf2: {label: "tisus_lf2", extendedComponent: "structServiceSelect"},
         text_sum: {label: "sum", extendedComponent: "structServiceSelect"},
@@ -3568,7 +3641,61 @@ settings.corpora["tisus"] = {
         text_oral: {label: "tisus_oral", extendedComponent: "structServiceSelect"},
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
-        text_date: {label: "date"}
+        text_date: {label: "date"},
+        // text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
+        text_l1: {
+            label: "tisus_l1",
+            type: "set",
+            extendedComponent: "datasetSelect",
+            translationKey: "langcode_",
+            dataset: [
+                "ara",
+                "ben",
+                "bos",
+                "eng",
+                "est",
+                "fil",
+                "fin",
+                "vls",
+                "fra",
+                "ell",
+                "isl",
+                "jpn",
+                "cat",
+                "zho",
+                "lav",
+                "lit",
+                "mkd",
+                "nld",
+                "prp",
+                "ron",
+                "rus",
+                "sco",
+                "spa",
+                "deu",
+                "ukr",
+                "hun",
+                "srp",
+                "hrv",
+                "prd",
+                "prp",
+                "afr",
+                "aze",
+                "bul",
+                "ces",
+                "cmn",
+                "swe",
+                "por",
+                "glg",
+                "hbs",
+                "ita",
+                "kor",
+                "pol",
+                "tha",
+                "tur",
+                "swa"
+            ]
+        }
     },
     customAttributes: {
         pdf: {
@@ -3702,6 +3829,14 @@ settings.corpora["asu"] = {
             order: 100,
             extendedComponent: "structServiceSelect"
         }
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_ASU.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1000
+            }
     },
     defaultFilters: ["text_mode", "text_category", "text_person", "text_text"]
 };
