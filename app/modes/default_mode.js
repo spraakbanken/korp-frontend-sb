@@ -3643,7 +3643,7 @@ settings.corpora["tisus"] = {
         text_oral: {label: "tisus_oral", extendedComponent: "structServiceSelect"},
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
-        text_date: {label: "date"},
+        text_date: {label: "date", hideExtended: true},
         // text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
         text_l1: {
             label: "tisus_l1",
