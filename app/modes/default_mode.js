@@ -3549,9 +3549,9 @@ settings.corpora["sw1203"] = {
         text_level: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_task: {label: "task", extendedComponent: "structServiceSelect"},
         text_task_url: {label: "task_url", extendedComponent: "structServiceSelect", type: "url"},
-        // text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
-        text_l1: {
-            label: "tisus_l1",
+        // text_firstlang: {label: "tisus_firstlang", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
+        text_firstlang: {
+            label: "tisus_firstlang",
             type: "set",
             extendedComponent: "datasetSelect",
             translationKey: "langcode_",
@@ -3613,7 +3613,7 @@ settings.corpora["sw1203"] = {
             }
     },
     defaultFilters: ["text_type", "text_level"]
-    // defaultFilters: ["text_type", "text_level", "text_l1"]
+    // defaultFilters: ["text_type", "text_level", "text_firstlang"]
 };
 
 settings.corpora["tisus"] = {
@@ -3636,17 +3636,17 @@ settings.corpora["tisus"] = {
             }},
         text_residencetime: {label: "residencetime", extendedComponent: "structServiceSelect"},
         text_education: {label: "education", extendedComponent: "structServiceSelect"},
-        text_lf1: {label: "tisus_lf1", extendedComponent: "structServiceSelect"},
-        text_lf2: {label: "tisus_lf2", extendedComponent: "structServiceSelect"},
+        text_lfone: {label: "tisus_lfone", extendedComponent: "structServiceSelect"},
+        text_lftwo: {label: "tisus_lftwo", extendedComponent: "structServiceSelect"},
         text_sum: {label: "sum", extendedComponent: "structServiceSelect"},
         text_written: {label: "tisus_written", extendedComponent: "structServiceSelect"},
         text_oral: {label: "tisus_oral", extendedComponent: "structServiceSelect"},
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date", hideExtended: true},
-        // text_l1: {label: "tisus_l1", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
-        text_l1: {
-            label: "tisus_l1",
+        // text_firstlang: {label: "tisus_firstlang", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
+        text_firstlang: {
+            label: "tisus_firstlang",
             type: "set",
             extendedComponent: "datasetSelect",
             translationKey: "langcode_",
