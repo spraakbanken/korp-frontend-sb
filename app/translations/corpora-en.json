@@ -75,9 +75,9 @@
     "imprintyear": "imprint year",
     "pagelink": "page link",
 
-    "tisus_l1": "native language",
-    "tisus_lf1": "reading comprehension, part 1",
-    "tisus_lf2": "reading comprehension, part 2",
+    "tisus_firstlang": "native language",
+    "tisus_lfone": "reading comprehension, part 1",
+    "tisus_lftwo": "reading comprehension, part 2",
     "tisus_written": "written proficiency",
     "tisus_oral": "oral proficiency",
     "residencetime": "residence time",
