@@ -36,7 +36,7 @@ settings.kubhiststruct_attributes = {
     text_publishingdays: {label: "publishingdays", order: 60},
     text_completetitle: {label: "completetitle", order: 60},
     text_publisher: {label: "publisher", order: 60},
-    text_politicaltendency: {label: "politicaltendency", order: 60},
+    text_politicaltendency: {label: "politicaltendency", order: 60, extendedComponent: "structServiceSelect"},
     text_annualprice: {label: "annualprice", order: 60},
     text_editorialplace: {label: "editorialplace", order: 60},
     text_typearea: {label: "typearea", order: 60},
