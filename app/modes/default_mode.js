@@ -3549,59 +3549,12 @@ settings.corpora["sw1203"] = {
         text_level: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_task: {label: "task", extendedComponent: "structServiceSelect"},
         text_task_url: {label: "task_url", extendedComponent: "structServiceSelect", type: "url"},
-        // text_firstlang: {label: "tisus_firstlang", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
         text_firstlang: {
             label: "tisus_firstlang",
+            opts: setOptions,
             type: "set",
-            extendedComponent: "datasetSelect",
+            extendedComponent: "structServiceSelect",
             translationKey: "langcode_",
-            dataset: [
-                "ara",
-                "ben",
-                "bos",
-                "eng",
-                "est",
-                "fil",
-                "fin",
-                "vls",
-                "fra",
-                "ell",
-                "isl",
-                "jpn",
-                "cat",
-                "zho",
-                "lav",
-                "lit",
-                "mkd",
-                "nld",
-                "prp",
-                "ron",
-                "rus",
-                "sco",
-                "spa",
-                "deu",
-                "ukr",
-                "hun",
-                "srp",
-                "hrv",
-                "prd",
-                "prp",
-                "afr",
-                "aze",
-                "bul",
-                "ces",
-                "cmn",
-                "swe",
-                "por",
-                "glg",
-                "hbs",
-                "ita",
-                "kor",
-                "pol",
-                "tha",
-                "tur",
-                "swa"
-            ]
         }
     },
     customAttributes: {
@@ -3612,8 +3565,8 @@ settings.corpora["sw1203"] = {
             order: 1
             }
     },
-    defaultFilters: ["text_type", "text_level"]
-    // defaultFilters: ["text_type", "text_level", "text_firstlang"]
+    // defaultFilters: ["text_type", "text_level"]
+    defaultFilters: ["text_type", "text_level", "text_firstlang"]
 };
 
 settings.corpora["tisus"] = {
@@ -3644,59 +3597,12 @@ settings.corpora["tisus"] = {
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date", hideExtended: true},
-        // text_firstlang: {label: "tisus_firstlang", extendedComponent: "structServiceSelect", type: "set", translationKey: "langcode_"}
         text_firstlang: {
             label: "tisus_firstlang",
             type: "set",
-            extendedComponent: "datasetSelect",
-            translationKey: "langcode_",
-            dataset: [
-                "ara",
-                "ben",
-                "bos",
-                "eng",
-                "est",
-                "fil",
-                "fin",
-                "vls",
-                "fra",
-                "ell",
-                "isl",
-                "jpn",
-                "cat",
-                "zho",
-                "lav",
-                "lit",
-                "mkd",
-                "nld",
-                "prp",
-                "ron",
-                "rus",
-                "sco",
-                "spa",
-                "deu",
-                "ukr",
-                "hun",
-                "srp",
-                "hrv",
-                "prd",
-                "prp",
-                "afr",
-                "aze",
-                "bul",
-                "ces",
-                "cmn",
-                "swe",
-                "por",
-                "glg",
-                "hbs",
-                "ita",
-                "kor",
-                "pol",
-                "tha",
-                "tur",
-                "swa"
-            ]
+            opts: setOptions,
+            extendedComponent: "structServiceSelect",
+            translationKey: "langcode_"
         }
     },
     customAttributes: {
