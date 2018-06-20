@@ -1483,8 +1483,8 @@ var bloggmix_structs = {
     blog_title: {label: "blog_title"},
     blog_url: {label: "blog_url", type: "url"},
     blog_age: {label: "author_age"},
-    blog_city: {label: "city"},
-    blog_categories: {label: "categories", type: "set"},
+    blog_city: {label: "city", extendedComponent: "structServiceSelect"},
+    blog_categories: {label: "categories", type: "set", extendedComponent: "structServiceSelect"},
     text_title: {label: "post_title"},
     text_date: {label: "date"},
     text_tags: {label: "tags", type: "set"},
@@ -1497,7 +1497,8 @@ settings.corpora["bloggmix1998"] = {
     within: settings.defaultWithin,
     context: defaultContext,
     attributes: modernAttrs,
-    structAttributes: bloggmix_structs
+    structAttributes: bloggmix_structs,
+    defaultFilters: ["blog_categories"]
 };
 
 settings.corpora["bloggmix1999"] = {
@@ -1506,7 +1507,8 @@ settings.corpora["bloggmix1999"] = {
     within: settings.defaultWithin,
     context: defaultContext,
     attributes: modernAttrs,
-    structAttributes: bloggmix_structs
+    structAttributes: bloggmix_structs,
+    defaultFilters: ["blog_categories"]
 };
 
 settings.corpora["bloggmix2000"] = {

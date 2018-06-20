@@ -29,7 +29,9 @@ settings.corpora["lb"] = {
         "text_date": {label: "imprintyear"},
         "page_n": {label: "page"},
         "page_url": {label: "pagelink", type: "url"}
-    }
+    },
+    // TODO: won't generate autocomplete, just a list
+    // defaultFilters: ["text_author", "text_title"]
 };
 
 settings.corpusListing = new CorpusListing(settings.corpora);
