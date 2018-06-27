@@ -2012,7 +2012,7 @@ settings.corpora["ivip"] = {
             isStructAttr: true
         },
     },
-    structAttributes: {
+    structAttributes: _.extend({}, commonStructAttrs, {
         text_country: {
             label: "country",
             order: 10,
@@ -2044,7 +2044,7 @@ settings.corpora["ivip"] = {
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
         text_mediafileext: {displayType: "hidden"}
-    },
+    }),
     customAttributes: {
         video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip/"),
         text_speaker_custom: {
@@ -2182,12 +2182,7 @@ settings.corpora["ivip-demo"] = {
             isStructAttr: true
         },
     },
-    structAttributes: {
-        text_blingbring: lexClassesText.text_blingbring,
-        text_swefn: lexClassesText.text_swefn,
-        text_lix: readability.lix,
-        text_ovix: readability.ovix,
-        text_nk: readability.nk,
+    structAttributes: _.extend({}, commonStructAttrs, {
         text_country: {
             label: "country",
             order: 10,
@@ -2219,7 +2214,7 @@ settings.corpora["ivip-demo"] = {
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
         text_mediafileext: {displayType: "hidden"}
-    },
+    }),
     customAttributes: {
         video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip-demo/"),
         text_speaker_custom: {
@@ -2384,14 +2379,9 @@ settings.corpora["suc3"] = {
             isStructAttr: true
         }
     }),
-    structAttributes: {
-        text_id: {label: "text"},
-        text_blingbring: lexClassesText.text_blingbring,
-        text_swefn: lexClassesText.text_swefn,
-        text_lix: readability.lix,
-        text_ovix: readability.ovix,
-        text_nk: readability.nk,
-    }
+    structAttributes: _.extend({}, commonStructAttrs, {
+        text_id: {label: "text"}
+    })
 };
 
 settings.corpora["storsuc"] = {
@@ -3795,18 +3785,13 @@ settings.corpora["twitter-2015"] = {
         "1 text": "1 text"
     },
     attributes: modernAttrs2,
-    structAttributes: {
+    structAttributes: _.extend({}, commonStructAttrs, {
         user_username: {label: "username2"},
         text_datetime: {label: "date"},
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
         text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lexClassesText.text_blingbring,
-        text_swefn: lexClassesText.text_swefn,
-        text_lix: readability.lix,
-        text_ovix: readability.ovix,
-        text_nk: readability.nk
-    },
+    }),
     customAttributes: {
         text_url: {
             label: "url",
@@ -3829,18 +3814,13 @@ settings.corpora["twitter-2016"] = {
         "1 text": "1 text"
     },
     attributes: modernAttrs2,
-    structAttributes: {
+    structAttributes: _.extend({}, commonStructAttrs, {
         user_username: {label: "username2"},
         text_datetime: {label: "date"},
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
-        text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lexClassesText.text_blingbring,
-        text_swefn: lexClassesText.text_swefn,
-        text_lix: readability.lix,
-        text_ovix: readability.ovix,
-        text_nk: readability.nk
-    },
+        text_id: {label: "id", displayType: "hidden"}
+    }),
     customAttributes: {
         text_url: {
             label: "url",
@@ -3863,18 +3843,13 @@ settings.corpora["twitter-2017"] = {
         "1 text": "1 text"
     },
     attributes: modernAttrs2,
-    structAttributes: {
+    structAttributes: _.extend({}, commonStructAttrs, {
         user_username: {label: "username2"},
         text_datetime: {label: "date"},
         text_retweets: {label: "retweets"},
         text_favourite_count: {label: "favourite_count"},
-        text_id: {label: "id", displayType: "hidden"},
-        text_blingbring: lexClassesText.text_blingbring,
-        text_swefn: lexClassesText.text_swefn,
-        text_lix: readability.lix,
-        text_ovix: readability.ovix,
-        text_nk: readability.nk
-    },
+        text_id: {label: "id", displayType: "hidden"}
+    }),
     customAttributes: {
         text_url: {
             label: "url",

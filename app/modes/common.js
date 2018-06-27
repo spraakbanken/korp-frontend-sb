@@ -522,6 +522,14 @@ var readability = {
     }
 };
 
+var commonStructAttrs = {
+    text_blingbring: lexClassesText.text_blingbring,
+    text_swefn: lexClassesText.text_swefn,
+    text_lix: readability.lix,
+    text_ovix: readability.ovix,
+    text_nk: readability.nk
+};
+
 settings.posset = {
    type: "set",
    label: "posset",
@@ -736,6 +744,7 @@ module.exports = {
   spContext,
   modernAttrs,
   modernAttrs2,
+  commonStructAttrs,
   defaultContext,
   attrs,
   sattrs,
