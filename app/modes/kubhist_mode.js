@@ -83,7 +83,7 @@ settings.aftonbladstruct_attributes = {
     text_issn: {label: "issn", order: 30}
 };
 
-digidailydescription = '<a href="http://feedback.tidningar.kb.se/viewtopic.php?id=127" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
+digidailydescription = '<a href="http://feedback.blogg.kb.se/forums/topic/digidailyprojekten-2010-2014/" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
 
 $("#lemgram_list_item").remove();
 $("#showLineDiagram").remove();
