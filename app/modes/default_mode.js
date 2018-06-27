@@ -2378,14 +2378,19 @@ settings.corpora["suc3"] = {
     context: {
         "1 sentence": "1 sentence"
     },
-    attributes: _.extend({}, modernAttrs, {
+    attributes: _.extend({}, modernAttrs2, {
         name_type: {
             label: "suc_name",
             isStructAttr: true
         }
     }),
     structAttributes: {
-        text_id: {label: "text"}
+        text_id: {label: "text"},
+        text_blingbring: lexClassesText.text_blingbring,
+        text_swefn: lexClassesText.text_swefn,
+        text_lix: readability.lix,
+        text_ovix: readability.ovix,
+        text_nk: readability.nk,
     }
 };
 
