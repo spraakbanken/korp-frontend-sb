@@ -18,7 +18,7 @@ settings.corporafolders = {};
 settings.corporafolders.buugaag = {
     title: "Buugaag Dugsiyeed",
     contents: ["somali-1971-79", "somali-1993-94", "somali-2001", "somali-itoobiya",
-        "somali-hargeysa-2010", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
+        "somali-hargeysa-2010", "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
         "somali-cb-2001-03-soomaaliya", "somali-cd-2012-itoobiya", "somali-saynis-1972-77", "somali-saynis-1994-96",
         "somali-saynis", "somali-saynis-2011-soomaaliya", "somali-xisaab-1971-79",
         "somali-xisaab-1994-97", "somali-xisaab-2001-hargeysa", "somali-xisaab-2001-nayroobi",
@@ -27,7 +27,10 @@ settings.corporafolders.buugaag = {
 
 settings.corporafolders.warar = {
     title: "Warar",
-    contents: ["somali-bbc", "somali-radioden2014", "somali-radioswe2014", "somali-radiomuq", "somali-ogaden", "somali-wardheer"]
+    contents: ["somali-bbc", "somali-haatuf-news-2002", "somali-haatuf-news-2003", "somali-haatuf-news-2004",
+        "somali-haatuf-news-2005", "somali-haatuf-news-2006", "somali-haatuf-news-2007", "somali-haatuf-news-2008",
+        "somali-haatuf-news-2009", "somali-radioden2014", "somali-radioswe2014", "somali-radiomuq", "somali-ogaden",
+        "somali-wardheer"]
 };
 
 settings.corporafolders.wb = {
@@ -97,6 +100,150 @@ settings.corpora["somali-1993-94"] = {
     structAttributes: {
         text_year: somalis.year,
         text_place: somalis.place,
+        text_title: somalis.title,
+        text_source: somalis.source,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-haatuf-news-2002"] = {
+    id: "somali-haatuf-news-2002",
+    title: "Haatuf News 2002",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2003"] = {
+    id: "somali-haatuf-news-2003",
+    title: "Haatuf News 2003",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2004"] = {
+    id: "somali-haatuf-news-2004",
+    title: "Haatuf News 2004",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2005"] = {
+    id: "somali-haatuf-news-2005",
+    title: "Haatuf News 2005",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2006"] = {
+    id: "somali-haatuf-news-2006",
+    title: "Haatuf News 2006",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2007"] = {
+    id: "somali-haatuf-news-2007",
+    title: "Haatuf News 2007",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2008"] = {
+    id: "somali-haatuf-news-2008",
+    title: "Haatuf News 2008",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-haatuf-news-2009"] = {
+    id: "somali-haatuf-news-2009",
+    title: "Haatuf News 2009",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_date: somalis.date,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_place: somalis.place,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-caafimaad-1983"] = {
+    id: "somali-caafimaad-1983",
+    title: "Caafimaad 1983",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_publisher: somalis.publisher,
         text_title: somalis.title,
         text_source: somalis.source,
         page_n: somalis.page
