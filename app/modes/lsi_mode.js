@@ -33,7 +33,6 @@ settings.corpora["lsi"] = {
     structAttributes: {
         "page_pno": {label: "page"},
         "page_family": {label: "languagefamily"},
-        "page_language": {label: "language"},
         "page_lsi_classification": {label: "lsi_classification"},
         "page_ethnologue_classification": {label: "ethnologue_classification"},
         "page_glottolog_classification": {label: "glottolog_classification"},
@@ -41,8 +40,9 @@ settings.corpora["lsi"] = {
         "page_longitude": {label: "longitude"},
         "page_page_tables_url": {label: "page_tables", type: "url"},
         "page_page_url": {label: "pagesource", type: "url"},
-        "page_language": {label: "language"},
+        "page_normalized_language_name": {label: "language"},
         "page_iso_code": {label: "iso_code"},
+        "page_q_name": {label: "q_name"},
         "corpus_vol": {label: "volume"},
         "corpus_part": {label: "part"},
         "sentence_id": {label: "sentence"}

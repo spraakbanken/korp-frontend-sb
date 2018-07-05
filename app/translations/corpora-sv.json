@@ -134,6 +134,7 @@
     "glottolog_classification": "Glottolog-klassifikation",
     "latitude": "latitud",
     "longitude": "longitud",
+    "q_name": "namn i frågeformulär",
 
     "blog_title": "bloggtitel",
     "blog_url": "bloggaddress",
