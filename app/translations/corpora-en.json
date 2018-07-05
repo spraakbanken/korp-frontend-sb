@@ -135,6 +135,7 @@
     "glottolog_classification": "Glottolog classification",
     "latitude": "latitude",
     "longitude": "longitude",
+    "q_name": "name in questionnaires",
 
     "blog_title": "blog title",
     "blog_url": "blog address",
