@@ -31,21 +31,21 @@ settings.corpora["lsi"] = {
         ref: attrs.ref
     },
     structAttributes: {
-        "page_pno": {label: "page"},
-        "page_family": {label: "languagefamily"},
-        "page_lsi_classification": {label: "lsi_classification"},
-        "page_ethnologue_classification": {label: "ethnologue_classification"},
-        "page_glottolog_classification": {label: "glottolog_classification"},
-        "page_latitude": {label: "latitude"},
-        "page_longitude": {label: "longitude"},
-        "page_page_tables_url": {label: "page_tables", type: "url"},
-        "page_page_url": {label: "pagesource", type: "url"},
-        "page_normalized_language_name": {label: "language"},
-        "page_iso_code": {label: "iso_code"},
-        "page_q_name": {label: "q_name"},
-        "corpus_vol": {label: "volume"},
-        "corpus_part": {label: "part"},
-        "sentence_id": {label: "sentence"}
+        "corpus_vol": {label: "volume", order: 10},
+        "corpus_part": {label: "part", order: 20},
+        "page_normalized_language_name": {label: "language", order: 30},
+        "page_pno": {label: "page", order: 40},
+        "page_family": {label: "languagefamily", order: 50},
+        "page_lsi_classification": {label: "lsi_classification", order: 60},
+        "page_ethnologue_classification": {label: "ethnologue_classification", order: 70},
+        "page_glottolog_classification": {label: "glottolog_classification", order: 80},
+        "page_latitude": {label: "latitude", order: 90},
+        "page_longitude": {label: "longitude", order: 100},
+        "page_page_tables_url": {label: "page_tables", type: "url", order: 110},
+        "page_page_url": {label: "pagesource", type: "url", order: 120},
+        "page_iso_code": {label: "iso_code", order: 130},
+        "page_q_name": {label: "q_name", order: 140},
+        "sentence_id": {label: "sentence", order: 150}
     },
     customAttributes: {
         "image": {
@@ -63,7 +63,8 @@ settings.corpora["lsi"] = {
                 a.append(image);
                 div.append(a);
                 return div;
-            }
+            },
+            order: 200
         }
     }
 };
