@@ -208,7 +208,7 @@ settings.corpora["magmakolumner"] = {
     attributes: modernAttrs,
     structAttributes: {
         text_author: {label: "author"},
-        text_title: {label: "title"},
+        text_title: {label: "title", order : 1},
         text_date: {label: "date"}
     }
 };
