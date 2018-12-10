@@ -227,7 +227,7 @@ settings.defaultOptions = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v7";
+settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v8";
 settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.strixUrl = "https://spraakbanken.gu.se/strix/"
