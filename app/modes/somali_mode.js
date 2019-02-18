@@ -18,11 +18,17 @@ settings.corporafolders = {};
 settings.corporafolders.buugaag = {
     title: "Buugaag Dugsiyeed",
     contents: ["somali-1971-79", "somali-1993-94", "somali-2001", "somali-itoobiya",
-        "somali-hargeysa-2010", "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
-        "somali-cb-2001-03-soomaaliya", "somali-cd-2012-itoobiya", "somali-saynis-1972-77", "somali-saynis-1994-96",
-        "somali-saynis", "somali-saynis-2011-soomaaliya", "somali-xisaab-1971-79",
+        "somali-hargeysa-2010",
+        "somali-as-2013", "somali-as-2016", "somali-as-2018",
+        "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
+        "somali-cb-2001-03-soomaaliya",
+        "somali-cb-2010", "somali-cb-2011", "somali-cb-2016", "somali-cb-2018",
+        "somali-cd-2012-itoobiya", "somali-saynis-1972-77", "somali-saynis-1994-96",
+        "somali-saynis", "somali-saynis-2001", "somali-saynis-2010", "somali-saynis-2011-soomaaliya",
+        "somali-saynis-2016", "somali-saynis-2018", "somali-xisaab-1971-79",
         "somali-xisaab-1994-97", "somali-xisaab-2001-hargeysa", "somali-xisaab-2001-nayroobi",
-        "somali-xisaab-2011-itoobiya"]
+        "somali-xisaab-2011-itoobiya", "somali-xisaab-2016-somaliland", "somali-xisaab-2018-soomaaliya"
+    ]
 };
 
 settings.corporafolders.warar = {
@@ -334,6 +340,57 @@ settings.corpora["somali-hargeysa-2010"] = {
     }
 };
 
+settings.corpora["somali-as-2013"] = {
+    id: "somali-as-2013",
+    title: "Af-Soomaali 2013 Somaliland",
+    description: "",
+    within: spWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        text_edition: somalis.edition,
+        text_place: somalis.place,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_year: somalis.year,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-as-2016"] = {
+    id: "somali-as-2016",
+    title: "Af-Soomaali 2016 Somaliland",
+    description: "",
+    within: spWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        text_edition: somalis.edition,
+        text_place: somalis.place,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_year: somalis.year,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-as-2018"] = {
+    id: "somali-as-2018",
+    title: "Af-Soomaali 2018 Soomaaliya",
+    description: "",
+    within: spWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        text_edition: somalis.edition,
+        text_place: somalis.place,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_year: somalis.year,
+        page_n: somalis.page
+    }
+};
+
 settings.corpora["somali-hargeysa"] = {
     id: "somali-hargeysa",
     title: "Cilmiga Bulshada 2001 Somaliland",
@@ -387,6 +444,179 @@ settings.corpora["somali-saynis-2011-soomaaliya"] = {
         text_editor: somalis.editor,
         text_edition: somalis.edition,
         text_sponsor: somalis.sponsor,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-cb-2010"] = {
+    id: "somali-cb-2010",
+    title: "Cilmiga Bulshada 2010 Somaliland",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_editor: somalis.editor,
+        text_edition: somalis.edition,
+        text_sponsor: somalis.sponsor,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-cb-2011"] = {
+    id: "somali-cb-2011",
+    title: "Cilmiga Bulshada 2011 Itoobiya",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-cb-2016"] = {
+    id: "somali-cb-2016",
+    title: "Cilmiga Bulshada 2016 Somaliland",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-cb-2018"] = {
+    id: "somali-cb-2018",
+    title: "Cilmiga Bulshada 2018 Soomaaliya",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-saynis-2010"] = {
+    id: "somali-saynis-2010",
+    title: "Saynis 2010 Somaliland",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-saynis-2016"] = {
+    id: "somali-saynis-2016",
+    title: "Saynis 2016 Somaliland",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-saynis-2018"] = {
+    id: "somali-saynis-2018",
+    title: "Saynis 2018 Soomaaliya",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-xisaab-2016-somaliland"] = {
+    id: "somali-xisaab-2016-somaliland",
+    title: "Xisaab 2016 Somaliland",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-xisaab-2018-soomaaliya"] = {
+    id: "somali-xisaab-2018-soomaaliya",
+    title: "Xisaab 2018 Soomaaliya",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        page_n: somalis.page
+    }
+};
+
+settings.corpora["somali-saynis-2001"] = {
+    id: "somali-saynis-2001",
+    title: "Saynis 2001 Soomaaliya",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_edition: somalis.edition,
+        text_editor: somalis.editor,
         page_n: somalis.page
     }
 };
