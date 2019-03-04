@@ -16,6 +16,7 @@ settings.corpora["kioping"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
