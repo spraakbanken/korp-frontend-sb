@@ -11,6 +11,7 @@ settings.corpora = {};
 settings.corporafolders = {};
 
 settings.runebergattributes = {
+    pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,
     lex: attrs.lemgram,

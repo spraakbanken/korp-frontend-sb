@@ -109,6 +109,7 @@ settings.ubkvtstruct_attributes = {
 
 //RUNEBERG
 settings.runebergattributes = {
+    pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,
     lex: attrs.lemgram,
@@ -331,6 +332,7 @@ settings.corpora["bellman"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -360,6 +362,7 @@ settings.corpora["betankande"] = {
         "1 page": "1 page"
     },
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -388,6 +391,7 @@ settings.corpora["vasabrev"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -2033,6 +2037,7 @@ settings.corpora["vasabibel-nt"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -2140,6 +2145,7 @@ settings.corpora["kioping"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -2194,6 +2200,7 @@ settings.corpora["akerbruk"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
@@ -2231,6 +2238,7 @@ settings.corpora["kvah"] = {
     within: spWithin,
     context: spContext,
     attributes: {
+        pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
