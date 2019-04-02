@@ -92,9 +92,13 @@ $("#showLineDiagram").remove();
 settings.corpora = {};
 settings.corporafolders = {};
 
+settings.corporafolders.kubhist = {
+    title: "Kubhist",
+    contents: []
+};
 
 
-settings.corporafolders.aftonbladet = {
+settings.corporafolders.kubhist.aftonbladet = {
     title: "Aftonbladet",
     contents: ["kubhist-aftonbladet-1830", "kubhist-aftonbladet-1840", "kubhist-aftonbladet-1850", "kubhist-aftonbladet-1860"]
 };
@@ -149,7 +153,7 @@ settings.corpora["kubhist-aftonbladet-1860"] = {
 
 
 
-settings.corporafolders.blekingsposten = {
+settings.corporafolders.kubhist.blekingsposten = {
     title: "Blekingsposten",
     contents: ["kubhist-blekingsposten-1850", "kubhist-blekingsposten-1860", "kubhist-blekingsposten-1870", "kubhist-blekingsposten-1880"]
 };
@@ -203,7 +207,7 @@ settings.corpora["kubhist-blekingsposten-1880"] = {
     customAttributes: kubhist_custom_attributes
 };
 
-settings.corporafolders.bollnastidning = {
+settings.corporafolders.kubhist.bollnastidning = {
     title: "Bollnäs tidning",
     contents: ["kubhist-bollnastidning-1870", "kubhist-bollnastidning-1880"]
 };
@@ -234,7 +238,7 @@ settings.corpora["kubhist-bollnastidning-1880"] = {
 
 
 
-settings.corporafolders.dalpilen = {
+settings.corporafolders.kubhist.dalpilen = {
     title: "Dalpilen",
     contents: ["kubhist-dalpilen-1850", "kubhist-dalpilen-1860", "kubhist-dalpilen-1870", "kubhist-dalpilen-1880", "kubhist-dalpilen-1890", "kubhist-dalpilen-1900", "kubhist-dalpilen-1910", "kubhist-dalpilen-1920"]
 };
@@ -337,7 +341,7 @@ settings.corpora["kubhist-dalpilen-1920"] = {
 
 
 
-settings.corporafolders.fahluweckoblad = {
+settings.corporafolders.kubhist.fahluweckoblad = {
     title: "Fahlu weckoblad",
     contents: ["kubhist-fahluweckoblad-1780", "kubhist-fahluweckoblad-1790", "kubhist-fahluweckoblad-1800", "kubhist-fahluweckoblad-1810", "kubhist-fahluweckoblad-1820"]
 };
@@ -404,7 +408,7 @@ settings.corpora["kubhist-fahluweckoblad-1820"] = {
 
 
 
-settings.corporafolders.faluposten = {
+settings.corporafolders.kubhist.faluposten = {
     title: "Faluposten",
     contents: ["kubhist-faluposten-1860", "kubhist-faluposten-1870", "kubhist-faluposten-1880", "kubhist-faluposten-1890"]
 };
@@ -459,7 +463,7 @@ settings.corpora["kubhist-faluposten-1890"] = {
 
 
 
-settings.corporafolders.folketsrost = {
+settings.corporafolders.kubhist.folketsrost = {
     title: "Folkets röst",
     contents: ["kubhist-folketsrost-1850", "kubhist-folketsrost-1860"]
 };
@@ -490,7 +494,7 @@ settings.corpora["kubhist-folketsrost-1860"] = {
 
 
 
-settings.corporafolders.gotlandstidning = {
+settings.corporafolders.kubhist.gotlandstidning = {
     title: "Gotlands tidning",
     contents: ["kubhist-gotlandstidning-1860", "kubhist-gotlandstidning-1870", "kubhist-gotlandstidning-1880"]
 };
@@ -533,7 +537,7 @@ settings.corpora["kubhist-gotlandstidning-1880"] = {
 
 
 
-settings.corporafolders.goteborgsweckoblad = {
+settings.corporafolders.kubhist.goteborgsweckoblad = {
     title: "Göteborgs weckoblad",
     contents: ["kubhist-goteborgsweckoblad-1870", "kubhist-goteborgsweckoblad-1880", "kubhist-goteborgsweckoblad-1890"]
 };
@@ -576,7 +580,7 @@ settings.corpora["kubhist-goteborgsweckoblad-1890"] = {
 
 
 
-settings.corporafolders.gotheborgsweckolista = {
+settings.corporafolders.kubhist.gotheborgsweckolista = {
     title: "Götheborgs weckolista",
     contents: ["kubhist-gotheborgsweckolista-1740", "kubhist-gotheborgsweckolista-1750"]
 };
@@ -607,7 +611,7 @@ settings.corpora["kubhist-gotheborgsweckolista-1750"] = {
 
 
 
-settings.corporafolders.jonkopingsbladet = {
+settings.corporafolders.kubhist.jonkopingsbladet = {
     title: "Jönköpingsbladet",
     contents: ["kubhist-jonkopingsbladet-1840", "kubhist-jonkopingsbladet-1850", "kubhist-jonkopingsbladet-1860", "kubhist-jonkopingsbladet-1870"]
 };
@@ -662,7 +666,7 @@ settings.corpora["kubhist-jonkopingsbladet-1870"] = {
 
 
 
-settings.corporafolders.kalmar = {
+settings.corporafolders.kubhist.kalmar = {
     title: "Kalmar",
     contents: ["kubhist-kalmar-1860", "kubhist-kalmar-1870", "kubhist-kalmar-1880", "kubhist-kalmar-1890", "kubhist-kalmar-1900", "kubhist-kalmar-1910"]
 };
@@ -741,7 +745,7 @@ settings.corpora["kubhist-kalmar-1910"] = {
 
 
 
-settings.corporafolders.lindesbergsallehanda = {
+settings.corporafolders.kubhist.lindesbergsallehanda = {
     title: "Lindesbergs allehanda",
     contents: ["kubhist-lindesbergsallehanda-1870", "kubhist-lindesbergsallehanda-1880"]
 };
@@ -772,7 +776,7 @@ settings.corpora["kubhist-lindesbergsallehanda-1880"] = {
 
 
 
-settings.corporafolders.norraskane = {
+settings.corporafolders.kubhist.norraskane = {
     title: "Norra Skåne",
     contents: ["kubhist-norraskane-1880", "kubhist-norraskane-1890"]
 };
@@ -803,7 +807,7 @@ settings.corpora["kubhist-norraskane-1890"] = {
 
 
 
-settings.corporafolders.postochinrikestidning = {
+settings.corporafolders.kubhist.postochinrikestidning = {
     title: "Post- och Inrikes Tidningar",
     contents: ["kubhist-postochinrikestidning-1770", "kubhist-postochinrikestidning-1780", "kubhist-postochinrikestidning-1790", "kubhist-postochinrikestidning-1800",
         "kubhist-postochinrikestidning-1810", "kubhist-postochinrikestidning-1820", "kubhist-postochinrikestidning-1830", "kubhist-postochinrikestidning-1840",
@@ -932,7 +936,7 @@ settings.corpora["kubhist-postochinrikestidning-1860"] = {
 
 
 
-settings.corporafolders.stockholmsposten = {
+settings.corporafolders.kubhist.stockholmsposten = {
     title: "Stockholmsposten",
     contents: ["kubhist-stockholmsposten-1770", "kubhist-stockholmsposten-1780", "kubhist-stockholmsposten-1790", "kubhist-stockholmsposten-1800",
         "kubhist-stockholmsposten-1810", "kubhist-stockholmsposten-1820", "kubhist-stockholmsposten-1830"]
@@ -1024,7 +1028,7 @@ settings.corpora["kubhist-stockholmsposten-1830"] = {
 
 
 
-settings.corporafolders.tidningforwenersborg = {
+settings.corporafolders.kubhist.tidningforwenersborg = {
     title: "Tidning för Wenersborgs stad och län",
     contents: ["kubhist-tidningforwenersborg-1840" , "kubhist-tidningforwenersborg-1850", "kubhist-tidningforwenersborg-1860", "kubhist-tidningforwenersborg-1870",
         "kubhist-tidningforwenersborg-1880", "kubhist-tidningforwenersborg-1890"]
@@ -1104,7 +1108,7 @@ settings.corpora["kubhist-tidningforwenersborg-1890"] = {
 
 
 
-settings.corporafolders.wermlandslanstidning = {
+settings.corporafolders.kubhist.wermlandslanstidning = {
     title: "Wermlands läns tidning",
     contents: ["kubhist-wermlandslanstidning-1870"]
 };
@@ -1123,7 +1127,7 @@ settings.corpora["kubhist-wermlandslanstidning-1870"] = {
 
 
 
-settings.corporafolders.wernamotidning = {
+settings.corporafolders.kubhist.wernamotidning = {
     title: "Wernamo tidning",
     contents: ["kubhist-wernamotidning-1870", "kubhist-wernamotidning-1880"]
 };
@@ -1154,7 +1158,7 @@ settings.corpora["kubhist-wernamotidning-1880"] = {
 
 
 
-settings.corporafolders.ostergotlandsveckoblad = {
+settings.corporafolders.kubhist.ostergotlandsveckoblad = {
     title: "Östergötlands veckoblad",
     contents: ["kubhist-ostergotlandsveckoblad-1880", "kubhist-ostergotlandsveckoblad-1890"]
 };
@@ -1185,7 +1189,7 @@ settings.corpora["kubhist-ostergotlandsveckoblad-1890"] = {
 
 
 
-settings.corporafolders.ostgotaposten = {
+settings.corporafolders.kubhist.ostgotaposten = {
     title: "Östgötaposten",
     contents: ["kubhist-ostgotaposten-1890", "kubhist-ostgotaposten-1900", "kubhist-ostgotaposten-1910"]
 };
@@ -1225,6 +1229,90 @@ settings.corpora["kubhist-ostgotaposten-1910"] = {
     structAttributes: settings.kubhiststruct_attributes
 };
 
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// kubhist2 settings
+
+settings.preselectedCorpora = ["kubhist2"];
+
+
+settings.corporafolders.kubhist2 = {
+    title: "Kubhist 2",
+    contents: []
+};
+
+
+settings.kubhist2attributes = {
+    lemma: attrs.baseform,
+    pos: attrs.pos,
+    lex: attrs.lemgram,
+    dalinlex: attrs.dalinlemgram,
+    dephead: attrs.dephead,
+    deprel: attrs.deprel,
+    ref: attrs.ref,
+    ne_ex: attrs.ne_ex,
+    ne_type: attrs.ne_type,
+    ne_subtype: attrs.ne_subtype,
+    ne_name: attrs.ne_name,
+    sentiment: modernAttrs2.sentiment,
+    blingbring: modernAttrs2.blingbring,
+    swefn: modernAttrs2.swefn
+};
+
+settings.kubhist2struct_attributes = _.extend({}, commonStructAttrs, {
+    text_title: {
+        label: "title",
+        order: 10,
+        opts: liteOptions
+    },
+    text_date: {label: "date", order: 11},
+    page_no: {label: "page", order: 20},
+    text_edition: {label: "edition", order: 25},
+    text_libris: {label: "librisid", order: 30},
+    page_filename: {
+        label: "source",
+        order: 50,
+        pattern: "<div><div>Kungliga Biblioteket</div><div><a href='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.page_no %>/' target='_blank'><img src='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.page_no %>_thumb.jpg' width='100%'></img></a></div></div>"
+    },
+    string_wordbreak: {
+      label: "wordbreak"
+    }
+});
+
+digidailydescription = '<a href="http://feedback.blogg.kb.se/forums/topic/digidailyprojekten-2010-2014/" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
+
+$("#lemgram_list_item").remove();
+$("#showLineDiagram").remove();
+
+kubhist2_settings = {
+    morphology: "saldom|dalinm|swedbergm",
+    description: digidailydescription,
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: settings.kubhist2attributes,
+    structAttributes: settings.kubhist2struct_attributes
+};
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+// kubhist2 test corpus
+settings.corporafolders.kubhist2["barometern"] = {
+    title: "Barometern",
+    contents: ["kubhist2-barometern-1840", "kubhist2-barometern-1850"]
+};
+
+settings.corpora["kubhist2-barometern-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-barometern-1840",
+    title: "Barometern 1840-talet"
+});
+
+settings.corpora["kubhist2-barometern-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-barometern-1850",
+    title: "Barometern 1850-talet"
+});
+
+/////////////////////////////////////////////////////////////////////////////////////
 settings.corpora = _(settings.corpora)
                         .sortBy("title")
                         .map(function(item) {return [item.id, item]})

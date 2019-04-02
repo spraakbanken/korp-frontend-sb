@@ -1394,5 +1394,7 @@
     "langcode_pol": "Polska",
     "langcode_tha": "Thailändska",
     "langcode_tur": "Turkiska",
-    "langcode_swa": "Swahili"
+    "langcode_swa": "Swahili",
+
+    "wordbreak": "avstavning"
 }

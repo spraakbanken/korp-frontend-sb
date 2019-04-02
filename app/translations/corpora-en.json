@@ -1395,5 +1395,7 @@
     "langcode_pol": "Polish",
     "langcode_tha": "Thai",
     "langcode_tur": "Turkish",
-    "langcode_swa": "Swahili"
+    "langcode_swa": "Swahili",
+
+    "wordbreak": "hyphenation"
 }

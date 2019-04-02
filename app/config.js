@@ -145,11 +145,6 @@ settings.modeConfig = [
         mode: "kubhist"
     },
     {
-        localekey: "kubhist2",
-        mode: "kubhist2",
-        labOnly: true
-    },
-    {
         localekey: "all_hist",
         mode: "all_hist",
     },
