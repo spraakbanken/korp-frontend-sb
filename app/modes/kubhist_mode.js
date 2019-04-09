@@ -1267,15 +1267,15 @@ settings.kubhist2struct_attributes = _.extend({}, commonStructAttrs, {
         opts: liteOptions
     },
     text_date: {label: "date", order: 11},
-    page_no: {label: "page", order: 20},
+    Page_n: {label: "page", order: 20},
     text_edition: {label: "edition", order: 25},
     text_libris: {label: "librisid", order: 30},
-    page_filename: {
+    Page_filename: {
         label: "source",
         order: 50,
-        pattern: "<div><div>Kungliga Biblioteket</div><div><a href='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.page_no %>/' target='_blank'><img src='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.page_no %>_thumb.jpg' width='100%'></img></a></div></div>"
+        pattern: "<div><div>Kungliga Biblioteket</div><div><a href='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.Page_n %>/' target='_blank'><img src='https://tidningar.kb.se/<%= struct_attrs.text_libris %>/<%= struct_attrs.text_date %>/edition/<%= struct_attrs.text_edition %>/part/1/page/<%= struct_attrs.Page_n %>_thumb.jpg' width='100%'></img></a></div></div>"
     },
-    string_wordbreak: {
+    String_wordbreak: {
       label: "wordbreak"
     }
 });
@@ -1297,19 +1297,14 @@ kubhist2_settings = {
 /////////////////////////////////////////////////////////////////////////////////////
 
 // kubhist2 test corpus
-settings.corporafolders.kubhist2["barometern"] = {
-    title: "Barometern",
-    contents: ["kubhist2-barometern-1840", "kubhist2-barometern-1850"]
+settings.corporafolders.kubhist2["carlscronaswekoblad"] = {
+    title: "Carlscronas Wekoblad",
+    contents: ["kubhist2-carlscronaswekoblad-1850"]
 };
 
-settings.corpora["kubhist2-barometern-1840"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-barometern-1840",
-    title: "Barometern 1840-talet"
-});
-
-settings.corpora["kubhist2-barometern-1850"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-barometern-1850",
-    title: "Barometern 1850-talet"
+settings.corpora["kubhist2-carlscronaswekoblad-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-carlscronaswekoblad-1850",
+    title: "Carlscronas Wekoblad 1850-talet"
 });
 
 /////////////////////////////////////////////////////////////////////////////////////
