@@ -1465,6 +1465,11 @@ settings.corporafolders.kubhist2["vestmanlandslanstidning"] = {
     // contents: ["kubhist2-vestmanlandslanstidning-1830", "kubhist2-vestmanlandslanstidning-1840", "kubhist2-vestmanlandslanstidning-1850", "kubhist2-vestmanlandslanstidning-1860", "kubhist2-vestmanlandslanstidning-1870", "kubhist2-vestmanlandslanstidning-1880", "kubhist2-vestmanlandslanstidning-1890"]
 };
 
+settings.corporafolders.kubhist2["wexjobladet"] = {
+    title: "Wexjöbladet",
+    contents: ["kubhist2-wexjobladet-1810", "kubhist2-wexjobladet-1820", "kubhist2-wexjobladet-1830", "kubhist2-wexjobladet-1840", "kubhist2-wexjobladet-1850"]
+};
+
 /////////////////////////////////////////////////////////////////////////////////////
 // Corpora
 
@@ -2006,6 +2011,31 @@ settings.corpora["kubhist2-stockholmsposten-1830"] = _.extend({}, kubhist2_setti
 settings.corpora["kubhist2-vestmanlandslanstidning-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-vestmanlandslanstidning-1830",
     title: "Vestmanlands Läns Tidning 1830-talet"
+});
+
+settings.corpora["kubhist2-wexjobladet-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wexjobladet-1810",
+    title: "Wexjöbladet 1810-talet"
+});
+
+settings.corpora["kubhist2-wexjobladet-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wexjobladet-1820",
+    title: "Wexjöbladet 1820-talet"
+});
+
+settings.corpora["kubhist2-wexjobladet-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wexjobladet-1830",
+    title: "Wexjöbladet 1830-talet"
+});
+
+settings.corpora["kubhist2-wexjobladet-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wexjobladet-1840",
+    title: "Wexjöbladet 1840-talet"
+});
+
+settings.corpora["kubhist2-wexjobladet-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wexjobladet-1850",
+    title: "Wexjöbladet 1850-talet"
 });
 
 /////////////////////////////////////////////////////////////////////////////////////
