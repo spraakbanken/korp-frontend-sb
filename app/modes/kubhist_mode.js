@@ -1369,6 +1369,102 @@ settings.corporafolders.kubhist2["folketsrost"] = {
     contents: ["kubhist2-folketsrost-1840", "kubhist2-folketsrost-1850", "kubhist2-folketsrost-1860"]
 };
 
+settings.corporafolders.kubhist2["ghost"] = {
+    title: "Göteborgs Handels- och Sjöfartstidning",
+    contents: ["kubhist2-ghost-1830"]
+    // contents: ["kubhist2-ghost-1830", "kubhist2-ghost-1840", "kubhist2-ghost-1850", "kubhist2-ghost-1860", "kubhist2-ghost-1870", "kubhist2-ghost-1880", "kubhist2-ghost-1890"]
+};
+
+settings.corporafolders.kubhist2["gotheborgsallehanda"] = {
+    title: "Götheborgs Allehanda",
+    contents: ["kubhist2-gotheborgsallehanda-1800", "kubhist2-gotheborgsallehanda-1810", "kubhist2-gotheborgsallehanda-1820", "kubhist2-gotheborgsallehanda-1830"]
+    // contents: ["kubhist2-gotheborgsallehanda-1770", "kubhist2-gotheborgsallehanda-1780", "kubhist2-gotheborgsallehanda-1790", "kubhist2-gotheborgsallehanda-1800", "kubhist2-gotheborgsallehanda-1810", "kubhist2-gotheborgsallehanda-1820", "kubhist2-gotheborgsallehanda-1830", "kubhist2-gotheborgsallehanda-1840"]
+};
+
+settings.corporafolders.kubhist2["gotheborgskanyheter"] = {
+    title: "Götheborgska Nyheter",
+    contents: ["kubhist2-gotheborgskanyheter-1800", "kubhist2-gotheborgskanyheter-1810", "kubhist2-gotheborgskanyheter-1820", "kubhist2-gotheborgskanyheter-1830"]
+    // contents: ["kubhist2-gotheborgskanyheter-1760", "kubhist2-gotheborgskanyheter-1770", "kubhist2-gotheborgskanyheter-1780", "kubhist2-gotheborgskanyheter-1790", "kubhist2-gotheborgskanyheter-1800", "kubhist2-gotheborgskanyheter-1810", "kubhist2-gotheborgskanyheter-1820", "kubhist2-gotheborgskanyheter-1830", "kubhist2-gotheborgskanyheter-1840"]
+};
+
+settings.corporafolders.kubhist2["inrikestidningar"] = {
+    title: "Inrikes Tidningar",
+    contents: ["kubhist2-inrikestidningar-1800", "kubhist2-inrikestidningar-1810", "kubhist2-inrikestidningar-1820"]
+    // contents: ["kubhist2-inrikestidningar-1760", "kubhist2-inrikestidningar-1770", "kubhist2-inrikestidningar-1780", "kubhist2-inrikestidningar-1790", "kubhist2-inrikestidningar-1800", "kubhist2-inrikestidningar-1810", "kubhist2-inrikestidningar-1820"]
+};
+
+settings.corporafolders.kubhist2["kalmar"] = {
+    title: "Kalmar",
+    contents: ["kubhist2-kalmar-1900"]
+    // contents: ["kubhist2-kalmar-1860", "kubhist2-kalmar-1870", "kubhist2-kalmar-1880", "kubhist2-kalmar-1890", "kubhist2-kalmar-1900"]
+};
+
+settings.corporafolders.kubhist2["lundsweckoblad"] = {
+    title: "Lunds Weckoblad",
+    contents: ["kubhist2-lundsweckoblad-1810", "kubhist2-lundsweckoblad-1820", "kubhist2-lundsweckoblad-1830"]
+    // contents: ["kubhist2-lundsweckoblad-1770", "kubhist2-lundsweckoblad-1780", "kubhist2-lundsweckoblad-1810", "kubhist2-lundsweckoblad-1820", "kubhist2-lundsweckoblad-1830", "kubhist2-lundsweckoblad-1840", "kubhist2-lundsweckoblad-1850", "kubhist2-lundsweckoblad-1860", "kubhist2-lundsweckoblad-1870", "kubhist2-lundsweckoblad-1880", "kubhist2-lundsweckoblad-1890"]
+};
+
+settings.corporafolders.kubhist2["malmoallehanda"] = {
+    title: "Malmö Allehanda",
+    contents: ["kubhist2-malmoallehanda-1820", "kubhist2-malmoallehanda-1830"]
+    // contents: ["kubhist2-malmoallehanda-1820", "kubhist2-malmoallehanda-1830", "kubhist2-malmoallehanda-1840", "kubhist2-malmoallehanda-1850", "kubhist2-malmoallehanda-1860", "kubhist2-malmoallehanda-1870", "kubhist2-malmoallehanda-1880", "kubhist2-malmoallehanda-1890"]
+};
+
+settings.corporafolders.kubhist2["norrkopingstidningar"] = {
+    title: "Norrköpings Tidningar",
+    contents: ["kubhist2-norrkopingstidningar-1800", "kubhist2-norrkopingstidningar-1810", "kubhist2-norrkopingstidningar-1820", "kubhist2-norrkopingstidningar-1830"]
+    // contents: ["kubhist2-norrkopingstidningar-1780", "kubhist2-norrkopingstidningar-1790", "kubhist2-norrkopingstidningar-1800", "kubhist2-norrkopingstidningar-1810", "kubhist2-norrkopingstidningar-1820", "kubhist2-norrkopingstidningar-1830", "kubhist2-norrkopingstidningar-1840", "kubhist2-norrkopingstidningar-1850", "kubhist2-norrkopingstidningar-1860", "kubhist2-norrkopingstidningar-1870", "kubhist2-norrkopingstidningar-1880", "kubhist2-norrkopingstidningar-1890"]
+};
+
+settings.corporafolders.kubhist2["nyttochgammalt"] = {
+    title: "Nytt och Gammalt",
+    contents: ["kubhist2-nyttochgammalt-1800", "kubhist2-nyttochgammalt-1810"]
+    // contents: ["kubhist2-nyttochgammalt-1780", "kubhist2-nyttochgammalt-1790", "kubhist2-nyttochgammalt-1800", "kubhist2-nyttochgammalt-1810"]
+};
+
+settings.corporafolders.kubhist2["ostgotacorrespondenten"] = {
+    title: "Östgöta Correspondenten",
+    contents: ["kubhist2-ostgotacorrespondenten-1830"]
+    // contents: ["kubhist2-ostgotacorrespondenten-1830", "kubhist2-ostgotacorrespondenten-1840", "kubhist2-ostgotacorrespondenten-1850", "kubhist2-ostgotacorrespondenten-1860", "kubhist2-ostgotacorrespondenten-1870", "kubhist2-ostgotacorrespondenten-1880", "kubhist2-ostgotacorrespondenten-1890"]
+};
+
+settings.corporafolders.kubhist2["ostgotaposten"] = {
+    title: "Östgötaposten",
+    contents: ["kubhist2-ostgotaposten-1900"]
+    // contents: ["kubhist2-ostgotaposten-1890", "kubhist2-ostgotaposten-1900"]
+};
+
+settings.corporafolders.kubhist2["post-ochinrikestidningar"] = {
+    title: "Post- och Inrikes Tidningar",
+    contents: ["kubhist2-post-ochinrikestidningar-1820", "kubhist2-post-ochinrikestidningar-1830"]
+    // contents: ["kubhist2-post-ochinrikestidningar-1820", "kubhist2-post-ochinrikestidningar-1830", "kubhist2-post-ochinrikestidningar-1840", "kubhist2-post-ochinrikestidningar-1850", "kubhist2-post-ochinrikestidningar-1860", "kubhist2-post-ochinrikestidningar-1870", "kubhist2-post-ochinrikestidningar-1880", "kubhist2-post-ochinrikestidningar-1890"]
+};
+
+settings.corporafolders.kubhist2["posttidningar"] = {
+    title: "Posttidningar",
+    contents: ["kubhist2-posttidningar-1800", "kubhist2-posttidningar-1810", "kubhist2-posttidningar-1820"]
+    // contents: ["kubhist2-posttidningar-1640", "kubhist2-posttidningar-1650", "kubhist2-posttidningar-1660", "kubhist2-posttidningar-1670", "kubhist2-posttidningar-1680", "kubhist2-posttidningar-1690", "kubhist2-posttidningar-1700", "kubhist2-posttidningar-1710", "kubhist2-posttidningar-1720", "kubhist2-posttidningar-1730", "kubhist2-posttidningar-1740", "kubhist2-posttidningar-1750", "kubhist2-posttidningar-1760", "kubhist2-posttidningar-1770", "kubhist2-posttidningar-1780", "kubhist2-    posttidningar-1790", "kubhist2-posttidningar-1800", "kubhist2-posttidningar-1810", "kubhist2-posttidningar-1820"]
+};
+
+settings.corporafolders.kubhist2["stockholmsdagblad"] = {
+    title: "Stockholms Dagblad",
+    contents: ["kubhist2-stockholmsdagblad-1820", "kubhist2-stockholmsdagblad-1830"]
+    // contents: ["kubhist2-stockholmsdagblad-1820", "kubhist2-stockholmsdagblad-1830", "kubhist2-stockholmsdagblad-1840", "kubhist2-stockholmsdagblad-1850", "kubhist2-stockholmsdagblad-1860", "kubhist2-stockholmsdagblad-1870", "kubhist2-stockholmsdagblad-1880", "kubhist2-stockholmsdagblad-1890"]
+};
+
+settings.corporafolders.kubhist2["stockholmsposten"] = {
+    title: "Stockholmsposten",
+    contents: ["kubhist2-stockholmsposten-1800", "kubhist2-stockholmsposten-1810", "kubhist2-stockholmsposten-1820", "kubhist2-stockholmsposten-1830"]
+    // contents: ["kubhist2-stockholmsposten-1770", "kubhist2-stockholmsposten-1780", "kubhist2-stockholmsposten-1790", "kubhist2-stockholmsposten-1800", "kubhist2-stockholmsposten-1810", "kubhist2-stockholmsposten-1820", "kubhist2-stockholmsposten-1830"]
+};
+
+settings.corporafolders.kubhist2["vestmanlandslanstidning"] = {
+    title: "Vestmanlands Läns Tidning",
+    contents: ["kubhist2-vestmanlandslanstidning-1830"]
+    // contents: ["kubhist2-vestmanlandslanstidning-1830", "kubhist2-vestmanlandslanstidning-1840", "kubhist2-vestmanlandslanstidning-1850", "kubhist2-vestmanlandslanstidning-1860", "kubhist2-vestmanlandslanstidning-1870", "kubhist2-vestmanlandslanstidning-1880", "kubhist2-vestmanlandslanstidning-1890"]
+};
+
 /////////////////////////////////////////////////////////////////////////////////////
 // Corpora
 
@@ -1720,6 +1816,196 @@ settings.corpora["kubhist2-folketsrost-1850"] = _.extend({}, kubhist2_settings, 
 settings.corpora["kubhist2-folketsrost-1860"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-folketsrost-1860",
     title: "Folkets Röst 1860-talet"
+});
+
+settings.corpora["kubhist2-ghost-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1830",
+    title: "Göteborgs Handels- och Sjöfartstidning 1830-talet"
+});
+
+settings.corpora["kubhist2-gotheborgsallehanda-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgsallehanda-1800",
+    title: "Götheborgs Allehanda 1800-talet"
+});
+
+settings.corpora["kubhist2-gotheborgsallehanda-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgsallehanda-1810",
+    title: "Götheborgs Allehanda 1810-talet"
+});
+
+settings.corpora["kubhist2-gotheborgsallehanda-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgsallehanda-1820",
+    title: "Götheborgs Allehanda 1820-talet"
+});
+
+settings.corpora["kubhist2-gotheborgsallehanda-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgsallehanda-1830",
+    title: "Götheborgs Allehanda 1830-talet"
+});
+
+settings.corpora["kubhist2-gotheborgskanyheter-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgskanyheter-1800",
+    title: "Götheborgska Nyheter 1800-talet"
+});
+
+settings.corpora["kubhist2-gotheborgskanyheter-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgskanyheter-1810",
+    title: "Götheborgska Nyheter 1810-talet"
+});
+
+settings.corpora["kubhist2-gotheborgskanyheter-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgskanyheter-1820",
+    title: "Götheborgska Nyheter 1820-talet"
+});
+
+settings.corpora["kubhist2-gotheborgskanyheter-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-gotheborgskanyheter-1830",
+    title: "Götheborgska Nyheter 1830-talet"
+});
+
+settings.corpora["kubhist2-inrikestidningar-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-inrikestidningar-1800",
+    title: "Inrikes Tidningar 1800-talet"
+});
+
+settings.corpora["kubhist2-inrikestidningar-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-inrikestidningar-1810",
+    title: "Inrikes Tidningar 1810-talet"
+});
+
+settings.corpora["kubhist2-inrikestidningar-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-inrikestidningar-1820",
+    title: "Inrikes Tidningar 1820-talet"
+});
+
+settings.corpora["kubhist2-kalmar-1900"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-kalmar-1900",
+    title: "Kalmar 1900-talet"
+});
+
+settings.corpora["kubhist2-lundsweckoblad-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-lundsweckoblad-1810",
+    title: "Lunds Weckoblad 1810-talet"
+});
+
+settings.corpora["kubhist2-lundsweckoblad-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-lundsweckoblad-1820",
+    title: "Lunds Weckoblad 1820-talet"
+});
+
+settings.corpora["kubhist2-lundsweckoblad-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-lundsweckoblad-1830",
+    title: "Lunds Weckoblad 1830-talet"
+});
+
+settings.corpora["kubhist2-malmoallehanda-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-malmoallehanda-1820",
+    title: "Malmö Allehanda 1820-talet"
+});
+
+settings.corpora["kubhist2-malmoallehanda-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-malmoallehanda-1830",
+    title: "Malmö Allehanda 1830-talet"
+});
+
+settings.corpora["kubhist2-norrkopingstidningar-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-norrkopingstidningar-1800",
+    title: "Norrköpings Tidningar 1800-talet"
+});
+
+settings.corpora["kubhist2-norrkopingstidningar-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-norrkopingstidningar-1810",
+    title: "Norrköpings Tidningar 1810-talet"
+});
+
+settings.corpora["kubhist2-norrkopingstidningar-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-norrkopingstidningar-1820",
+    title: "Norrköpings Tidningar 1820-talet"
+});
+
+settings.corpora["kubhist2-norrkopingstidningar-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-norrkopingstidningar-1830",
+    title: "Norrköpings Tidningar 1830-talet"
+});
+
+settings.corpora["kubhist2-nyttochgammalt-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-nyttochgammalt-1800",
+    title: "Nytt och Gammalt 1800-talet"
+});
+
+settings.corpora["kubhist2-nyttochgammalt-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-nyttochgammalt-1810",
+    title: "Nytt och Gammalt 1810-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1830",
+    title: "Östgöta Correspondenten 1830-talet"
+});
+
+settings.corpora["kubhist2-ostgotaposten-1900"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotaposten-1900",
+    title: "Östgötaposten 1900-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1820",
+    title: "Post- och Inrikes Tidningar 1820-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1830",
+    title: "Post- och Inrikes Tidningar 1830-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1800",
+    title: "Posttidningar 1800-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1810",
+    title: "Posttidningar 1810-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1820",
+    title: "Posttidningar 1820-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1820",
+    title: "Stockholms Dagblad 1820-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1830",
+    title: "Stockholms Dagblad 1830-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1800"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1800",
+    title: "Stockholmsposten 1800-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1810"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1810",
+    title: "Stockholmsposten 1810-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1820"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1820",
+    title: "Stockholmsposten 1820-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1830",
+    title: "Stockholmsposten 1830-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1830"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1830",
+    title: "Vestmanlands Läns Tidning 1830-talet"
 });
 
 /////////////////////////////////////////////////////////////////////////////////////
