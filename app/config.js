@@ -17,6 +17,16 @@ settings.enableFrontendKwicDownload = true
 settings.languages = ["sv", "en"];
 settings.defaultLanguage = "sv";
 
+class MotomoLogger {
+    static logEvent(category, action, name, value) {
+        // uses global _paq obj from motomo tracking lib. 
+        console.info("LOG", category, action, name, value)
+        _paq.push(["trackEvent", category, action, name, value])
+    }
+}
+
+settings.logger = MotomoLogger
+
 settings.downloadFormats = [
     "csv",
     "tsv",
