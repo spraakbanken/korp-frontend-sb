@@ -18,7 +18,7 @@ Release candidate
       > yarn build
       > rsync --delete --exclude ".htaccess" -r dist/ fkkorp@demo.spraakdata.gu.se:/export/htdocs/korprc (deploy)
 
-    Available at: http://demo.spraakdata.gu.se/korprc/
+    Available at: https://demo.spraakbanken.gu.se/korprc/
 
 Production:
 
