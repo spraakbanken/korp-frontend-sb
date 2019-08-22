@@ -6,6 +6,7 @@
     "old_swedish_texts": "Fornsvenska",
     "digidaily": "Digidaily",
     "kubhist": "Kubhist",
+    "kubhist2": "Kubhist2",
     "bible_texts": "Bibelstället",
     "fisk1800_texts": "Äldre finlandssvenska",
     "lb_texts": "Litteraturbanken",
@@ -1393,5 +1394,7 @@
     "langcode_pol": "Polska",
     "langcode_tha": "Thailändska",
     "langcode_tur": "Turkiska",
-    "langcode_swa": "Swahili"
+    "langcode_swa": "Swahili",
+
+    "wordbreak": "avstavning"
 }

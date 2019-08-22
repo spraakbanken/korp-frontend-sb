@@ -239,7 +239,7 @@ view.KWICResults = class ParallelKwicResults extends view.KWICResults {
             })
 
         }
-        safeApply($("body").scope(), $.noop)
+        safeApply(scope, $.noop)
 
     }
 
@@ -2218,6 +2218,7 @@ settings.corpora["espc-en"] = {
 };
 
 
+console.log("parallelcorpuslisting")
 window.cl = settings.corpusListing = new ParallelCorpusListing(settings.corpora, parseLocationLangs());
 delete ParallelCorpusListing;
 delete context;
