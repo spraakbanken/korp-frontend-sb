@@ -1871,8 +1871,8 @@ var ivipVideo = function(baseURL) {
         label: "video",
         renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
 
-            var startTime = wordData["sentence_start"];
-            var endTime = wordData["sentence_end"];
+            var startTime = sentenceData["sentence_start"];
+            var endTime = sentenceData["sentence_end"];
             var path = sentenceData["text_mediafilepath"];
             var file = sentenceData["text_mediafile"];
             var ext = sentenceData["text_mediafileext"];
@@ -2003,16 +2003,14 @@ settings.corpora["ivip"] = {
             order: 12,
             isStructAttr: true
         },
-        sentence_start: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
-        sentence_end: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
     },
     structAttributes: _.extend({}, commonStructAttrs, {
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
         text_country: {
             label: "country",
             order: 10,
@@ -2174,16 +2172,14 @@ settings.corpora["ivip-demo"] = {
             order: 12,
             isStructAttr: true
         },
-        sentence_start: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
-        sentence_end: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
     },
     structAttributes: _.extend({}, commonStructAttrs, {
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
         text_country: {
             label: "country",
             order: 10,
