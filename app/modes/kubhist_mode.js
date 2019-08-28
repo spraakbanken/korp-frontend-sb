@@ -1487,62 +1487,64 @@ settings.corporafolders.kubhist2["wexjobladet"] = {
     contents: ["kubhist2-wexjobladet-1810", "kubhist2-wexjobladet-1820", "kubhist2-wexjobladet-1830", "kubhist2-wexjobladet-1840", "kubhist2-wexjobladet-1850"]
 };
 
-settings.corporafolders.kubhist2["skyddat"] = {
-    title: "Kubhist2 - Skyddat",
-    contents: ["kubhist2-dalpilen-1900", "kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1900", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1900", "kubhist2-ostgotaposten-1910"]
-};
+if(isLab){
+  settings.corporafolders.kubhist2["skyddat"] = {
+      title: "Kubhist2 - Skyddat",
+      contents: ["kubhist2-dalpilen-1900", "kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1900", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1900", "kubhist2-ostgotaposten-1910"]
+  };
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Corpora
 
-settings.corpora["kubhist2-dalpilen-1900"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-dalpilen-1900",
-    title: "Dalpilen 1900-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-dalpilen-1900"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-dalpilen-1900",
+      title: "Dalpilen 1900-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-dalpilen-1910"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-dalpilen-1910",
-    title: "Dalpilen 1910-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-dalpilen-1910"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-dalpilen-1910",
+      title: "Dalpilen 1910-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-dalpilen-1920"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-dalpilen-1920",
-    title: "Dalpilen 1920-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-dalpilen-1920"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-dalpilen-1920",
+      title: "Dalpilen 1920-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-kalmar-1900"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-kalmar-1900",
-    title: "Kalmar 1900-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-kalmar-1900"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-kalmar-1900",
+      title: "Kalmar 1900-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-kalmar-1910"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-kalmar-1910",
-    title: "Kalmar 1910-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-kalmar-1910"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-kalmar-1910",
+      title: "Kalmar 1910-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-kalmar-kalmarlanstidning-1910"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-kalmar-kalmarlanstidning-1910",
-    title: "Kalmar-Kalmar läns Tidning 1910-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-kalmar-kalmarlanstidning-1910"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-kalmar-kalmarlanstidning-1910",
+      title: "Kalmar-Kalmar läns Tidning 1910-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-ostgotaposten-1900"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-ostgotaposten-1900",
-    title: "Östgötaposten 1900-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-ostgotaposten-1900"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-ostgotaposten-1900",
+      title: "Östgötaposten 1900-talet",
+      limitedAccess: true
+  });
 
-settings.corpora["kubhist2-ostgotaposten-1910"] = _.extend({}, kubhist2_settings, {
-    id: "kubhist2-ostgotaposten-1910",
-    title: "Östgötaposten 1910-talet",
-    limitedAccess: true
-});
+  settings.corpora["kubhist2-ostgotaposten-1910"] = _.extend({}, kubhist2_settings, {
+      id: "kubhist2-ostgotaposten-1910",
+      title: "Östgötaposten 1910-talet",
+      limitedAccess: true
+  });
 
+}  // end if(isLab)
 
 
 settings.corpora["kubhist2-aftonbladet-1830"] = _.extend({}, kubhist2_settings, {
