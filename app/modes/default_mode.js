@@ -1919,6 +1919,7 @@ settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
     description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>Korpusen kommer att finnas tillgänglig för forskare omkring 2021.',
+    inStrix: true,
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
@@ -2041,7 +2042,8 @@ settings.corpora["ivip"] = {
         },
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
-        text_mediafileext: {displayType: "hidden"}
+        text_mediafileext: {displayType: "hidden"},
+        sentence_id: {displayType: "hidden"}
     }),
     customAttributes: {
         video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip/"),
