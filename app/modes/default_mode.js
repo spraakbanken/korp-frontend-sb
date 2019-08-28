@@ -1871,8 +1871,8 @@ var ivipVideo = function(baseURL) {
         label: "video",
         renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
 
-            var startTime = wordData["sentence_start"];
-            var endTime = wordData["sentence_end"];
+            var startTime = sentenceData["sentence_start"];
+            var endTime = sentenceData["sentence_end"];
             var path = sentenceData["text_mediafilepath"];
             var file = sentenceData["text_mediafile"];
             var ext = sentenceData["text_mediafileext"];
@@ -1919,6 +1919,7 @@ settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
     description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>Korpusen kommer att finnas tillgänglig för forskare omkring 2021.',
+    inStrix: true,
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
@@ -2003,16 +2004,14 @@ settings.corpora["ivip"] = {
             order: 12,
             isStructAttr: true
         },
-        sentence_start: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
-        sentence_end: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
     },
     structAttributes: _.extend({}, commonStructAttrs, {
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
         text_country: {
             label: "country",
             order: 10,
@@ -2043,7 +2042,8 @@ settings.corpora["ivip"] = {
         },
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
-        text_mediafileext: {displayType: "hidden"}
+        text_mediafileext: {displayType: "hidden"},
+        sentence_id: {displayType: "hidden"}
     }),
     customAttributes: {
         video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip/"),
@@ -2093,6 +2093,7 @@ settings.corpora["ivip-demo"] = {
     id: "ivip-demo",
     title: "IVIP demo",
     description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska. Detta är en öppen delmängd av IVIP-korpusen.',
+    inStrix: true,
     context: {
         "1 sentence": "1 sentence",
         "1 text": "1 text"
@@ -2173,16 +2174,14 @@ settings.corpora["ivip-demo"] = {
             order: 12,
             isStructAttr: true
         },
-        sentence_start: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
-        sentence_end: {
-            displayType: "hidden",
-            isStructAttr: true
-        },
     },
     structAttributes: _.extend({}, commonStructAttrs, {
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
         text_country: {
             label: "country",
             order: 10,
@@ -2213,7 +2212,8 @@ settings.corpora["ivip-demo"] = {
         },
         text_mediafilepath: {displayType: "hidden"},
         text_mediafile: {displayType: "hidden"},
-        text_mediafileext: {displayType: "hidden"}
+        text_mediafileext: {displayType: "hidden"},
+        sentence_id: {displayType: "hidden"}
     }),
     customAttributes: {
         video: ivipVideo("https://spraakbanken.gu.se/korp/data/ivip-demo/"),
