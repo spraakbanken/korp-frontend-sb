@@ -181,7 +181,9 @@ view.KWICResults = class ParallelKwicResults extends view.KWICResults {
 
         if(!obj.linkref) return
 
-        var corpus = settings.corpusListing.get(sentence.corpus)
+        console.log("sentence.corpus", sentence.corpus, settings.corpora, settings.corpusListing.struct)
+        // var corpus = settings.corpusListing.get(sentence.corpus)
+        var corpus = settings.corpora[sentence.corpus]
 
         function findRef(ref, sentence) {
             var out = null
@@ -223,7 +225,7 @@ view.KWICResults = class ParallelKwicResults extends view.KWICResults {
             })
 
         } else {
-            var links = _.pick(obj, function(val, key) {
+            var links = _.pickBy(obj, function(val, key) {
                 return _.startsWith(key, "wordlink")
             })
             _.each(links, function(val, key) {
