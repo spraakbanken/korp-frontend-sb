@@ -2004,6 +2004,19 @@ settings.corpora["ivip"] = {
             order: 12,
             isStructAttr: true
         },
+        sentence_id: {displayType: "hidden"},
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
+        _head: {
+            displayType: "hidden"
+        },
+        _tail: {
+            displayType: "hidden"
+        }
     },
     structAttributes: _.extend({}, commonStructAttrs, {
         sentence_start: {
@@ -2054,7 +2067,11 @@ settings.corpora["ivip"] = {
             customType: "struct"
         }
     },
-    defaultFilters: ["text_country", "text_city", "text_place"]
+    defaultFilters: ["text_country", "text_city", "text_place"],
+    readingMode: {
+        directive: 'ivip',
+        nodes: ['sentence']
+    }
 };
 
 settings.corpora["lawline"] = {
@@ -2174,6 +2191,19 @@ settings.corpora["ivip-demo"] = {
             order: 12,
             isStructAttr: true
         },
+        sentence_id: {displayType: "hidden"},
+        sentence_start: {
+            displayType: "hidden"
+        },
+        sentence_end: {
+            displayType: "hidden"
+        },
+        _head: {
+            displayType: "hidden"
+        },
+        _tail: {
+            displayType: "hidden"
+        }
     },
     structAttributes: _.extend({}, commonStructAttrs, {
         sentence_start: {
@@ -2224,7 +2254,11 @@ settings.corpora["ivip-demo"] = {
             customType: "struct"
         }
     },
-    defaultFilters: ["text_country", "text_city", "text_place"]
+    defaultFilters: ["text_country", "text_city", "text_place"],
+    readingMode: {
+        directive: 'ivip',
+        nodes: ['sentence']
+    }
 };
 
 settings.corpora["lasbart"] = {
@@ -2626,6 +2660,12 @@ settings.corpora["vivill"] = {
         },
         sentimentclass: {
             label: "sentiment_class"
+        },
+        _head: {
+            displayType: "hidden"
+        },
+        _tail: {
+            displayType: "hidden"
         }
     }),
     structAttributes: {
@@ -2705,6 +2745,9 @@ settings.corpora["vivill"] = {
         },
         text_type: {label: "type"},
         sentence_id: {displayType: "hidden"}
+    },
+    readingMode: {
+        directive: 'standard'
     }
 };
 
@@ -3870,7 +3913,10 @@ settings.corpora["gdc"] = {
         "3 sentence": "3 sentences"
     },
     attributes: _.extend({}, modernAttrs, {
-        wordclean: {label: "normalized_wordform"}
+        wordclean: {label: "normalized_wordform"},
+        line_speaker: {displayType: "hidden"},
+        line_speakergender: {displayType: "hidden"},
+        section_name: {displayType: "hidden"}
     }),
     structAttributes: {
         "text_activity1": {label: "activity1"},
@@ -3882,9 +3928,14 @@ settings.corpora["gdc"] = {
         "line_speaker": {label: "speaker"},
         "line_speakergender": {label: "gender"},
         "text_date": {label: "date"},
-        "section_name": {label: "section"}
+        "section_name": {label: "section"},
+        "sentence_id": {displayType: "hidden"}
         // TODO: this gives some error, fix this.
         //"meta_comment": {label: "comment", type: "set"}
+    },
+    readingMode: {
+        directive: "standard",
+        nodes: ["section", "line"]
     }
 };
 
