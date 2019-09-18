@@ -16,8 +16,7 @@
   overflow: auto;
   font-family: monospace;
   white-space: pre;
-  width: fit-content;
-  min-width: 700px;
+  width: auto;
   position: relative;
   margin: 0px;
 }
