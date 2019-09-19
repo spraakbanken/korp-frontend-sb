@@ -1,6 +1,6 @@
 const app = angular.module("korpApp")
 
-app.directive("ivip", ($timeout) => ({
+app.directive("ivip", ['$timeout', ($timeout) => ({
     scope: {
         data: "<",
         wordClick: '&'
@@ -102,4 +102,4 @@ app.directive("ivip", ($timeout) => ({
             mediaElem.on('contextmenu', (e) => e.preventDefault())
         })
     }
-}))
+})])
