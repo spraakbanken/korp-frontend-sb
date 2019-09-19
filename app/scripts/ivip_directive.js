@@ -1,6 +1,6 @@
 const app = angular.module("korpApp")
 
-app.directive("ivip", ['$timeout', ($timeout) => ({
+app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
     scope: {
         data: "<",
         wordClick: '&'

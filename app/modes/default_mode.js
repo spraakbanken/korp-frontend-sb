@@ -2069,8 +2069,8 @@ settings.corpora["ivip"] = {
     },
     defaultFilters: ["text_country", "text_city", "text_place"],
     readingMode: {
-        directive: 'ivip',
-        groupElement: 'sentence'
+        directive: "ivip-reading-mode",
+        groupElement: "sentence"
     }
 };
 
@@ -2256,8 +2256,8 @@ settings.corpora["ivip-demo"] = {
     },
     defaultFilters: ["text_country", "text_city", "text_place"],
     readingMode: {
-        directive: 'ivip',
-        groupElement: 'sentence'
+        directive: "ivip-reading-mode",
+        groupElement: "sentence"
     }
 };
 
@@ -2747,7 +2747,7 @@ settings.corpora["vivill"] = {
         sentence_id: {displayType: "hidden"}
     },
     readingMode: {
-        directive: 'standard'
+        directive: "standard-reading-mode"
     }
 };
 
