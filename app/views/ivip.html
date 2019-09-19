@@ -11,7 +11,7 @@
     <div ng-if="!follow" 
          ng-click="makeFollow()"
          class="follow-icon">
-      <i class="fa fa-angle-double-down"></i>
+      <i uib-popover="{{'ivip_follow_video' | loc:lang}}" popover-trigger="'mouseenter'" class="fa fa-angle-double-down"></i>
     </div>
   </div>
 </div>

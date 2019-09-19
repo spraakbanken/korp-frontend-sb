@@ -1396,5 +1396,6 @@
     "langcode_tur": "Turkiska",
     "langcode_swa": "Swahili",
 
-    "wordbreak": "avstavning"
+    "wordbreak": "avstavning",
+    "ivip_follow_video": "Följ videon med autoscroll"
 }
