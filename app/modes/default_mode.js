@@ -2070,7 +2070,7 @@ settings.corpora["ivip"] = {
     defaultFilters: ["text_country", "text_city", "text_place"],
     readingMode: {
         directive: 'ivip',
-        nodes: ['sentence']
+        groupElement: 'sentence'
     }
 };
 
@@ -2257,7 +2257,7 @@ settings.corpora["ivip-demo"] = {
     defaultFilters: ["text_country", "text_city", "text_place"],
     readingMode: {
         directive: 'ivip',
-        nodes: ['sentence']
+        groupElement: 'sentence'
     }
 };
 
@@ -3913,10 +3913,7 @@ settings.corpora["gdc"] = {
         "3 sentence": "3 sentences"
     },
     attributes: _.extend({}, modernAttrs, {
-        wordclean: {label: "normalized_wordform"},
-        line_speaker: {displayType: "hidden"},
-        line_speakergender: {displayType: "hidden"},
-        section_name: {displayType: "hidden"}
+        wordclean: {label: "normalized_wordform"}
     }),
     structAttributes: {
         "text_activity1": {label: "activity1"},
@@ -3928,14 +3925,9 @@ settings.corpora["gdc"] = {
         "line_speaker": {label: "speaker"},
         "line_speakergender": {label: "gender"},
         "text_date": {label: "date"},
-        "section_name": {label: "section"},
-        "sentence_id": {displayType: "hidden"}
+        "section_name": {label: "section"}
         // TODO: this gives some error, fix this.
         //"meta_comment": {label: "comment", type: "set"}
-    },
-    readingMode: {
-        directive: "standard",
-        nodes: ["section", "line"]
     }
 };
 
