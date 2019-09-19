@@ -2,7 +2,8 @@ const app = angular.module("korpApp")
 
 app.directive("ivip", ($timeout) => ({
     scope: {
-        data: "<"
+        data: "<",
+        wordClick: '&'
     },
 
     template: require("customviews/ivip.html"),
@@ -67,9 +68,10 @@ app.directive("ivip", ($timeout) => ({
 
         scope.pause = () => clearInterval(scope.intervalID)
 
-        scope.wordClick = function (sentence) {
-            const currentTime = sentence.attrs.start / 1000
+        scope.wordClicked = function (clickedSentence, clickedWord) {
+            const currentTime = clickedSentence.attrs.start / 1000
             setCurrentTime(currentTime)
+            scope.wordClick(['wordClick'])(clickedWord)
         }
 
         scope.makeFollow = function () {

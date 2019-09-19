@@ -4,7 +4,7 @@
   <div class="text-container ivip-text-container">
     <span class="sentence {{sentence.attrs.speaker_id}}" id="{{sentence.attrs.id}}" ng-repeat="sentence in data.document.tokens">
       <span class="speaker">{{sentence.attrs.speaker_id}}</span>
-      <span class="word" ng-repeat="token in sentence.tokens" ng-click="wordClick(sentence)">
+      <span class="word" ng-repeat="token in sentence.tokens" ng-click="wordClicked(sentence, token)">
         {{token.attrs.head}}{{token.attrs.word}}{{token.attrs.tail}}
       </span>
     </span>

@@ -16,7 +16,7 @@
   overflow: auto;
   font-family: monospace;
   white-space: pre;
-  width: auto;
+  max-width: initial;
   position: relative;
   margin: 0px;
 }
