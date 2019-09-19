@@ -13,7 +13,6 @@ app.directive("ivip", ($timeout) => ({
 
         const structs = scope.data.document.structs
         scope.isVideo = structs.text_mediatype !== 'telefoninspelning'
-        c.log("## structs.text_mediatype", structs.text_mediatype)
         const path = structs.text_mediafilepath
         const file = structs.text_mediafile
         const ext = structs.text_mediafileext
