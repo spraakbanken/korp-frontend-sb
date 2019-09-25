@@ -75,7 +75,16 @@ app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
         }
 
         scope.makeFollow = function () {
+            // a bit hacky, when user clicks the follow-button
+            // it disappears and a scroll is being done automatically
+            // if we are at the absolute bottom of the page
+            scope.codeScroll1 = true
+            scope.codeScroll2 = true
             scope.follow = true
+            $timeout(() => {
+                scope.codeScroll1 = false
+                scope.codeScroll2 = false
+            }, 0)
         }
 
         function initMedia(mediaElem) {
