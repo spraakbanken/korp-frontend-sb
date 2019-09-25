@@ -1397,5 +1397,6 @@
     "langcode_tur": "Turkish",
     "langcode_swa": "Swahili",
 
-    "wordbreak": "hyphenation"
+    "wordbreak": "hyphenation",
+    "ivip_follow_video": "Follow video with autoscroll"
 }

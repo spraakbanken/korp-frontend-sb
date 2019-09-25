@@ -1,0 +1,17 @@
+<div class="ivip">
+  <video ng-if="isVideo" class="ivip-media video mb-5" controls autoplay="true" src="{{mediaPath}}" controlsList="nodownload"></video>
+  <audio ng-if="!isVideo" class="ivip-media audio mb-5" controls autoplay="true" src="{{mediaPath}}" controlsList="nodownload"></audio>
+  <div class="text-container ivip-text-container">
+    <span class="sentence {{sentence.attrs.speaker_id}}" id="{{sentence.attrs.id}}" ng-repeat="sentence in data.document.tokens">
+      <span class="speaker">{{sentence.attrs.speaker_id}}</span>
+      <span class="word" ng-repeat="token in sentence.tokens" ng-click="wordClicked(sentence, token)">
+        {{token.attrs.head}}{{token.attrs.word}}{{token.attrs.tail}}
+      </span>
+    </span>
+    <div ng-if="!follow" 
+         ng-click="makeFollow()"
+         class="follow-icon">
+      <i uib-popover="{{'ivip_follow_video' | loc:lang}}" popover-trigger="'mouseenter'" class="fa fa-angle-double-down"></i>
+    </div>
+  </div>
+</div>
