@@ -26,7 +26,6 @@ Production:
 
   On master:
     > tag latest release
-    > run release.sh and upload zip to web
     > yarn build
     > rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korp (deploy)
 
