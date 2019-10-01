@@ -17,7 +17,7 @@ settings.corporafolders = {};
 // Skolböcker
 settings.corporafolders.buugaag = {
     title: "Buugaag Dugsiyeed",
-    contents: ["somali-1971-79", "somali-1993-94", "somali-2001", "somali-itoobiya",
+    contents: ["somali-1971-79", "somali-1993-94", "somali-as-2001", "somali-2001", "somali-itoobiya",
         "somali-hargeysa-2010",
         "somali-as-2013", "somali-as-2016", "somali-as-2018",
         "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
@@ -339,6 +339,24 @@ settings.corpora["somali-hargeysa-2010"] = {
         page_n: somalis.page
     }
 };
+
+settings.corpora["somali-as-2001"] = {
+    id: "somali-as-2001",
+    title: "Af-Soomaali 2001 Somaliland",
+    description: "",
+    within: spWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        text_edition: somalis.edition,
+        text_place: somalis.place,
+        text_publisher: somalis.publisher,
+        text_title: somalis.title,
+        text_year: somalis.year,
+        page_n: somalis.page
+    }
+};
+
 
 settings.corpora["somali-as-2013"] = {
     id: "somali-as-2013",
