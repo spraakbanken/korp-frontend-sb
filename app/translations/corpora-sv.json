@@ -131,8 +131,9 @@
     "iso_code": "ISO-kod",
 
     "lsi_classification": "LSI-klassifikation",
-    "ethnologue_classification": "Ethnologue-klassifikation",
-    "glottolog_classification": "Glottolog-klassifikation",
+    "ethnologue_classification": "ethnologue-klassifikation",
+    "glottolog_classification": "glottolog-klassifikation",
+    "ethnologue_glottolog_language_name": "ethnologue/glottolog-språknamn",
     "latitude": "latitud",
     "longitude": "longitud",
     "q_name": "namn i frågeformulär",

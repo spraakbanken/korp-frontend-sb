@@ -39,6 +39,7 @@ settings.corpora["lsi"] = {
         "page_lsi_classification": {label: "lsi_classification", order: 60},
         "page_ethnologue_classification": {label: "ethnologue_classification", order: 70},
         "page_glottolog_classification": {label: "glottolog_classification", order: 80},
+        "page_ethnologue_glottolog_language_name": {label: "ethnologue_glottolog_language_name", order: 85},
         "page_latitude": {label: "latitude", order: 90},
         "page_longitude": {label: "longitude", order: 100},
         "page_page_tables_url": {label: "page_tables", type: "url", order: 110},
