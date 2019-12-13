@@ -3,9 +3,9 @@ settings.wordpicture = false;
 
 settings.corpora = {};
 settings.corporafolders = {};
-settings.corpora["dream"] = {
-    id: "dream",
-    title: "DReaM",
+settings.corpora["dream-en-open"] = {
+    id: "dream-en-open",
+    title: "DReaM-en-open",
     description: "",
     within: settings.defaultWithin,
     context: {
@@ -31,7 +31,9 @@ settings.corpora["dream"] = {
         "doc_inlg": {label: "doc_inlg"},
         "doc_lgcode": {label: "doc_lgcode"},
         "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
+        "doc_year": {label: "doc_year"},
+        "page_page_url": {label: "url", type: "url"},
+        "page_page_number": {label: "page_num"}
     }
 };
 
