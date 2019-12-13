@@ -214,7 +214,7 @@
     "sx": "prefix",
 
     "example": "Exempel",
-    "page_num": "sidonummer",
+    "page_num": "sidnummer",
     "year_to"  : "år (slut)",
     "year_from"  : "år (start)",
 
@@ -305,7 +305,7 @@
     "FINIT": "Finit verb",
 
     "origlang": "originalspråk",
-    "page_n": "sidonummer",
+    "page_n": "sidnummer",
     "paragraph_marginal": "marginalnoter",
     "date_interval": "tidsintervall",
 
