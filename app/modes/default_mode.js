@@ -2067,7 +2067,7 @@ settings.corpora["ivip"] = {
             customType: "struct"
         }
     },
-    defaultFilters: ["text_country", "text_city", "text_place"],
+    defaultFilters: ["text_country", "text_city", "text_place", "text_consentid"],
     readingMode: {
         directive: "ivip-reading-mode",
         groupElement: "sentence"
@@ -2254,7 +2254,7 @@ settings.corpora["ivip-demo"] = {
             customType: "struct"
         }
     },
-    defaultFilters: ["text_country", "text_city", "text_place"],
+    defaultFilters: ["text_country", "text_city", "text_place", "text_consentid"],
     readingMode: {
         directive: "ivip-reading-mode",
         groupElement: "sentence"
