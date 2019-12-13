@@ -1,6 +1,19 @@
 settings.autocomplete = false;
 settings.wordpicture = false;
 
+var structs = {
+    "doc_author": {label: "doc_author"},
+    "doc_title": {label: "doc_title"},
+    "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
+    "doc_hhtype": {label: "doc_hhtype"},
+    "doc_inlg": {label: "doc_inlg"},
+    "doc_lgcode": {label: "doc_lgcode"},
+    "doc_macro_area": {label: "doc_macro_area"},
+    "doc_year": {label: "doc_year"},
+    "page_page_url": {label: "url", type: "url"},
+    "page_page_number": {label: "page_num"}
+};
+
 settings.corpora = {};
 settings.corporafolders = {};
 settings.corpora["dream-en-open"] = {
@@ -23,18 +36,7 @@ settings.corpora["dream-en-open"] = {
         deprel: {label: "deprel"},
         ref: attrs.ref
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"},
-        "page_page_url": {label: "url", type: "url"},
-        "page_page_number": {label: "page_num"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-de-open"] = {
@@ -49,16 +51,7 @@ settings.corpora["dream-de-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-es-open"] = {
@@ -73,16 +66,7 @@ settings.corpora["dream-es-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-fr-open"] = {
@@ -97,16 +81,7 @@ settings.corpora["dream-fr-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-it-open"] = {
@@ -121,16 +96,7 @@ settings.corpora["dream-it-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-nl-open"] = {
@@ -145,16 +111,7 @@ settings.corpora["dream-nl-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpora["dream-ru-open"] = {
@@ -169,16 +126,7 @@ settings.corpora["dream-ru-open"] = {
     attributes: {
 
     },
-    structAttributes: {
-        "doc_author": {label: "doc_author"},
-        "doc_title": {label: "doc_title"},
-        "doc_glottolog_ref_id": {label: "doc_glottolog_ref_id"},
-        "doc_hhtype": {label: "doc_hhtype"},
-        "doc_inlg": {label: "doc_inlg"},
-        "doc_lgcode": {label: "doc_lgcode"},
-        "doc_macro_area": {label: "doc_macro_area"},
-        "doc_year": {label: "doc_year"}
-    }
+    structAttributes: structs
 };
 
 settings.corpusListing = new CorpusListing(settings.corpora);
