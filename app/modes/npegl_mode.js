@@ -310,7 +310,6 @@ function catToString(array) {
 function collapseCat(values) {
     values = Array.from(values)
     let groups = []
-    // values = values.reverse()
     let take = (allOfVal, fromArray) => {
         let output = []
         while(fromArray.length && fromArray[0] === allOfVal) {
@@ -322,16 +321,12 @@ function collapseCat(values) {
     while(values.length) {
         let group = take(values[0], values)
         groups.push(group[0].split(":")[0])
-        // if(group.length == 1) {
-        //     groups.push(group[0].split(":")[0])
-        // } else {
-        //     groups.push(group.map((item) => item.split(":")[0]).join(" ") )
-        // }
     }
     return groups
 }
 
 
+// We've got to extend the stats data postprocessing with some custom merging of stats table rows. 
 model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
     makeRequest(cqp, callback) {
         let def = super.makeRequest(cqp, callback)
@@ -343,23 +338,15 @@ model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
             let output = [data[0]]
             for(let [cat, group] of Object.entries(groups)) {
                 output.push(group.reduce((agg, row) => {
-                    // console.log("agg, row", agg, row)
-                    // if(!agg) return row
-                    // let added = {}
                     let corporaKeys = settings.corpusListing.getSelectedCorpora().map((key) => key.toUpperCase() + "_value")
                     agg.total_value = add(agg.total_value || [0,0], row.total_value)
                     for(let key of corporaKeys) {
                         agg[key] = add(agg[key] || [0,0], row[key] || [0,0])
                     }
-                    // added.statsValues = cat.split(" ").map(item => ({e_cat: [item + ":.*"]}))
-                    // console.log("agg.statsValues", agg.statsValues)
                     agg.statsValues.push(row.statsValues)
 
-                    // added.statsValues = {e_cat: [...agg.statsValues.map(item => item.e_cat), ...row.statsValues.map(item => item.e_cat)]}
-                    // for(let i in agg.statsValues) {
-                        // added.statsValues.e_cat.push()
-                        // added.statsValues[i] = {e_cat: [...agg.statsValues[i].e_cat, ...row.statsValues[i].e_cat]}
-                    // }
+                    // we have to let Korp know that the cqp expression we need to create
+                    // is like [] | [] | [], which Korp doesn't have a natural way to handle. 
                     agg.isPhraseLevelDisjunction = true
                     for(let [k, v] of Object.entries(row)) {
                         if(!agg[k]) agg[k] = v
@@ -367,13 +354,9 @@ model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
                     return agg
                 }, {statsValues: []}))
 
-                if(group.length > 1 && cat == "Md.Aj") {
-                    console.log("group", cat, group, output[output.length - 1])
-                }
             }
 
             result[0] = output
-            console.log("output", output)
             return result
         })
         return def
