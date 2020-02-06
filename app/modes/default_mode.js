@@ -4116,7 +4116,35 @@ rd_struct_attributes = {
 
 settings.corporafolders.governmental.rd = {
     title: "Riksdagens öppna data",
-    contents: ["rd-bet", "rd-ds", "rd-eun", "rd-fpm", "rd-frsrdg", "rd-flista", "rd-ip", "rd-kammakt", "rd-kom", "rd-mot", "rd-prop", "rd-prot", "rd-rskr", "rd-samtr", "rd-skfr", "rd-sou", "rd-tlista", "rd-utr", "rd-utsk", "rd-yttr", "rd-ovr"]
+    contents: ["rd-anf", "rd-bet", "rd-ds", "rd-eun", "rd-fpm", "rd-frsrdg", "rd-flista", "rd-ip", "rd-kammakt", "rd-kom", "rd-mot", "rd-prop", "rd-prot", "rd-rskr", "rd-samtr", "rd-skfr", "rd-sou", "rd-tlista", "rd-utr", "rd-utsk", "rd-yttr", "rd-ovr"]
+};
+
+settings.corpora["rd-anf"] = {
+    id: "rd-anf",
+    title: "Anföranden",
+    description: "De tal som riksdagsledamöterna håller under debatter i kammaren kallas anföranden.",
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: modernAttrs2,
+    structAttributes: {
+        "text_dok_id": {label: "rd_dok_id", order: 1},
+        "text_dok_hangar_id": {label: "rd_hangar_id", order: 10},
+        "text_dok_titel": {label: "title", order: 20},
+        "text_dok_rm": {label: "rd_anf_rm", order: 30},
+        "text_dok_nummer": {label: "rd_nummer", order: 40},
+        "text_dok_datum": {label: "date", order: 50},
+        "text_avsnittsrubrik": {label: "rd_rubrik", order: 60},
+        "text_kammaraktivitet": {label: "rd_kammaraktivitet", order: 70},
+        "text_anforande_id": {label: "rd_anforande_id", order: 80},
+        "text_anforande_nummer": {label: "rd_anf_nummer", order: 90},
+        "text_talare": {label: "speaker", order: 100},
+        "text_parti": {label: "party", order: 110},
+        "text_intressent_id": {label: "rd_intressent_id", order: 120},
+        "text_rel_dok_id": {label: "rd_relaterat_id", order: 130},
+        "text_replik": {label: "rd_replik", order: 140},
+        "text_systemdatum": {label: "rd_systemdatum", order: 150}
+    },
+    inStrix: false
 };
 
 settings.corpora["rd-bet"] = {

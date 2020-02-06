@@ -1295,6 +1295,9 @@
     "rd_vinnare": "winner",
     "rd_votering_id": "voting ID",
     "rd_votering_ledamot_url_xml": "voting member URL (XML)",
+    "rd_kammaraktivitet": "chamber activity",
+    "rd_anforande_id": "speech ID",
+    "rd_replik": "reply",
 
     "category_url": "category URL",
     "page_tables": "Page tables",
