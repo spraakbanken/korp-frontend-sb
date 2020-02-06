@@ -1294,6 +1294,9 @@
     "rd_vinnare": "vinnare",
     "rd_votering_id": "votering-ID",
     "rd_votering_ledamot_url_xml": "votering ledamot-URL (XML)",
+    "rd_kammaraktivitet": "kammaraktivitet",
+    "rd_anforande_id": "anförande-ID",
+    "rd_replik": "replik",
 
     "category_url": "kategori-URL",
     "page_tables": "Sidtabeller",
