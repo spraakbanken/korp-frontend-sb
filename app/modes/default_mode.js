@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "soexempel", "sw1203", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -3516,7 +3516,7 @@ settings.corpora["ansokningar"] = {
 settings.corpora["asu"] = {
     id: "asu",
     title: "ASU",
-    description: 'Andraspråkets strukturutveckling<br>För åtkomst kontakta <a href="ham@ling.su.se">Björn Hammarberg</a>.',
+    description: 'Andraspråkets strukturutveckling<br>För åtkomst kontakta <a href="mailto:ham@ling.su.se">Björn Hammarberg</a>.',
     limitedAccess: true,
     within: settings.defaultWithin,
     context: {
@@ -4031,6 +4031,34 @@ settings.corpora["soexempel"] = {
         "entry_entryno": {label: "entryno", extendedComponent: "structServiceSelect"},
         "entry_sense1": {label: "sense1", extendedComponent: "structServiceSelect"},
         "entry_sense2": {label: "sense2", extendedComponent: "structServiceSelect"}
+    }
+};
+
+settings.corpora["spin-source"] = {
+    id: "spin-source",
+    title: "SpIn",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        anonymize: {label: "anonymize"}
+    }),
+    structAttributes: {
+        text_date: {label: "date"},
+        text_birthyear_interval: {label: "birthyear"},
+        text_course_level: {label: "course_level"},
+        text_course_subject: {label: "course_subject"},
+        text_essay_id: {label: "essay_id"},
+        text_gender: {label: "gender"},
+        text_grade: {label: "grade"},
+        text_grading_scale: {label: "grading_scale"},
+        text_l1: {label: "l1"},
+        text_residence: {label: "residence"},
+        text_subject: {label: "subject"},
+        text_text_types: {label: "text_types"},
+        text_type: {label: "type"},
+        text_writing_language: {label: "writing_language"}
     }
 };
 
