@@ -3516,7 +3516,7 @@ settings.corpora["ansokningar"] = {
 settings.corpora["asu"] = {
     id: "asu",
     title: "ASU",
-    description: 'Andraspråkets strukturutveckling<br>För åtkomst kontakta <a href="ham@ling.su.se">Björn Hammarberg</a>.',
+    description: 'Andraspråkets strukturutveckling<br>För åtkomst kontakta <a href="mailto:ham@ling.su.se">Björn Hammarberg</a>.',
     limitedAccess: true,
     within: settings.defaultWithin,
     context: {
