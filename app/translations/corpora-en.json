@@ -75,8 +75,10 @@
 
     "imprintyear": "imprint year",
     "pagelink": "page link",
+    
+    "cefr_level": "proficiency level (CEFR)",
 
-    "tisus_firstlang": "native language",
+    "firstlang": "native language",
     "tisus_lfone": "reading comprehension, part 1",
     "tisus_lftwo": "reading comprehension, part 2",
     "tisus_written": "written proficiency",
