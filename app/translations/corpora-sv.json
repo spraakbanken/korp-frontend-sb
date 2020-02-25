@@ -75,8 +75,10 @@
 
     "imprintyear": "tryckår",
     "pagelink": "sidlänk",
+    
+    "cefr_level": "kunskapsnivå (CEFR)",
 
-    "tisus_firstlang": "modersmål",
+    "firstlang": "modersmål",
     "tisus_lfone": "läsförståelse, del 1",
     "tisus_lftwo": "läsförståelse, del 2",
     "tisus_written": "skriftlig språkfärdighet",

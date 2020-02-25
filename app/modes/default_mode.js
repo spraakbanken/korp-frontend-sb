@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -3380,66 +3380,26 @@ settings.corpora["sw1203"] = {
     context: spContext,
     attributes: modernAttrs,
     structAttributes: {
-        text_type: {
-            label: "type",
-            extendedComponent: "structServiceSelect"
-        },
-        text_student: {
-            label: "student",
-            extendedComponent: "structServiceSelect"
-        },
-        text_gender: {
-            label: "gender",
-            extendedComponent: "datasetSelect",
+        text_type: {label: "type", extendedComponent: "structServiceSelect"},
+        text_student: {label: "student", extendedComponent: "structServiceSelect"},
+        text_gender: {label: "gender", extendedComponent: "datasetSelect",
             dataset: {
                 "F": "Kvinna",
                 "M": "Man"
-            }
-        },
-        text_birthyear: {
-            label: "birthyear",
-            extendedComponent: "structServiceSelect"
-        },
-        text_a: {
-            label: "a",
-            extendedComponent: "structServiceSelect"
-        },
-        text_b: {
-            label: "b",
-            extendedComponent: "structServiceSelect"
-        },
-        text_cd: {
-            label: "c/d",
-            extendedComponent: "structServiceSelect"
-        },
-        text_semester: {
-            label: "semester",
-            extendedComponent: "structServiceSelect"
-        },
-        text_age: {
-            label: "age",
-            extendedComponent: "structServiceSelect"
-        },
-        text_level: {
-            label: "proficiencylevel",
-            extendedComponent: "structServiceSelect"
-        },
-        text_task: {
-            label: "task",
-            extendedComponent: "structServiceSelect"
-        },
-        text_task_url: {
-            label: "task_url",
-            extendedComponent: "structServiceSelect",
-            type: "url"
-        },
-        text_firstlang: {
-            label: "tisus_firstlang",
+            }},
+        text_birthyear: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_a: {label: "a", extendedComponent: "structServiceSelect"},
+        text_b: {label: "b", extendedComponent: "structServiceSelect"},
+        text_cd: {label: "c/d", extendedComponent: "structServiceSelect"},
+        text_semester: {label: "semester", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_level: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
+        text_task: {label: "task", extendedComponent: "structServiceSelect"},
+        text_task_url: {label: "task_url", extendedComponent: "structServiceSelect", type: "url"},
+        text_firstlang: {label: "firstlang",
             opts: setOptions,
-            type: "set",
-            extendedComponent: "structServiceSelect",
-            translationKey: "langcode_",
-        }
+            type: "set", extendedComponent: "structServiceSelect",
+            translationKey: "langcode_",}
     },
     customAttributes: {
         pdf: {
@@ -3481,7 +3441,7 @@ settings.corpora["tisus"] = {
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date", hideExtended: true},
         text_firstlang: {
-            label: "tisus_firstlang",
+            label: "firstlang",
             type: "set",
             opts: setOptions,
             extendedComponent: "structServiceSelect",
@@ -4045,21 +4005,56 @@ settings.corpora["spin-source"] = {
         anonymize: {label: "anonymize"}
     }),
     structAttributes: {
-        text_date: {label: "date"},
-        text_birthyear_interval: {label: "birthyear"},
-        text_course_level: {label: "course_level"},
-        text_course_subject: {label: "course_subject"},
-        text_essay_id: {label: "essay_id"},
-        text_gender: {label: "gender"},
-        text_grade: {label: "grade"},
-        text_grading_scale: {label: "grading_scale"},
-        text_l1: {label: "l1"},
-        text_residence: {label: "residence"},
-        text_subject: {label: "subject"},
-        text_text_types: {label: "text_types"},
-        text_type: {label: "type"},
-        text_writing_language: {label: "writing_language"}
-    }
+        text_date: {label: "date", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_course_level: {label: "course_level", extendedComponent: "structServiceSelect"},
+        text_course_subject: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        text_essay_id: {label: "essay ID"},
+        text_student_id: {label: "student ID", extendedComponent: "structServiceSelect"},
+        text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
+        text_gender: {label: "gender", extendedComponent: "structServiceSelect"},
+        text_grade: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading scale", extendedComponent: "structServiceSelect"},
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+        text_residence: {label: "residence", extendedComponent: "structServiceSelect"},
+        text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect", type: "set"},
+        text_type: {label: "type", extendedComponent: "structServiceSelect"},
+        text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"}
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade"]
+};
+
+settings.corpora["sw1203v2"] = {
+    id: "sw1203v2",
+    title: "SW1203-uppsatser version 2",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        anonymize: {label: "anonymize"}
+    }),
+    structAttributes: {
+        text_date: {label: "date", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_course_level: {label: "course_level", extendedComponent: "structServiceSelect"},
+        text_course_subject: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        text_essay_id: {label: "essay ID"},
+        text_student_id: {label: "student ID", extendedComponent: "structServiceSelect"},
+        text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
+        text_gender: {label: "gender", extendedComponent: "structServiceSelect"},
+        text_grade: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading scale", extendedComponent: "structServiceSelect"},
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+        text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect", type: "set"},
+        text_type: {label: "type", extendedComponent: "structServiceSelect"},
+        text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"}
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade"]
 };
 
 
