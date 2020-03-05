@@ -13,9 +13,8 @@ settings.corpora = {};
 settings.corporafolders = {};
 settings.corpora["lsi"] = {
     id: "lsi",
-    title: "LSI",
-    description: "",
-    limitedAccess: true,
+    title: "Linguistic Survey of India",
+    description: "A digital version of the classic Grierson’s <i>Linguistic Survey of India</i> (LSI; 1903-1927) covering more than 250 varieties representing the four major South Asian language families.",
     within: settings.defaultWithin,
     context: {
     "1 sentence": "1 sentence",
