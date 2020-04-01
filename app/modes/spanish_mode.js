@@ -18,7 +18,7 @@ settings.corpora["pe77"] = {
     attributes: {
         pos: {label: "pos"},
         msd: {label: "msd"},
-        lemma: {label: "baseform"}
+        baseform: {label: "baseform"}
     },
     structAttributes: {
         text_title: {label: "title"},
@@ -42,7 +42,7 @@ settings.corpora["one71"] = {
     attributes: {
         pos: {label: "pos"},
         msd: {label: "msd"},
-        lemma: {label: "baseform"}
+        baseform: {label: "baseform"}
     },
     structAttributes: {
         text_title: {label: "title"},
@@ -66,7 +66,7 @@ settings.corpora["cor92"] = {
     attributes: {
         pos: {label: "pos"},
         msd: {label: "msd"},
-        lemma: {label: "baseform"}
+        baseform: {label: "baseform"}
     },
     structAttributes: {
         text_title: {label: "title"},
