@@ -4019,7 +4019,7 @@ settings.corpora["spin-source"] = {
         text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
         text_residence: {label: "residence", extendedComponent: "structServiceSelect"},
         text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
-        text_text_types: {label: "genre", extendedComponent: "structServiceSelect", type: "set"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
         text_type: {label: "type", extendedComponent: "structServiceSelect"},
         text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"}
     },
@@ -4050,7 +4050,7 @@ settings.corpora["sw1203v2"] = {
         text_grading_scale: {label: "grading scale", extendedComponent: "structServiceSelect"},
         text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
         text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
-        text_text_types: {label: "genre", extendedComponent: "structServiceSelect", type: "set"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
         text_type: {label: "type", extendedComponent: "structServiceSelect"},
         text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"}
     },
