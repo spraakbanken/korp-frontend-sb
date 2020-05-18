@@ -2,7 +2,6 @@ settings.primaryColor = "#FFE7D2";
 settings.primaryLight = "#FFF4EB";
 settings.autocomplete = false;
 settings.wordpicture = false;
-settings.enableMap = false;
 
 settings.inputCaseInsensitiveDefault = true;
 settings.statisticsCaseInsensitiveDefault = true;

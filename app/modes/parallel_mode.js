@@ -1,5 +1,4 @@
 settings.wordpicture = false;
-settings.enableMap = false;
 var start_lang = "swe";
 
 settings.hitsPerPageDefault = 10
