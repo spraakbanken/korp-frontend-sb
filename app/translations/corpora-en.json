@@ -1391,5 +1391,9 @@
     "langcode_swa": "Swahili",
 
     "wordbreak": "hyphenation",
-    "ivip_follow_video": "Follow video with autoscroll"
+    "ivip_follow_video": "Follow video with autoscroll",
+    
+    "correction_label": "correction label",
+    "pseudo_label": "pseudo label",
+    "grading_scale": "grading scale"
 }
