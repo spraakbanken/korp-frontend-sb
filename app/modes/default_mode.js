@@ -119,7 +119,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "swell-original", "swell-target", "tisus"]
 };
 
 settings.corporafolders.novels = {
@@ -4015,7 +4015,7 @@ settings.corpora["spin-source"] = {
         text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
         text_gender: {label: "gender", extendedComponent: "structServiceSelect"},
         text_grade: {label: "cefr_level", extendedComponent: "structServiceSelect"},
-        text_grading_scale: {label: "grading scale", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
         text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
         text_residence: {label: "residence", extendedComponent: "structServiceSelect"},
         text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
@@ -4025,6 +4025,77 @@ settings.corpora["spin-source"] = {
     },
     defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade"]
 };
+
+swell_structs = {
+        text_date: {label: "date", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect", order: 10},
+        text_age: {label: "age", extendedComponent: "structServiceSelect", order: 20},
+        text_course_level: {label: "course_level", extendedComponent: "structServiceSelect"},
+        text_course_subject: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        text_essay_id: {label: "essay ID"},
+        text_student_id: {label: "student ID", extendedComponent: "structServiceSelect", order: 50},
+        text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
+        text_gender: {label: "gender", extendedComponent: "structServiceSelect", order: 30},
+        text_grade: {label: "proficiencylevel", extendedComponent: "structServiceSelect", order: 60},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect", order: 40},
+        text_residence: {label: "residence", extendedComponent: "structServiceSelect", order: 45},
+        text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
+        text_type: {label: "type", extendedComponent: "structServiceSelect"},
+        text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"},
+        text_task_url: {label: "url", type: "url"},
+        text_svala_link: {label: "Svala", pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"}
+    };
+
+settings.corpora["swell-original"] = {
+    id: "swell-original",
+    title: "SweLL original",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        target_form: {label: "target_form"},
+        correction_label: {label: "correction_label", extendedComponent: "structServiceSelect"},
+        pseudo_label: {label: "pseudo_label", extendedComponent: "structServiceSelect"}
+    }),
+    structAttributes: swell_structs,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/swell/portal/files/instructions/SweLL_-_Metadata_explanation.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade", "text_grading_scale"]
+};
+
+settings.corpora["swell-target"] = {
+    id: "swell-target",
+    title: "SweLL target",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        original_form: {label: "original_form"},
+        correction_label: {label: "correction_label"},
+        pseudo_label: {label: "pseudo_label"}
+    }),
+    structAttributes: swell_structs,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/swell/portal/files/instructions/SweLL_-_Metadata_explanation.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade", "text_grading_scale"]
+};
+
 
 settings.corpora["sw1203v2"] = {
     id: "sw1203v2",
@@ -4047,7 +4118,7 @@ settings.corpora["sw1203v2"] = {
         text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
         text_gender: {label: "gender", extendedComponent: "structServiceSelect"},
         text_grade: {label: "cefr_level", extendedComponent: "structServiceSelect"},
-        text_grading_scale: {label: "grading scale", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
         text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
         text_subject: {label: "subject", extendedComponent: "structServiceSelect"},
         text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},

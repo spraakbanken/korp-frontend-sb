@@ -1390,5 +1390,9 @@
     "langcode_swa": "Swahili",
 
     "wordbreak": "avstavning",
-    "ivip_follow_video": "Följ videon med autoscroll"
+    "ivip_follow_video": "Följ videon med autoscroll",
+    
+    "correction_label": "korr-kod",
+    "pseudo_label": "pseudo-kod",
+    "grading_scale": "betygsskala"
 }
