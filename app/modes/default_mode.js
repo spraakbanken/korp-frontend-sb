@@ -1943,18 +1943,25 @@ settings.corpora["ivip"] = {
         sentiment: modernAttrs2.sentiment,
         blingbring: modernAttrs2.blingbring,
         swefn: modernAttrs2.swefn,
-        w_normalised: {
+        word_normalised: {
             label: "normalized_wordform",
             isStructAttr: true
         },
-        w_full: {
+        word_full: {
             label: "annotation",
             isStructAttr: true
         },
-        w_type: {
+        word_type: {
             label: "annotation_type",
             isStructAttr: true,
-            extendedComponent: "structServiceSelect"
+            type: "set",
+            opts: setOptions,
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "överlapp": "överlapp",
+                "paus": "paus",
+                "förkortat": "förkortat"
+            },
         },
         sentence_speaker_id: {
             label: "speaker",
@@ -1974,7 +1981,7 @@ settings.corpora["ivip"] = {
                 "Kund1": "Kund1",
                 "Kund2": "Kund2",
                 "Observer": "Observer",
-                "Participant": "Participant",
+                "Participant": "Deltagare",
                 "Personal": "Personal",
                 "Talaren": "Talaren",
                 "Uncertain": "Uncertain",
@@ -2074,37 +2081,6 @@ settings.corpora["ivip"] = {
     }
 };
 
-settings.corpora["lawline"] = {
-    id: "lawline",
-    title: "Lawline",
-    description: 'Frågor och svar kring juridisk rådgivning från lawline.' +
-                 '<br><br>För åtkomst kontakta <a href="mailto:lena.rogstroem@svenska.gu.se">Lena Rogström</a>.',
-    limitedAccess: true,
-    within: settings.defaultWithin,
-    context: spContext,
-    attributes: modernAttrs,
-    structAttributes: {
-        "text_category": {label: "category", order: 10},
-        "text_topic": {label: "topic", order: 20},
-        "text_datum": {label: "date", order: 30},
-        "textpart_type": {label: "type",
-                          order: 40,
-                          extendedComponent: "datasetSelect",
-                          dataset: {
-                            "answer": "answer",
-                            "question": "question"
-                            }
-                        },
-        "text_url": {label: "url",
-                     order: 50,
-                     pattern: "<a href='<%= struct_attrs.text_url %>' target='_blank'><%= struct_attrs.text_url %></a>"
-                 },
-        "text_category_link": {label: "category_url",
-                               order: 60,
-                               pattern: "<a href='<%= struct_attrs.text_category_link %>' target='_blank'><%= struct_attrs.text_category_link %></a>"
-                          }
-    }
-};
 
 settings.corpora["ivip-demo"] = {
     id: "ivip-demo",
@@ -2148,9 +2124,9 @@ settings.corpora["ivip-demo"] = {
             opts: setOptions,
             extendedComponent: "datasetSelect",
             dataset: {
-                "overlap": "overlap",
-                "pause": "pause",
-                "shortened": "shortened"
+                "överlapp": "överlapp",
+                "paus": "paus",
+                "förkortat": "förkortat"
             },
         },
         sentence_speaker_id: {
@@ -2176,7 +2152,8 @@ settings.corpora["ivip-demo"] = {
             extendedComponent: "datasetSelect",
             dataset: {
                 "": "Odefinerat",
-                "female": "female"
+                "female": "female",
+                "male": "male"
             },
             isStructAttr: true
         },
@@ -2260,6 +2237,40 @@ settings.corpora["ivip-demo"] = {
         groupElement: "sentence"
     }
 };
+
+
+settings.corpora["lawline"] = {
+    id: "lawline",
+    title: "Lawline",
+    description: 'Frågor och svar kring juridisk rådgivning från lawline.' +
+                 '<br><br>För åtkomst kontakta <a href="mailto:lena.rogstroem@svenska.gu.se">Lena Rogström</a>.',
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        "text_category": {label: "category", order: 10},
+        "text_topic": {label: "topic", order: 20},
+        "text_datum": {label: "date", order: 30},
+        "textpart_type": {label: "type",
+                          order: 40,
+                          extendedComponent: "datasetSelect",
+                          dataset: {
+                            "answer": "answer",
+                            "question": "question"
+                            }
+                        },
+        "text_url": {label: "url",
+                     order: 50,
+                     pattern: "<a href='<%= struct_attrs.text_url %>' target='_blank'><%= struct_attrs.text_url %></a>"
+                 },
+        "text_category_link": {label: "category_url",
+                               order: 60,
+                               pattern: "<a href='<%= struct_attrs.text_category_link %>' target='_blank'><%= struct_attrs.text_category_link %></a>"
+                          }
+    }
+};
+
 
 settings.corpora["lasbart"] = {
     id: "lasbart",
