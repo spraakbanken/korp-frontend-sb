@@ -1,7 +1,6 @@
 settings.autocomplete = false;
 settings.wordpicture = false;
 settings.newMapEnabled = false;
-settings.enableMap = false;
 
 settings.corpora = {};
 settings.corporafolders = {};
@@ -15,7 +14,21 @@ var textWithin = {
 };
 
 npegl = {};
-npegl.e_cat = {label: "e_cat", isStructAttr: true, order: 10};
+npegl.e_cat = {
+    label: "e_cat", 
+    isStructAttr: false, 
+    order: 10, 
+    stats_stringify(values) {
+        return catToString(values)
+    }, 
+    stats_cqp(tokens) {
+
+        // return `e_cat="${tokens.join(" | ")}"`
+        return "(" + tokens.map(item => `_.e_cat="${item}"`).join(" | ") + ")"
+
+    }
+};
+
 npegl.e_features_adjsem = {label: "e_features_adjsem", isStructAttr: true, order: 10};
 npegl.e_features_decl = {label: "e_features_decl", isStructAttr: true, order: 10};
 npegl.e_features_degr = {label: "e_features_degr", isStructAttr: true, order: 10};
@@ -153,4 +166,74 @@ settings.corpora["npegl-swe"] = {
 };
 
 settings.corpusListing = new CorpusListing(settings.corpora);
+
+
+
+function filterDuplicates(array) {
+    return array.reduce((agg, val) => {
+        if(agg[agg.length-1] == val) return agg
+        agg.push(val)
+    return agg
+    }, [])
+}
+
+function catToString(array) {
+    return filterDuplicates(array).map((item) => item.split(":")[0]).join(" ")
+}
+
+function collapseCat(values) {
+    values = Array.from(values)
+    let groups = []
+    let take = (allOfVal, fromArray) => {
+        let output = []
+        while(fromArray.length && fromArray[0] === allOfVal) {
+            output = output.concat(fromArray.splice(0, 1))
+        }
+        return output
+    }
+
+    while(values.length) {
+        let group = take(values[0], values)
+        groups.push(group[0].split(":")[0])
+    }
+    return groups
+}
+
+
+// We've got to extend the stats data postprocessing with some custom merging of stats table rows. 
+model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
+    makeRequest(cqp, callback) {
+        let def = super.makeRequest(cqp, callback)
+        def.then( (result) => {
+            let [data, columns, searchParams] = result
+            if(searchParams.reduceVals.length < 1 || searchParams.reduceVals[0] != "e_cat") return result
+            let groups = _.groupBy(data.slice(1), (row) => catToString(row.e_cat))
+            let add = (arr1, arr2) => [arr1[0] + arr2[0], arr1[1] + arr2[1]]
+            let output = [data[0]]
+            for(let [cat, group] of Object.entries(groups)) {
+                output.push(group.reduce((agg, row) => {
+                    let corporaKeys = settings.corpusListing.getSelectedCorpora().map((key) => key.toUpperCase() + "_value")
+                    agg.total_value = add(agg.total_value || [0,0], row.total_value)
+                    for(let key of corporaKeys) {
+                        agg[key] = add(agg[key] || [0,0], row[key] || [0,0])
+                    }
+                    agg.statsValues.push(row.statsValues)
+
+                    // we have to let Korp know that the cqp expression we need to create
+                    // is like [] | [] | [], which Korp doesn't have a natural way to handle. 
+                    agg.isPhraseLevelDisjunction = true
+                    for(let [k, v] of Object.entries(row)) {
+                        if(!agg[k]) agg[k] = v
+                    }
+                    return agg
+                }, {statsValues: []}))
+
+            }
+
+            result[0] = output
+            return result
+        })
+        return def
+    }
+}
 

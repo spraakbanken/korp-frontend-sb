@@ -1214,6 +1214,7 @@
 
     "annotation_type": "annotation type",
     "country": "country",
+    "place_type": "type of place",
     "mediatype": "media type",
     "consentid": "consent ID",
     "speakerrole": "speaker role",

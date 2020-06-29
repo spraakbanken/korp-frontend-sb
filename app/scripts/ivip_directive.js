@@ -1,5 +1,7 @@
 const app = angular.module("korpApp")
 
+const colors = ["#1565c0", "#388e3c", "#00838f", "#ff3333", "#ff7700"]
+
 app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
     scope: {
         data: "<",
@@ -21,9 +23,14 @@ app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
         scope.mediaPath = baseURL + path +  file + "." + ext
 
         scope.mediaStartTime = 0
+        scope.docColors = {}
         for (let sentence of  scope.data.document.tokens) {
             if (sentence.attrs.id == scope.data.sentenceId) {
                 scope.mediaStartTime = sentence.attrs.start / 1000
+            }
+            // map each speaker to a unique color
+            if (!(sentence.attrs.speaker_id in scope.docColors)) {
+                scope.docColors[sentence.attrs.speaker_id] = colors.shift()
             }
         }
 

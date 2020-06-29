@@ -6,8 +6,6 @@
 var isLab = window.isLab || false;
 
 settings.autocomplete = true;
-settings.enableMap = !isLab;
-settings.mapPosTag = ["PM", "NNP", "NNPS"]
 settings.newMapEnabled = isLab;
 settings.hitsPerPageDefault = 25
 settings.hitsPerPageValues = [25,50,75,100,500,1000]
@@ -243,8 +241,6 @@ settings.defaultOptions = {
 
 settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v8";
 settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
-
-settings.strixUrl = "https://spraakbanken.gu.se/strix/"
 
 settings.mapCenter = {
   lat: 62.99515845212052,
