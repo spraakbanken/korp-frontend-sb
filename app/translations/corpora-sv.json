@@ -1213,6 +1213,7 @@
 
     "annotation_type": "annotationstyp",
     "country": "land",
+    "place_type": "platstyp",
     "mediatype": "mediatyp",
     "consentid": "samtyckes-ID",
     "speakerrole": "talarroll",

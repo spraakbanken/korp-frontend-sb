@@ -2041,7 +2041,7 @@ settings.corpora["ivip"] = {
             extendedComponent: "structServiceSelect"
         },
         text_place: {
-            label: "location",
+            label: "place_type",
             order: 30,
             extendedComponent: "structServiceSelect"
          },
