@@ -244,8 +244,6 @@ settings.defaultOptions = {
 settings.korpBackendURL = "https://ws.spraakbanken.gu.se/ws/korp/v8";
 settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
-settings.strixUrl = "https://spraakbanken.gu.se/strix/"
-
 settings.mapCenter = {
   lat: 62.99515845212052,
   lng: 16.69921875,

@@ -1832,8 +1832,7 @@ settings.corpora["fragelistor"] = {
         },
         "page_n": {label: "page"},
         "sentence_id": {displayType: "hidden"}
-    },
-    inStrix: true
+    }
 };
 
 settings.corpora["sprakfragor"] = {
@@ -1919,7 +1918,6 @@ settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
     description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>Korpusen kommer att finnas tillgänglig för forskare omkring 2021.',
-    inStrix: true,
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
@@ -2086,7 +2084,6 @@ settings.corpora["ivip-demo"] = {
     id: "ivip-demo",
     title: "IVIP demo",
     description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska. Detta är en öppen delmängd av IVIP-korpusen.',
-    inStrix: true,
     context: {
         "1 sentence": "1 sentence",
         "1 text": "1 text"
@@ -2655,7 +2652,6 @@ settings.corpora["sfs"] = {
 settings.corpora["vivill"] = {
     id: "vivill",
     title: "Svenska partiprogram och valmanifest 1887–2010",
-    inStrix: true,
     description: "",
     within: {
         "sentence": "sentence",
@@ -2773,8 +2769,7 @@ settings.corpora["wikipedia-sv"] = {
         text_title: {label: "article"},
         text_url: {label: "url", type: "url"},
         sentence_id: {displayType: "hidden"}
-    },
-    inStrix: true
+    }
 };
 
 settings.corpora["strindbergromaner"] = {
@@ -4248,8 +4243,7 @@ settings.corpora["rd-anf"] = {
         "text_rel_dok_id": {label: "rd_relaterat_id", order: 130},
         "text_replik": {label: "rd_replik", order: 140},
         "text_systemdatum": {label: "rd_systemdatum", order: 150}
-    },
-    inStrix: false
+    }
 };
 
 settings.corpora["rd-bet"] = {
@@ -4259,8 +4253,7 @@ settings.corpora["rd-bet"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-ds"] = {
@@ -4270,8 +4263,7 @@ settings.corpora["rd-ds"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-eun"] = {
@@ -4281,8 +4273,7 @@ settings.corpora["rd-eun"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-flista"] = {
@@ -4292,8 +4283,7 @@ settings.corpora["rd-flista"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-fpm"] = {
@@ -4303,8 +4293,7 @@ settings.corpora["rd-fpm"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-frsrdg"] = {
@@ -4314,8 +4303,7 @@ settings.corpora["rd-frsrdg"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-ip"] = {
@@ -4325,8 +4313,7 @@ settings.corpora["rd-ip"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-kammakt"] = {
@@ -4336,8 +4323,7 @@ settings.corpora["rd-kammakt"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-kom"] = {
@@ -4347,8 +4333,7 @@ settings.corpora["rd-kom"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-mot"] = {
@@ -4358,8 +4343,7 @@ settings.corpora["rd-mot"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-prop"] = {
@@ -4369,8 +4353,7 @@ settings.corpora["rd-prop"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-prot"] = {
@@ -4380,8 +4363,7 @@ settings.corpora["rd-prot"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-rskr"] = {
@@ -4391,8 +4373,7 @@ settings.corpora["rd-rskr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-samtr"] = {
@@ -4402,8 +4383,7 @@ settings.corpora["rd-samtr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-skfr"] = {
@@ -4413,8 +4393,7 @@ settings.corpora["rd-skfr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-sou"] = {
@@ -4434,8 +4413,7 @@ settings.corpora["rd-tlista"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-utr"] = {
@@ -4445,8 +4423,7 @@ settings.corpora["rd-utr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-utsk"] = {
@@ -4456,8 +4433,7 @@ settings.corpora["rd-utsk"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-yttr"] = {
@@ -4467,8 +4443,7 @@ settings.corpora["rd-yttr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpora["rd-ovr"] = {
@@ -4478,8 +4453,7 @@ settings.corpora["rd-ovr"] = {
     within: settings.defaultWithin,
     context: spContext,
     attributes: modernAttrs,
-    structAttributes: rd_struct_attributes,
-    inStrix: true
+    structAttributes: rd_struct_attributes
 };
 
 settings.corpusListing = new CorpusListing(settings.corpora);
