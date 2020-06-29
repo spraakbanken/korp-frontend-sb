@@ -24,13 +24,15 @@ app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
 
         scope.mediaStartTime = 0
         scope.docColors = {}
+        let colorIdx = 0
         for (let sentence of  scope.data.document.tokens) {
             if (sentence.attrs.id == scope.data.sentenceId) {
                 scope.mediaStartTime = sentence.attrs.start / 1000
             }
             // map each speaker to a unique color
             if (!(sentence.attrs.speaker_id in scope.docColors)) {
-                scope.docColors[sentence.attrs.speaker_id] = colors.shift()
+                scope.docColors[sentence.attrs.speaker_id] = colors[colorIdx] || "#000000"
+                colorIdx++
             }
         }
 
