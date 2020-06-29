@@ -1,5 +1,4 @@
 settings.wordpicture = false;
-settings.enableMap = false;
 var start_lang = "swe";
 
 settings.hitsPerPageDefault = 10
@@ -16,7 +15,7 @@ korpApp.controller("SearchCtrl", function($rootScope, $scope, $controller, $loca
     $scope.corpusChangeListener() // remove prev listener
     $scope.$on("reduceattrupdate", function() {
         $scope.statCurrentAttrs = settings.corpusListing.getStatsAttributeGroups(settings.corpusListing.getReduceLang())
-        $scope.statSelectedAttrs = $location.search().stats_reduce.split(',')
+        $scope.statSelectedAttrs = ($location.search().stats_reduce || "word").split(',')
         insensitiveAttrs = $location.search().stats_reduce_insensitive
         if(insensitiveAttrs)
             $scope.statInsensitiveAttrs = insensitiveAttrs.split(',')
