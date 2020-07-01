@@ -16,10 +16,40 @@ var structs = {
 
 settings.corpora = {};
 settings.corporafolders = {};
+
+settings.corporafolders.protected = {
+    title: "Restricted",
+    contents: ["dream-en-restricted", "dream-de-restricted", "dream-es-restricted", "dream-fr-restricted", "dream-it-restricted", "dream-nl-restricted"/*, "dream-ru-restricted"*/]
+};
+
 settings.corpora["dream-en-open"] = {
     id: "dream-en-open",
     title: "DReaM-en-open",
     description: "",
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+        norm: {label: "normalized_wordform"},
+        pos: {
+          label: "pos"
+        },
+        msd: attrs.msd,
+        lemma: {label: "baseform"},
+        dephead: attrs.dephead,
+        deprel: {label: "deprel"},
+        ref: attrs.ref
+    },
+    structAttributes: structs
+};
+
+settings.corpora["dream-en-restricted"] = {
+    id: "dream-en-restricted",
+    title: "DReaM-en-restricted",
+    description: "",
+    limitedAccess: true,
     within: settings.defaultWithin,
     context: {
         "1 sentence": "1 sentence",
@@ -54,10 +84,42 @@ settings.corpora["dream-de-open"] = {
     structAttributes: structs
 };
 
+settings.corpora["dream-de-restricted"] = {
+    id: "dream-de-restricted",
+    title: "DReaM-de-restricted",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};
+
 settings.corpora["dream-es-open"] = {
     id: "dream-es-open",
     title: "DReaM-es-open",
     description: "",
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};
+
+settings.corpora["dream-es-restricted"] = {
+    id: "dream-es-restricted",
+    title: "DReaM-es-restricted",
+    description: "",
+    limitedAccess: true,
     within: settings.defaultWithin,
     context: {
         "1 sentence": "1 sentence",
@@ -84,10 +146,42 @@ settings.corpora["dream-fr-open"] = {
     structAttributes: structs
 };
 
+settings.corpora["dream-fr-restricted"] = {
+    id: "dream-fr-restricted",
+    title: "DReaM-fr-restricted",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};
+
 settings.corpora["dream-it-open"] = {
     id: "dream-it-open",
     title: "DReaM-it-open",
     description: "",
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};
+
+settings.corpora["dream-it-restricted"] = {
+    id: "dream-it-restricted",
+    title: "DReaM-it-restricted",
+    description: "",
+    limitedAccess: true,
     within: settings.defaultWithin,
     context: {
         "1 sentence": "1 sentence",
@@ -114,6 +208,22 @@ settings.corpora["dream-nl-open"] = {
     structAttributes: structs
 };
 
+settings.corpora["dream-nl-restricted"] = {
+    id: "dream-nl-restricted",
+    title: "DReaM-nl-restricted",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};
+
 settings.corpora["dream-ru-open"] = {
     id: "dream-ru-open",
     title: "DReaM-ru-open",
@@ -128,5 +238,21 @@ settings.corpora["dream-ru-open"] = {
     },
     structAttributes: structs
 };
+
+/*settings.corpora["dream-ru-restricted"] = {
+    id: "dream-ru-restricted",
+    title: "DReaM-ru-restricted",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "7 sentence": "7 sentence"
+    },
+    attributes: {
+
+    },
+    structAttributes: structs
+};*/
 
 settings.corpusListing = new CorpusListing(settings.corpora);

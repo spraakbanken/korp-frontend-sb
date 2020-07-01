@@ -210,6 +210,10 @@ settings.modeConfig = [
         mode: "lsi"
     },
     {
+        localekey: "dream",
+        mode: "dream"
+    },
+    {
         localekey: "somali",
         mode: "somali",
     }
