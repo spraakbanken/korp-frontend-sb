@@ -42,6 +42,7 @@ app.directive("ivipReadingMode", ['$timeout', ($timeout) => ({
 
         scope.$on('on-exit', function(event, arg) {
             scope.pause()
+            scope.mediaElem.pause()
         })
 
         scope.play = () => {
