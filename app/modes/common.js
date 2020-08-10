@@ -688,10 +688,10 @@ settings.commonStructTypes = {
             <h3>{{'simple' | loc}}</h3>
             <form ng-submit="commitDateInput()">
                 <div class="" style="margin-bottom: 1rem;">
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'from' | loc}}</span> <input type="text" ng-model="fromDateString" placeholder="'1945' {{'or' | loc}} '1945-08-06'"/>
+                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'from' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="fromDateString" placeholder="'1945' {{'or' | loc}} '1945-08-06'"/>
                 </div>
                 <div>
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'to' | loc}}</span> <input type="text" ng-model="toDateString" placeholder="'1968' {{'or' | loc}} '1968-04-04'"/>
+                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'to' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="toDateString" placeholder="'1968' {{'or' | loc}} '1968-04-04'"/>
                 </div>
                 <button type="submit" class="hidden" />
             </form>
