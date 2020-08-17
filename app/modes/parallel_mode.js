@@ -2204,7 +2204,6 @@ settings.corpora["espc-en"] = {
     linkedTo: ["espc-en"],
     limitedAccess: true,
     title: "The English-Swedish Parallel Corpus (ESPC)",
-    description: 'För åtkomst kontakta <a href="mailto:karin.axelsson@sprak.gu.se">Karin Axelsson</a>.',
     context: context.defaultAligned,
     within: {
         "link": "meningspar"
