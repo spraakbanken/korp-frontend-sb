@@ -2201,7 +2201,7 @@ settings.corpora["espc-sv"] = {
 settings.corpora["espc-en"] = {
     id: "espc-en",
     lang: "eng",
-    linkedTo: ["espc-en"],
+    linkedTo: ["espc-sv"],
     limitedAccess: true,
     title: "The English-Swedish Parallel Corpus (ESPC)",
     context: context.defaultAligned,
