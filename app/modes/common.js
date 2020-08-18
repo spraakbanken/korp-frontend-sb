@@ -1,4 +1,5 @@
-settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense' text-in-field='textInField'/>";
+settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />";
+
 
 var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
@@ -117,15 +118,7 @@ attrs.lemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)' text-in-field='textInField'/>"
-                        + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
-    extendedController: ["$scope", function($scope) {
-        $scope.valueError = false;
-
-        $scope.checkForError = function(valueSelected) {
-            $scope.valueError = !valueSelected;
-        }
-    }],
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
     order: 2
 };
 attrs.dalinlemgram = {
@@ -138,7 +131,7 @@ attrs.dalinlemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin' text-in-field='textInField'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin' text-in-field='textInField' error-on-empty='true' error-message='choose_value'/>",
     order: 2
 };
 attrs.saldo = {
@@ -240,7 +233,7 @@ attrs.prefix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />"
 };
 attrs.suffix = {
     label: "suffix",
@@ -251,7 +244,7 @@ attrs.suffix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />"
 };
 attrs.ref = {
     label: "ref",
@@ -574,7 +567,7 @@ settings.fsvlex = {
     type: "set",
     label: "lemgram",
     opts: setOptions,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
@@ -587,7 +580,7 @@ settings.fsvvariants = {
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
     opts: setOptions,
     externalSearch: karpLemgramLink,
     internalSearch: true,
