@@ -18,6 +18,16 @@ var probabilitySetOptions = {
     "contains_not": "not_rank_contains",
 };
 
+var extendedSetOptions = {
+    "is": "contains",
+    "is_not": "not contains",
+    "starts_with": "starts_with_contains",
+    "contains": "incontains_contains",
+    "ends_with": "ends_with_contains",
+    "matches": "regexp_contains",
+    "matches_not": "not_regexp_contains",
+};
+
 var defaultContext = {
     "1 sentence": "1 sentence"
 };
@@ -104,8 +114,8 @@ attrs.msd = {
 attrs.baseform = {
     label: "baseform",
     type: "set",
-    opts: setOptions,
-    extendedTemplate: "<input ng-model='model' >",
+    opts: extendedSetOptions,
+    extendedTemplate: "<input ng-model='input' escaper>",
     order: 1
 };
 attrs.lemgram = {
