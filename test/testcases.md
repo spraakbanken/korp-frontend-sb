@@ -20,6 +20,19 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&page=0&se
 - Click the button
 - **Check that the results seem reasonable**
 
+**Lemgram suggestions**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
+
+- Follow link or go to Korp and select the "SUC3"-corpus
+- Enter a wordform in the search input, "framtid" for example
+- Select a lemgram and search
+- Enter another wordform
+- **The lemgram autocomplete should popup**
+- Don't select anything, just search
+- Enter yet another wordform
+- **The lemgram autocomplete should popup**
+
 ### Extended
 
 **Warnings when using lemgram, initial part and final part**
@@ -33,6 +46,27 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 - Type an actual wordform and select a lemgram
 - **"Choose a value" should disappear**
 - Redo the test for *initial part* and *final part* also
+
+**Case insensitivity settings should not be preserved when switching 
+search attribute**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=en&search=cqp
+
+- Follow link
+- A case-insensitive search has been performed
+- Switch from `word` to `lemgram` in the search box
+- Enter a lemgram
+- Go to the advanced tab
+- **`%c` should not be included in the "Active CQP query in extended"-box**
+
+### Advanced
+
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search_tab=2&search=cqp%7C%5Bword%20%3D%20%22national.*%22%20%26%20word%20!%3D%20%22nationaliteter%22%20%25c%5D
+
+- Follow link
+- **It should open "Advanced" tab for searching**
+- Click the JSON-button
+- **Check that the result is the same as in KWIC**
 
 ### Filters
 
@@ -66,7 +100,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=spin-source&glob
 - Check that the progress bar works, it updates every time we get new results from corpora
 - Check that the first page of results are shown before search is completely finished
 
-**JSON button**
+**JSON button is available**
 
 - Do a simple search in any corpus, SUC3 for example
 - **JSON button should appear and link to the correct search (compare
@@ -98,12 +132,28 @@ Note: "One sentence per row (TSV)" does not fully support this search.
 The entire row will be placed in left context, since there may be one
 word or more that matches.
 
+**Download from KWIC opened from word picture**
+
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=4&word_pic&corpus=aspacsv,romi,romii,rom99,storsuc,romg&search=lemgram%7Chund%5C.%5C.nn%5C.1
+
+- Follow link
+- Click any word to get a new KWIC
+- Click "Download hit page" as... -> "One sentence per row (CSV)"
+- **The correc data should be in the downloaded document**
+
 **Context view look**
 
 https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&search=word%7Cframtid&page=0&reading_mode
 
 - Follow link
 - Check that the hits are bold, the hit sentences are black and the rest of the contexts are grey
+
+**Short KWIC rows should not cut off corpus names**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22och%22%20%26%20lbound(sentence)%20%26%20rbound(sentence)%5D&corpus=drama&search_tab=1&search=cqp
+
+- Follow link
+- **Check that the hit corpus name in the KWIC is completely visible**
 
 ### Word picture
 
@@ -124,6 +174,16 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&page=0&resu
 - Follow link
 - Check that the word picture works, but statistics is turned off
 
+**Pagination when opening KWIC from word picture**
+
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=3&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1&corpus=aspacsv,romi,romii,rom99,storsuc,romg
+
+- Follow link
+- Click the first result in wordpicture, "med" with 200 occurences
+- A KWIC should open up
+- Go to page 6 using the "Go to page" input box
+- **First hit on this page should be the last hit from "Bonniersromaner II"**
+
 ### Statistics
 
 **Download**
@@ -142,13 +202,14 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2
 
 https://spraakbanken.gu.se/korplabb/#?cqp=[]&corpus=vivill&page=0&search=word|nyhet&result_tab=1
 
-- Search in all "vivill" for "nyhet" or follow link above
+- Search in "Svenska partiprogram och valmanifest" for
+  "nyhet" or follow link above
 - The point here is that the statistics table load in the background
   while the KWIC is viewed
 - When the search is done, go to the statistics tab
 - **Check that the table use (almost) all the available space**
 
-**Opening an a KWIC from statistics should use the same search settings**
+**Opening a KWIC from statistics should use the same search settings**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=word%7Cframtid
 
@@ -158,6 +219,25 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivi
 - Click the result row in the statistics to open a KWIC
 - **Check that the result is the same as in the actual KWIC to make 
   sure that se search is still done in "Svenska partiprogram och valmanifest"**
+
+**"Compile based on" should not be empty after switching to corpus 
+with other attributes**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party
+
+- Follow link
+- "Compile based on" is `party`
+- Switch corpus to "SUC3"
+- **Check that "compile based on" has been reset to `word`**
+
+**JSON button should link to the correct search**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party
+
+- Follow link
+- **Click JSON-button and check that the result is for the same search**
+- Search for another word, "jämlikhet" perhaps
+- **Click JSON-button and check that the result is for the new word**
 
 ### Map
 
@@ -175,6 +255,16 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivi
 - **Check that the map doesn't zoom**
 - **Check that the info box (or boxes) about the mark becomes 
   permanent and not just appear on hover**
+
+**Should be disabled when no rows are selected**
+
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&result_tab=2
+
+- Follow link
+- Deselect all rows in statistics
+- Click "Show map" -> "Show map"
+- **An error message should appear**
+- **Korp should not open a map tab**
 
 ### Reading mode
 
@@ -200,8 +290,6 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Click "Show Dependency Tree" in the sidebar
 - **Check that the dependency tree pops up and looks ok** (might
   take a second)
-
-#### 
 
 ## Comparison
 
@@ -248,31 +336,33 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 
 Note: This only applies when "Remember me" have been checked
 
-## Miscellaneous
+## Parallel mode
 
-**Responsiveness**
+**Word links should work**
 
-- Do any simple search
-- Resize the window some and make sure that no elements overlap
-- Make sure no elements move in a particularly ugly manner
+https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=en&parallel_corpora=swe&cqp_swe=%5Bword%20%3D%20%22katt%22%5D&cqp_null=%5B%5D&corpus=saltnld-sv&search=cqp%7C%5Bword%20%3D%20%22katt%22%5D
 
-**Note**: Korp is obviously not created to be completely responsive and look good on small screens.
+- Follow link
+- **Click some words and make sure that the corresponding word in 
+  the linked sentence is highlighted**
 
-**Parallel searches on non-default language**
+Hint: in Dutch, the Swedish word "katt" is "kat"!
+
+**Searches on non-default language**
 
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_corpora=eng&cqp_swe=%5B%5D&cqp_null=%5B%5D&corpus=aspacsven-sv&cqp_eng=%5Bword%20%3D%20%22sawdust%22%5D&search=cqp%7C%5Bword%20%3D%20%22sawdust%22%5D
 
 - Follow link, do not search manually
 - **Check that Korp searches for "sawdust" in English**
 
-**Parallel search KWIC alignment**
+**KWIC alignment**
 
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=sv&parallel_corpora=swe&cqp_null=%5Bword%20%3D%20%22%C3%A4r%22%5D&cqp_dan=%5B%5D&cqp_swe=%5Bword%20%3D%20%22Mexiko%22%5D&corpus=europarl-fi&cqp=%5Bprefix%20contains%20%22l%C3%A4%5C.%5C.nn%5C.1%22%5D&search=cqp%7C%5Bword%20%3D%20%22Mexiko%22%5D
 
 - Follow link (important that the search result is a short sentence first and longer sentences later in the KWIC)
 - **For each row, check that linked sentence starts at around the same place as the hit sentence**
 
-**Parallel search dependency highlighting**
+**Dependency highlighting**
 
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_corpora=eng&cqp_swe=%5B%5D&cqp_null=%5B%5D&corpus=aspacsven-sv&cqp_eng=%5Bword%20%3D%20%22sawdust%22%5D&search=cqp%7C%5Bword%20%3D%20%22sawdust%22%5D
 
@@ -283,13 +373,50 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?parallel_corpora=swe&cqp_swe
 - Compare dependency highlighting on the sentences that are the same
 - **Should be the same no matter if the search was in English or Swedish**
 
-**KWIC download in parallel mode**
+**KWIC download**
 
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_corpora=eng&cqp_swe=%5B%5D&cqp_null=%5B%5D&corpus=aspacsven-sv&cqp_eng=%5Bword%20%3D%20%22sawdust%22%5D&search=cqp%7C%5Bword%20%3D%20%22sawdust%22%5D
 
 - Follow link
 - Download "One senence per row (CSV)"
 - **Check that it looks ok**
+
+## Trend diagram
+
+**i18n for download buttons**
+
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=5&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+
+- Follow link
+- Press "Table"
+- Switch language back and forth
+- **Check that all texts are updated to the correct language
+  immediately**
+- Click "Export"
+- **Downloaded document should contain correct data**
+
+**Trend diagram width**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=en&corpus=familjeliv-adoption,familjeliv-allmanna-ekonomi,familjeliv-allmanna-familjeliv,familjeliv-allmanna-fritid,familjeliv-allmanna-hushem&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+
+- Follow link
+- Click "Show trend diagram" then immediately switch back to statistics
+- Now the trend diagram will render in the background
+- Wait until the progress bar is done
+- Wait some more
+- Go back to the trend diagram tab
+- **The width of the diagram should be the same as the width
+  of the window**
+
+## Miscellaneous
+
+**Responsiveness**
+
+- Do any simple search
+- Resize the window some and make sure that no elements overlap
+- Make sure no elements move in a particularly ugly manner
+
+**Note**: Korp is obviously not created to be completely responsive and look good on small screens.
 
 **Resetting Korp by clicking logo**
 
@@ -304,3 +431,17 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&corpus=fisk
 
 - Follow link
 - **Only the corpora under "Finlandssvenska texter" should be selected**
+
+**About-view layout**
+
+- Go to Korp
+- Click the cog wheel and open the About-view
+- **Check that everything looks OK, no overflow errors or weird scrolls**
+
+**Disabling "in order"**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=false&lang=en&search=word%7Ckatt%20svart
+
+- Follow link
+- **Search words, "katt" and "svart" should be highlighted in the result
+  
