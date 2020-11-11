@@ -3870,7 +3870,7 @@ settings.corpora["twitter-2017"] = {
 settings.corpora["gdc"] = {
     id: "gdc",
     title: "Gothenburg Dialogue Corpus (GDC)",
-    description: 'För åtkomst kontakta <a href="mailto:cajsa.ottesjo@gu.se">Cajsa Ottesjö</a>.',
+    description: 'För åtkomst kontakta <a href="mailto:data@flov.gu.se">data@flov.gu.se</a>.',
     limitedAccess: true,
     within: settings.defaultWithin,
     context: {
