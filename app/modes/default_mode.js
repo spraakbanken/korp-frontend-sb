@@ -118,7 +118,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "swell-original", "swell-target", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "swell-original", "swell-target", "tisus", "tisusv2"]
 };
 
 settings.corporafolders.novels = {
@@ -3461,6 +3461,69 @@ settings.corpora["tisus"] = {
             order: 1
             }
     }
+};
+
+settings.corpora["tisusv2"] = {
+    id: "tisusv2",
+    title: "TISUS-texter v2",
+    description: 'För åtkomst kontakta <a href="mailto:elena.volodina@svenska.gu.se">Elena Volodina</a>.',
+    limitedAccess: true,
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_essay_id: {label: "essay_id", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_gender: {
+            label: "gender",
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "Kvinna": "Kvinna",
+                "Man": "Man"
+            }},
+        text_time_in_sweden: {label: "time_in_sweden", extendedComponent: "structServiceSelect"},
+        text_edu_level: {label: "edu_level", extendedComponent: "structServiceSelect"},
+        text_lf1_result: {label: "lf1_result"},
+        text_lf2_result: {label: "lf2_result"},
+        text_final_grade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
+        text_approximate_level: {label: "approximate_level", extendedComponent: "structServiceSelect"},
+        text_datum: {label: "date", hideExtended: true},
+        /*text_iso_l1: {
+            label: "firstlang",
+            type: "set",
+            opts: setOptions,
+            extendedComponent: "structServiceSelect",
+            translationKey: "langcode_"
+        },*/
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        text_course_level: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        text_course_subject: {label: "school_type", extendedComponent: "structServiceSelect"},
+        text_grade: {label: "essay_grade", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
+        text_lf_sum: {label: "lf_sum"},
+        text_oral_result: {label: "oral_result", extendedComponent: "structServiceSelect"},
+        text_source: {label: "tisus_source", extendedComponent: "structServiceSelect"},
+        text_student_id: {label: "student_id", extendedComponent: "structServiceSelect"},
+        text_svala_link: {label: "full text", hideExtended: true, pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>SVALA</a>"},
+        text_task: {label: "task_id", extendedComponent: "structServiceSelect"},
+        text_task_date: {label: "task_date", extendedComponent: "structServiceSelect"},
+        text_task_format: {label: "task_format", extendedComponent: "structServiceSelect"},
+        text_task_subject: {label: "task_subject", extendedComponent: "structServiceSelect"},
+        text_task_type: {label: "task_type", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
+        text_written_result: {label: "written_result", extendedComponent: "structServiceSelect"}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_explanations2.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_task_subject", "text_age", "text_grade", "text_grading_scale"]
 };
 
 settings.corpora["ansokningar"] = {
