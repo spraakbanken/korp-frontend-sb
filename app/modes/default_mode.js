@@ -2358,6 +2358,37 @@ Meningarna i korpusarna är sorterade i slumpvis ordning, för att man inte ska 
     }
 };
 
+settings.corpora["sic2"] = {
+    id: "sic2",
+    title: "SIC2",
+    description: "Stockholm Internet Corpus 2",
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "1 post": "1 post"
+    },
+    attributes: _.extend({}, modernAttrs2,{
+        name_type: {
+            label: "sic2_name",
+            isStructAttr: true
+        }
+    }),
+    structAttributes: _.extend({}, commonStructAttrs, {
+        blog_id: {
+            label: "blog_id",
+            extendedComponent: "structServiceSelect"
+        },
+        blog_sex: {
+            label: "author_gender",
+            extendedComponent: "structServiceSelect"
+        },
+        post_id: {
+            label: "post_id",
+            extendedComponent: "structServiceSelect"
+        }
+    })
+};
+
 settings.corpora["snp7879"] = {
     id: "snp7879",
     title: "SNP 78–79 (Riksdagens snabbprotokoll)",
