@@ -1464,5 +1464,10 @@
     
     "correction_label": "korr-kod",
     "pseudo_label": "pseudo-kod",
-    "grading_scale": "betygsskala"
+    "grading_scale": "betygsskala",
+
+    "sic2_name": "SIC2-namntyp",
+    "blog_id": "blogg-ID",
+    "author_gender": "författarkön",
+    "post_id": "inläggs-ID"
 }

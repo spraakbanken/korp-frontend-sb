@@ -1464,5 +1464,10 @@
     
     "correction_label": "correction label",
     "pseudo_label": "pseudo label",
-    "grading_scale": "grading scale"
+    "grading_scale": "grading scale",
+
+    "sic2_name": "SIC2 name type",
+    "blog_id": "blog ID",
+    "author_gender": "author gender",
+    "post_id": "post ID"
 }
