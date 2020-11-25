@@ -128,7 +128,7 @@ settings.corporafolders.novels = {
 
 settings.corporafolders.socialmedia = {
     title: "Sociala medier",
-    contents: []
+    contents: ["sic2"]
 };
 
 settings.corporafolders.socialmedia.bloggmix = {
@@ -2360,8 +2360,8 @@ Meningarna i korpusarna är sorterade i slumpvis ordning, för att man inte ska 
 
 settings.corpora["sic2"] = {
     id: "sic2",
-    title: "SIC2",
-    description: "Stockholm Internet Corpus 2",
+    title: "SIC2 - Stockholm Internet Corpus",
+    description: 'The <a href="https://www.ling.su.se/english/nlp/corpora-and-resources/sic/stockholm-internet-corpus-sic-1.99019" target="blank">Stockholm Internet Corpus (SIC2)</a> contains Swedish blog posts, annotated with part of speech, morphological features, and named entities.',
     within: settings.defaultWithin,
     context: {
         "1 sentence": "1 sentence",
