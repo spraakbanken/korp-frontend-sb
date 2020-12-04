@@ -240,7 +240,12 @@ attrs.prefix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>",
+    // extendedController: [
+    //     "$scope", "searches", "$timeout", function($scope, searches, $timeout) {
+    //         $scope.orObj.type = "complemgram"
+    //         $scope.orObj.op = "contains"
+    // }]
 };
 attrs.suffix = {
     label: "suffix",

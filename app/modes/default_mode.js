@@ -2390,10 +2390,106 @@ settings.corpora["suc2"] = {
         "1 sentence": "1 sentence"
     },
     attributes: _.extend({}, modernAttrs, {
+        prefix: {
+            label: "prefix", 
+            extendedTemplate: "<span>{{'compound_move' | loc}}</span>",
+            hideSidebar: true
+        },
+        suffix: {
+            label: "suffix", 
+            extendedTemplate: "<span>{{'compound_move' | loc}}</span>",
+            hideSidebar: true
+        },
         complemgram: {
-            label: "complemgram",
-            displayType: "hidden",
-            type: "set"
+            label: "compound",
+            type: "set",
+            opts: {
+                "prefix": "starts_with_contains",
+                "not_prefix": "not_starts_with_contains",
+                "compound_middle": "incontains_contains",
+                "not_compound_middle": "not_incontains_contains",
+                "suffix": "ends_with_contains",
+                "not_suffix": "not_ends_with_contains",
+            },
+            stringify: function(lemgram) {
+                return util.lemgramToString(lemgram, true)
+            },
+            internalSearch: true,
+            ranked: true,
+            extendedController: [
+                "$scope", "searches", "$timeout", function($scope, searches, $timeout) {
+                    if($scope.model) {
+                        $scope.currentVal = $scope.model.replace(/[\\+\.\*:]*$/, "").replace(/^\\\+/, "")
+                    }
+                    let setModel = () => {
+                        if(!$scope.currentVal) {
+                            $scope.model = ""
+                            return
+                        }
+                        if(["starts_with_contains", "not_starts_with_contains"].includes($scope.orObj.op)) {
+                            $scope.model = $scope.currentVal + "\\+"
+                        } else if(["ends_with_contains", "not_ends_with_contains"].includes($scope.orObj.op)) {
+                            $scope.model = "\\+" + $scope.currentVal + ":.*"
+                        } else if(["incontains_contains", "not_incontains_contains"].includes($scope.orObj.op)) {
+                            $scope.model = "\\+" + $scope.currentVal + "\\+"
+                        }
+                    }
+                    $scope.$watch("orObj.op", (newVal) => {
+                        setModel()
+                    })
+                    $scope.$watch("currentVal", (newVal) => {
+                        setModel()
+                    })
+            }],
+            extendedTemplate: "<autoc model='currentVal' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>",
+
+            sidebarComponent: {
+                template: String.raw`
+                    <i ng-show="value == '|'" rel="localize[empty]" style="color : grey">[tom]</i>
+                    <ul ng-show="value != '|'">
+                        <li ng-repeat="comp in values | limitTo:listLimit">
+                            
+                            <span ng-repeat="value in comp.split('+')">
+                                <span ng-if="!$first"> + </span>
+                                <a ng-click="onItemClick(value, $first, $last)" ng-bind-html="stringify(value) | trust"></a>
+                            </span>
+                        </li>
+                        <li class="link" ng-show="values.length > 1" ng-click="listLimit = listLimit < 10 ? 10 : 1">
+                            {{listLimit < 10 ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
+                        </li>
+                    </ul>
+                `,
+                controller: function($scope, statemachine) {
+                    $scope.listLimit = 1
+                    $scope.stringify = (lemgram) => util.lemgramToString(lemgram, true)
+                    $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
+                    $scope.onItemClick = (value, isPrefix, isSuffix) => {
+                        let isMiddle = !(isPrefix || isSuffix)
+
+                        let p = new URLSearchParams(location.hash.slice(1))
+                        if(isPrefix) {
+                            p.set("prefix", "")
+                            p.delete("mid_comp")
+                            p.delete("suffix")
+                        }
+                        if(isMiddle) {
+                            p.set("mid_comp", "")
+                            p.delete("suffix")
+                            p.delete("prefix")
+                        }
+                        if(isSuffix) {
+                            p.set("suffix", "")
+                            p.delete("mid_comp")
+                            p.delete("prefix")
+                        }
+                        statemachine.send("SEARCH_LEMGRAM", {value})
+                        p.set("search", "lemgram|" + value)
+
+                        window.location.hash = "#?" + p.toString().replace("=&", "&").replace(/=$/, "")
+                        
+                    }
+                }
+            },
         },
         compwf: {
             label: "compwf",
