@@ -118,7 +118,7 @@ settings.corporafolders.governmental = {
 
 settings.corporafolders.protected = {
     title: "Skyddade korpusar",
-    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "swell-original", "swell-target", "tisus"]
+    contents: ["ansokningar", "asu", "sprakfragor", "forhor", "gdc", "ivip", "lawline", "mepac", "mepac-i", "platsannonser", "spin-source", "soexempel", "sw1203", "sw1203v2", "swell-original", "swell-target", "tisus", "tisusv2"]
 };
 
 settings.corporafolders.novels = {
@@ -128,7 +128,7 @@ settings.corporafolders.novels = {
 
 settings.corporafolders.socialmedia = {
     title: "Sociala medier",
-    contents: []
+    contents: ["sic2"]
 };
 
 settings.corporafolders.socialmedia.bloggmix = {
@@ -2358,6 +2358,37 @@ Meningarna i korpusarna är sorterade i slumpvis ordning, för att man inte ska 
     }
 };
 
+settings.corpora["sic2"] = {
+    id: "sic2",
+    title: "SIC2 - Stockholm Internet Corpus",
+    description: 'The <a href="https://www.ling.su.se/english/nlp/corpora-and-resources/sic/stockholm-internet-corpus-sic-1.99019" target="blank">Stockholm Internet Corpus (SIC2)</a> contains Swedish blog posts, annotated with part of speech, morphological features, and named entities.',
+    within: settings.defaultWithin,
+    context: {
+        "1 sentence": "1 sentence",
+        "1 post": "1 post"
+    },
+    attributes: _.extend({}, modernAttrs2,{
+        name_type: {
+            label: "sic2_name",
+            isStructAttr: true
+        }
+    }),
+    structAttributes: _.extend({}, commonStructAttrs, {
+        blog_id: {
+            label: "blog_id",
+            extendedComponent: "structServiceSelect"
+        },
+        blog_sex: {
+            label: "author_gender",
+            extendedComponent: "structServiceSelect"
+        },
+        post_id: {
+            label: "post_id",
+            extendedComponent: "structServiceSelect"
+        }
+    })
+};
+
 settings.corpora["snp7879"] = {
     id: "snp7879",
     title: "SNP 78–79 (Riksdagens snabbprotokoll)",
@@ -3458,6 +3489,69 @@ settings.corpora["tisus"] = {
     }
 };
 
+settings.corpora["tisusv2"] = {
+    id: "tisusv2",
+    title: "TISUS-texter v2",
+    description: 'För åtkomst kontakta <a href="mailto:elena.volodina@svenska.gu.se">Elena Volodina</a>.',
+    limitedAccess: true,
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_essay_id: {label: "essay_id", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_gender: {
+            label: "gender",
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "Kvinna": "Kvinna",
+                "Man": "Man"
+            }},
+        text_time_in_sweden: {label: "time_in_sweden", extendedComponent: "structServiceSelect"},
+        text_edu_level: {label: "edu_level", extendedComponent: "structServiceSelect"},
+        text_lf1_result: {label: "lf1_result"},
+        text_lf2_result: {label: "lf2_result"},
+        text_final_grade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
+        text_approximate_level: {label: "approximate_level", extendedComponent: "structServiceSelect"},
+        text_datum: {label: "date", hideExtended: true},
+        /*text_iso_l1: {
+            label: "firstlang",
+            type: "set",
+            opts: setOptions,
+            extendedComponent: "structServiceSelect",
+            translationKey: "langcode_"
+        },*/
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        text_course_level: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        text_course_subject: {label: "school_type", extendedComponent: "structServiceSelect"},
+        text_grade: {label: "essay_grade", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
+        text_lf_sum: {label: "lf_sum"},
+        text_oral_result: {label: "oral_result", extendedComponent: "structServiceSelect"},
+        text_source: {label: "tisus_source", extendedComponent: "structServiceSelect"},
+        text_student_id: {label: "student_id", extendedComponent: "structServiceSelect"},
+        text_svala_link: {label: "full text", hideExtended: true, pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>SVALA</a>"},
+        text_task: {label: "task_id", extendedComponent: "structServiceSelect"},
+        text_task_date: {label: "task_date", extendedComponent: "structServiceSelect"},
+        text_task_format: {label: "task_format", extendedComponent: "structServiceSelect"},
+        text_task_subject: {label: "task_subject", extendedComponent: "structServiceSelect"},
+        text_task_type: {label: "task_type", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
+        text_written_result: {label: "written_result", extendedComponent: "structServiceSelect"}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_explanations2.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    },
+    defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_task_subject", "text_age", "text_grade", "text_grading_scale"]
+};
+
 settings.corpora["ansokningar"] = {
     id: "ansokningar",
     title: "Ansökningar",
@@ -3865,7 +3959,7 @@ settings.corpora["twitter-2017"] = {
 settings.corpora["gdc"] = {
     id: "gdc",
     title: "Gothenburg Dialogue Corpus (GDC)",
-    description: 'För åtkomst kontakta <a href="mailto:cajsa.ottesjo@gu.se">Cajsa Ottesjö</a>.',
+    description: 'För åtkomst kontakta <a href="mailto:data@flov.gu.se">data@flov.gu.se</a>.',
     limitedAccess: true,
     within: settings.defaultWithin,
     context: {

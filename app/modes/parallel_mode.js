@@ -31,7 +31,7 @@ korpApp.controller("SearchCtrl", function($rootScope, $scope, $controller, $loca
 
 function parseLocationLangs() {
     try {
-        var langs = _(location.hash.split("?")[1].split("&")).invoke("split", "=").object().value()["parallel_corpora"].split(",")
+        var langs = _.filter(location.hash.split("?")[1].split("&"), (elem) => elem.slice(0, 16) === "parallel_corpora")[0].split('=')[1].split(',')
     } catch(e) {
         return ["swe"]
     }
@@ -2201,10 +2201,9 @@ settings.corpora["espc-sv"] = {
 settings.corpora["espc-en"] = {
     id: "espc-en",
     lang: "eng",
-    linkedTo: ["espc-en"],
+    linkedTo: ["espc-sv"],
     limitedAccess: true,
     title: "The English-Swedish Parallel Corpus (ESPC)",
-    description: 'För åtkomst kontakta <a href="mailto:karin.axelsson@sprak.gu.se">Karin Axelsson</a>.',
     context: context.defaultAligned,
     within: {
         "link": "meningspar"
