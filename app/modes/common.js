@@ -513,15 +513,11 @@ var modernAttrs = {
         },
         extendedTemplate: "<input ng-model='currentVal'>",
         extendedController: ["$scope", function($scope) {
-        console.log("🚀 ~ file: common.js ~ line 516 ~ scope", $scope)
-            if($scope.model) {
-                $scope.currentVal = $scope.model.replace(/[\\+\.\*]*$/, "").replace(/^\\\+/, "")
+            let strip = str => str.replace(/[\\+\.\*]*$/, "").replace(/^\\\+/, "")
+            if($scope.model && strip($scope.model) != ".+?") {
+                $scope.currentVal = strip($scope.model)
             }
             let setModel = () => {
-                // if(!$scope.currentVal) {
-                //     $scope.model = ""
-                //     return
-                // }
                 let val = $scope.currentVal || ".+?"
                 if(["starts_with_contains", "not_starts_with_contains"].includes($scope.orObj.op)) {
                     $scope.model = val + "\\+"
@@ -539,9 +535,6 @@ var modernAttrs = {
             })
         }],
         type: "set",
-        hideStatistics: false,
-        hideExtended: false,
-        hideCompare: false
     },
     sense: {
         label: "sense",
