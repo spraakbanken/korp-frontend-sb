@@ -454,7 +454,7 @@ var modernAttrs = {
                 <ul ng-show="value != '|'">
                     <li ng-repeat="comp in values | limitTo:listLimit">
                         
-                        <span ng-repeat="value in comp.split('+')">
+                        <span ng-repeat="value in comp.split('+') track by $index">
                             <span ng-if="!$first"> + </span>
                             <a ng-click="onItemClick(value, $first, $last)" ng-bind-html="stringify(value) | trust"></a>
                         </span>
