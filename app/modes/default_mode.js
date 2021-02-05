@@ -4544,4 +4544,19 @@ settings.corpora["rd-ovr"] = {
     structAttributes: rd_struct_attributes
 };
 
+settings.corpora["sv-covid-19"] = {
+    id: "sv-covid-19",
+    title: "sv-COVID-19",
+    description: "Blandade artiklar relaterade till corona.",
+    context: spContext,
+    within: spWithin,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_title: {label: "title"},
+        text_source: {label: "source", type: "url"},
+        text_date: {label: "date"}
+    }
+};
+
+
 settings.corpusListing = new CorpusListing(settings.corpora);
