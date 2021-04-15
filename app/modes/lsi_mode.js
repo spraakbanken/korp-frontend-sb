@@ -61,11 +61,10 @@ settings.corpora["lsi"] = {
                 controller: ["$scope", function($scope) {
                     $scope.pageUrl = $scope.sentenceData["page_page_url"];
                     const re = new RegExp("volume=(.*-.*)&pages=.*#page/(.*)/mode");
-                    const matches = pageUrl.match(re);
-                    const volumeName = matches[1];
+                    const matches = $scope.pageUrl.match(re);
+                    $scope.volumeName = matches[1];
                     const pageNumber = matches[2];
-                    const pageNumber2 = ("00"+pageNumber).slice(-3);
-                    return div;
+                    $scope.pageNumber2 = ("00"+pageNumber).slice(-3);
                 }]
             },
             order: 200
