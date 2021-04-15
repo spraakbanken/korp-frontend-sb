@@ -1867,47 +1867,49 @@ settings.corpora["sprakfragor"] = {
 var ivipVideo = function(baseURL) {
     return {
         label: "video",
-        renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
+        sidebarComponent: {
+            template: String.raw`
+                <span class="link" ng-click="showVideoModal()">visa inspelning</span>
+                <div id="video-modal" ng-controller="VideoCtrl"></div>
+            `,
+            controller: ["$scope", function($scope) {
+                const startTime = $scope.sentenceData["sentence_start"];
+                const endTime = $scope.sentenceData["sentence_end"];
+                const path = $scope.sentenceData["text_mediafilepath"];
+                const file = $scope.sentenceData["text_mediafile"];
+                const ext = $scope.sentenceData["text_mediafileext"];
 
-            var startTime = sentenceData["sentence_start"];
-            var endTime = sentenceData["sentence_end"];
-            var path = sentenceData["text_mediafilepath"];
-            var file = sentenceData["text_mediafile"];
-            var ext = sentenceData["text_mediafileext"];
+                $scope.showVideoModal = function () {
+                    const url = baseURL + path +  file + "." + ext;
 
-            var videoLink = $('<span class="link">visa inspelning</span>');
-            videoLink.click(function () {
-                var url = baseURL + path +  file + "." + ext;
+                    const modalScope = angular.element("#video-modal").scope();
+                    modalScope.videos = [{"url": url, "type": "video/mp4"}];
+                    modalScope.fileName = file + "." + ext;
+                    modalScope.startTime = startTime / 1000;
+                    modalScope.endTime = endTime / 1000;
 
-                var scope = angular.element("#video-modal").scope();
-                scope.videos = [{"url": url, "type": "video/mp4"}];
-                scope.fileName = file + "." + ext;
-                scope.startTime = startTime / 1000;
-                scope.endTime = endTime / 1000;
-
-                // find start of sentence
-                var startIdx = 0
-                for(var i = wordData.position; i >= 0; i--) {
-                    if(_.includes(tokens[i]._open, "sentence")) {
-                        startIdx = i;
-                        break;
+                    // find start of sentence
+                    let startIdx = 0
+                    for(let i = $scope.wordData.position; i >= 0; i--) {
+                        if(_.includes($scope.tokens[i]._open, "sentence")) {
+                            startIdx = i;
+                            break;
+                        }
                     }
-                }
 
-                // find end of sentence
-                var endIdx = tokens.length - 1
-                for(var i = wordData.position; i < tokens.length; i++) {
-                    if(_.includes(tokens[i]._close, "sentence")) {
-                        endIdx = i;
-                        break;
+                    // find end of sentence
+                    let endIdx = $scope.tokens.length - 1
+                    for(let i = $scope.wordData.position; i < $scope.tokens.length; i++) {
+                        if(_.includes($scope.tokens[i]._close, "sentence")) {
+                            endIdx = i;
+                            break;
+                        }
                     }
-                }
 
-                scope.sentence = _.map(tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                scope.open();
-                scope.$apply();
-            });
-            return videoLink;
+                    modalScope.sentence = _.map($scope.tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+                    modalScope.open();
+                }
+            }]
         },
         customType: "struct"
     }
