@@ -133,7 +133,8 @@ settings.modeConfig = [
     },
     {
         localekey: "parallel_texts",
-        mode: "parallel"
+        mode: "parallel",
+        parallel: true
     },
     {
         localekey: "old_swedish_texts",
