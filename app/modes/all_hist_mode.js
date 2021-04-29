@@ -1,4 +1,4 @@
-structAttributes:settings.primaryColor = "#F7D1E4";
+settings.primaryColor = "#F7D1E4";
 settings.primaryLight = "#FFEBF5";
 
 settings.structAttributeSelector = "intersection"
