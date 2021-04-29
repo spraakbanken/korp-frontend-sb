@@ -389,8 +389,6 @@ var modernAttrs = {
     dephead: attrs.dephead,
     deprel: attrs.deprel,
     ref: attrs.ref,
-    // prefix: attrs.prefix,
-    // suffix: attrs.suffix,
     ne_ex: attrs.ne_ex,
     ne_type: attrs.ne_type,
     ne_subtype: attrs.ne_subtype,
@@ -398,12 +396,16 @@ var modernAttrs = {
     prefix: {
         label: "prefix", 
         extendedTemplate: "<span>{{'compound_move' | loc}}</span>",
-        hideSidebar: true
+        hideSidebar: true,
+        hideStatistics: true,
+        hideCompare: true
     },
     suffix: {
         label: "suffix", 
         extendedTemplate: "<span>{{'compound_move' | loc}}</span>",
-        hideSidebar: true
+        hideSidebar: true,
+        hideStatistics: true,
+        hideCompare: true
     },
     complemgram: {
         label: "compound",
