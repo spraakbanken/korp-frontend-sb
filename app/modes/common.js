@@ -448,7 +448,7 @@ var modernAttrs = {
                     setModel()
                 })
         }],
-        extendedTemplate: "<autoc model='currentVal' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>",
+        extendedTemplate: "<autoc model='currentVal' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value'/>",
 
         sidebarComponent: {
             template: String.raw`
