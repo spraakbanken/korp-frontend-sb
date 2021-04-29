@@ -40,12 +40,15 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 
 - Go to link
+- Go to Extended search
 - Select "lemgram" and type something
 - Do not select a lemgram and click outside the box
 - **"Choose a value" should appear**
 - Type an actual wordform and select a lemgram
 - **"Choose a value" should disappear**
-- Redo the test for *initial part* and *final part* also
+  
+TODO:
+- Redo the test for *compounds* when implemented
 
 **Case insensitivity settings should not be preserved when switching 
 search attribute**
@@ -72,7 +75,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search_tab=
 
 **Escaping values**
 
-https://spraakbankengu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=aspacsv&global_filter=eyJ0ZXh0X2F1dGhvciI6WyJKLlIuUi4gVG9sa2llbiJdfQ%3D%3D&page=0&search=word%7CSmaug
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=aspacsv&global_filter=eyJ0ZXh0X2F1dGhvciI6WyJKLlIuUi4gVG9sa2llbiJdfQ%3D%3D&page=0&search=word%7CSmaug
 
 - Go to link or filter on author J.R.R. Tolkien in *ASPAC svenska*
 - Go to the advanced tab
@@ -150,6 +153,8 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&search=wo
 
 **Short KWIC rows should not cut off corpus names**
 
+Currently broken: https://github.com/spraakbanken/korp-frontend/issues/25
+
 https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22och%22%20%26%20lbound(sentence)%20%26%20rbound(sentence)%5D&corpus=drama&search_tab=1&search=cqp
 
 - Follow link
@@ -200,7 +205,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2
 
 **Table should use the available space**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=[]&corpus=vivill&page=0&search=word|nyhet&result_tab=1
+https://spraakbanken.gu.se/korplabb/#?cqp=[]&corpus=vivill&page=0&search=word|nyhet
 
 - Search in "Svenska partiprogram och valmanifest" for
   "nyhet" or follow link above
@@ -235,9 +240,9 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party
 
 - Follow link
-- **Click JSON-button and check that the result is for the same search**
+- **Click the statistics JSON-button and check that the result is for the same search**
 - Search for another word, "jämlikhet" perhaps
-- **Click JSON-button and check that the result is for the new word**
+- **Click the statistics JSON-button and check that the result is for the new word**
 
 ### Map
 
@@ -311,11 +316,12 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 **Links to restricted corpora**
 
 - Login
+- Select a restricted corpora
 - Search in simple
 - Select a non-default "compile based on"-attribute
 - Turn on word picture
 - Perform search
-- Switch to another page
+- Switch to another page in the KWIC
 - Copy link and then log out
 - Open link in a new tab
 - Login prompt should appear - login
@@ -385,9 +391,10 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 
 **i18n for download buttons**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=5&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
 
 - Follow link
+- Click "Show Trend Diagram"
 - Press "Table"
 - Switch language back and forth
 - **Check that all texts are updated to the correct language
@@ -403,7 +410,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=en&cor
 - Click "Show trend diagram" then immediately switch back to statistics
 - Now the trend diagram will render in the background
 - Wait until the progress bar is done
-- Wait some more
+- Wait some more :)
 - Go back to the trend diagram tab
 - **The width of the diagram should be the same as the width
   of the window**
