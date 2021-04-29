@@ -50,19 +50,22 @@ settings.corpora["lsi"] = {
     customAttributes: {
         "image": {
             customType: "struct",
-            renderItem: function(key, value, attrs, wordData, sentenceData, tokens) {
-                var pageUrl = sentenceData["page_page_url"];
-                var re = new RegExp("volume=(.*-.*)&pages=.*#page/(.*)/mode");
-                var matches = pageUrl.match(re);
-                var volumeName = matches[1];
-                var pageNumber = matches[2];
-                var src = 'https://spraakbanken.gu.se/korp/data/lsi/faksimil_thumb/thumb.lsi-v' + volumeName + '-' + ("00"+pageNumber).slice(-3) + '.jpg';
-                var image = $('<img src="' + src + '">');
-                var a = $('<a target="_blank" href="' + pageUrl + '"/>');
-                var div = $('<div></div>');
-                a.append(image);
-                div.append(a);
-                return div;
+            sidebarComponent: {
+                template: String.raw`
+                    <div>
+                        <a target="_blank" ng-href="{{pageUrl}}" ng-show="pageUrl">
+                            <img ng-src="https://spraakbanken.gu.se/korp/data/lsi/faksimil_thumb/thumb.lsi-v{{volumeName}}-{{pageNumber2}}.jpg">
+                        </a>
+                    </div>
+                `,
+                controller: ["$scope", function($scope) {
+                    $scope.pageUrl = $scope.sentenceData["page_page_url"];
+                    const re = new RegExp("volume=(.*-.*)&pages=.*#page/(.*)/mode");
+                    const matches = $scope.pageUrl.match(re);
+                    $scope.volumeName = matches[1];
+                    const pageNumber = matches[2];
+                    $scope.pageNumber2 = ("00"+pageNumber).slice(-3);
+                }]
             },
             order: 200
         }

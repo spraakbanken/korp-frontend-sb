@@ -132,13 +132,9 @@ settings.modeConfig = [
         mode: "default"
     },
     {
-        localekey: "swedish_texts",
-        mode: "swedish",
-        labOnly: true
-    },
-    {
         localekey: "parallel_texts",
-        mode: "parallel"
+        mode: "parallel",
+        parallel: true
     },
     {
         localekey: "old_swedish_texts",
