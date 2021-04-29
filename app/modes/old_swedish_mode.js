@@ -24,9 +24,6 @@ settings.sdhkstructs = {
 
 settings.sdhkdescription ='Svenskt Diplomatarium - från <a href="http://www.riksarkivet.se/sdhk" target="_blank">Riksarkivet</a>';
 
-
-$("#lemgram_list_item").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 

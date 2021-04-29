@@ -142,11 +142,6 @@ settings.runebergstruct_attributes = {
     text_date: {label: "date"}
 };
 
-
-$("#lemgram_list_item").remove();
-$("#results-lemgram").remove();
-//$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 

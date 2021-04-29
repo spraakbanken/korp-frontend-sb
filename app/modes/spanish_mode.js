@@ -3,9 +3,6 @@ settings.primaryLight = "#FFF4EB";
 settings.autocomplete = false;
 settings.wordpicture = false;
 
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 settings.corpora["pe77"] = {

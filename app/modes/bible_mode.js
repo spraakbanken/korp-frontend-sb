@@ -4,10 +4,6 @@ settings.primaryLight = "#F9EDED";
 settings.autocomplete = true;
 settings.wordpicture = true;
 
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
-
 settings.corpora = {};
 settings.corporafolders = {};
 
