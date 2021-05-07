@@ -2676,6 +2676,20 @@ settings.corpora["sfs"] = {
     }
 };
 
+settings.corpora["sv-covid-19"] = {
+    id: "sv-covid-19",
+    title: "sv-COVID-19",
+    description: "Blandade artiklar relaterade till corona.",
+    context: spContext,
+    within: spWithin,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_title: {label: "title"},
+        text_source: {label: "source", type: "url"},
+        text_date: {label: "date"}
+    }
+};
+
 settings.corpora["vivill"] = {
     id: "vivill",
     title: "Svenska partiprogram och valmanifest 1887–2010",
@@ -4544,20 +4558,6 @@ settings.corpora["rd-ovr"] = {
     context: spContext,
     attributes: modernAttrs,
     structAttributes: rd_struct_attributes
-};
-
-settings.corpora["sv-covid-19"] = {
-    id: "sv-covid-19",
-    title: "sv-COVID-19",
-    description: "Blandade artiklar relaterade till corona.",
-    context: spContext,
-    within: spWithin,
-    attributes: modernAttrs,
-    structAttributes: {
-        text_title: {label: "title"},
-        text_source: {label: "source", type: "url"},
-        text_date: {label: "date"}
-    }
 };
 
 
