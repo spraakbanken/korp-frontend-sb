@@ -9,7 +9,7 @@ settings.corporafolders = {};
 settings.corpora["spf"] = {
     id: "spf",
     title: "Svensk prosafiktion 1800–1900",
-    description: 'Samtliga etexter från <a href="http://spf1800-1900.se/">spf1800-1900.se</a>.',
+    description: 'Svensk prosafiktion 1800–1900 är en korpus som Litteraturbanken tog fram med stöd av Vetenskapsrådet 2009-2011. Målet var att samla den svenska skönlitteratur som trycktes separat första gången åren 1800, 1820, 1840, 1860, 1880 och 1900.',
     within: settings.defaultWithin,
     context: defaultContext,
     attributes: {
@@ -27,11 +27,17 @@ settings.corpora["spf"] = {
     structAttributes: {
         "text_title": {label: "title"},
         "text_author": {label: "author"},
-        "text_url": {label: "verk", type: "url"},
-        "text_source": {label: "source"},
         "text_date": {label: "imprintyear"},
-        "page_n": {label: "page"},
-        "page_url": {label: "pagelink", type: "url"}
+        "text_id": {label: "id", displayType: "hidden"},
+        "page_ix": {label: "id", displayType: "hidden"},
+        "page_n": {label: "page"}
+    },
+    customAttributes: {
+        page_url: {
+            label: "source",
+            pattern: "<a href='https://spraakbanken.gu.se/lb/resurser/spf/txt/<%= struct_attrs.text_id %>/res_<%= struct_attrs.page_ix %>.html' target='_blank'>länk</a>",
+            customType: "struct"
+            }
     }
 };
 
