@@ -1,6 +1,3 @@
-settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />";
-
-
 var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
 var liteOptions = {
@@ -81,35 +78,7 @@ attrs.pos = {
 attrs.msd = {
     label: "msd",
     opts: settings.defaultOptions,
-    extendedTemplate: '<input ng-model="input" class="arg_value" escaper ng-model-options=\'{debounce : {default : 300, blur : 0}, updateOn: "default blur"}\'>' +
-    '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
-    extendedController: ["$scope", "$uibModal", function($scope, $uibModal) {
-        var modal = null;
-        var msdHTML = settings.markup.msd;
-        var template = '<div>' +
-                         '<div class="modal-header">' +
-                            '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
-                            '<span ng-click="clickX()" class="close-x">×</span>' +
-                         '</div>' +
-                         '<div class="modal-body msd-modal" ng-click="msdClick($event)">' + msdHTML + '</div>' +
-                       '</div>'
-
-        $scope.onIconClick = function() {
-            modal = $uibModal.open({
-                template: template,
-                scope: $scope
-            })
-        }
-        $scope.clickX = function(event) {
-            modal.close()
-        }
-        $scope.msdClick = function(event) {
-            val = $(event.target).parent().data("value")
-            if(!val) return;
-            $scope.input = val;
-            modal.close();
-        }
-    }]
+    extendedComponent: 'msd'
 };
 attrs.baseform = {
     label: "baseform",
@@ -128,7 +97,13 @@ attrs.lemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            errorOnEmpty: true
+        }
+    },
     order: 2
 };
 attrs.dalinlemgram = {
@@ -141,7 +116,14 @@ attrs.dalinlemgram = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin' text-in-field='textInField' error-on-empty='true' error-message='choose_value'/>",
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            variant: 'dalin',
+            errorOnEmpty: true
+        }
+    },
     order: 2
 };
 attrs.saldo = {
@@ -153,7 +135,13 @@ attrs.saldo = {
     },
     externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
     internalSearch: true,
-    extendedTemplate: settings.senseAutoComplete,
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'sense',
+            errorOnEmpty: true
+        }
+    },
     order: 3
 };
 attrs.dephead = {
@@ -243,7 +231,14 @@ attrs.prefix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />"
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            variant: 'affix',
+            errorOnEmpty: true
+        }
+    }
 };
 attrs.suffix = {
     label: "suffix",
@@ -254,7 +249,14 @@ attrs.suffix = {
     },
     externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />"
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            variant: 'affix',
+            errorOnEmpty: true
+        }
+    }
 };
 attrs.ref = {
     label: "ref",
@@ -423,80 +425,8 @@ var modernAttrs = {
         },
         internalSearch: true,
         ranked: true,
-        extendedController: [
-            "$scope", function($scope) {
-                if($scope.model) {
-                    $scope.currentVal = $scope.model.replace(/[\\+\.\*:]*$/, "").replace(/^\\\+/, "")
-                }
-                let setModel = () => {
-                    if(!$scope.currentVal) {
-                        $scope.model = ""
-                        return
-                    }
-                    if(["starts_with_contains", "not_starts_with_contains"].includes($scope.orObj.op)) {
-                        $scope.model = $scope.currentVal + "\\+"
-                    } else if(["ends_with_contains", "not_ends_with_contains"].includes($scope.orObj.op)) {
-                        $scope.model = "\\+" + $scope.currentVal + ":.*"
-                    } else if(["incontains_contains", "not_incontains_contains"].includes($scope.orObj.op)) {
-                        $scope.model = "\\+" + $scope.currentVal + "\\+"
-                    }
-                }
-                $scope.$watch("orObj.op", (newVal) => {
-                    setModel()
-                })
-                $scope.$watch("currentVal", (newVal) => {
-                    setModel()
-                })
-        }],
-        extendedTemplate: "<autoc model='currentVal' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField' error-on-empty='true' error-message='choose_value'/>",
-
-        sidebarComponent: {
-            template: String.raw`
-                <i ng-show="value == '|'" rel="localize[empty]" style="color : grey">[tom]</i>
-                <ul ng-show="value != '|'">
-                    <li ng-repeat="comp in values | limitTo:listLimit">
-                        
-                        <span ng-repeat="value in comp.split('+') track by $index">
-                            <span ng-if="!$first"> + </span>
-                            <a ng-click="onItemClick(value, $first, $last)" ng-bind-html="stringify(value) | trust"></a>
-                        </span>
-                    </li>
-                    <li class="link" ng-show="values.length > 1" ng-click="listLimit = listLimit < 10 ? 10 : 1">
-                        {{listLimit < 10 ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
-                    </li>
-                </ul>
-            `,
-            controller: ["$scope", "statemachine", function($scope, statemachine) {
-                $scope.listLimit = 1
-                $scope.stringify = (lemgram) => util.lemgramToString(lemgram, true)
-                $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
-                $scope.onItemClick = (value, isPrefix, isSuffix) => {
-                    let isMiddle = !(isPrefix || isSuffix)
-
-                    let p = new URLSearchParams(location.hash.slice(1))
-                    if(isPrefix) {
-                        p.set("prefix", "")
-                        p.delete("mid_comp")
-                        p.delete("suffix")
-                    }
-                    if(isMiddle) {
-                        p.set("mid_comp", "")
-                        p.delete("suffix")
-                        p.delete("prefix")
-                    }
-                    if(isSuffix) {
-                        p.set("suffix", "")
-                        p.delete("mid_comp")
-                        p.delete("prefix")
-                    }
-                    statemachine.send("SEARCH_LEMGRAM", {value})
-                    p.set("search", "lemgram|" + value)
-
-                    window.location.hash = "#?" + p.toString().replace("=&", "&").replace(/=$/, "")
-                    
-                }
-            }]
-        },
+        extendedComponent: "complemgramExtended",
+        sidebarComponent: "complemgram"
     },
     compwf: {
         label: "compwf",
@@ -511,29 +441,7 @@ var modernAttrs = {
             "suffix": "ends_with_contains",
             "not_suffix": "not_ends_with_contains",
         },
-        extendedTemplate: "<input ng-model='currentVal'>",
-        extendedController: ["$scope", function($scope) {
-            let strip = str => str.replace(/[\\+\.\*]*$/, "").replace(/^\\\+/, "")
-            if($scope.model && strip($scope.model) != ".+?") {
-                $scope.currentVal = strip($scope.model)
-            }
-            let setModel = () => {
-                let val = $scope.currentVal || ".+?"
-                if(["starts_with_contains", "not_starts_with_contains"].includes($scope.orObj.op)) {
-                    $scope.model = val + "\\+"
-                } else if(["ends_with_contains", "not_ends_with_contains"].includes($scope.orObj.op)) {
-                    $scope.model = "\\+" + val
-                } else if(["incontains_contains", "not_incontains_contains"].includes($scope.orObj.op)) {
-                    $scope.model = "\\+" + val + "\\+"
-                }
-            }
-            $scope.$watch("orObj.op", (newVal) => {
-                setModel()
-            })
-            $scope.$watch("currentVal", (newVal) => {
-                setModel()
-            })
-        }],
+        extendedComponent: "compwf",
         type: "set",
     },
     sense: {
@@ -549,7 +457,13 @@ var modernAttrs = {
         opts: probabilitySetOptions,
         externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
         internalSearch: true,
-        extendedTemplate: settings.senseAutoComplete
+        extendedComponent: {
+            name: "autocExtended",
+            options: {
+                type: 'sense',
+                errorOnEmpty: true
+            }
+        }
     }
 };
 
@@ -690,7 +604,13 @@ settings.fsvlex = {
     type: "set",
     label: "lemgram",
     opts: setOptions,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            errorOnEmpty: true
+        }
+    },
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
@@ -703,7 +623,13 @@ settings.fsvvariants = {
     stringify: function(str) {
         return util.lemgramToString(str, true);
     },
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField' error-on-empty='true' error-message='choose_value' />",
+    extendedComponent: {
+        name: "autocExtended",
+        options: {
+            type: 'lemgram',
+            errorOnEmpty: true
+        }
+    },
     opts: setOptions,
     externalSearch: karpLemgramLink,
     internalSearch: true,
@@ -799,126 +725,7 @@ settings.commonStructTypes = {
         hideCompare: "true",
         hideStatistics: "true",
         opts: false,
-        extendedTemplate: `\
-        <div class="date_interval_arg_type">
-            <h3>{{'simple' | loc}}</h3>
-            <form ng-submit="commitDateInput()">
-                <div class="" style="margin-bottom: 1rem;">
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'from' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="fromDateString" placeholder="'1945' {{'or' | loc}} '1945-08-06'"/>
-                </div>
-                <div>
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'to' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="toDateString" placeholder="'1968' {{'or' | loc}} '1968-04-04'"/>
-                </div>
-                <button type="submit" class="hidden" />
-            </form>
-            <div class="section mt-4"> 
-                <h3>{{'advanced' | loc}}</h3>
-                <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> 
-                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'from' | loc}} </span>
-                </button> 
-                {{combined.format("YYYY-MM-DD HH:mm")}} 
-                <time-interval 
-                    ng-click="from_click($event)" 
-                    class="date_interval popper_menu dropdown-menu" 
-                    date-model="from_date" 
-                    time-model="from_time" 
-                    model="combined" 
-                    min-date="minDate" 
-                    max-date="maxDate"></time-interval>
-            </div>
-                
-            <div class="section"> 
-                <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> 
-                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'to' | loc}} </span>
-                </button> 
-                {{combined2.format("YYYY-MM-DD HH:mm")}} 
-                
-                <time-interval 
-                    ng-click="from_click($event)" 
-                    class="date_interval popper_menu dropdown-menu" 
-                    date-model="to_date" 
-                    time-model="to_time" 
-                    model="combined2" 
-                    my="left top" 
-                    at="right top"
-                    min-date="minDate"
-                    max-date="maxDate"></time-interval>
-            </div>
-        </div>`,
-        extendedController: [
-            "$scope", "searches", "$timeout", function($scope, searches, $timeout) {
-                let s = $scope;
-                let cl = settings.corpusListing;
-
-                let updateIntervals = function() {
-                    let moments = cl.getMomentInterval();
-                    if (moments.length) {
-                        let [fromYear, toYear] = _.invokeMap(moments, "toDate")
-                        s.minDate = fromYear
-                        s.maxDate = toYear
-                    } else {
-                        let [from, to] = cl.getTimeInterval()
-                        s.minDate = moment(from.toString(), "YYYY").toDate();
-                        s.maxDate = moment(to.toString(), "YYYY").toDate();
-                    }
-                };
-                s.commitDateInput = () => {
-                    if(s.fromDateString) {
-                        let simpleFrom = s.fromDateString.length == 4
-                        s.from_date = moment(s.fromDateString, simpleFrom ? "YYYY" : "YYYY-MM-DD" ).toDate()
-                    }
-                    if(s.toDateString) {
-                        let simpleTo = s.toDateString.length == 4
-                        if(simpleTo) {
-                            var dateString = `${s.toDateString}-12-31`
-                        }
-                        s.to_date = moment(dateString || s.dateString).toDate()
-                        s.to_time = moment("235959", "HHmmss").toDate()
-                     }
-                }
-                s.$on("corpuschooserchange", function() {
-                  updateIntervals();
-                });
-
-                updateIntervals();
-
-                s.from_click = function(event) {
-                  event.originalEvent.preventDefault();
-                  event.originalEvent.stopPropagation();
-                };
-
-                let getYear = function(val) {
-                  return moment(val.toString(), "YYYYMMDD").toDate();
-                };
-
-                let getTime = function(val) {
-                  return moment(val.toString(), "HHmmss").toDate();
-                };
-
-                if (!s.model) {
-                    s.from_date = s.minDate;
-                    s.to_date = s.maxDate;
-                    let [from, to] = _.invokeMap(cl.getMomentInterval(), "toDate")
-                    s.from_time = from 
-                    s.to_time = to
-                } else if (s.model.length === 4) {
-                    let [fromYear, toYear] = _.map(s.model.slice(0, 3), getYear)
-                    s.from_date = fromYear
-                    s.to_date = toYear
-                    let [fromTime, toTime] = _.map(s.model.slice(2), getTime)
-                    s.from_time = fromTime
-                    s.to_time = toTime
-                }
-                s.$watchGroup(["combined", "combined2"], function([combined, combined2]) {
-                    s.model = [
-                        moment(s.from_date).format("YYYYMMDD"), 
-                        moment(s.to_date).format("YYYYMMDD"), 
-                        moment(s.from_time).format("HHmmss"), 
-                        moment(s.to_time).format("HHmmss")
-                   ]
-                });
-            }
-        ]
+        extendedComponent: "dateInterval"
     }
 };
 

@@ -1868,48 +1868,10 @@ var ivipVideo = function(baseURL) {
     return {
         label: "video",
         sidebarComponent: {
-            template: String.raw`
-                <span class="link" ng-click="showVideoModal()">visa inspelning</span>
-                <div id="video-modal" ng-controller="VideoCtrl"></div>
-            `,
-            controller: ["$scope", function($scope) {
-                const startTime = $scope.sentenceData["sentence_start"];
-                const endTime = $scope.sentenceData["sentence_end"];
-                const path = $scope.sentenceData["text_mediafilepath"];
-                const file = $scope.sentenceData["text_mediafile"];
-                const ext = $scope.sentenceData["text_mediafileext"];
-
-                $scope.showVideoModal = function () {
-                    const url = baseURL + path +  file + "." + ext;
-
-                    const modalScope = angular.element("#video-modal").scope();
-                    modalScope.videos = [{"url": url, "type": "video/mp4"}];
-                    modalScope.fileName = file + "." + ext;
-                    modalScope.startTime = startTime / 1000;
-                    modalScope.endTime = endTime / 1000;
-
-                    // find start of sentence
-                    let startIdx = 0
-                    for(let i = $scope.wordData.position; i >= 0; i--) {
-                        if(_.includes($scope.tokens[i]._open, "sentence")) {
-                            startIdx = i;
-                            break;
-                        }
-                    }
-
-                    // find end of sentence
-                    let endIdx = $scope.tokens.length - 1
-                    for(let i = $scope.wordData.position; i < $scope.tokens.length; i++) {
-                        if(_.includes($scope.tokens[i]._close, "sentence")) {
-                            endIdx = i;
-                            break;
-                        }
-                    }
-
-                    modalScope.sentence = _.map($scope.tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                    modalScope.open();
-                }
-            }]
+            name: "ivipVideo",
+            options: {
+                baseURL: baseURL
+            }
         },
         customType: "struct"
     }
