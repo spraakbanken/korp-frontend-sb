@@ -41,9 +41,124 @@ var spWithin = {
 var attrs = {};  // positional attributes
 var sattrs = {}; // structural attributes
 
+var posTranslation = {
+    "AB": {
+        "en": "adverb",
+        "sv": "adverb"
+    },
+    "MAD": {
+        "en": "punctuation",
+        "sv": "interpunktion"
+    },
+    "MID": {
+        "en": "punctuation",
+        "sv": "interpunktion"
+    },
+    "PAD": {
+        "en": "punctuation",
+        "sv": "interpunktion"
+    },
+    "MID|MAD|PAD": {
+        "en": "punctuation",
+        "sv": "interpunktion"
+    },
+    "DL": {
+        "en": "punctuation",
+        "sv": "interpunktion"
+    },
+    "DT": {
+        "en": "determiner",
+        "sv": "determinerare"
+    },
+    "HA": {
+        "en": "interrogative/relative adverb",
+        "sv": "frågande/relativt adverb"
+    },
+    "HD": {
+        "en": "interrogative/relative determiner",
+        "sv": "frågande/relativ determinerare"
+    },
+    "HP": {
+        "en": "interrogative/relative pronoun",
+        "sv": "frågande/relativt pronomen"
+    },
+    "HS": {
+        "en": "interrogative/relative possessive",
+        "sv": "frågande/relativt possesivt pronomen"
+    },
+    "IE": {
+        "en": "infinitive marker",
+        "sv": "infinitivmärke"
+    },
+    "IN": {
+        "en": "interjection",
+        "sv": "interjektion"
+    },
+    "JJ": {
+        "en": "adjective",
+        "sv": "adjektiv"
+    },
+    "KN": {
+        "en": "conjunction",
+        "sv": "konjunktion"
+    },
+    "NN": {
+        "en": "noun",
+        "sv": "substantiv"
+    },
+    "PC": {
+        "en": "participle",
+        "sv": "particip"
+    },
+    "PL": {
+        "en": "particle",
+        "sv": "partikel"
+    },
+    "PM": {
+        "en": "proper noun",
+        "sv": "egennamn"
+    },
+    "PN": {
+        "en": "pronoun",
+        "sv": "pronomen"
+    },
+    "PP": {
+        "en": "preposition",
+        "sv": "preposition"
+    },
+    "PS": {
+        "en": "possessive",
+        "sv": "possessivt pronomen"
+    },
+    "RG": {
+        "en": "cardinal number",
+        "sv": "grundtal"
+    },
+    "RO": {
+        "en": "ordinal number",
+        "sv": "ordningstal"
+    },
+    "SN": {
+        "en": "subjunction",
+        "sv": "subjunktion"
+    },
+    "UO": {
+        "en": "foreign word",
+        "sv": "utländskt ord"
+    },
+    "VB": {
+        "en": "verb",
+        "sv": "verb"
+    },
+    "E": {
+        "en": "e",
+        "sv": "e"
+    }
+};
+
 attrs.pos = {
     label: "pos",
-    translationKey: "pos_",
+    translation: posTranslation,
     dataset: {
         "AB": "AB",
         "MID|MAD|PAD": "DL",
@@ -150,7 +265,272 @@ attrs.dephead = {
 };
 attrs.deprel = {
     label: "deprel",
-    translationKey: "deprel_",
+    translation: {
+        "ROOT": {
+            "en": "Root",
+            "sv": "Rot"
+        },
+        "++": {
+            "en": "Coordinating conjunction",
+            "sv": "Samordnande konjunktion"
+        },
+        "+A": {
+            "en": "Conjunctional adverbial",
+            "sv": "Konjuktionellt adverb"
+        },
+        "+F": {
+            "en": "Coordination at main clause level",
+            "sv": "Koordination på huvudsatsnivå"
+        },
+        "AA": {
+            "en": "Other adverbial",
+            "sv": "Annat adverbial"
+        },
+        "AG": {
+            "en": "Agent",
+            "sv": "Agent"
+        },
+        "AN": {
+            "en": "Apposition",
+            "sv": "Apposition"
+        },
+        "AT": {
+            "en": "Nominal (adjectival) pre-modifier",
+            "sv": "Framförställt attribut"
+        },
+        "CA": {
+            "en": "Contrastive adverbial",
+            "sv": "Kontrastivt adverbial"
+        },
+        "DB": {
+            "en": "Doubled function",
+            "sv": "Dubbel funktion"
+        },
+        "DT": {
+            "en": "Determiner",
+            "sv": "Determinerare, bestämningsord"
+        },
+        "EF": {
+            "en": "Relative clause in cleft",
+            "sv": "Relativ bisats"
+        },
+        "EO": {
+            "en": "Logical object",
+            "sv": "Egentligt objekt"
+        },
+        "ES": {
+            "en": "Logical subject",
+            "sv": "Egentligt subjekt"
+        },
+        "ET": {
+            "en": "Other nominal post-modifier",
+            "sv": "Efterställd bestämning"
+        },
+        "FO": {
+            "en": "Dummy object",
+            "sv": "Formellt objekt"
+        },
+        "FP": {
+            "en": "Free subjective predicative complement",
+            "sv": "Fritt subjektivt predikativ (predikatsfyllnad)"
+        },
+        "FS": {
+            "en": "Dummy subject",
+            "sv": "Formellt subjekt"
+        },
+        "FV": {
+            "en": "Finite predicate verb",
+            "sv": "Finit verb, predikatsverb"
+        },
+        "I?": {
+            "en": "Question mark",
+            "sv": "Frågetecken"
+        },
+        "IC": {
+            "en": "Quotation mark",
+            "sv": "Citattecken"
+        },
+        "IG": {
+            "en": "Other punctuation mark",
+            "sv": "Övrig interpunktion"
+        },
+        "IK": {
+            "en": "Comma",
+            "sv": "Kommatecken"
+        },
+        "IM": {
+            "en": "Infinitive marker",
+            "sv": "Infinitivmärke"
+        },
+        "IO": {
+            "en": "Indirect object",
+            "sv": "Indirekt objekt (dativobjekt)"
+        },
+        "IP": {
+            "en": "Period",
+            "sv": "Punkt"
+        },
+        "IQ": {
+            "en": "Colon",
+            "sv": "Kolon"
+        },
+        "IR": {
+            "en": "Parenthesis",
+            "sv": "Parentes"
+        },
+        "IS": {
+            "en": "Semicolon",
+            "sv": "Semikolon"
+        },
+        "IT": {
+            "en": "Dash",
+            "sv": "Divis, bindestreck"
+        },
+        "IU": {
+            "en": "Exclamation mark",
+            "sv": "Utropstecken"
+        },
+        "IV": {
+            "en": "Nonfinite verb",
+            "sv": "Infinit verb"
+        },
+        "JC": {
+            "en": "Second quotation mark",
+            "sv": "Citattecken 2"
+        },
+        "JG": {
+            "en": "Second (other) punctuation mark",
+            "sv": "Övrig interpunktion 2"
+        },
+        "JR": {
+            "en": "Second parenthesis",
+            "sv": "Parentes 2"
+        },
+        "JT": {
+            "en": "Second dash",
+            "sv": "Divis 2, bindestreck 2"
+        },
+        "KA": {
+            "en": "Comparative adverbial",
+            "sv": "Komparativt adverbial"
+        },
+        "MA": {
+            "en": "Attitude adverbial",
+            "sv": "Satsadverbial"
+        },
+        "MS": {
+            "en": "Macrosyntagm",
+            "sv": "Makrosyntagm"
+        },
+        "NA": {
+            "en": "Negation adverbial",
+            "sv": "Negerande adverbial"
+        },
+        "OA": {
+            "en": "Object adverbial",
+            "sv": "Objektsadverbial (prepositionsobjekt)"
+        },
+        "OO": {
+            "en": "Direct object",
+            "sv": "Direkt objekt (ackusativobjekt)"
+        },
+        "OP": {
+            "en": "Object predicative",
+            "sv": "Objektspredikativ (objektiv predikatsfyllnad)"
+        },
+        "PL": {
+            "en": "Verb particle",
+            "sv": "Verbpartikel"
+        },
+        "PR": {
+            "en": "Preposition",
+            "sv": "Preposition"
+        },
+        "PT": {
+            "en": "Predicative attribute",
+            "sv": "Predikativt attribut"
+        },
+        "RA": {
+            "en": "Place adverbial",
+            "sv": "Platsadverbial"
+        },
+        "SP": {
+            "en": "Subjective predicative complement",
+            "sv": "Subjektspredikativ (subjektiv predikatsfyllnad)"
+        },
+        "SS": {
+            "en": "Other subject",
+            "sv": "Subjekt (övrigt subjekt)"
+        },
+        "TA": {
+            "en": "Time adverbial",
+            "sv": "Tidsadverbial"
+        },
+        "TT": {
+            "en": "Address phrase",
+            "sv": "Tilltalsfras"
+        },
+        "UK": {
+            "en": "Subordinating conjunction",
+            "sv": "Subjunktion"
+        },
+        "VA": {
+            "en": "Notifying adverbial",
+            "sv": "Korrelativt adverbial"
+        },
+        "VO": {
+            "en": "Infinitive object complement",
+            "sv": "Objekt med infinitiv"
+        },
+        "VS": {
+            "en": "Infinitive subject complement",
+            "sv": "Subjekt med infinitiv"
+        },
+        "XA": {
+            "en": "Expressions like 'så att säga' (so to speak)",
+            "sv": "Uttryck som ”så att säga”"
+        },
+        "XF": {
+            "en": "Fundament phrase",
+            "sv": "Fundamentsfras"
+        },
+        "XT": {
+            "en": "Expressions like 'så kallad' (so called)",
+            "sv": "Uttryck som ”så kallad”"
+        },
+        "XX": {
+            "en": "Unclassifiable grammatical function",
+            "sv": "Oklassificerbar satsfunktion"
+        },
+        "YY": {
+            "en": "Interjection phrase",
+            "sv": "Interjektionsfras"
+        },
+        "CJ": {
+            "en": "Conjunct (in coordinate structure)",
+            "sv": "Samordnat led"
+        },
+        "HD": {
+            "en": "Head",
+            "sv": "Huvud"
+        },
+        "IF": {
+            "en": "Infinitive verb phrase minus infinitive marker",
+            "sv": "Infinitivfras, utom infinitivmärke"
+        },
+        "PA": {
+            "en": "Complement of preposition",
+            "sv": "Prepositions komplement"
+        },
+        "UA": {
+            "en": "Subordinate clause minus subordinating conjunction",
+            "sv": "Underordnad sats (bisats), utom subjunktion"
+        },
+        "VG": {
+            "en": "Verb group",
+            "sv": "Verbgrupp"
+        }
+    },
     extendedComponent: "datasetSelect",
     dataset: {
         "++": "++",
@@ -267,7 +647,20 @@ attrs.link = {
 };
 attrs.ne_ex = {
     label: "ne_expr",
-    translationKey: "ne_expr_",
+    translation: {
+        "ENAMEX": {
+            "en": "name expression",
+            "sv": "namnuttryck"
+        },
+        "TIMEX": {
+            "en": "time expression",
+            "sv": "tidsuttryck"
+        },
+        "NUMEX": {
+            "en": "numerical expression",
+            "sv": "numeriskt uttryck"
+        }
+    },
     extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
@@ -278,7 +671,40 @@ attrs.ne_ex = {
 };
 attrs.ne_type = {
     label: "ne_type",
-    translationKey: "ne_type_",
+    translation: {
+        "LOC": {
+            "en": "location name",
+            "sv": "platsnamn"
+        },
+        "PRS": {
+            "en": "person name",
+            "sv": "personnamm"
+        },
+        "ORG": {
+            "en": "organization name",
+            "sv": "organisationsnamn"
+        },
+        "EVN": {
+            "en": "event name",
+            "sv": "händelsenamn"
+        },
+        "WRK": {
+            "en": "work or art name",
+            "sv": "verks- eller konstnamn"
+        },
+        "OBJ": {
+            "en": "object name",
+            "sv": "objektnamn"
+        },
+        "MSR": {
+            "en": "measure name",
+            "sv": "måttnamn"
+        },
+        "TME": {
+            "en": "time",
+            "sv": "tid"
+        }
+    },    
     extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
@@ -294,7 +720,236 @@ attrs.ne_type = {
 };
 attrs.ne_subtype = {
     label: "ne_subtype",
-    translationKey: "ne_subtype_",
+    translation: {
+        "AST": {
+            "en": "astronomical",
+            "sv": "astronomisk"
+        },
+        "GPL": {
+            "en": "geographical/geological",
+            "sv": "geografisk/geologisk"
+        },
+        "PPL": {
+            "en": "geo-social-political entity",
+            "sv": "geo-social-politisk entitet"
+        },
+        "FNC": {
+            "en": "facility entity",
+            "sv": "facilitetsentitet"
+        },
+        "STR": {
+            "en": "street/road/postal address",
+            "sv": "gata/väg/postadress"
+        },
+        "HUM": {
+            "en": "human being/fictional human character",
+            "sv": "människa/fiktiv mänsklig karaktär"
+        },
+        "MTH": {
+            "en": "saint/apostle/god/mythical name/humanoid",
+            "sv": "helgon/apostel/gud/mytiskt namm/humanoid"
+        },
+        "ANM": {
+            "en": "animal/pet/mythical beasts",
+            "sv": "djur/husdjur/mytiskt odjur"
+        },
+        "CLC": {
+            "en": "tribe/dynasty/ethnical or race name",
+            "sv": "stam/dynasti/etniskt namn"
+        },
+        "FIN": {
+            "en": "financial",
+            "sv": "finansiell"
+        },
+        "ATH": {
+            "en": "athletic",
+            "sv": "atletisk"
+        },
+        "CLT": {
+            "en": "cultural",
+            "sv": "kulturell"
+        },
+        "PLT": {
+            "en": "political",
+            "sv": "politisk"
+        },
+        "TVR": {
+            "en": "media",
+            "sv": "media"
+        },
+        "EDU": {
+            "en": "educational",
+            "sv": "utbildning"
+        },
+        "TRN": {
+            "en": "transportation",
+            "sv": "transport"
+        },
+        "CRP": {
+            "en": "corporation/organization",
+            "sv": "företag/organisation"
+        },
+        "HPL": {
+            "en": "historical/political",
+            "sv": "historisk/politisk"
+        },
+        "WTH": {
+            "en": "natural",
+            "sv": "natur"
+        },
+        "CLU": {
+            "en": "cultural",
+            "sv": "kulturell"
+        },
+        "ATL": {
+            "en": "athletic",
+            "sv": "atletisk"
+        },
+        "RLG": {
+            "en": "religious",
+            "sv": "religiös"
+        },
+        "WRT": {
+            "en": "written material",
+            "sv": "skrivet material"
+        },
+        "RTV": {
+            "en": "radio/tv-programs",
+            "sv": "radio/tv-program"
+        },
+        "WAO": {
+            "en": "physical work or art",
+            "sv": "fysiskt verk eller konst"
+        },
+        "PRJ": {
+            "en": "project/agreement/initiative",
+            "sv": "projekt/överenskommelse/initiativ"
+        },
+        "WMD": {
+            "en": "written media",
+            "sv": "skriven media"
+        },
+        "WAE": {
+            "en": "opera/theater play/symphony",
+            "sv": "opera/teaterpjäs/symfoni"
+        },
+        "MDC": {
+            "en": "medical",
+            "sv": "medicinsk"
+        },
+        "FWP": {
+            "en": "food/beverage",
+            "sv": "mat/dryck"
+        },
+        "CMP": {
+            "en": "computer product/telephony",
+            "sv": "datorprodukt/telefoni"
+        },
+        "VHA": {
+            "en": "air/space vehicle",
+            "sv": "luft-/rymdfarkost"
+        },
+        "VHG": {
+            "en": "land vehicle",
+            "sv": "fordon"
+        },
+        "VHW": {
+            "en": "water vehicle",
+            "sv": "fartyg"
+        },
+        "PRZ": {
+            "en": "prize/scholarship/honour",
+            "sv": "pris/stipendium/utmärkelse"
+        },
+        "PRD": {
+            "en": "product/artefact/flower/plant",
+            "sv": "produkt/artefakt/växt"
+        },
+        "VLM": {
+            "en": "volume",
+            "sv": "volym"
+        },
+        "TMP": {
+            "en": "temperature",
+            "sv": "temperatur"
+        },
+        "INX": {
+            "en": "index",
+            "sv": "index"
+        },
+        "IDX": {
+            "en": "index",
+            "sv": "index"
+        },
+        "DST": {
+            "en": "distance",
+            "sv": "avstånd"
+        },
+        "PRC": {
+            "en": "percent",
+            "sv": "procent"
+        },
+        "CUR": {
+            "en": "currency",
+            "sv": "valuta"
+        },
+        "DEN": {
+            "en": "density",
+            "sv": "densitet"
+        },
+        "DSG": {
+            "en": "dosage",
+            "sv": "dosering"
+        },
+        "SPD": {
+            "en": "speed",
+            "sv": "hastighet"
+        },
+        "FRQ": {
+            "en": "frequency",
+            "sv": "frekvens"
+        },
+        "AGE": {
+            "en": "age",
+            "sv": "ålder"
+        },
+        "MSU": {
+            "en": "metric surface unit",
+            "sv": "ytmått"
+        },
+        "WMU": {
+            "en": "weight or mass unit",
+            "sv": "vikt- eller massaenhet"
+        },
+        "CMU": {
+            "en": "computer unit",
+            "sv": "datorenhet"
+        },
+        "WEB": {
+            "en": "web",
+            "sv": "webb"
+        },
+        "PSS": {
+            "en": "pressure",
+            "sv": "tryck"
+        },
+        "CVU": {
+            "en": "capacity/volume",
+            "sv": "kapacitet/volym"
+        },
+        "LST": {
+            "en": "list",
+            "sv": "lista"
+        },
+        "DAT": {
+            "en": "date",
+            "sv": "datum"
+        },
+        "PER": {
+            "en": "period",
+            "sv": "period"
+        }
+    },
     extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
@@ -564,7 +1219,7 @@ settings.posset = {
    type: "set",
    label: "posset",
    opts: setOptions,
-   translationKey: "pos_",
+   translation: posTranslation,
    extendedComponent: "datasetSelect",
    dataset:  {
         "AB": "AB",
@@ -718,6 +1373,61 @@ var fsv_aldrelagar = {
     }
 };
 
+var fabTranslation = {
+    "texttype": {
+        "en": "text type",
+        "sv": "texttyp"
+    },
+    "footnote": {
+        "en": "footnote",
+        "sv": "fotnot"
+    },
+    "marginal": {
+        "en": "margin notes",
+        "sv": "marginalnoter"
+    },
+    "bold": {
+        "en": "bold text",
+        "sv": "fetstilt"
+    },
+    "emphasis": {
+        "en": "emphasised text",
+        "sv": "emfas"
+    },
+    "headline": {
+        "en": "header",
+        "sv": "rubrik"
+    },
+    "smallcaps": {
+        "en": "small caps",
+        "sv": "kapitäler"
+    },
+    "italic": {
+        "en": "italics",
+        "sv": "kursivt"
+    },
+    "info": {
+        "en": "reference",
+        "sv": "hänvisning"
+    },
+    "antikva": {
+        "en": "antiqua",
+        "sv": "antikva"
+    },
+    "gap": {
+        "en": "missing text",
+        "sv": "saknad text"
+    },
+    "kustod": {
+        "en": "catchword",
+        "sv": "kustod"
+    },
+    "unclear": {
+        "en": "unreadable",
+        "sv": "oläsligt"
+    }
+};
+
 settings.commonStructTypes = {
     date_interval: {
         label: "date_interval",
@@ -744,5 +1454,6 @@ module.exports = {
   lexClassesText,
   readability,
   fsv_aldrelagar,
-  fsv_yngrelagar
+  fsv_yngrelagar,
+  fabTranslation
 }

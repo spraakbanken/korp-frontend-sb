@@ -122,7 +122,7 @@ settings.runebergattributes = {
     typograph: {
         label: "typography",
         type: "set",
-        translationKey: "fab_",
+        translation: fabTranslation,
         extendedComponent: "datasetSelect",
         dataset: [
             "footnote",
@@ -1863,7 +1863,7 @@ settings.corpora["lag1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
@@ -1906,7 +1906,7 @@ settings.corpora["forarbeten1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
@@ -2153,7 +2153,7 @@ settings.corpora["kioping"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",
