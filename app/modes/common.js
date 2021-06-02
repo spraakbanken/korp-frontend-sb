@@ -1010,11 +1010,7 @@ attrs.ne_subtype = {
         "LST",
         "DAT",
         "PER"
-   ],
-   stringify: function(val) {
-       lString = util.getLocaleStringUndefined("ne_subtype_" + val)
-       return lString || val;
-   }
+   ]
 };
 attrs.ne_name = {
     label: "ne_name",
@@ -1085,9 +1081,7 @@ var modernAttrs = {
     },
     compwf: {
         label: "compwf",
-        display: {
-            "expandList": {}
-        },
+        sidebarComponent: "expandList",
         opts: {
             "prefix": "starts_with_contains",
             "not_prefix": "not_starts_with_contains",
@@ -1103,9 +1097,11 @@ var modernAttrs = {
         label: "sense",
         type: "set",
         ranked: true,
-        display: {
-            expandList: {
-                internalSearch: function(key, value) { return "[" + key + " highest_rank '" + regescape(value) + "']"}
+        sidebarComponent: {
+            name: "expandList",
+            options: {
+                internalSearch: true,
+                op: "highest_rank"
             }
         },
         stringify: function(sense) { return util.saldoToString(sense, true); },
@@ -1162,14 +1158,14 @@ var lexClassesText = {
         isStructAttr: true,
         ranked: true,
         order: 500,
-        display: {
-            expandList: {
-                internalSearch: function(key, value) { return "[_.text_blingbring highest_rank '" + regescape(value) + "']"},
-                linkAllValues: true,
+        sidebarComponent: {
+            name: "expandList",
+            options: {
+                op: "highest_rank",
+                internalSearch: true,
                 showAll: true
             }
-        },
-        internalSearch: true
+        }
     },
     text_swefn: {
         label: "swefn",
@@ -1177,15 +1173,15 @@ var lexClassesText = {
         isStructAttr: true,
         ranked: true,
         order: 501,
-        display: {
-            expandList: {
-                internalSearch: function(key, value) { return "[_.text_swefn highest_rank '" + regescape(value) + "']"},
-                linkAllValues: true,
+        sidebarComponent: {
+            name: "expandList",
+            options: {
+                op: "highest_rank",
+                internalSearch: true,
                 showAll: true
             }
         },
-        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
-        internalSearch: true
+        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>"
     }
 };
 

@@ -1,7 +1,9 @@
+import { stringifyFunctions } from "custom/stringify_functions.js"
+
 export default {
     complemgram: {
         template: String.raw`
-            <i ng-show="value == '|'" rel="localize[empty]" style="color : grey">[tom]</i>
+            <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:lang }}</i>
             <ul ng-show="value != '|'">
                 <li ng-repeat="comp in values | limitTo:listLimit">
                     
@@ -39,7 +41,6 @@ export default {
                     p.delete("prefix")
                 }
                 statemachine.send("SEARCH_LEMGRAM", {value})
-                console.log('## sending', value)
                 p.set("search", "lemgram|" + value)
 
                 window.location.hash = "#?" + p.toString().replace("=&", "&").replace(/=$/, "")
@@ -107,5 +108,63 @@ export default {
             const pageNumber = matches[2]
             $scope.pageNumber2 = ("00"+pageNumber).slice(-3)
         }]
-    }
+    },
+    expandList: (options = {}) => ({
+        template: `
+        <i ng-if="value == '|'" style="color : grey">{{ 'empty' | loc:lang }}</i>
+        <ul ng-if="value != '|'" style="list-style: initial;">
+            <li ng-repeat="value in values | limitTo:listLimit">
+                <span 
+                    ng-class="{link: internalSearch}"
+                    title="{{ value.prob }}"
+                    ng-bind-html="stringify(value.value) | trust"
+                    ng-click="internalSearch && onItemClick(value.value)"></span>
+                <a
+                    ng-if="attrs.externalSearch"
+                    ng-href="{{ externalLink(value.value) }}"
+                    class="external_link"
+                    target="_blank"
+                    style="margin-top: -6px"></a>
+            </li>
+        </ul>
+        <span class="link" ng-show="values.length > 1 && !showAll" ng-click="listLimit = listLimit != $scope.values.length ? $scope.values.length : 1">
+            {{listLimit != $scope.values.length ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
+        </span>
+        `,
+        controller: ["$scope", "statemachine", function($scope, statemachine) {
+            let valueArray = _.filter(($scope.value && $scope.value.split("|")) || [], Boolean)
+
+            if ($scope.attrs.ranked) {
+                $scope.values = _.map(valueArray, (value) => {
+                    // TODO is this correct? should we not split at the last occurrence of ":"
+                    const val = value.split(":")
+                    return { value: val[0], prob: val[val.length - 1] }
+                })
+            } else {
+                $scope.values = _.map(valueArray, (value) => ({ value: value }))
+            }
+
+            $scope.listLimit = options.showAll ? $scope.values.length : 1
+
+            $scope.showAll = options.showAll
+            $scope.internalSearch = options.internalSearch
+
+            $scope.stringify = (val) => stringifyFunctions[$scope.key] ? stringifyFunctions[$scope.key](val) : val
+
+            const op = options.op ? options.op : "contains"
+
+            $scope.onItemClick = (value) => {
+                const cqp = `[${$scope.type == 'struct' ? '_.' : ''}${$scope.key} ${op} "${regescape(value)}"]`;
+                statemachine.send("SEARCH_CQP", {cqp})
+            }
+ 
+            if ($scope.attrs.externalSearch) {
+                $scope.externalLink = (value) => {
+                    return _.template($scope.attrs.externalSearch)({
+                        val: value,
+                    })
+                }
+            }     
+       }]
+    })
 }
