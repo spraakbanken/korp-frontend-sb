@@ -1,4 +1,4 @@
-import { stringifyFunctions } from "custom/stringify_functions.js"
+import { stringifyFunc } from "@/stringify.js"
 
 export default {
     complemgram: {
@@ -149,7 +149,7 @@ export default {
             $scope.showAll = options.showAll
             $scope.internalSearch = options.internalSearch
 
-            $scope.stringify = (val) => stringifyFunctions[$scope.key] ? stringifyFunctions[$scope.key](val) : val
+            $scope.stringify = stringifyFunc($scope.key)
 
             const op = options.op ? options.op : "contains"
 

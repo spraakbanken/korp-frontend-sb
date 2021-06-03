@@ -206,10 +206,7 @@ attrs.lemgram = {
     label: "lemgram",
     type: "set",
     opts: setOptions,
-    stringify: function(lemgram) {
-        // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.trim(lemgram), true);
-    },
+    stringify: "lemgram",
     externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedComponent: {
@@ -225,10 +222,7 @@ attrs.dalinlemgram = {
     label: "dalin-lemgram",
     type: "set",
     opts: setOptions,
-    stringify: function(lemgram) {
-        // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.trim(lemgram), true);
-    },
+    stringify: "lemgram",
     externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedComponent: {
@@ -245,9 +239,7 @@ attrs.saldo = {
     label: "saldo",
     type: "set",
     opts: setOptions,
-    stringify: function(saldo) {
-        return util.saldoToString(saldo, true);
-    },
+    stringify: "sense",
     externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
     internalSearch: true,
     extendedComponent: {
@@ -606,9 +598,7 @@ attrs.prefix = {
     label: "prefix",
     type: "set",
     opts: setOptions,
-    stringify: function(lemgram) {
-        return util.lemgramToString(lemgram, true);
-    },
+    stringify: "lemgram",
     externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedComponent: {
@@ -624,9 +614,7 @@ attrs.suffix = {
     label: "suffix",
     type: "set",
     opts: setOptions,
-    stringify: function(lemgram) {
-        return util.lemgramToString(lemgram, true);
-    },
+    stringify: "lemgram",
     externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedComponent: {
@@ -1071,9 +1059,7 @@ var modernAttrs = {
             "suffix": "ends_with_contains",
             "not_suffix": "not_ends_with_contains",
         },
-        stringify: function(lemgram) {
-            return util.lemgramToString(lemgram, true)
-        },
+        stringify: "complemgram",
         internalSearch: true,
         ranked: true,
         extendedComponent: "complemgramExtended",
@@ -1104,7 +1090,7 @@ var modernAttrs = {
                 op: "highest_rank"
             }
         },
-        stringify: function(sense) { return util.saldoToString(sense, true); },
+        stringify: "sense",
         opts: probabilitySetOptions,
         externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
         internalSearch: true,
@@ -1262,18 +1248,14 @@ settings.fsvlex = {
             errorOnEmpty: true
         }
     },
-    stringify: function(str) {
-        return util.lemgramToString(str, true);
-    },
+    stringify: "lemgram",
     externalSearch: karpLemgramLink,
     internalSearch: true
 };
 settings.fsvvariants = {
     type: "set",
     label: "variants",
-    stringify: function(str) {
-        return util.lemgramToString(str, true);
-    },
+    stringify: "lemgram",
     extendedComponent: {
         name: "autocExtended",
         options: {
