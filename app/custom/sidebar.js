@@ -1,4 +1,5 @@
-import { stringifyFunc } from "@/stringify.js"
+import { stringifyFunc } from "@/stringify"
+import statemachine from "@/statemachine"
 
 export default {
     complemgram: {
@@ -17,7 +18,7 @@ export default {
                 </li>
             </ul>
         `,
-        controller: ["$scope", "statemachine", function($scope, statemachine) {
+        controller: ["$scope", function($scope) {
             $scope.listLimit = 1
             $scope.stringify = (lemgram) => util.lemgramToString(lemgram, true)
             $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
@@ -131,7 +132,7 @@ export default {
             {{listLimit != $scope.values.length ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
         </span>
         `,
-        controller: ["$scope", "statemachine", function($scope, statemachine) {
+        controller: ["$scope", function($scope) {
             let valueArray = _.filter(($scope.value && $scope.value.split("|")) || [], Boolean)
 
             if ($scope.attrs.ranked) {
@@ -167,4 +168,4 @@ export default {
             }     
        }]
     })
-}
+}   
