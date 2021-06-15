@@ -16,7 +16,8 @@ var textWithin = {
 npegl = {};
 npegl.e_cat = {
     label: "e_cat", 
-    isStructAttr: true, 
+    isStructAttr: true,
+    groupBy: "group_by",
     order: 10, 
     stats_stringify(values) {
         return catToString(values)
