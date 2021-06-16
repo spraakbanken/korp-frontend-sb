@@ -1868,48 +1868,10 @@ var ivipVideo = function(baseURL) {
     return {
         label: "video",
         sidebarComponent: {
-            template: String.raw`
-                <span class="link" ng-click="showVideoModal()">visa inspelning</span>
-                <div id="video-modal" ng-controller="VideoCtrl"></div>
-            `,
-            controller: ["$scope", function($scope) {
-                const startTime = $scope.sentenceData["sentence_start"];
-                const endTime = $scope.sentenceData["sentence_end"];
-                const path = $scope.sentenceData["text_mediafilepath"];
-                const file = $scope.sentenceData["text_mediafile"];
-                const ext = $scope.sentenceData["text_mediafileext"];
-
-                $scope.showVideoModal = function () {
-                    const url = baseURL + path +  file + "." + ext;
-
-                    const modalScope = angular.element("#video-modal").scope();
-                    modalScope.videos = [{"url": url, "type": "video/mp4"}];
-                    modalScope.fileName = file + "." + ext;
-                    modalScope.startTime = startTime / 1000;
-                    modalScope.endTime = endTime / 1000;
-
-                    // find start of sentence
-                    let startIdx = 0
-                    for(let i = $scope.wordData.position; i >= 0; i--) {
-                        if(_.includes($scope.tokens[i]._open, "sentence")) {
-                            startIdx = i;
-                            break;
-                        }
-                    }
-
-                    // find end of sentence
-                    let endIdx = $scope.tokens.length - 1
-                    for(let i = $scope.wordData.position; i < $scope.tokens.length; i++) {
-                        if(_.includes($scope.tokens[i]._close, "sentence")) {
-                            endIdx = i;
-                            break;
-                        }
-                    }
-
-                    modalScope.sentence = _.map($scope.tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                    modalScope.open();
-                }
-            }]
+            name: "ivipVideo",
+            options: {
+                baseURL: baseURL
+            }
         },
         customType: "struct"
     }
@@ -2075,7 +2037,7 @@ settings.corpora["ivip"] = {
     },
     defaultFilters: ["text_country", "text_city", "text_place", "text_consentid"],
     readingMode: {
-        directive: "ivip-reading-mode",
+        component: "ivipReadingMode",
         groupElement: "sentence"
     }
 };
@@ -2231,7 +2193,7 @@ settings.corpora["ivip-demo"] = {
     },
     defaultFilters: ["text_country", "text_city", "text_place", "text_consentid"],
     readingMode: {
-        directive: "ivip-reading-mode",
+        component: "ivipReadingMode",
         groupElement: "sentence"
     }
 };
@@ -2786,16 +2748,36 @@ settings.corpora["vivill"] = {
         text_party: {
             label: "party",
             extendedComponent: "structServiceSelect",
-            translationKey: "party_",
-            stringify: function(val) {
-                return util.getLocaleString("party_" + val);
+            translation: {
+                "all": "Alliansen",
+                "c": "Centerpartiet",
+                "rg": "De rödgröna",
+                "fi": "Feministiskt initiativ",
+                "fp": "Folkpartiet liberalerna",
+                "jr": "Jordbrukarnas riksförbund",
+                "kd": "Kristdemokraterna",
+                "la": "Lantmannapartiet",
+                "labp": "Lantmanna- och borgarepartiet",
+                "lisp": "Liberala samlingspartiet",
+                "mp": "Miljöpartiet de gröna",
+                "m": "Moderata samlingspartiet",
+                "npf": "Nationella framstegspartiet",
+                "nyd": "Ny demokrati",
+                "pp": "Piratpartiet",
+                "sd": "Sverigedemokraterna",
+                "k_h": "Sveriges kommunistiska parti, Höglundarna",
+                "k_k": "Sverges kommunistiska parti, Kilbommarna",
+                "svp": "Sverges socialdemokratiska vänsterparti",
+                "lp": "Sveriges liberala parti",
+                "s": "Sveriges socialdemokratiska arbetareparti",
+                "v": "Vänsterpartiet"
             }
         },
         text_type: {label: "type"},
         sentence_id: {displayType: "hidden"}
     },
     readingMode: {
-        directive: "standard-reading-mode"
+        component: "standardReadingMode"
     }
 };
 
@@ -3418,6 +3400,391 @@ settings.corpora["klarsprak"] = {
     }
 };
 
+const firstLangAttr = {
+    label: "firstlang",
+    opts: setOptions,
+    type: "set",
+    extendedComponent: "structServiceSelect",
+    translation: {
+        "undefined": {
+            "en": "missing data",
+            "sv": "Uppgift saknas"
+        },
+        "afr": {
+            "en": "Afrikaans",
+            "sv": "Afrikaans"
+        },
+        "aii": {
+            "en": "Assyrian Neo-Aramaic",
+            "sv": "Nyöstsyriska"
+        },
+        "amh": {
+            "en": "Amharic",
+            "sv": "Amhariska"
+        },
+        "ara": {
+            "en": "Arabic",
+            "sv": "Arabiska"
+        },
+        "arc": {
+            "en": "Aramaic",
+            "sv": "Arameiska"
+        },
+        "ary": {
+            "en": "Moroccan Arabic",
+            "sv": "Marockansk arabiska"
+        },
+        "aze": {
+            "en": "Azerbaijani",
+            "sv": "Azerbaijdzjanska"
+        },
+        "bci": {
+            "en": "Baoule",
+            "sv": "Baoule"
+        },
+        "bel": {
+            "en": "Belarusian",
+            "sv": "Vitryska"
+        },
+        "ben": {
+            "en": "Bengali",
+            "sv": "Bengali"
+        },
+        "ber": {
+            "en": "Berber",
+            "sv": "Berberspråk"
+        },
+        "bos": {
+            "en": "Bosnian",
+            "sv": "Bosniska"
+        },
+        "bsy": {
+            "en": "Sabah Bisaya",
+            "sv": "Bisaya"
+        },
+        "bul": {
+            "en": "Bulgarian",
+            "sv": "Bulgariska"
+        },
+        "cat": {
+            "en": "Catalan",
+            "sv": "Katalanska"
+        },
+        "ces": {
+            "en": "Czech",
+            "sv": "Tjeckiska"
+        },
+        "cgg": {
+            "en": "Chiga",
+            "sv": "Rukiga"
+        },
+        "ckb": {
+            "en": "Central Kurdish",
+            "sv": "Sorani"
+        },
+        "cld": {
+            "en": "Chaldean Neo-Aramaic",
+            "sv": "Kaldeiska"
+        },
+        "cmn": {
+            "en": "Mandarin Chinese",
+            "sv": "Mandarin"
+        },
+        "cnr": {
+            "en": "Montenegrin",
+            "sv": "Montenegrinska"
+        },
+        "dan": {
+            "en": "Danish",
+            "sv": "Danska"
+        },
+        "deu": {
+            "en": "German",
+            "sv": "Tyska"
+        },
+        "ell": {
+            "en": "Greek",
+            "sv": "Grekiska"
+        },
+        "eng": {
+            "en": "English",
+            "sv": "Engelska"
+        },
+        "epo": {
+            "en": "Esperanto",
+            "sv": "Esperanto"
+        },
+        "est": {
+            "en": "Estonian",
+            "sv": "Estniska"
+        },
+        "eus": {
+            "en": "Basque",
+            "sv": "Baskiska"
+        },
+        "fil": {
+            "en": "Filipino",
+            "sv": "Filippinska"
+        },
+        "fin": {
+            "en": "Finnish",
+            "sv": "Finska"
+        },
+        "fra": {
+            "en": "French",
+            "sv": "Franska"
+        },
+        "gig": {
+            "en": "Goaria",
+            "sv": "Goaria"
+        },
+        "glg": {
+            "en": "Galician",
+            "sv": "Galiciska"
+        },
+        "guj": {
+            "en": "Gujarati",
+            "sv": "Gujarati"
+        },
+        "hbs": {
+            "en": "Serbo-Croatian",
+            "sv": "Serbo-kroatiska"
+        },
+        "hin": {
+            "en": "Hindi",
+            "sv": "Hindi"
+        },
+        "hrv": {
+            "en": "Croatian",
+            "sv": "Kroatiska"
+        },
+        "hun": {
+            "en": "Hungarian",
+            "sv": "Ungerska"
+        },
+        "ibo": {
+            "en": "Igbo",
+            "sv": "Igbo"
+        },
+        "isl": {
+            "en": "Icelandic",
+            "sv": "Isländska"
+        },
+        "ita": {
+            "en": "Italian",
+            "sv": "Italienska"
+        },
+        "jpn": {
+            "en": "Japanese",
+            "sv": "Japanska"
+        },
+        "kaz": {
+            "en": "Kazakh",
+            "sv": "Kazakiska"
+        },
+        "kin": {
+            "en": "Kinyarwanda",
+            "sv": "Kinyarwanda"
+        },
+        "kir": {
+            "en": "Kirghiz",
+            "sv": "Kirgiziska"
+        },
+        "kor": {
+            "en": "Korean",
+            "sv": "Koreanska"
+        },
+        "kur": {
+            "en": "Kurdish",
+            "sv": "Kurdiska"
+        },
+        "lat": {
+            "en": "Latin",
+            "sv": "Latin"
+        },
+        "lav": {
+            "en": "Latvian",
+            "sv": "Lettiska"
+        },
+        "lit": {
+            "en": "Lithuanian",
+            "sv": "Litauiska"
+        },
+        "lug": {
+            "en": "Ganda",
+            "sv": "Luganda,ganda"
+        },
+        "mal": {
+            "en": "Malayalam",
+            "sv": "Malayalam"
+        },
+        "mkd": {
+            "en": "Macedonian",
+            "sv": "Makedonska"
+        },
+        "msa": {
+            "en": "Malay",
+            "sv": "Malajiska"
+        },
+        "nep": {
+            "en": "Nepali",
+            "sv": "Nepali"
+        },
+        "nld": {
+            "en": "Dutch",
+            "sv": "Nederländska"
+        },
+        "nor": {
+            "en": "Norwegian",
+            "sv": "Norska"
+        },
+        "nub": {
+            "en": "Nuba (Sudan)",
+            "sv": "Nuba (Sudan)"
+        },
+        "nyn": {
+            "en": "Nyankole",
+            "sv": "Runyankore"
+        },
+        "pan": {
+            "en": "Panjabi",
+            "sv": "Punjabi"
+        },
+        "pol": {
+            "en": "Polish",
+            "sv": "Polska"
+        },
+        "por": {
+            "en": "Portuguese",
+            "sv": "Portugisiska"
+        },
+        "prd": {
+            "en": "Parsi-Dari",
+            "sv": "Dari"
+        },
+        "prp": {
+            "en": "Parsi",
+            "sv": "Persiska"
+        },
+        "prs": {
+            "en": "Dari",
+            "sv": "Persiska farsi"
+        },
+        "pus": {
+            "en": "Pushto",
+            "sv": "Pashto"
+        },
+        "ron": {
+            "en": "Romanian",
+            "sv": "Rumänska"
+        },
+        "rus": {
+            "en": "Russian",
+            "sv": "Ryska"
+        },
+        "sco": {
+            "en": "Scots",
+            "sv": "Skottska"
+        },
+        "sin": {
+            "en": "Sinhala",
+            "sv": "Singalesiska"
+        },
+        "slk": {
+            "en": "Slovak",
+            "sv": "Slovakiska"
+        },
+        "som": {
+            "en": "Somali",
+            "sv": "Somaliska"
+        },
+        "spa": {
+            "en": "Spanish",
+            "sv": "Spanska"
+        },
+        "sqi": {
+            "en": "Albanian",
+            "sv": "Albanska"
+        },
+        "srp": {
+            "en": "Serbian",
+            "sv": "Serbiska"
+        },
+        "swa": {
+            "en": "Swahili",
+            "sv": "Swahili"
+        },
+        "swe": {
+            "en": "Swedish",
+            "sv": "Svenska"
+        },
+        "swh": {
+            "en": "Swahili",
+            "sv": "Swahili"
+        },
+        "syc": {
+            "en": "Classical Syriac",
+            "sv": "Syrisk arameiska"
+        },
+        "syr": {
+            "en": "Syriac",
+            "sv": "Syriska"
+        },
+        "tgl": {
+            "en": "Tagalog",
+            "sv": "Tagalog"
+        },
+        "tha": {
+            "en": "Thai",
+            "sv": "Thailändska"
+        },
+        "tir": {
+            "en": "Tigrinya",
+            "sv": "Tigrinska"
+        },
+        "ttj": {
+            "en": "Tooro",
+            "sv": "Rutooro"
+        },
+        "tuk": {
+            "en": "Turkmen",
+            "sv": "Turkmeniska"
+        },
+        "tur": {
+            "en": "Turkish",
+            "sv": "Turkiska"
+        },
+        "ukr": {
+            "en": "Ukrainian",
+            "sv": "Ukrainska"
+        },
+        "urd": {
+            "en": "Urdu",
+            "sv": "Urdu"
+        },
+        "uzb": {
+            "en": "Uzbek",
+            "sv": "Uzbekiska"
+        },
+        "vie": {
+            "en": "Vietnamese",
+            "sv": "Vietnamesiska"
+        },
+        "vls": {
+            "en": "Vlaams",
+            "sv": "Flamländska"
+        },
+        "yue": {
+            "en": "Yue Chinese",
+            "sv": "Kantonesiska"
+        },
+        "zho": {
+            "en": "Chinese",
+            "sv": "Kinesiska"
+        }
+    }    
+};
+
 settings.corpora["sw1203"] = {
     id: "sw1203",
     title: "SW1203-uppsatser",
@@ -3443,10 +3810,7 @@ settings.corpora["sw1203"] = {
         text_level: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_task: {label: "task", extendedComponent: "structServiceSelect"},
         text_task_url: {label: "task_url", extendedComponent: "structServiceSelect", type: "url"},
-        text_firstlang: {label: "firstlang",
-            opts: setOptions,
-            type: "set", extendedComponent: "structServiceSelect",
-            translationKey: "langcode_",}
+        text_firstlang: firstLangAttr
     },
     customAttributes: {
         pdf: {
@@ -3487,13 +3851,7 @@ settings.corpora["tisus"] = {
         text_finalgrade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
         text_proficiencylevel: {label: "proficiencylevel", extendedComponent: "structServiceSelect"},
         text_date: {label: "date", hideExtended: true},
-        text_firstlang: {
-            label: "firstlang",
-            type: "set",
-            opts: setOptions,
-            extendedComponent: "structServiceSelect",
-            translationKey: "langcode_"
-        }
+        text_firstlang: firstLangAttr
     },
     customAttributes: {
         pdf: {

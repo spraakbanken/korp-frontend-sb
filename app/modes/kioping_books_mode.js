@@ -26,7 +26,7 @@ settings.corpora["kioping"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",

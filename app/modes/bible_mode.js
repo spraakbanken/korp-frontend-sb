@@ -28,7 +28,7 @@ settings.corpora["bibel1917"] = {
         texttype: {
              label: "fab_texttype",
              type: "set",
-             translationKey: "fab_",
+             translation: fabTranslation,
             extendedComponent: "datasetSelect",
              dataset: [
                  "info",
