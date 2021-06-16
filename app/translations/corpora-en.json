@@ -701,5 +701,8 @@
     "sic2_name": "SIC2 name type",
     "blog_id": "blog ID",
     "author_gender": "author gender",
-    "post_id": "post ID"
+    "post_id": "post ID",
+
+    "tag_sentence": "sentence",
+    "tag_paragraph": "paragraph"
 }

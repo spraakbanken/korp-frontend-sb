@@ -701,5 +701,8 @@
     "sic2_name": "SIC2-namntyp",
     "blog_id": "blogg-ID",
     "author_gender": "författarkön",
-    "post_id": "inläggs-ID"
+    "post_id": "inläggs-ID",
+
+    "tag_sentence": "mening",
+    "tag_paragraph": "stycke"
 }

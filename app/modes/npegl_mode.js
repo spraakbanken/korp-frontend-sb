@@ -10,7 +10,8 @@ var textContext = {
 };
 var textWithin = {
     "text": "text",
-    "np": "np"
+    "np": "np",
+    "e": "e",
 };
 
 npegl = {};
