@@ -282,13 +282,6 @@ settings.corpora["npegl-eng"] = {
     attributes: npegl_attributes,
     structAttributes: {
     },
-    customAttributes: {
-        apa_bepa: {
-            label: "Blabla",
-            pattern: "aa <%= pos_attrs.np_db_item_id %> asgasg",
-            customType: "pos"
-        },
-    }
 };
 
 settings.corpora["npegl-ger"] = {
