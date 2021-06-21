@@ -14,11 +14,21 @@ var textWithin = {
 };
 
 npegl = {};
+
+npegl.np_language = {label: "language", isStructAttr: true, order: 10};
+npegl.np_db_item_id = {label: "db item id", isStructAttr: true, order: 20};
+npegl.np_corpus_unit_id = {label: "corpus unit id", isStructAttr: true, order: 30};
+
+npegl.np_gender = {label: "gender", isStructAttr: true, order: 40, extendedComponent: "structServiceSelect"};
+npegl.np_number = {label: "number", isStructAttr: true, order: 50, extendedComponent: "structServiceSelect"};
+npegl.np_case = {label: "case", isStructAttr: true, order: 60, extendedComponent: "structServiceSelect"};
+npegl.np_grammatical_function = {label: "grammatical function", isStructAttr: true, order: 70, extendedComponent: "structServiceSelect"};
+
 npegl.e_cat = {
-    label: "e_cat", 
+    label: "category",
     isStructAttr: true,
     groupBy: "group_by",
-    order: 10, 
+    order: 80,
     stats_stringify(values) {
         return catToString(values)
     }, 
@@ -208,38 +218,37 @@ npegl.e_cat = {
     }
 };
 
-npegl.e_features_adjsem = {label: "e_features_adjsem", isStructAttr: true, order: 10};
-npegl.e_features_decl = {label: "e_features_decl", isStructAttr: true, order: 10};
-npegl.e_features_degr = {label: "e_features_degr", isStructAttr: true, order: 10};
-npegl.e_features_genprole = {label: "e_features_genprole", isStructAttr: true, order: 10};
-npegl.e_features_nounsem = {label: "e_features_nounsem", isStructAttr: true, order: 10};
-npegl.e_indices_ismoddedidx = {label: "e_indices_ismoddedidx", isStructAttr: true, order: 10};
-npegl.e_indices_modsidx = {label: "e_indices_modsidx", isStructAttr: true, order: 10};
-npegl.e_tags_anim = {label: "e_tags_anim", isStructAttr: true, order: 10};
-npegl.e_tags_def = {label: "e_tags_def", isStructAttr: true, order: 10};
-npegl.e_tags_noundrv = {label: "e_tags_noundrv", isStructAttr: true, order: 10};
-npegl.e_tags_nounless = {label: "e_tags_nounless", isStructAttr: true, order: 10};
-npegl.e_tags_nounsuff = {label: "e_tags_nounsuff", isStructAttr: true, order: 10};
-npegl.e_tags_relnoun = {label: "e_tags_relnoun", isStructAttr: true, order: 10};
-npegl.np_annotation_time = {label: "np_annotation_time", isStructAttr: true, order: 10};
-npegl.np_annotator = {label: "np_annotator", isStructAttr: true, order: 10};
-npegl.np_case = {label: "np_case", isStructAttr: true, order: 10};
-npegl.np_comments = {label: "np_comments", isStructAttr: true, order: 10};
-npegl.np_corpus_unit_id = {label: "np_corpus_unit_id", isStructAttr: true, order: 10};
-npegl.np_db_item_id = {label: "np_db_item_id", isStructAttr: true, order: 10};
-npegl.np_degree_of_interest = {label: "np_degree_of_interest", isStructAttr: true, order: 10, extendedComponent: "structServiceSelect"};
-npegl.np_gender = {label: "np_gender", isStructAttr: true, order: 10, extendedComponent: "structServiceSelect"};
-npegl.np_grammatical_function = {label: "np_grammatical_function", isStructAttr: true, order: 10};
-npegl.np_language = {label: "np_language", isStructAttr: true, order: 10};
-npegl.np_lastmodified = {label: "np_lastmodified", isStructAttr: true, order: 10};
+npegl.e_name = {label: "baseform", isStructAttr: true, order: 85};
+
+npegl.e_features_adjsem = {label: "adjectival semantics", isStructAttr: true, order: 90, extendedComponent: "structServiceSelect"};
+npegl.e_features_decl = {label: "declension", isStructAttr: true, order: 100, extendedComponent: "structServiceSelect"};
+npegl.e_features_degr = {label: "degree", isStructAttr: true, order: 110, extendedComponent: "structServiceSelect"};
+npegl.e_features_genprole = {label: "genitive role", isStructAttr: true, order: 120, extendedComponent: "structServiceSelect"};
+npegl.e_features_nounsem = {label: "noun semantics", isStructAttr: true, order: 130, extendedComponent: "structServiceSelect"};
+npegl.e_indices_ismoddedidx = {label: "identifier", isStructAttr: true, order: 140, hideExtended: true};
+npegl.e_indices_modsidx = {label: "modifies", isStructAttr: true, order: 150, hideExtended: true};
+npegl.e_tags_anim = {label: "animate", isStructAttr: true, order: 160};
+
+npegl.e_tags_def = {label: "definite", isStructAttr: true, order: 170, extendedComponent: "datasetSelect", escape: false, dataset: {"": "undefined", ".+": "defined"}, opts: {"is": "="}};
+npegl.e_tags_noundrv = {label: "derived noun", isStructAttr: true, order: 180, extendedComponent: "datasetSelect", escape: false, dataset: {"": "undefined", ".+": "defined"}, opts: {"is": "="}};
+npegl.e_tags_nounless = {label: "nounless apposition", isStructAttr: true, order: 190, extendedComponent: "datasetSelect", escape: false, dataset: {"": "undefined", ".+": "defined"}, opts: {"is": "="}};
+npegl.e_tags_nounsuff = {label: "suffixed article", isStructAttr: true, order: 200, extendedComponent: "datasetSelect", escape: false, dataset: {"": "undefined", ".+": "defined"}, opts: {"is": "="}};
+npegl.e_tags_relnoun = {label: "relational noun", isStructAttr: true, order: 210, extendedComponent: "datasetSelect", escape: false, dataset: {"": "undefined", ".+": "defined"}, opts: {"is": "="}};
+
+npegl.np_degree_of_interest = {label: "degree of interest", isStructAttr: true, order: 220, extendedComponent: "structServiceSelect"};
+npegl.np_verified = {label: "verified", isStructAttr: true, order: 230};
+npegl.np_comments = {label: "comments", isStructAttr: true, order: 240};
+npegl.np_annotation_time = {label: "annotation time", isStructAttr: true, order: 250};
+npegl.np_annotator = {label: "annotator", isStructAttr: true, order: 260};
+
+/*npegl.np_lastmodified = {label: "np_lastmodified", isStructAttr: true, order: 10};
 npegl.np_lastmodifiedby = {label: "np_lastmodifiedby", isStructAttr: true, order: 10};
 npegl.np_lexiconname = {label: "np_lexiconname", isStructAttr: true, order: 10};
-npegl.np_lexiconorder = {label: "np_lexiconorder", isStructAttr: true, order: 10};
-npegl.np_number = {label: "np_number", isStructAttr: true, order: 10};
-npegl.np_verified = {label: "np_verified", isStructAttr: true, order: 10};
+npegl.np_lexiconorder = {label: "np_lexiconorder", isStructAttr: true, order: 10};*/
 
 var npegl_attributes = {
     e_cat: npegl.e_cat,
+    e_name: npegl.e_name,
     e_features_adjsem: npegl.e_features_adjsem,
     e_features_decl: npegl.e_features_decl,
     e_features_degr: npegl.e_features_degr,
@@ -263,14 +272,13 @@ var npegl_attributes = {
     np_gender: npegl.np_gender,
     np_grammatical_function: npegl.np_grammatical_function,
     np_language: npegl.np_language,
-    np_lastmodified: npegl.np_lastmodified,
+    /*np_lastmodified: npegl.np_lastmodified,
     np_lastmodifiedby: npegl.np_lastmodifiedby,
     np_lexiconname: npegl.np_lexiconname,
-    np_lexiconorder: npegl.np_lexiconorder,
+    np_lexiconorder: npegl.np_lexiconorder,*/
     np_number: npegl.np_number,
     np_verified: npegl.np_verified
 };
-
 
 settings.corpora["npegl-eng"] = {
     id: "npegl-eng",
@@ -280,8 +288,15 @@ settings.corpora["npegl-eng"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
-    structAttributes: {
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_eng&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
     },
+    structAttributes: {
+    }
 };
 
 settings.corpora["npegl-ger"] = {
@@ -292,6 +307,13 @@ settings.corpora["npegl-ger"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_ger&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
+    },
     structAttributes: {
     }
 };
@@ -304,6 +326,13 @@ settings.corpora["npegl-got"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_got&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
+    },
     structAttributes: {
     }
 };
@@ -316,6 +345,13 @@ settings.corpora["npegl-ice"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_ice&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
+    },
     structAttributes: {
     }
 };
@@ -328,6 +364,13 @@ settings.corpora["npegl-sax"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_sax&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
+    },
     structAttributes: {
     }
 };
@@ -340,6 +383,13 @@ settings.corpora["npegl-swe"] = {
     within: textWithin,
     context: textContext,
     attributes: npegl_attributes,
+    customAttributes: {
+        karp_link: {
+            label: "Karp",
+            pattern: "<a href='http://spraakbanken.gu.se/karp/#?mode=npegl_swe&searchTab=extended&extended=and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>&search=extended||and|DB_item_id|equals|<%= pos_attrs.np_db_item_id %>' target='_blank'>go to entry</a>",
+            customType: "pos"
+        }
+    },
     structAttributes: {
     }
 };
