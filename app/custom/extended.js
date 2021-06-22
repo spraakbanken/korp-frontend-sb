@@ -15,6 +15,8 @@ export default {
                     $scope.currentVal = $scope.model.replace(/[\\+\.\*:]*$/, "").replace(/^\\\+/, "")
                     $scope.input = $scope.currentVal
                     $scope.isRawInput = false
+                } else {
+                    $scope.currentVal = ""
                 }
                 let setModel = () => {
                     if(["starts_with_contains", "not_starts_with_contains"].includes($scope.orObj.op)) {
