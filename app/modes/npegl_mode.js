@@ -33,9 +33,11 @@ npegl.e_cat = {
     stats_stringify(values) {
         return catToString(values)
     }, 
-    // stats_cqp(tokens) {
-    //     return "(" + tokens.map(item => `_.e_cat="${item}"`).join(" | ") + ")"
-    // },
+    stats_cqp(tokens) {
+
+        // return `e_cat="${tokens.join(" | ")}"`
+        return "(" + tokens.map(item => `_.e_cat="${item}"`).join(" | ") + ")"
+    },
     extendedController: [
         "$scope", function($scope) {
             const labels = [
@@ -436,9 +438,7 @@ model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
         let def = super.makeRequest(cqp, callback)
         def.then( (result) => {
             let [data, columns, searchParams] = result
-            if(!searchParams.reduceVals.includes("e_cat")) {
-                return result
-            }
+            if(searchParams.reduceVals.length < 1 || searchParams.reduceVals[0] != "e_cat") return result
             let groups = _.groupBy(data.slice(1), (row) => catToString(row.e_cat))
             let add = (arr1, arr2) => [arr1[0] + arr2[0], arr1[1] + arr2[1]]
             let output = [data[0]]
