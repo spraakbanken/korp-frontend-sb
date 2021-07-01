@@ -438,8 +438,17 @@ model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
         let def = super.makeRequest(cqp, callback)
         def.then( (result) => {
             let [data, columns, searchParams] = result
-            if(searchParams.reduceVals.length < 1 || searchParams.reduceVals[0] != "e_cat") return result
-            let groups = _.groupBy(data.slice(1), (row) => catToString(row.e_cat))
+            let groups = _.groupBy(data.slice(1), (row) => {
+                let str = ""
+                for (const attr of searchParams.reduceVals) {
+                    if (attr === "e_cat") {
+                        str += catToString(row.e_cat)
+                    } else {
+                        str += row[attr].join('')
+                    }
+                }
+                return str
+            })
             let add = (arr1, arr2) => [arr1[0] + arr2[0], arr1[1] + arr2[1]]
             let output = [data[0]]
             for(let [cat, group] of Object.entries(groups)) {
