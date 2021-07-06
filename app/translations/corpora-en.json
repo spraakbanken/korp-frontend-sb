@@ -84,6 +84,9 @@
     "pagelink": "page link",
     
     "cefr_level": "proficiency level (CEFR)",
+    "lessontext_topic": "lessontext topic",
+    "nr_essay_student": "essays/student",
+    "school_type": "school type",
 
     "firstlang": "native language",
     "tisus_lfone": "reading comprehension, part 1",
