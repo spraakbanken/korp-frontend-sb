@@ -1,7 +1,0 @@
-{
-  "name": "korp-frontend-sb",
-  "version": "9.0.0",
-  "dependencies": {
-    "jquery": "^3.4.1"
-  }
-}
