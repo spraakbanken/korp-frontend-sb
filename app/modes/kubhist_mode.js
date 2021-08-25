@@ -1301,7 +1301,7 @@ kubhist2_settings = {
 
 settings.corporafolders.kubhist2["aftonbladet"] = {
     title: "Aftonbladet",
-    contents: ["kubhist2-aftonbladet-1830", "kubhist2-aftonbladet-1840", "kubhist2-aftonbladet-1850", "kubhist2-aftonbladet-1860"]
+    contents: ["kubhist2-aftonbladet-1830", "kubhist2-aftonbladet-1840", "kubhist2-aftonbladet-1850", "kubhist2-aftonbladet-1860", "kubhist2-aftonbladet-1870", "kubhist2-aftonbladet-1880", "kubhist2-aftonbladet-1890", "kubhist2-aftonbladet-1900"]
 };
 
 settings.corporafolders.kubhist2["alfwarochskamt"] = {
@@ -1346,7 +1346,7 @@ settings.corporafolders.kubhist2["dagligtallehanda"] = {
 
 settings.corporafolders.kubhist2["dalpilen"] = {
     title: "Dalpilen",
-    contents: ["kubhist2-dalpilen-1850", "kubhist2-dalpilen-1860", "kubhist2-dalpilen-1870", "kubhist2-dalpilen-1880", "kubhist2-dalpilen-1890"]
+    contents: ["kubhist2-dalpilen-1850", "kubhist2-dalpilen-1860", "kubhist2-dalpilen-1870", "kubhist2-dalpilen-1880", "kubhist2-dalpilen-1890", "kubhist2-dalpilen-1900"]
 };
 
 settings.corporafolders.kubhist2["fahluweckoblad"] = {
@@ -1490,17 +1490,11 @@ settings.corporafolders.kubhist2["wexjobladet"] = {
 if(isLab){
   settings.corporafolders.kubhist2["skyddat"] = {
       title: "Kubhist2 - Skyddat",
-      contents: ["kubhist2-dalpilen-1900", "kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1900", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1900", "kubhist2-ostgotaposten-1910"]
+      contents: ["kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1900", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1900", "kubhist2-ostgotaposten-1910"]
   };
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Corpora
-
-  settings.corpora["kubhist2-dalpilen-1900"] = _.extend({}, kubhist2_settings, {
-      id: "kubhist2-dalpilen-1900",
-      title: "Dalpilen 1900-talet",
-      limitedAccess: true
-  });
 
   settings.corpora["kubhist2-dalpilen-1910"] = _.extend({}, kubhist2_settings, {
       id: "kubhist2-dalpilen-1910",
@@ -1565,6 +1559,26 @@ settings.corpora["kubhist2-aftonbladet-1850"] = _.extend({}, kubhist2_settings, 
 settings.corpora["kubhist2-aftonbladet-1860"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-aftonbladet-1860",
     title: "Aftonbladet 1860-talet"
+});
+
+settings.corpora["kubhist2-aftonbladet-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-aftonbladet-1870",
+    title: "Aftonbladet 1870-talet"
+});
+
+settings.corpora["kubhist2-aftonbladet-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-aftonbladet-1880",
+    title: "Aftonbladet 1880-talet"
+});
+
+settings.corpora["kubhist2-aftonbladet-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-aftonbladet-1890",
+    title: "Aftonbladet 1890-talet"
+});
+
+settings.corpora["kubhist2-aftonbladet-1900"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-aftonbladet-1900",
+    title: "Aftonbladet 1900-talet"
 });
 
 settings.corpora["kubhist2-alfwarochskamt-1840"] = _.extend({}, kubhist2_settings, {
@@ -1807,6 +1821,10 @@ settings.corpora["kubhist2-dalpilen-1890"] = _.extend({}, kubhist2_settings, {
     title: "Dalpilen 1890-talet"
 });
 
+settings.corpora["kubhist2-dalpilen-1900"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-dalpilen-1900",
+    title: "Dalpilen 1900-talet"
+});
 
 settings.corpora["kubhist2-fahluweckoblad-1780"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-fahluweckoblad-1780",
