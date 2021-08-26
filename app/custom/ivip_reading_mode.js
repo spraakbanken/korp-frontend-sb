@@ -2,8 +2,7 @@ import "./ivip.css"
 
 const colors = ["#1565c0", "#388e3c", "#00838f", "#ff3333", "#ff7700"]
 
-export const componentName = "ivipReadingMode"
-export const component = {
+export default {
     // Due to the usage of CSS "whitespace: pre", needed to align sentences in IVIP, we load the template so that HTML is minified
     template: require("./ivip.html"),
     bindings: {
