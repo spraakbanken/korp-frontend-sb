@@ -101,6 +101,11 @@ settings.corporafolders.fisk.magazines = {
     contents: ["astra1960-1979", "astranova", "bullen", "fanbararen", "finsktidskrift", "forumfeot", "hankeiten", "hanken", "jft", "kallan", "meddelanden", "nyaargus", "studentbladet", "svenskbygden"]
 };
 
+settings.corporafolders.l2 = {
+    title: "L2 Korp",
+    contents: ["coctaill-ae", "coctaill-lt", "spinv1", "sw1203v1", "swellv1-original", "swellv1-target", "tisusv1"]
+};
+
 settings.corporafolders.medical = {
     title: "Medicinska texter",
     contents: ["diabetolog", "smittskydd"]
@@ -1773,6 +1778,71 @@ settings.corpora["coctaill"] = {
         activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
         task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
         language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_COCTAILL.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["coctaill-ae"] = {
+    id: "coctaill-ae",
+    title: "COCTAILL activities & examples",
+    description: "",
+    context: spContext,
+    within: spWithin,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_author: {label: "author", extendedComponent: "structServiceSelect"},
+        text_coursebook_title: {label: "title", extendedComponent: "structServiceSelect"},
+        text_date: {label: "date", hideExtended: true},
+        lesson_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        list_unit: {label: "coctaill_list_unit", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        list_skill: {label: "coctaill_list_skill", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        activity_instruction_skill: {label: "coctaill_activity_instruction_skill", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        activity_instruction_format: {label: "coctaill_activity_instruction_format", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        task_skill: {label: "coctaill_task_skill", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        task_format: {label: "coctaill_task_format", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        language_example_unit: {label: "coctaill_language_example_unit", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        language_example_skill: {label: "coctaill_language_example_skill", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        list_dummy:       {label: "+list", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        activity_instruction_dummy: {label: "+activity_instruction", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        task_dummy: {label: "+task", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        language_example_dummy: {label: "+language_example", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true}
+    },
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.gu.se/sites/spraakbanken.gu.se/files/Metadata_COCTAILL.pdf' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["coctaill-lt"] = {
+    id: "coctaill-lt",
+    title: "COCTAILL lesson text",
+    description: "",
+    context: spContext,
+    within: spWithin,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_author: {label: "author", extendedComponent: "structServiceSelect"},
+        text_coursebook_title: {label: "title", extendedComponent: "structServiceSelect"},
+        text_date: {label: "date", hideExtended: true},
+        lesson_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        lessontext_genre: {label: "genre", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        lessontext_topic: {label: "topic", type: "set", opts: setOptions, extendedComponent: "structServiceSelect"},
+        subheading_dummy: {label: "+subheading", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
+        lessontext_dummy: {label: "+lessontext", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true},
         lesson_dummy: {label: "+lesson", dataset: ["-"], opts: liteOptions, extendedComponent: "singleValue", hideSidebar: true}
     },
     customAttributes: {
@@ -3906,7 +3976,7 @@ settings.corpora["tisusv2"] = {
         text_oral_result: {label: "oral_result", extendedComponent: "structServiceSelect"},
         text_source: {label: "tisus_source", extendedComponent: "structServiceSelect"},
         text_student_id: {label: "student_id", extendedComponent: "structServiceSelect"},
-        text_svala_link: {label: "full text", hideExtended: true, pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>SVALA</a>"},
+        text_svala_link: {label: "full text", hideExtended: true, pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"},
         text_task: {label: "task_id", extendedComponent: "structServiceSelect"},
         text_task_date: {label: "task_date", extendedComponent: "structServiceSelect"},
         text_task_format: {label: "task_format", extendedComponent: "structServiceSelect"},
@@ -4494,6 +4564,194 @@ settings.corpora["spin-source"] = {
     defaultFilters: ["text_text_types", "text_l1", "text_gender", "text_subject", "text_age", "text_grade"]
 };
 
+l2_structs = {
+    text_date: {label: "date", extendedComponent: "structServiceSelect"},
+    text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+    text_age: {label: "age", extendedComponent: "structServiceSelect"},
+    text_course_subject: {label: "course_subject", extendedComponent: "structServiceSelect"},
+    text_essay_id: {label: "essay ID"},
+    text_student_id: {label: "student ID", extendedComponent: "structServiceSelect"},
+    text_task_id: {label: "task ID", extendedComponent: "structServiceSelect"},
+    text_gender: {label: "gender", extendedComponent: "structServiceSelect"},
+    text_grade: {label: "essay_grade", extendedComponent: "structServiceSelect"},
+    text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
+    text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+    text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
+    text_approximate_level: {label: "approximate_level", extendedComponent: "structServiceSelect"},
+    text_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+    text_edu_level: {label: "edu_level", extendedComponent: "structServiceSelect"},
+    /*text_iso_l1: {label: "l1", extendedComponent: "structServiceSelect"},*/
+    text_lessontext_topic: {label: "lessontext_topic", extendedComponent: "structServiceSelect"},
+    text_nr_essay_student: {label: "nr_essay_student", extendedComponent: "structServiceSelect"},
+    text_school_type: {label: "school_type", extendedComponent: "structServiceSelect"},
+    text_svala_link: {label: "full text", pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"},
+    text_task_date: {label: "task_date", extendedComponent: "structServiceSelect"},
+    text_task_format: {label: "task_format", extendedComponent: "structServiceSelect"},
+    text_task_subject: {label: "task_subject", extendedComponent: "structServiceSelect"},
+    text_task_type: {label: "task_type", extendedComponent: "structServiceSelect"},
+    text_task_url: {label: "task_url", type: "url"},
+    text_time_in_sweden: {label: "time_in_sweden", extendedComponent: "structServiceSelect"}
+};
+
+l2_filters = ["text_age", "text_gender", "text_text_types", "text_l1", "text_approximate_level", "text_course_subject", "text_grading_scale", "text_school_type", "text_edu_level", "text_task_type"];
+
+
+settings.corpora["spinv1"] = {
+    id: "spinv1",
+    title: "SpIn v1",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        original_form: {label: "original form"},
+        pseudo_label: {label: "pseudo label"}
+    }),
+    structAttributes: l2_structs,
+    defaultFilters: l2_filters,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.github.io/swell-release-v1/Metadata-SpIn' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["sw1203v1"] = {
+    id: "sw1203v1",
+    title: "SW1203 v1",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: modernAttrs,
+    structAttributes: l2_structs,
+    defaultFilters: l2_filters,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.github.io/swell-release-v1/Metadata-SW1203' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["swellv1-original"] = {
+    id: "swellv1-original",
+    title: "SweLL v1 original",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        correction_label: {label: "correction label"},
+        target_form: {label: "target form"},
+        pseudo_label: {label: "pseudo label"}
+    }),
+    structAttributes: l2_structs,
+    defaultFilters: l2_filters,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.github.io/swell-release-v1/Metadata-SweLL' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["swellv1-target"] = {
+    id: "swellv1-target",
+    title: "SweLL v1 target",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: _.extend({}, modernAttrs, {
+        correction_label: {label: "correction label"},
+        original_form: {label: "original form"},
+        pseudo_label: {label: "pseudo label"}
+    }),
+    structAttributes: l2_structs,
+    defaultFilters: l2_filters,
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.github.io/swell-release-v1/Metadata-SweLL' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
+settings.corpora["tisusv1"] = {
+    id: "tisusv1",
+    title: "TISUS v1",
+    description: "",
+    limitedAccess: true,
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_essay_id: {label: "essay_id", extendedComponent: "structServiceSelect"},
+        text_age: {label: "age", extendedComponent: "structServiceSelect"},
+        text_gender: {
+            label: "gender",
+            extendedComponent: "datasetSelect",
+            dataset: {
+                "Kvinna": "Kvinna",
+                "Man": "Man"
+            }},
+        text_time_in_sweden: {label: "time_in_sweden", extendedComponent: "structServiceSelect"},
+        text_edu_level: {label: "edu_level", extendedComponent: "structServiceSelect"},
+        text_lf1_result: {label: "lf1_result"},
+        text_lf2_result: {label: "lf2_result"},
+        text_final_grade: {label: "finalgrade", extendedComponent: "structServiceSelect"},
+        text_approximate_level: {label: "approximate_level", extendedComponent: "structServiceSelect"},
+        text_datum: {label: "date", hideExtended: true},
+        /*text_iso_l1: {
+            label: "firstlang",
+            type: "set",
+            opts: setOptions,
+            extendedComponent: "structServiceSelect",
+            translationKey: "langcode_"
+        },*/
+        text_l1: {label: "firstlang", extendedComponent: "structServiceSelect"},
+        text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect"},
+        text_cefr_level: {label: "cefr_level", extendedComponent: "structServiceSelect"},
+        //text_course_level: {label: "course_subject", extendedComponent: "structServiceSelect"},
+        //text_course_subject: {label: "school_type", extendedComponent: "structServiceSelect"},
+        text_grade: {label: "essay_grade", extendedComponent: "structServiceSelect"},
+        text_grading_scale: {label: "grading_scale", extendedComponent: "structServiceSelect"},
+        text_lf_sum: {label: "lf_sum"},
+        text_oral_result: {label: "oral_result", extendedComponent: "structServiceSelect"},
+        text_source: {label: "tisus_source", extendedComponent: "structServiceSelect"},
+        text_student_id: {label: "student_id", extendedComponent: "structServiceSelect"},
+        text_svala_link: {label: "full text", hideExtended: true, pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"},
+        text_task_id: {label: "task_id", extendedComponent: "structServiceSelect"},
+        text_task_date: {label: "task_date", extendedComponent: "structServiceSelect"},
+        text_task_format: {label: "task_format", extendedComponent: "structServiceSelect"},
+        text_task_subject: {label: "task_subject", extendedComponent: "structServiceSelect"},
+        text_task_type: {label: "task_type", extendedComponent: "structServiceSelect"},
+        text_text_types: {label: "genre", extendedComponent: "structServiceSelect"},
+        text_written_result: {label: "written_result", extendedComponent: "structServiceSelect"},
+        text_nr_essay_student: {label: "nr_essay_student"},
+        text_task_url: {label: "task_url", type: "url"}
+    },
+    defaultFilters: ["text_age", "text_gender", "text_text_types", "text_l1", "text_approximate_level", "text_grading_scale", "text_edu_level", "text_task_type"],
+    customAttributes: {
+        pdf: {
+            label: "",
+            pattern: "<a href='https://spraakbanken.github.io/swell-release-v1/Metadata-TISUS' target='_blank'>Metadata explanation</a>",
+            customType: "struct",
+            order: 1
+            }
+    }
+};
+
 swell_structs = {
         text_date: {label: "date", extendedComponent: "structServiceSelect"},
         text_birthyear_interval: {label: "birthyear", extendedComponent: "structServiceSelect", order: 10},
@@ -4513,7 +4771,7 @@ swell_structs = {
         text_type: {label: "type", extendedComponent: "structServiceSelect"},
         text_writing_language: {label: "writing_language", extendedComponent: "structServiceSelect"},
         text_task_url: {label: "url", type: "url"},
-        text_svala_link: {label: "Svala", pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"}
+        text_svala_link: {label: "full text", pattern: "<a href='<%= struct_attrs.text_svala_link %>' target='_blank'>länk</a>"}
     };
 
 settings.corpora["swell-original"] = {

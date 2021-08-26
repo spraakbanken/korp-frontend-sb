@@ -84,6 +84,9 @@
     "pagelink": "sidlänk",
     
     "cefr_level": "kunskapsnivå (CEFR)",
+    "lessontext_topic": "lektionstextämne",
+    "nr_essay_student": "uppsatser/student",
+    "school_type": "skolform",
 
     "firstlang": "modersmål",
     "tisus_lfone": "läsförståelse, del 1",
