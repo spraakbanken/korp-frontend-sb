@@ -215,10 +215,10 @@ npegl.e_cat = {
     }],
     extendedTemplate: `<select ng-model="input" ng-options="tuple[0] as tuple[1] for tuple in dataset"></select>`,
     opts: {
-        "equal": "=",
         "subsumed_by": "*=", // needed to disambiguate expression when parsing, will be translated to '='
+        "equal": "=",
+        "not_subsumed_by": "!*=", // needed to disambiguate expression when parsing, will be translated to '!='
         "not_equal": "!=",
-        "not_subsumed_by": "!*=", // needed to disambiguate expression when parsing, will be translated to '='
     }
 };
 
