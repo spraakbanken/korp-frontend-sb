@@ -704,5 +704,8 @@
     "post_id": "post ID",
 
     "tag_sentence": "sentence",
-    "tag_paragraph": "paragraph"
+    "tag_paragraph": "paragraph",
+    "tag_np": "np",
+    "tag_e": "e",
+    "tag_text": "context"
 }

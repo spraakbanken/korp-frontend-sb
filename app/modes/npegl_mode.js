@@ -192,7 +192,7 @@ npegl.e_cat = {
                 "&[.]Other:[0-9]+"
             ].map((elem, idx) => [elem, idx]));
 
-            const data = {"=": exactMatching, "*=": matching}
+            const data = { "=": exactMatching, "*=": matching, "!=": exactMatching, "!*=": matching }
 
             $scope.$watch("input", () => {
                 $scope.model = Object.keys(data[$scope.orObj.op])[$scope.input]
@@ -215,8 +215,10 @@ npegl.e_cat = {
     }],
     extendedTemplate: `<select ng-model="input" ng-options="tuple[0] as tuple[1] for tuple in dataset"></select>`,
     opts: {
-        "is": "=",
-        "starts_with": "*=", // needed to disambiguate expression when parsing, will be translated to '='
+        "equal": "=",
+        "subsumed_by": "*=", // needed to disambiguate expression when parsing, will be translated to '='
+        "not_equal": "!=",
+        "not_subsumed_by": "!*=", // needed to disambiguate expression when parsing, will be translated to '='
     }
 };
 

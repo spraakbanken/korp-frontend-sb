@@ -704,5 +704,8 @@
     "post_id": "inläggs-ID",
 
     "tag_sentence": "mening",
-    "tag_paragraph": "stycke"
+    "tag_paragraph": "stycke",
+    "tag_np": "np",
+    "tag_e": "e",
+    "tag_text": "kontext"
 }
