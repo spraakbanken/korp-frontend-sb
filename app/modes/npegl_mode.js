@@ -14,7 +14,7 @@ var textWithin = {
     "e": "e",
 };
 
-npegl = {};
+var npegl = {};
 
 npegl.np_language = {label: "language", isStructAttr: true, order: 10};
 npegl.np_db_item_id = {label: "db item id", isStructAttr: true, order: 20};
@@ -30,14 +30,8 @@ npegl.e_cat = {
     isStructAttr: true,
     groupBy: "group_by",
     order: 80,
-    stats_stringify(values) {
-        return catToString(values)
-    }, 
-    stats_cqp(tokens) {
-
-        // return `e_cat="${tokens.join(" | ")}"`
-        return "(" + tokens.map(item => `_.e_cat="${item}"`).join(" | ") + ")"
-    },
+    stats_stringify: "npeglStringify",
+    stats_cqp: "npeglCQP",
     extendedController: [
         "$scope", function($scope) {
             const labels = [
@@ -399,39 +393,6 @@ settings.corpora["npegl-swe"] = {
 
 settings.corpusListing = new CorpusListing(settings.corpora);
 
-
-
-function filterDuplicates(array) {
-    return array.reduce((agg, val) => {
-        if(agg[agg.length-1] == val) return agg
-        agg.push(val)
-    return agg
-    }, [])
-}
-
-function catToString(array) {
-    return filterDuplicates(array).map((item) => item.split(":")[0]).join(" ")
-}
-
-function collapseCat(values) {
-    values = Array.from(values)
-    let groups = []
-    let take = (allOfVal, fromArray) => {
-        let output = []
-        while(fromArray.length && fromArray[0] === allOfVal) {
-            output = output.concat(fromArray.splice(0, 1))
-        }
-        return output
-    }
-
-    while(values.length) {
-        let group = take(values[0], values)
-        groups.push(group[0].split(":")[0])
-    }
-    return groups
-}
-
-
 // We've got to extend the stats data postprocessing with some custom merging of stats table rows. 
 model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
     makeRequest(cqp, callback) {
@@ -442,7 +403,7 @@ model.StatsProxy = class NpeglStatsProxy extends model.StatsProxy {
                 let str = ""
                 for (const attr of searchParams.reduceVals) {
                     if (attr === "e_cat") {
-                        str += catToString(row.e_cat)
+                        str += npeglCatToString(row.e_cat)
                     } else {
                         str += row[attr].join('')
                     }

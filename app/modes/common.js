@@ -1417,6 +1417,8 @@ settings.commonStructTypes = {
     }
 };
 
+const { catToString } = require('custom/npegl.js');
+
 module.exports = {
   spWithin,
   spContext,
@@ -1433,5 +1435,6 @@ module.exports = {
   readability,
   fsv_aldrelagar,
   fsv_yngrelagar,
-  fabTranslation
+  fabTranslation,
+  npeglCatToString: catToString
 }
