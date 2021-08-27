@@ -46,9 +46,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 - **"Choose a value" should appear**
 - Type an actual wordform and select a lemgram
 - **"Choose a value" should disappear**
-  
-TODO:
-- Redo the test for *compounds* when implemented
+- Redo the test for *compounds*
 
 **Case insensitivity settings should not be preserved when switching 
 search attribute**
@@ -77,7 +75,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search_tab=
 
 https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=aspacsv&global_filter=eyJ0ZXh0X2F1dGhvciI6WyJKLlIuUi4gVG9sa2llbiJdfQ%3D%3D&page=0&search=word%7CSmaug
 
-- Go to link or filter on author J.R.R. Tolkien in *ASPAC svenska*
+- Go to link or filter on author J.R.R. Tolkien in *ASPAC svenska* and search for e.g. Smaug in simple search.
 - Go to the advanced tab
 - Check that in "Active CQP query in simple search" the dots in the name
   are escaped with `\`
@@ -187,7 +185,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=3&wor
 - Click the first result in wordpicture, "med" with 200 occurences
 - A KWIC should open up
 - Go to page 6 using the "Go to page" input box
-- **First hit on this page should be the last hit from "Bonniersromaner II"**
+- **First hit on this page should be the two last hits from "Bonniersromaner II"**
 
 ### Statistics
 
@@ -279,10 +277,12 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search=lemg
 
 https://spraakbanken.gu.se/korplabb/#?lang=sv&cqp=%5B%5D&corpus=rd-anf&search=word%7Cinkomstbortfall&reading_mode
 
+>Not sure if this test is good anymore, but check that all information is visible!
+
 - Follow link, we need a result view where the sidebar is very long
 - (You might have to make your browser window smaller for this one)
 - Select a word in the KWIC so that sidebar appears
-- Scroll down, when the sidebar hits the top of the window, a scrollbar should appear
+- ~~Scroll down, when the sidebar hits the top of the window, a scrollbar should appear~~
 - **Check that it is possible to view all info in the sidebar, dependency
   graph should be at the bottom**
 
@@ -305,7 +305,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Save a simple search on "frihet" as a lemgram
 - Change corpus to "August Strindbergs samlade verk"
 - Go to comparision tab and execute the comparison on jämlikhet
-  and frihet
+  and frihet (attribute party is the best).
 - Click on any row in the result
 - Click on "Show context"
 - **Check that this works. Each result row should consist of five 
@@ -351,6 +351,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=en&parallel_corpora=swe
 - Follow link
 - **Click some words and make sure that the corresponding word in 
   the linked sentence is highlighted**
+- Also check that dependency highlighting works, for the first sentence, "katt" is linked to "och".
 
 Hint: in Dutch, the Swedish word "katt" is "kat"!
 
@@ -386,6 +387,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 - Follow link
 - Download "One senence per row (CSV)"
 - **Check that it looks ok**
+- "One token per row ..." should be disabled.
 
 ## Trend diagram
 
@@ -451,4 +453,3 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=fals
 
 - Follow link
 - **Search words, "katt" and "svart" should be highlighted in the result
-  
