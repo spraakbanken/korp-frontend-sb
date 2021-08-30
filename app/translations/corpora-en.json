@@ -127,6 +127,7 @@
     "date": "date",
     "author": "author",
     "title": "title",
+    "original_title": "original title",
     "section": "section",
     "genre": "genre",
     "article": "article",
