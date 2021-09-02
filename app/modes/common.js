@@ -193,6 +193,8 @@ attrs.pos = {
 attrs.msd = {
     label: "msd",
     opts: settings.defaultOptions,
+    pattern: "<span class='msd_sidebar'><%=val%></span>",
+    sidebarInfoUrl: "markup/msdtags.html",
     extendedComponent: 'msd'
 };
 attrs.baseform = {
