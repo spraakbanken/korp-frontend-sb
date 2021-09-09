@@ -1365,8 +1365,17 @@ settings.corporafolders.kubhist2["folketsrost"] = {
 
 settings.corporafolders.kubhist2["ghost"] = {
     title: "Göteborgs Handels- och Sjöfartstidning",
-    contents: ["kubhist2-ghost-1830"]
-    // contents: ["kubhist2-ghost-1830", "kubhist2-ghost-1840", "kubhist2-ghost-1850", "kubhist2-ghost-1860", "kubhist2-ghost-1870", "kubhist2-ghost-1880", "kubhist2-ghost-1890"]
+    contents: ["kubhist2-ghost-1830", "kubhist2-ghost-1840", "kubhist2-ghost-1850", "kubhist2-ghost-1860", "kubhist2-ghost-1870", "kubhist2-ghost-1880", "kubhist2-ghost-1890"]
+};
+
+settings.corporafolders.kubhist2["goteborgsposten"] = {
+    title: "Göteborgsposten",
+    contents: ["kubhist2-goteborgsposten-1850", "kubhist2-goteborgsposten-1860", "kubhist2-goteborgsposten-1870", "kubhist2-goteborgsposten-1880", "kubhist2-goteborgsposten-1890"]
+};
+
+settings.corporafolders.kubhist2["goteborgsweckoblad"] = {
+    title: "Göteborgs Weckoblad",
+    contents: ["kubhist2-goteborgsweckoblad-1870", "kubhist2-goteborgsweckoblad-1880", "kubhist2-goteborgsweckoblad-1890"]
 };
 
 settings.corporafolders.kubhist2["gotheborgsallehanda"] = {
@@ -1908,6 +1917,76 @@ settings.corpora["kubhist2-folketsrost-1860"] = _.extend({}, kubhist2_settings, 
 settings.corpora["kubhist2-ghost-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-ghost-1830",
     title: "Göteborgs Handels- och Sjöfartstidning 1830-talet"
+});
+
+settings.corpora["kubhist2-ghost-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1840",
+    title: "Göteborgs Handels- och Sjöfartstidning 1840-talet"
+});
+
+settings.corpora["kubhist2-ghost-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1850",
+    title: "Göteborgs Handels- och Sjöfartstidning 1850-talet"
+});
+
+settings.corpora["kubhist2-ghost-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1860",
+    title: "Göteborgs Handels- och Sjöfartstidning 1860-talet"
+});
+
+settings.corpora["kubhist2-ghost-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1870",
+    title: "Göteborgs Handels- och Sjöfartstidning 1870-talet"
+});
+
+settings.corpora["kubhist2-ghost-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1880",
+    title: "Göteborgs Handels- och Sjöfartstidning 1880-talet"
+});
+
+settings.corpora["kubhist2-ghost-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ghost-1890",
+    title: "Göteborgs Handels- och Sjöfartstidning 1890-talet"
+});
+
+settings.corpora["kubhist2-goteborgsposten-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsposten-1850",
+    title: "Göteborgsposten 1850-talet"
+});
+
+settings.corpora["kubhist2-goteborgsposten-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsposten-1860",
+    title: "Göteborgsposten 1860-talet"
+});
+
+settings.corpora["kubhist2-goteborgsposten-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsposten-1870",
+    title: "Göteborgsposten 1870-talet"
+});
+
+settings.corpora["kubhist2-goteborgsposten-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsposten-1880",
+    title: "Göteborgsposten 1880-talet"
+});
+
+settings.corpora["kubhist2-goteborgsposten-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsposten-1890",
+    title: "Göteborgsposten 1890-talet"
+});
+
+settings.corpora["kubhist2-goteborgsweckoblad-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsweckoblad-1870",
+    title: "Göteborgs Weckoblad 1870-talet"
+});
+
+settings.corpora["kubhist2-goteborgsweckoblad-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsweckoblad-1880",
+    title: "Göteborgs Weckoblad 1880-talet"
+});
+
+settings.corpora["kubhist2-goteborgsweckoblad-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-goteborgsweckoblad-1890",
+    title: "Göteborgs Weckoblad 1890-talet"
 });
 
 settings.corpora["kubhist2-gotheborgsallehanda-1800"] = _.extend({}, kubhist2_settings, {
