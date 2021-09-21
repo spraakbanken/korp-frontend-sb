@@ -1162,6 +1162,7 @@ var lexClassesText = {
         isStructAttr: true,
         ranked: true,
         order: 501,
+        opts: probabilitySetOptions,
         sidebarComponent: {
             name: "expandList",
             options: {
