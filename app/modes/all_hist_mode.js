@@ -1,4 +1,4 @@
-structAttributes:settings.primaryColor = "#F7D1E4";
+settings.primaryColor = "#F7D1E4";
 settings.primaryLight = "#FFEBF5";
 
 settings.structAttributeSelector = "intersection"
@@ -122,7 +122,7 @@ settings.runebergattributes = {
     typograph: {
         label: "typography",
         type: "set",
-        translationKey: "fab_",
+        translation: fabTranslation,
         extendedComponent: "datasetSelect",
         dataset: [
             "footnote",
@@ -141,11 +141,6 @@ settings.runebergstruct_attributes = {
     },
     text_date: {label: "date"}
 };
-
-
-$("#lemgram_list_item").remove();
-$("#results-lemgram").remove();
-//$("#showLineDiagram").remove();
 
 settings.corpora = {};
 settings.corporafolders = {};
@@ -1868,7 +1863,7 @@ settings.corpora["lag1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
@@ -1911,7 +1906,7 @@ settings.corpora["forarbeten1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
@@ -2158,7 +2153,7 @@ settings.corpora["kioping"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",

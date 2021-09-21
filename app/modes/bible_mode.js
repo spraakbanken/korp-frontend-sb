@@ -4,10 +4,6 @@ settings.primaryLight = "#F9EDED";
 settings.autocomplete = true;
 settings.wordpicture = true;
 
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
-
 settings.corpora = {};
 settings.corporafolders = {};
 
@@ -32,7 +28,7 @@ settings.corpora["bibel1917"] = {
         texttype: {
              label: "fab_texttype",
              type: "set",
-             translationKey: "fab_",
+             translation: fabTranslation,
             extendedComponent: "datasetSelect",
              dataset: [
                  "info",

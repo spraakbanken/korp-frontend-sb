@@ -7,9 +7,6 @@ settings.structAttributeSelector = "intersection"
 settings.wordAttributeSelector   = "intersection"
 settings.reduceWordAttributeSelector = "intersection"
 
-$("#lemgram_list_item").remove();
-$("#results-lemgram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 

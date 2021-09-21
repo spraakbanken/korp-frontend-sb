@@ -2,11 +2,6 @@ settings.primaryColor = "#E0F4F4";
 settings.primaryLight = "#F2FFFF";
 settings.wordpicture = false;
 
-
-$("#lemgram_list_item").remove();
-$("#results-lemgram").remove();
-$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 
@@ -43,7 +38,7 @@ settings.corpora["lag1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",
@@ -86,7 +81,7 @@ settings.corpora["forarbeten1734"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "bold",

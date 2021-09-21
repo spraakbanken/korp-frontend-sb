@@ -85,9 +85,6 @@ settings.aftonbladstruct_attributes = {
 
 digidailydescription = '<a href="http://feedback.blogg.kb.se/forums/topic/digidailyprojekten-2010-2014/" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
 
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
 
 settings.corpora = {};
 settings.corporafolders = {};
@@ -1281,9 +1278,6 @@ settings.kubhist2struct_attributes = _.extend({}, commonStructAttrs, {
 });
 
 digidailydescription = '<a href="http://feedback.blogg.kb.se/forums/topic/digidailyprojekten-2010-2014/" target="blank">Digidaily</a> var ett utvecklingsprojekt där Riksarkivet tillsammans med Kungl. biblioteket och Mittuniversitetet utvecklade rationella metoder och processer för massdigitalisering och texttolkning av dagstidningar. Projektet löpte mellan 2010 och 2014.'
-
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
 
 kubhist2_settings = {
     morphology: "saldom|dalinm|swedbergm",

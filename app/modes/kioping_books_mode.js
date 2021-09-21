@@ -2,9 +2,6 @@ settings.primaryColor = "#E0F4F4";
 settings.primaryLight = "#F2FFFF";
 settings.wordpicture = false;
 
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 
@@ -29,7 +26,7 @@ settings.corpora["kioping"] = {
         typograph: {
             label: "typography",
             type: "set",
-            translationKey: "fab_",
+            translation: fabTranslation,
             extendedComponent: "datasetSelect",
             dataset: [
                 "antikva",

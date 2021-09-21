@@ -6,10 +6,6 @@ settings.wordpicture = false;
 settings.inputCaseInsensitiveDefault = true;
 settings.statisticsCaseInsensitiveDefault = true;
 
-
-$("#lemgram_list_item").remove();
-$("#showLineDiagram").remove();
-
 settings.corpora = {};
 settings.corporafolders = {};
 

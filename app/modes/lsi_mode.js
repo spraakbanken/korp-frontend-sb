@@ -50,24 +50,7 @@ settings.corpora["lsi"] = {
     customAttributes: {
         "image": {
             customType: "struct",
-            sidebarComponent: {
-                template: String.raw`
-                    <div>
-                        <a target="_blank" ng-href="{{pageUrl}}" ng-show="pageUrl">
-                            <img ng-src="https://spraakbanken.gu.se/korp/data/lsi/faksimil_thumb/thumb.lsi-v{{volumeName}}-{{pageNumber2}}.jpg">
-                        </a>
-                    </div>
-                `,
-                controller: ["$scope", function($scope) {
-                    $scope.pageUrl = $scope.sentenceData["page_page_url"];
-                    const re = new RegExp("volume=(.*-.*)&pages=.*#page/(.*)/mode");
-                    const matches = $scope.pageUrl.match(re);
-                    $scope.volumeName = matches[1];
-                    const pageNumber = matches[2];
-                    $scope.pageNumber2 = ("00"+pageNumber).slice(-3);
-                }]
-            },
-            order: 200
+            sidebarComponent: "lsiImage"
         }
     }
 };
