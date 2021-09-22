@@ -1,6 +1,5 @@
 settings.autocomplete = false;
 settings.wordpicture = false;
-settings.newMapEnabled = false;
 
 settings.mode = {
     mode: "parallel",

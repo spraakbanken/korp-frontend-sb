@@ -1,4 +1,4 @@
-settings.newMapEnabled = true;
+settings.mapEnabled = true;
 
 settings.corpora = {};
 settings.corporafolders = {};

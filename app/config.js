@@ -6,7 +6,7 @@
 var isLab = window.isLab || false;
 
 settings.autocomplete = true;
-settings.newMapEnabled = isLab;
+settings.mapEnabled = false;
 settings.hitsPerPageDefault = 25
 settings.hitsPerPageValues = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false

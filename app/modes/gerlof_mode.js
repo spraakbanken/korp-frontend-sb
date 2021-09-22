@@ -2,7 +2,6 @@
 
 settings.autocomplete = false;
 settings.wordpicture = false;
-settings.newMapEnabled = false;
 
 settings.structAttributeSelector = "intersection"
 settings.wordAttributeSelector   = "intersection"
