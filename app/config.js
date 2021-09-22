@@ -2,9 +2,6 @@
  * lexem => lemgram, lemgram
  *
  */
-
-var isLab = window.isLab || false;
-
 settings.autocomplete = true;
 settings.mapEnabled = false;
 settings.hitsPerPageDefault = 25
