@@ -1084,7 +1084,7 @@ settings.corpora["familjeliv-allmanna-ekonomi"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1094,7 +1094,7 @@ settings.corpora["familjeliv-allmanna-familjeliv"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1104,7 +1104,7 @@ settings.corpora["familjeliv-allmanna-hushem"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1114,7 +1114,7 @@ settings.corpora["familjeliv-allmanna-husdjur"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1124,7 +1124,7 @@ settings.corpora["familjeliv-allmanna-fritid"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1134,7 +1134,7 @@ settings.corpora["familjeliv-allmanna-kropp"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1144,7 +1144,7 @@ settings.corpora["familjeliv-allmanna-noje"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1154,7 +1154,7 @@ settings.corpora["familjeliv-allmanna-samhalle"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1164,7 +1164,7 @@ settings.corpora["familjeliv-allmanna-sandladan"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1174,7 +1174,7 @@ settings.corpora["familjeliv-adoption"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1184,7 +1184,7 @@ settings.corpora["familjeliv-expert"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1194,7 +1194,7 @@ settings.corpora["familjeliv-foralder"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1204,7 +1204,7 @@ settings.corpora["familjeliv-gravid"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1214,7 +1214,7 @@ settings.corpora["familjeliv-kansliga"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1224,7 +1224,7 @@ settings.corpora["familjeliv-medlem-allmanna"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1235,7 +1235,7 @@ settings.corpora["familjeliv-medlem-foraldrar"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1245,7 +1245,7 @@ settings.corpora["familjeliv-medlem-planerarbarn"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1256,7 +1256,7 @@ settings.corpora["familjeliv-medlem-vantarbarn"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1266,7 +1266,7 @@ settings.corpora["familjeliv-pappagrupp"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1276,7 +1276,7 @@ settings.corpora["familjeliv-planerarbarn"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1286,7 +1286,7 @@ settings.corpora["familjeliv-sexsamlevnad"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1296,7 +1296,7 @@ settings.corpora["familjeliv-svartattfabarn"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -1306,7 +1306,7 @@ settings.corpora["familjeliv-anglarum"] = {
     description: "",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: familjeliv_structs
 };
 
@@ -4143,7 +4143,7 @@ settings.corpora["twitter"] = {
         "1 sentence": "1 sentence",
         "1 text": "1 text"
     },
-    attributes: modernAttrsOld,
+    attributes: modernAttrs,
     structAttributes: {
         user_username: {label: "username2"},
         user_name: {label: "name"},

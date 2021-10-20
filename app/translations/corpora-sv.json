@@ -127,6 +127,7 @@
     "date": "datum",
     "author": "författare",
     "title": "titel",
+    "original_title": "originaltitel",
     "section": "avdelning",
     "genre": "genre",
     "article": "artikel",

@@ -15,10 +15,10 @@ settings.corporafolders.buugaag = {
     contents: ["somali-1971-79", "somali-1993-94", "somali-as-2001", "somali-2001", "somali-itoobiya",
         "somali-hargeysa-2010",
         "somali-as-2013", "somali-as-2016", "somali-as-2018",
-        "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89", "somali-hargeysa",
-        "somali-cb-2001-03-soomaaliya",
+        "somali-caafimaad-1972-79", "somali-caafimaad-1983", "somali-caafimaad-1994", "somali-cb", "somali-cb-1980-89",
+        "somali-hargeysa", "somali-cb-2001-03-soomaaliya",
         "somali-cb-2010", "somali-cb-2011", "somali-cb-2016", "somali-cb-2018",
-        "somali-cd-2012-itoobiya", "somali-saynis-1972-77", "somali-saynis-1994-96",
+        "somali-cd-2012-itoobiya", "somali-mk-1972-79", "somali-saynis-1972-77", "somali-saynis-1980-89", "somali-saynis-1994-96",
         "somali-saynis", "somali-saynis-2001", "somali-saynis-2010", "somali-saynis-2011-soomaaliya",
         "somali-saynis-2016", "somali-saynis-2018", "somali-xisaab-1971-79",
         "somali-xisaab-1994-97", "somali-xisaab-2001-hargeysa", "somali-xisaab-2001-nayroobi",
@@ -42,6 +42,7 @@ settings.corporafolders.wb = {
 // Strukturella attribut
 somalis = {}
 somalis.title = {label: "title", order: 100};
+somalis.original_title = {label: "original_title", order: 110};
 somalis.source = {label: "source", type: "url", order: 200};
 somalis.author = {label: "author", order: 300};
 somalis.translator = {label: "translator", order: 400};
@@ -235,6 +236,26 @@ settings.corpora["somali-haatuf-news-2009"] = {
     }
 };
 
+settings.corpora["somali-caafimaad-1972-79"] = {
+    id: "somali-caafimaad-1972-79",
+    title: "Caafimaad 1972–79",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_edition: somalis.edition,
+        text_author: somalis.author,
+        text_title: somalis.title,
+        text_editor: somalis.editor,
+        text_place: somalis.place,
+        text_source: somalis.source,
+        text_publisher: somalis.publisher,
+        page_n: somalis.page
+    }
+};
+
 settings.corpora["somali-caafimaad-1983"] = {
     id: "somali-caafimaad-1983",
     title: "Caafimaad 1983",
@@ -284,6 +305,26 @@ settings.corpora["somali-ah-1992-02-kanada"] = {
         page_n: somalis.page
     }
 };
+
+settings.corpora["somali-ah-2010-19"] = {
+    id: "somali-ah-2010-19",
+    title: "Afka Hooyo 2010–19 Iswiidhan",
+    description: "",
+    within: spWithin,
+    context: spContext,
+    attributes: {},
+    structAttributes: {
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_author: somalis.author,
+        text_edition: somalis.edition,
+        text_editor: somalis.editor,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        page_n: somalis.page
+    }
+};
+
 
 settings.corpora["somali-2001"] = {
     id: "somali-2001",
@@ -843,6 +884,26 @@ settings.corpora["somali-kqa"] = {
     }
 };
 
+settings.corpora["somali-mk-1972-79"] = {
+    id: "somali-mk-1972-79",
+    title: "Maaddooyinka Kale 1972–79",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_author: somalis.author,
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_editor: somalis.editor,
+        text_edition: somalis.edition,
+        text_source: somalis.source,
+        page_n: somalis.page
+    }
+};
+
 settings.corpora["somali-ogaden"] = {
     id: "somali-ogaden",
     title: "Ogaden Online",
@@ -959,6 +1020,26 @@ settings.corpora["somali-saynis-1972-77"] = {
     }
 };
 
+settings.corpora["somali-saynis-1980-89"] = {
+    id: "somali-saynis-1980-89",
+    title: "Saynis 1980-89",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_author: somalis.author,
+        text_edition: somalis.edition,
+        text_editor: somalis.editor,
+        text_place: somalis.place,
+        text_publisher: somalis.publisher,
+        text_source: somalis.source,
+        text_title: somalis.title,
+        text_year: somalis.year,
+        page_n: somalis.page
+    }
+};
+
 settings.corpora["somali-saynis-1994-96"] = {
     id: "somali-saynis-1994-96",
     title: "Saynis 1994–96",
@@ -989,6 +1070,24 @@ settings.corpora["somali-sheekooyin"] = {
         text_title: somalis.title,
         text_date: somalis.year,
         text_publisher: somalis.publisher,
+        text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-sheekooyin-carruureed"] = {
+    id: "somali-sheekooyin-carruureed",
+    title: "Sheekooyin Carruureed (Turjuman)",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_title: somalis.title,
+        text_year: somalis.year,
+        text_author: somalis.author,
+        text_edition: somalis.edition,
+        text_place: somalis.place,
+        text_sponsor: somalis.sponsor,
         text_source: somalis.source
     }
 };
@@ -1112,6 +1211,27 @@ settings.corpora["somali-suugaan2"] = {
     }
 };
 
+settings.corpora["somali-suugaan-turjuman"] = {
+    id: "somali-suugaan-turjuman",
+    title: "Suugaan (Turjuman)",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_author: somalis.author,
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_orititle: somalis.original_title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_editor: somalis.editor,
+        text_edition: somalis.edition,
+        text_translator: somalis.translator,
+        page_n: somalis.page
+    }
+};
+
 settings.corpora["wikipedia-so"] = {
     id: "wikipedia-so",
     title: "Somali Wikipedia",
@@ -1123,6 +1243,28 @@ settings.corpora["wikipedia-so"] = {
         text_title: somalis.title,
         text_publisher: somalis.date,
         text_source: somalis.source
+    }
+};
+
+settings.corpora["somali-tid-turjuman"] = {
+    id: "somali-tid-turjuman",
+    title: "Taariikh iyo Dhaqan (Turjuman)",
+    description: "",
+    within: settings.defaultWithin,
+    context: defaultContext,
+    attributes: {},
+    structAttributes: {
+        text_author: somalis.author,
+        text_year: somalis.year,
+        text_title: somalis.title,
+        text_orititle: somalis.original_title,
+        text_publisher: somalis.publisher,
+        text_place: somalis.place,
+        text_editor: somalis.editor,
+        text_edition: somalis.edition,
+        text_translator: somalis.translator,
+        text_source: somalis.source,
+        page_n: somalis.page
     }
 };
 
