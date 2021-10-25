@@ -181,7 +181,7 @@ settings.corporafolders.newspapertexts.press = {
 
 settings.corporafolders.newspapertexts.webnews = {
     title: "Webbnyheter",
-    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013"]
+    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013", "svt"]
 };
 
 settings.corporafolders.magazines = {
@@ -737,6 +737,26 @@ settings.corpora["webbnyheter2013"] = {
         text_title: {label: "title"},
         text_url: {label: "url" , type: "url"},
         text_newspaper: {label: "newspaper"}
+    }
+};
+
+settings.corpora["svt"] = {
+    id: "svt",
+    title: "SVT-nyheter 2004-2021",
+    description: "Nyhetstexter från svt.se",
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        article_title: {label: "title", order: 10},
+        article_subtitle: {label: "subtitle", order: 20},
+        article_url: {label: "url" , type: "url", order: 30},
+        article_date:  _.extend({}, sattrs.date, { order: 40 }),
+        article_data_collected: {label: "date_collected", order: 50},
+        article_tags: {label: "tags", type: "set", order: 60},
+        article_section: {label: "section", order: 70},
+        article_authors: {label: "authors", type: "set", order: 80},
+        article_id: {label: "id", order: 90}
     }
 };
 

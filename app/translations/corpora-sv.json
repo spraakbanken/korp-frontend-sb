@@ -711,5 +711,9 @@
     "tag_paragraph": "stycke",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "kontext"
+    "tag_text": "kontext",
+
+    "date_collected": "insamlingsdatum",
+    "subtitle": "undertitel",
+    "authors": "författare"
 }

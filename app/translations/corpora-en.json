@@ -711,5 +711,8 @@
     "tag_paragraph": "paragraph",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "context"
+    "tag_text": "context",
+
+    "date_collected": "date of data collection",
+    "authors": "authors"
 }
