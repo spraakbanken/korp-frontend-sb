@@ -164,6 +164,11 @@ settings.corporafolders.socialmedia.twitter = {
     contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016", "twitter-2017"]
 };
 
+settings.corporafolders.svtnews = {
+    title: "SVT nyheter",
+    contents: ["svt"]
+};
+
 settings.corporafolders.newspapertexts = {
     title: "Tidningstexter",
     contents: ["attasidor", "dn1987", "ordat"]
@@ -181,7 +186,7 @@ settings.corporafolders.newspapertexts.press = {
 
 settings.corporafolders.newspapertexts.webnews = {
     title: "Webbnyheter",
-    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013", "svt"]
+    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013"]
 };
 
 settings.corporafolders.magazines = {
@@ -742,7 +747,7 @@ settings.corpora["webbnyheter2013"] = {
 
 settings.corpora["svt"] = {
     id: "svt",
-    title: "SVT-nyheter 2004-2021",
+    title: "SVT Nyheter 2004-2021",
     description: "Nyhetstexter från svt.se",
     within: spWithin,
     context: spContext,
