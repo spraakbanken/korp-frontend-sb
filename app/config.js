@@ -214,8 +214,8 @@ settings.modeConfig = [
         mode: "somali",
     },
     {
-        localekey: "kubfreq",
-        mode: "kubfreq"
+        localekey: "kubord",
+        mode: "kubord"
     }
 
 ];

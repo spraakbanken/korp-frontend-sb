@@ -13,7 +13,7 @@ settings.corporafolders.gp = {
     contents: ["kubfreq-gp-2018"]
 };
 
-kubfreq_settings = {
+kubord_settings = {
     context: {"0 word": "0 word"},
     within: {"word": "word"},
     attributes: {
@@ -48,7 +48,7 @@ kubfreq_settings = {
 };
 
 
-settings.corpora["kubfreq-gp-2018"] = _.extend({}, kubfreq_settings, {
+settings.corpora["kubfreq-gp-2018"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2018",
     id: "kubfreq-gp-2018",
     description: ""
