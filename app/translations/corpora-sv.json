@@ -710,5 +710,6 @@
 
     "date_collected": "insamlingsdatum",
     "subtitle": "undertitel",
-    "authors": "författare"
+    "authors": "författare",
+    "freqency": "frekvens"
 }

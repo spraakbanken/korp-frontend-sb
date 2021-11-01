@@ -708,5 +708,6 @@
     "tag_text": "context",
 
     "date_collected": "date of data collection",
-    "authors": "authors"
+    "authors": "authors",
+    "freqency": "freqency"
 }

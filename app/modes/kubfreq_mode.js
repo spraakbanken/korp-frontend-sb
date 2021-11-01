@@ -21,17 +21,29 @@ kubfreq_settings = {
         msd: attrs.msd,
         lemma: attrs.baseform,
         lex: attrs.lemgram,
-        sense: modernAttrs.saldo,
+        sense: modernAttrs.sense,
         complemgram: modernAttrs.complemgram,
         freq: {
-            label: "freq"
-            // opts: settings.defaultOptions
+            label: "freqency",
+            opts: liteOptions
         }
     },
     structAttributes: {
-        edition_name: {label: "name"},
+        edition_name: {
+            label: "name",
+            extendedComponent: "structServiceSelect"
+        },
         edition_date: {label: "date"},
-        page_nr: {label: "page"}
+        edition_year: {
+            label: "year",
+            hideSidebar: true,
+            opts: liteOptions,
+            extendedComponent: "structServiceSelect"
+        },
+        page_nr: {
+            label: "page",
+            opts: liteOptions
+        }
     }
 };
 
