@@ -164,6 +164,11 @@ settings.corporafolders.socialmedia.twitter = {
     contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016", "twitter-2017"]
 };
 
+settings.corporafolders.svtnews = {
+    title: "SVT nyheter",
+    contents: ["svt"]
+};
+
 settings.corporafolders.newspapertexts = {
     title: "Tidningstexter",
     contents: ["attasidor", "dn1987", "ordat"]
@@ -737,6 +742,26 @@ settings.corpora["webbnyheter2013"] = {
         text_title: {label: "title"},
         text_url: {label: "url" , type: "url"},
         text_newspaper: {label: "newspaper"}
+    }
+};
+
+settings.corpora["svt"] = {
+    id: "svt",
+    title: "SVT Nyheter 2004-2021",
+    description: "Nyhetstexter från svt.se",
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        article_title: {label: "title", order: 10},
+        article_subtitle: {label: "subtitle", order: 20},
+        article_url: {label: "url" , type: "url", order: 30},
+        article_date:  _.extend({}, sattrs.date, { order: 40 }),
+        article_data_collected: {label: "date_collected", order: 50},
+        article_tags: {label: "tags", type: "set", order: 60},
+        article_section: {label: "section", order: 70},
+        article_authors: {label: "authors", type: "set", order: 80},
+        article_id: {label: "id", order: 90}
     }
 };
 
@@ -1950,7 +1975,7 @@ var ivipVideo = function(baseURL) {
 settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
-    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>Korpusen kommer att finnas tillgänglig för forskare omkring 2021.',
+    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:jenny.nilsson@isof.se">Jenny Nilsson</a> eller <a href="mailto:catrin.norrby@su.se">Catrin Norrby</a>.',
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",

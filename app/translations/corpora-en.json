@@ -4,6 +4,7 @@
     "faroese_texts": "Faroese",
     "old_swedish_texts": "Old Swedish",
     "digidaily": "Digidaily",
+    "kubord": "Kubord",
     "kubhist": "Kubhist",
     "kubhist2": "Kubhist2",
     "bible_texts": "Biblical texts",
@@ -100,7 +101,6 @@
     "proficiencylevel": "proficiency level",
 
     "approximate_level": "approximate level",
-    "school_type": "school type",
     "course_subject": "course subject",
     "edu_level": "education level",
     "essay_id": "essay ID",
@@ -275,7 +275,7 @@
     "meL": "Magnus Erikssons Landslag",
     "meSt": "Magnus Erikssons Stadslag, exklusiva stadslagsflockar",
 
-    "activity1": "activity",
+    "activity": "activity",
     "activity1": "activity 1",
     "activity2": "activity 2",
     "activity3": "activity 3",
@@ -547,7 +547,6 @@
     "complemgram_show_one": "Show less",
     "complemgram_show_all": "Show more",
 
-    "sentiment": "sentiment",
     "swefn": "Swedish FrameNet",
     "blingbring": "Blingbring",
     "lix": "readability index",
@@ -604,7 +603,6 @@
     "rd_status": "status",
     "rd_subtitel": "sub title",
     "rd_tempbeteckning": "temporary name",
-
     "rd_anf_beteckning": "speech name",
     "rd_anf_datum": "speech date",
     "rd_anf_hangar_id": "speech hangar ID",
@@ -630,15 +628,11 @@
     "rd_motforslag_nummer": "counterproposal number",
     "rd_motforslag_partier": "counterproposal parties",
     "rd_mottagare": "recipient",
-    "rd_nummer": "number",
     "rd_organ": "organ",
-    "rd_pretext": "pretext",
     "rd_punkt": "point",
-    "rd_relaterat_id": "related ID",
     "rd_rm": "rm",
     "rd_sourceid": "source ID",
     "rd_startpos": "startpos",
-    "rd_status": "status",
     "rd_subtyp": "subtype",
     "rd_tumnagel": "thumbnail",
     "rd_tumnagel_stor": "thumbnail large",
@@ -711,5 +705,9 @@
     "tag_paragraph": "paragraph",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "context"
+    "tag_text": "context",
+
+    "date_collected": "date of data collection",
+    "authors": "authors",
+    "freqency": "freqency"
 }

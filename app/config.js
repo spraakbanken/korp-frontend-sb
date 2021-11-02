@@ -142,7 +142,7 @@ settings.modeConfig = [
         localekey: "runeberg",
         mode: "runeberg",
     },
-
+    
     {
         localekey: "bible_texts",
         mode: "bible",
@@ -178,6 +178,10 @@ settings.modeConfig = [
     {
         localekey: "somali",
         mode: "somali",
+    },
+    {
+        localekey: "kubord",
+        mode: "kubord"
     }
 
 ];

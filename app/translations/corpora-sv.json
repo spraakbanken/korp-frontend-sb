@@ -4,6 +4,7 @@
     "faroese_texts": "Färöiska",
     "old_swedish_texts": "Fornsvenska",
     "digidaily": "Digidaily",
+    "kubord": "Kubord",
     "kubhist": "Kubhist",
     "kubhist2": "Kubhist2",
     "bible_texts": "Bibelstället",
@@ -100,7 +101,6 @@
     "proficiencylevel": "kunskapsnivå",
 
     "approximate_level": "ungefärlig nivå",
-    "school_type": "skolform",
     "course_subject": "kursämne",
     "edu_level": "utbildningsnivå",
     "essay_id": "uppsats-ID",
@@ -547,7 +547,6 @@
     "complemgram_show_one": "Visa färre",
     "complemgram_show_all": "Visa fler",
 
-    "sentiment": "attityd",
     "swefn": "Svenskt FrasNät",
     "blingbring": "Blingbring",
     "lix": "läsbarhetsindex",
@@ -630,15 +629,11 @@
     "rd_motforslag_nummer": "motförslagsnummer",
     "rd_motforslag_partier": "motförslagspartier",
     "rd_mottagare": "mottagare",
-    "rd_nummer": "nummer",
     "rd_organ": "organ",
-    "rd_pretext": "pretext",
     "rd_punkt": "punkt",
-    "rd_relaterat_id": "relaterat-ID",
     "rd_rm": "rm",
     "rd_sourceid": "käll-ID",
     "rd_startpos": "startpos",
-    "rd_status": "status",
     "rd_subtyp": "subtyp",
     "rd_tumnagel": "tumnagel",
     "rd_tumnagel_stor": "tumnagel stor",
@@ -711,5 +706,10 @@
     "tag_paragraph": "stycke",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "kontext"
+    "tag_text": "kontext",
+
+    "date_collected": "insamlingsdatum",
+    "subtitle": "undertitel",
+    "authors": "författare",
+    "freqency": "frekvens"
 }
