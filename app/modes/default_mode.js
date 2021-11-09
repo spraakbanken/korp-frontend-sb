@@ -1975,7 +1975,7 @@ var ivipVideo = function(baseURL) {
 settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
-    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:jenny.nilsson@isof.se">Jenny Nilsson</a> eller <a href="mailto:catrin.norrby@su.se">Catrin Norrby</a>.',
+    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:jenny.nilsson@isof.se">Jenny Nilsson</a>.',
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
