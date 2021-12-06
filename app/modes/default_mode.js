@@ -753,15 +753,15 @@ settings.corpora["svt"] = {
     context: spContext,
     attributes: modernAttrs,
     structAttributes: {
-        article_title: {label: "title", order: 10},
-        article_subtitle: {label: "subtitle", order: 20},
-        article_url: {label: "url" , type: "url", order: 30},
-        article_date:  _.extend({}, sattrs.date, { order: 40 }),
-        article_data_collected: {label: "date_collected", order: 50},
-        article_tags: {label: "tags", type: "set", order: 60},
-        article_section: {label: "section", order: 70},
-        article_authors: {label: "authors", type: "set", order: 80},
-        article_id: {label: "id", order: 90}
+        text_title: {label: "title", order: 10},
+        text_subtitle: {label: "subtitle", order: 20},
+        text_url: {label: "url" , type: "url", order: 30},
+        text_date:  _.extend({}, sattrs.date, { order: 40 }),
+        text_data_collected: {label: "date_collected", order: 50},
+        text_tags: {label: "tags", type: "set", order: 60},
+        text_section: {label: "section", order: 70},
+        text_authors: {label: "authors", type: "set", order: 80},
+        text_id: {label: "id", order: 90}
     }
 };
 
@@ -1975,7 +1975,7 @@ var ivipVideo = function(baseURL) {
 settings.corpora["ivip"] = {
     id: "ivip",
     title: "IVIP",
-    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:jenny.nilsson@isof.se">Jenny Nilsson</a> eller <a href="mailto:catrin.norrby@su.se">Catrin Norrby</a>.',
+    description: 'Interaktion och variation i pluricentriska språk – Kommunikativa mönster i sverigesvenska och finlandssvenska<br><br>För åtkomst kontakta <a href="mailto:jenny.nilsson@isof.se">Jenny Nilsson</a>.',
     limitedAccess: true,
     context: {
         "1 sentence": "1 sentence",
