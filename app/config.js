@@ -12,6 +12,8 @@ settings.enableFrontendKwicDownload = true
 settings.languages = ["sv", "en"];
 settings.defaultLanguage = "sv";
 
+settings.wordLabel = { sv: "ord", en: "word" };
+
 class MotomoLogger {
     static logEvent(category, action, name, value) {
         // uses global _paq obj from motomo tracking lib. 
