@@ -25,6 +25,9 @@ kubord_settings = {
         wordbreak: {
             label: "wordbreak"
         },
+        original: {
+            label: "original"
+        },
         freq: {
             label: "freqency",
             opts: liteOptions
