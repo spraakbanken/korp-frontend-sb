@@ -10,7 +10,7 @@ settings.preselectedCorpora = ["gp"];
 
 settings.corporafolders.gp = {
     title: "Göteborgsposten",
-    contents: ["kubfreq-gp-2018"]
+    contents: ["kubfreq-gp-2018", "kubord-gp-2018"]
 };
 
 kubord_settings = {
@@ -20,9 +20,14 @@ kubord_settings = {
         pos: attrs.pos,
         msd: attrs.msd,
         lemma: attrs.baseform,
-        lex: attrs.lemgram,
         sense: modernAttrs.sense,
         complemgram: modernAttrs.complemgram,
+        wordbreak: {
+            label: "wordbreak"
+        },
+        original: {
+            label: "original"
+        },
         freq: {
             label: "freqency",
             opts: liteOptions
@@ -47,10 +52,16 @@ kubord_settings = {
     }
 };
 
-
+// Version 1, to be removed
 settings.corpora["kubfreq-gp-2018"] = _.extend({}, kubord_settings, {
-    title: "Ordfrekvenser Göteborgsposten 2018",
+    title: "Ordfrekvenser Göteborgsposten 2018 v1",
     id: "kubfreq-gp-2018",
+    description: ""
+});
+
+settings.corpora["kubord-gp-2018"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Göteborgsposten 2018 v2",
+    id: "kubord-gp-2018",
     description: ""
 });
 
