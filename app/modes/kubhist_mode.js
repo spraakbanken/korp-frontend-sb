@@ -1533,27 +1533,34 @@ settings.corporafolders.kubhist2["nyttochgammalt"] = {
     contents: ["kubhist2-nyttochgammalt-1780", "kubhist2-nyttochgammalt-1790", "kubhist2-nyttochgammalt-1800", "kubhist2-nyttochgammalt-1810"]
 };
 
-settings.corporafolders.kubhist2["ostgotacorrespondenten"] = {
-    title: "Östgöta Correspondenten",
-    contents: ["kubhist2-ostgotacorrespondenten-1830"]
-    // contents: ["kubhist2-ostgotacorrespondenten-1830", "kubhist2-ostgotacorrespondenten-1840", "kubhist2-ostgotacorrespondenten-1850", "kubhist2-ostgotacorrespondenten-1860", "kubhist2-ostgotacorrespondenten-1870", "kubhist2-ostgotacorrespondenten-1880", "kubhist2-ostgotacorrespondenten-1890"]
+settings.corporafolders.kubhist2["ostergotlandsveckoblad"] = {
+    title: "Östergötlands Veckoblad",
+    contents: ["kubhist2-ostergotlandsveckoblad-1880", "kubhist2-ostergotlandsveckoblad-1890"]
 };
 
-// settings.corporafolders.kubhist2["ostgotaposten"] = {
-//     title: "Östgötaposten",
-//     contents: ["kubhist2-ostgotaposten-1890"]
-// };
+settings.corporafolders.kubhist2["ostgotacorrespondenten"] = {
+    title: "Östgöta Correspondenten",
+    contents: ["kubhist2-ostgotacorrespondenten-1830", "kubhist2-ostgotacorrespondenten-1840", "kubhist2-ostgotacorrespondenten-1850", "kubhist2-ostgotacorrespondenten-1860", "kubhist2-ostgotacorrespondenten-1870", "kubhist2-ostgotacorrespondenten-1880", "kubhist2-ostgotacorrespondenten-1890"]
+};
+
+settings.corporafolders.kubhist2["ostgotaposten"] = {
+    title: "Östgötaposten",
+    contents: ["kubhist2-ostgotaposten-1890", "kubhist2-ostgotaposten-1900"]
+};
 
 settings.corporafolders.kubhist2["post-ochinrikestidningar"] = {
     title: "Post- och Inrikes Tidningar",
-    contents: ["kubhist2-post-ochinrikestidningar-1820", "kubhist2-post-ochinrikestidningar-1830"]
-    // contents: ["kubhist2-post-ochinrikestidningar-1820", "kubhist2-post-ochinrikestidningar-1830", "kubhist2-post-ochinrikestidningar-1840", "kubhist2-post-ochinrikestidningar-1850", "kubhist2-post-ochinrikestidningar-1860", "kubhist2-post-ochinrikestidningar-1870", "kubhist2-post-ochinrikestidningar-1880", "kubhist2-post-ochinrikestidningar-1890"]
+    contents: ["kubhist2-post-ochinrikestidningar-1820", "kubhist2-post-ochinrikestidningar-1830", "kubhist2-post-ochinrikestidningar-1840", "kubhist2-post-ochinrikestidningar-1850", "kubhist2-post-ochinrikestidningar-1860", "kubhist2-post-ochinrikestidningar-1870", "kubhist2-post-ochinrikestidningar-1880", "kubhist2-post-ochinrikestidningar-1890"]
 };
 
 settings.corporafolders.kubhist2["posttidningar"] = {
     title: "Posttidningar",
-    contents: ["kubhist2-posttidningar-1800", "kubhist2-posttidningar-1810", "kubhist2-posttidningar-1820"]
-    // contents: ["kubhist2-posttidningar-1640", "kubhist2-posttidningar-1650", "kubhist2-posttidningar-1660", "kubhist2-posttidningar-1670", "kubhist2-posttidningar-1680", "kubhist2-posttidningar-1690", "kubhist2-posttidningar-1700", "kubhist2-posttidningar-1710", "kubhist2-posttidningar-1720", "kubhist2-posttidningar-1730", "kubhist2-posttidningar-1740", "kubhist2-posttidningar-1750", "kubhist2-posttidningar-1760", "kubhist2-posttidningar-1770", "kubhist2-posttidningar-1780", "kubhist2-    posttidningar-1790", "kubhist2-posttidningar-1800", "kubhist2-posttidningar-1810", "kubhist2-posttidningar-1820"]
+    contents: ["kubhist2-posttidningar-1640", "kubhist2-posttidningar-1650", "kubhist2-posttidningar-1660", "kubhist2-posttidningar-1670", "kubhist2-posttidningar-1680", "kubhist2-posttidningar-1690", "kubhist2-posttidningar-1700", "kubhist2-posttidningar-1710", "kubhist2-posttidningar-1720", "kubhist2-posttidningar-1730", "kubhist2-posttidningar-1740", "kubhist2-posttidningar-1750", "kubhist2-posttidningar-1760", "kubhist2-posttidningar-1770", "kubhist2-posttidningar-1780", "kubhist2-posttidningar-1790", "kubhist2-posttidningar-1800", "kubhist2-posttidningar-1810", "kubhist2-posttidningar-1820"]
+};
+
+settings.corporafolders.kubhist2["stnlk"] = {
+    title: "Sundsvalls Tidning Norrländska Korrespondenten",
+    contents: ["kubhist2-stnlk-1870"]
 };
 
 settings.corporafolders.kubhist2["stockholmsdagblad"] = {
@@ -2828,9 +2835,59 @@ settings.corpora["kubhist2-nyttochgammalt-1810"] = _.extend({}, kubhist2_setting
     title: "Nytt och Gammalt 1810-talet"
 });
 
+settings.corpora["kubhist2-ostergotlandsveckoblad-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostergotlandsveckoblad-1880",
+    title: "Östergötlands Veckoblad 1880-talet"
+});
+
+settings.corpora["kubhist2-ostergotlandsveckoblad-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostergotlandsveckoblad-1890",
+    title: "Östergötlands Veckoblad 1890-talet"
+});
+
 settings.corpora["kubhist2-ostgotacorrespondenten-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-ostgotacorrespondenten-1830",
     title: "Östgöta Correspondenten 1830-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1840",
+    title: "Östgöta Correspondenten 1840-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1850",
+    title: "Östgöta Correspondenten 1850-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1860",
+    title: "Östgöta Correspondenten 1860-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1870",
+    title: "Östgöta Correspondenten 1870-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1880",
+    title: "Östgöta Correspondenten 1880-talet"
+});
+
+settings.corpora["kubhist2-ostgotacorrespondenten-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotacorrespondenten-1890",
+    title: "Östgöta Correspondenten 1890-talet"
+});
+
+settings.corpora["kubhist2-ostgotaposten-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotaposten-1890",
+    title: "Östgötaposten 1890-talet"
+});
+
+settings.corpora["kubhist2-ostgotaposten-1900"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-ostgotaposten-1900",
+    title: "Östgötaposten 1900-talet"
 });
 
 settings.corpora["kubhist2-post-ochinrikestidningar-1820"] = _.extend({}, kubhist2_settings, {
@@ -2841,6 +2898,116 @@ settings.corpora["kubhist2-post-ochinrikestidningar-1820"] = _.extend({}, kubhis
 settings.corpora["kubhist2-post-ochinrikestidningar-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-post-ochinrikestidningar-1830",
     title: "Post- och Inrikes Tidningar 1830-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1840",
+    title: "Post- och Inrikes Tidningar 1840-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1850",
+    title: "Post- och Inrikes Tidningar 1850-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1860",
+    title: "Post- och Inrikes Tidningar 1860-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1870",
+    title: "Post- och Inrikes Tidningar 1870-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1880",
+    title: "Post- och Inrikes Tidningar 1880-talet"
+});
+
+settings.corpora["kubhist2-post-ochinrikestidningar-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-post-ochinrikestidningar-1890",
+    title: "Post- och Inrikes Tidningar 1890-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1640"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1640",
+    title: "Posttidningar 1640-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1650"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1650",
+    title: "Posttidningar 1650-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1660"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1660",
+    title: "Posttidningar 1660-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1670"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1670",
+    title: "Posttidningar 1670-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1680"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1680",
+    title: "Posttidningar 1680-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1690"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1690",
+    title: "Posttidningar 1690-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1700"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1700",
+    title: "Posttidningar 1700-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1710"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1710",
+    title: "Posttidningar 1710-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1720"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1720",
+    title: "Posttidningar 1720-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1730"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1730",
+    title: "Posttidningar 1730-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1740"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1740",
+    title: "Posttidningar 1740-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1750"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1750",
+    title: "Posttidningar 1750-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1760"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1760",
+    title: "Posttidningar 1760-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1770"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1770",
+    title: "Posttidningar 1770-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1780"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1780",
+    title: "Posttidningar 1780-talet"
+});
+
+settings.corpora["kubhist2-posttidningar-1790"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-posttidningar-1790",
+    title: "Posttidningar 1790-talet"
 });
 
 settings.corpora["kubhist2-posttidningar-1800"] = _.extend({}, kubhist2_settings, {
@@ -2856,6 +3023,11 @@ settings.corpora["kubhist2-posttidningar-1810"] = _.extend({}, kubhist2_settings
 settings.corpora["kubhist2-posttidningar-1820"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-posttidningar-1820",
     title: "Posttidningar 1820-talet"
+});
+
+settings.corpora["kubhist2-stnlk-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stnlk-1870",
+    title: "Sundsvalls Tidning Norrländska Korrespondenten 1870-talet"
 });
 
 settings.corpora["kubhist2-stockholmsdagblad-1820"] = _.extend({}, kubhist2_settings, {
