@@ -1,4 +1,4 @@
-settings.newMapEnabled = true;
+settings.mapEnabled = true;
 
 settings.primaryColor = "#eecccc";
 settings.primaryLight = "#eee2e2";
