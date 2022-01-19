@@ -1922,7 +1922,7 @@ settings.corpora["da"] = {
             opts: liteOptions,
             dataset: {
                 "title": "title"
-            },
+            }
         }
     }
 };
