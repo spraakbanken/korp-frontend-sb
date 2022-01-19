@@ -709,5 +709,6 @@
 
     "date_collected": "date of data collection",
     "authors": "authors",
-    "freqency": "freqency"
+    "freqency": "freqency",
+    "paragraph_type": "paragraph type"
 }
