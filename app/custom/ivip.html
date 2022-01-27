@@ -6,7 +6,7 @@
                 id="{{sentence.attrs.id}}" 
                 ng-repeat="sentence in $ctrl.data.document.tokens" 
                 ng-style="{color: $ctrl.docColors[sentence.attrs.speaker_id]}">
-            <span class="speaker">{{sentence.attrs.speaker_id}}</span>
+            <span class="ivip-speaker">{{sentence.attrs.speaker_id}}</span>
             <span class="word" ng-repeat="token in sentence.tokens" ng-click="$ctrl.wordClicked(sentence, token)">
             {{token.attrs.head}}{{token.attrs.word}}{{token.attrs.tail}}
             </span>
