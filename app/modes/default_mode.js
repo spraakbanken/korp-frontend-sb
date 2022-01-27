@@ -761,7 +761,15 @@ settings.corpora["svt"] = {
         text_tags: {label: "tags", type: "set", order: 60},
         text_section: {label: "section", order: 70},
         text_authors: {label: "authors", type: "set", order: 80},
-        text_id: {label: "id", order: 90}
+        text_id: {label: "id", order: 90},
+        paragraph_type: {
+            label: "paragraph_type",
+            extendedComponent: "datasetSelect",
+            opts: liteOptions,
+            dataset: {
+                "title": "title"
+            }
+        }
     }
 };
 
@@ -1892,6 +1900,33 @@ settings.corpora["drama"] = {
         text_title: {label: "title"}
     }
 };
+
+settings.corpora["da"] = {
+    id: "da",
+    title: "Dagens Arena 2007-2021",
+    description: "Nyhetstexter från dagensarena.se",
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_title: {label: "title", order: 10},
+        text_url: {label: "url" , type: "url", order: 30},
+        text_date:  _.extend({}, sattrs.date, { order: 40 }),
+        text_data_collected: {label: "date_collected", order: 50},
+        text_tags: {label: "tags", type: "set", order: 60},
+        text_author: {label: "author", order: 80},
+        text_id: {label: "id", order: 90},
+        paragraph_type: {
+            label: "paragraph_type",
+            extendedComponent: "datasetSelect",
+            opts: liteOptions,
+            dataset: {
+                "title": "title"
+            }
+        }
+    }
+};
+
 /*
 settings.corpora["europarl-sv"] = {
     id: "europarl-sv",
