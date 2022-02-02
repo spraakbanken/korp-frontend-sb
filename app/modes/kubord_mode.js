@@ -52,9 +52,15 @@ kubord_settings = {
 
 settings.corporafolders.dn = {
     title: "Dagens Nyheter",
-    contents: ["kubord-dn-2011", "kubord-dn-2012", "kubord-dn-2013", "kubord-dn-2014", "kubord-dn-2015",
+    contents: ["kubord-dn-2010", "kubord-dn-2011", "kubord-dn-2012", "kubord-dn-2013", "kubord-dn-2014", "kubord-dn-2015",
                "kubord-dn-2016", "kubord-dn-2017", "kubord-dn-2018", "kubord-dn-2019", "kubord-dn-2020"]
 };
+
+settings.corpora["kubord-dn-2010"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Dagens Nyheter 2010",
+    id: "kubord-dn-2010",
+    description: ""
+});
 
 settings.corpora["kubord-dn-2011"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2011",
