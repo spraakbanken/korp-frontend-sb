@@ -103,7 +103,7 @@ settings.corporafolders.fisk.magazines = {
 
 settings.corporafolders.l2 = {
     title: "L2 Korp",
-    contents: ["coctaill-ae", "coctaill-lt", "spinv1", "sw1203v1", "swellv1-original", "swellv1-target", "tisusv1"]
+    contents: ["coctaill", "coctaill-ae", "coctaill-lt", "spinv1", "sw1203v1", "swellv1-original", "swellv1-target", "tisusv1"]
 };
 
 settings.corporafolders.medical = {
@@ -118,7 +118,32 @@ settings.corporafolders.medical.ltd = {
 
 settings.corporafolders.governmental = {
     title: "Myndighetstexter",
-    contents: ["klarsprak", "sou", "sfs"]
+    contents: ["klarsprak", "snp7879", "sou", "sfs"]
+};
+
+settings.corporafolders.newstexts = {
+    title: "Nyhetstexter",
+    contents: ["attasidor", "da", "dn1987", "ordat"]
+};
+
+settings.corporafolders.newstexts.gp = {
+    title: "GP",
+    contents: ["gp1994", "gp2001", "gp2002", "gp2003", "gp2004", "gp2005", "gp2006", "gp2007", "gp2008", "gp2009", "gp2010", "gp2011", "gp2012", "gp2013", "gp2d"]
+};
+
+settings.corporafolders.newstexts.press = {
+    title: "Press",
+    contents: ["press65", "press76", "press95", "press96", "press97", "press98"]
+};
+
+settings.corporafolders.newstexts.svtnews = {
+    title: "SVT nyheter",
+    contents: ["svt"]
+};
+
+settings.corporafolders.newstexts.webnews = {
+    title: "Webbnyheter",
+    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013"]
 };
 
 settings.corporafolders.protected = {
@@ -128,7 +153,7 @@ settings.corporafolders.protected = {
 
 settings.corporafolders.novels = {
     title: "Skönlitteratur",
-    contents: ["aspacsv", "romi", "romii", "rom99", "storsuc", "romg"]
+    contents: ["aspacsv", "romi", "romii", "rom99", "saltnld-sv", "storsuc", "romg"]
 };
 
 settings.corporafolders.socialmedia = {
@@ -164,31 +189,6 @@ settings.corporafolders.socialmedia.twitter = {
     contents: ["twitter", "twitter-pldebatt-130612", "twitter-pldebatt-131006", "twitter-pldebatt-140504", "twitter-2015", "twitter-2016", "twitter-2017"]
 };
 
-settings.corporafolders.svtnews = {
-    title: "SVT nyheter",
-    contents: ["svt"]
-};
-
-settings.corporafolders.newspapertexts = {
-    title: "Tidningstexter",
-    contents: ["attasidor", "dn1987", "ordat"]
-};
-
-settings.corporafolders.newspapertexts.gp = {
-    title: "GP",
-    contents: ["gp1994", "gp2001", "gp2002", "gp2003", "gp2004", "gp2005", "gp2006", "gp2007", "gp2008", "gp2009", "gp2010", "gp2011", "gp2012", "gp2013", "gp2d"]
-};
-
-settings.corporafolders.newspapertexts.press = {
-    title: "Press",
-    contents: ["press65", "press76", "press95", "press96", "press97", "press98"]
-};
-
-settings.corporafolders.newspapertexts.webnews = {
-    title: "Webbnyheter",
-    contents: ["webbnyheter2001", "webbnyheter2002", "webbnyheter2003", "webbnyheter2004", "webbnyheter2005", "webbnyheter2006", "webbnyheter2007", "webbnyheter2008", "webbnyheter2009", "webbnyheter2010", "webbnyheter2011", "webbnyheter2012", "webbnyheter2013"]
-};
-
 settings.corporafolders.magazines = {
     title: "Tidskrifter",
     contents: ["fof", "podiet"]
@@ -201,7 +201,7 @@ settings.corporafolders.magazines = {
  * PRESELECTED CORPORA
  * Folders will be expanded to all corpora. Optionally prefix folders with __ , which will be ignored.
  */
-settings.preselectedCorpora = ["suc3", "wikipedia-sv", "talbanken", "sfs", "snp7879", "__newspapertexts", "__fisk",
+settings.preselectedCorpora = ["suc3", "wikipedia-sv", "talbanken", "sfs", "snp7879", "__newstexts", "__fisk",
                                 "fof", "twitter", "__socialmedia.bloggmix", "romi", "romii", "rom99", "storsuc"];
 
 /*
