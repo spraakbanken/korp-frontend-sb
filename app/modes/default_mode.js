@@ -991,8 +991,16 @@ settings.corpora["podiet"] = {
     description: "Artiklar från Konsertmagasinet Podiet",
     within: spWithin,
     context: spContext,
-    attributes: modernAttrs,
+    attributes: _.extend({}, modernAttrs, {
+        _head: {
+            displayType: "hidden"
+        },
+        _tail: {
+            displayType: "hidden"
+        }
+    }),
     structAttributes: {
+        sentence_id: {displayType: "hidden"},
         text_title: {
             label: "article_title",
             order: 20,
@@ -1031,7 +1039,11 @@ settings.corpora["podiet"] = {
             }
         }
     },
-    defaultFilters: ["issue_title", "text_title"]
+    defaultFilters: ["issue_title", "text_title"],
+    readingMode: {
+        component: "standardReadingMode"//,
+        // groupElement: "text"
+    }
 };
 
 settings.corpora["fof"] = {
