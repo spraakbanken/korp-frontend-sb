@@ -55,7 +55,7 @@
     "sentiment": "sentiment",
     "sentiment_class": "sentiment class",
 
-    "url": "url",
+    "url": "URL",
     "referensnummer": "reference number",
 
     "weekday": "weekday",
@@ -77,7 +77,7 @@
     "website": "website",
     "favourite_count": "favourite count",
 
-    "id": "id",
+    "id": "ID",
 
     "organization": "organization",
 
@@ -710,5 +710,13 @@
     "date_collected": "date of data collection",
     "authors": "authors",
     "freqency": "freqency",
-    "paragraph_type": "paragraph type"
+    "paragraph_type": "paragraph type",
+
+    "issue_id": "issue ID",
+    "issue_title": "issue title",
+    "issue_url": "issue URL",
+
+    "article_id": "article ID",
+    "article_title": "article title",
+    "article_url": "article URL"
 }

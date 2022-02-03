@@ -191,7 +191,7 @@ settings.corporafolders.newspapertexts.webnews = {
 
 settings.corporafolders.magazines = {
     title: "Tidskrifter",
-    contents: ["fof"]
+    contents: ["fof", "podiet"]
 };
 
 
@@ -983,6 +983,55 @@ settings.corpora["ordat"] = {
         text_date: {label: "text_year"},
         text_volume: {label: "text_volume"}
     }
+};
+
+settings.corpora["podiet"] = {
+    id: "podiet",
+    title: "Podiet",
+    description: "Artiklar från Konsertmagasinet Podiet",
+    within: spWithin,
+    context: spContext,
+    attributes: modernAttrs,
+    structAttributes: {
+        text_title: {
+            label: "article_title",
+            order: 20,
+            extendedComponent: "structServiceSelect",
+            opts: liteOptions
+        },
+        text_url: {label: "article_url" , type: "url", order: 30},
+        text_date:  _.extend({}, sattrs.date, { order: 40 }),
+        text_id: {
+            label: "article_id",
+            order: 50,
+            extendedComponent: "structServiceSelect",
+            opts: liteOptions
+        },
+        issue_title: {
+            label: "issue_title",
+            order: 60,
+            extendedComponent: "structServiceSelect",
+            opts: liteOptions
+        },
+        issue_url: {label: "issue_url", type: "url", order: 70},
+        issue_id: {
+            label: "issue_id",
+            oder: 80,
+            extendedComponent: "structServiceSelect",
+            opts: liteOptions
+        },
+        issue_data_collected: {label: "date_collected", order: 90},
+        paragraph_type: {
+            label: "paragraph_type",
+            extendedComponent: "datasetSelect",
+            order: 100,
+            opts: liteOptions,
+            dataset: {
+                "title": "title"
+            }
+        }
+    },
+    defaultFilters: ["issue_title", "text_title"]
 };
 
 settings.corpora["fof"] = {

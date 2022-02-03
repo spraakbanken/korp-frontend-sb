@@ -55,7 +55,7 @@
     "sentiment": "attityd",
     "sentiment_class": "attitydklass",
 
-    "url": "url",
+    "url": "URL",
     "referensnummer": "referensnummer",
 
     "weekday": "veckodag",
@@ -77,7 +77,7 @@
     "website": "webbsida",
     "favourite_count": "favoriter",
 
-    "id": "id",
+    "id": "ID",
 
     "organization": "organisation",
 
@@ -712,5 +712,13 @@
     "subtitle": "undertitel",
     "authors": "författare",
     "freqency": "frekvens",
-    "paragraph_type": "styckestyp"
+    "paragraph_type": "styckestyp",
+
+    "issue_id": "utgåvans ID",
+    "issue_title": "utgåvans titel",
+    "issue_url": "utgåvans URL",
+
+    "article_id": "artikelns ID",
+    "article_title": "artikelns titel",
+    "article_url": "artikelns URL"
 }
