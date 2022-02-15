@@ -115,6 +115,10 @@ settings.modeConfig = [
         mode: "kubhist"
     },
     {
+        localekey: "kubord",
+        mode: "kubord"
+    },
+    {
         localekey: "all_hist",
         mode: "all_hist",
     },
@@ -178,10 +182,6 @@ settings.modeConfig = [
     {
         localekey: "somali",
         mode: "somali",
-    },
-    {
-        localekey: "kubord",
-        mode: "kubord"
     }
 ];
 
