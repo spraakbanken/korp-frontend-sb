@@ -1565,8 +1565,7 @@ settings.corporafolders.kubhist2["stnlk"] = {
 
 settings.corporafolders.kubhist2["stockholmsdagblad"] = {
     title: "Stockholms Dagblad",
-    contents: ["kubhist2-stockholmsdagblad-1820", "kubhist2-stockholmsdagblad-1830"]
-    // contents: ["kubhist2-stockholmsdagblad-1820", "kubhist2-stockholmsdagblad-1830", "kubhist2-stockholmsdagblad-1840", "kubhist2-stockholmsdagblad-1850", "kubhist2-stockholmsdagblad-1860", "kubhist2-stockholmsdagblad-1870", "kubhist2-stockholmsdagblad-1880", "kubhist2-stockholmsdagblad-1890"]
+    contents: ["kubhist2-stockholmsdagblad-1820", "kubhist2-stockholmsdagblad-1830", "kubhist2-stockholmsdagblad-1840", "kubhist2-stockholmsdagblad-1850", "kubhist2-stockholmsdagblad-1860", "kubhist2-stockholmsdagblad-1870", "kubhist2-stockholmsdagblad-1880", "kubhist2-stockholmsdagblad-1890"]
 };
 
 settings.corporafolders.kubhist2["stockholmsposten"] = {
@@ -3038,6 +3037,36 @@ settings.corpora["kubhist2-stockholmsdagblad-1820"] = _.extend({}, kubhist2_sett
 settings.corpora["kubhist2-stockholmsdagblad-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-stockholmsdagblad-1830",
     title: "Stockholms Dagblad 1830-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1840",
+    title: "Stockholms Dagblad 1840-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1850",
+    title: "Stockholms Dagblad 1850-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1860",
+    title: "Stockholms Dagblad 1860-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1870",
+    title: "Stockholms Dagblad 1870-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1880",
+    title: "Stockholms Dagblad 1880-talet"
+});
+
+settings.corpora["kubhist2-stockholmsdagblad-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsdagblad-1890",
+    title: "Stockholms Dagblad 1890-talet"
 });
 
 settings.corpora["kubhist2-stockholmsposten-1800"] = _.extend({}, kubhist2_settings, {

@@ -183,7 +183,6 @@ settings.modeConfig = [
         localekey: "kubord",
         mode: "kubord"
     }
-
 ];
 
 settings.primaryColor = "rgb(221, 233, 255)";
