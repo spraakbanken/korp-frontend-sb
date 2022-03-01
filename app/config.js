@@ -39,8 +39,6 @@ settings.structAttributeSelector = "union";
 settings.reduceWordAttributeSelector = "intersection";
 settings.reduceStructAttributeSelector = "intersection";
 
-settings.filterSelection = "intersection"
-
 settings.newsDeskUrl = "https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json";
 
 settings.wordpictureTagset = {
