@@ -2,7 +2,7 @@
 # lexem => lemgram, lemgram
 
 autocomplete: true
-mapEnabled: false
+map_enabled: false
 hits_per_page_values:
   - 25
   - 50
@@ -11,25 +11,19 @@ hits_per_page_values:
   - 500
   - 1000
 
-enableBackendKwicDownload: false
-enableFrontendKwicDownload: true
+enable_backend_kwic_download: false
+enable_frontend_kwic_download: true
 
 languages:
   - swe
   - eng
 default_language: swe
 
-wordLabel:
+word_label:
   swe: ord
   eng: word
 
-downloadFormats:
-  -  csv
-  -  tsv
-  -  annot
-  -  rex
-
-groupStatistics:
+group_statistics:
   - saldo
   - prefix
   - suffix
@@ -39,19 +33,13 @@ groupStatistics:
   - text_swefn
   - text_blingbring
 
-# for extended search dropdown, can be 'union' or 'intersection'
-wordAttributeSelector: union
-structAttributeSelector: union
-
 # for 'compile statistics by' selector, can be 'union' or 'intersection'
-reduceWordAttributeSelector: intersection
-reduceStructAttributeSelector: intersection
+reduce_word_attribute_selector: intersection
+reduce_struct_attribute_selector: intersection
 
-filterSelection: intersection
+news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
 
-newsDeskUrl: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
-
-wordpictureTagset:
+wordpicture_tagset:
     # supported pos-tags
     verb: vb
     noun: nn
@@ -68,7 +56,7 @@ wordpictureTagset:
     post_modifier: et
     adverbial2: aa
 
-wordPictureConf:
+word_picture_conf:
   verb:
     - - rel: subject
         css_class: color_blue
@@ -172,10 +160,7 @@ default_reading_context: 1 paragraph
 default_within:
   sentence": sentence
 
-# for optimization purposes
-cqpPrio: ['deprel', 'pos', 'msd', 'suffix', 'prefix', 'grundform', 'lemgram', 'saldo', 'word']
-
-defaultOptions:
+default_options:
   is: =
   is_not: '!='
   starts_with: ^=
@@ -184,12 +169,11 @@ defaultOptions:
   matches: '*='
   matches_not: '!*='
 
-korpBackendURL: 'https://ws.spraakbanken.gu.se/ws/korp/dev'
-downloadCgiScript: 'https://ws.spraakbanken.gu.se/ws/korp/download'
+korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/dev'
 
-mapCenter:
+map_center:
   lat: 62.99515845212052
   lng: 16.69921875
   zoom: 4
 
-readingModeField: sentence_id
+reading_mode_field: sentence_id
