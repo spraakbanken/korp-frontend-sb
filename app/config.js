@@ -4,8 +4,7 @@
  */
 settings.autocomplete = true;
 settings.mapEnabled = false;
-settings.hitsPerPageDefault = 25
-settings.hitsPerPageValues = [25,50,75,100,500,1000]
+settings.hits_per_page_values = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false
 settings.enableFrontendKwicDownload = true
 
@@ -91,8 +90,8 @@ settings.wordPictureConf = {
 
 }
 
-settings.visibleModes = 6
-settings.modeConfig = [
+settings.visible_modes = 6
+settings.mode_config = [
     {
         localekey: "modern_texts",
         mode: "default"
@@ -186,13 +185,10 @@ settings.modeConfig = [
 
 ];
 
-settings.primaryColor = "rgb(221, 233, 255)";
-settings.primaryLight = "rgb(242, 247, 255)";
+settings.default_overview_context = "1 sentence"
+settings.default_reading_context = "1 paragraph"
 
-settings.defaultOverviewContext = "1 sentence"
-settings.defaultReadingContext = "1 paragraph"
-
-settings.defaultWithin = {
+settings.default_within = {
     "sentence": "sentence"
 };
 
