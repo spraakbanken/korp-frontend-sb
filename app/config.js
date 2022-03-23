@@ -9,10 +9,10 @@ settings.hitsPerPageValues = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false
 settings.enableFrontendKwicDownload = true
 
-settings.languages = ["sv", "en"];
-settings.defaultLanguage = "sv";
+settings.languages = ["swe", "eng"];
+settings.defaultLanguage = "swe";
 
-settings.wordLabel = { sv: "ord", en: "word" };
+settings.wordLabel = { swe: "ord", eng: "word" };
 
 class MotomoLogger {
     static logEvent(category, action, name, value) {
