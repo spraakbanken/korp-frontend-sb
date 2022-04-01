@@ -138,7 +138,9 @@ settings.corporafolders.newstexts.press = {
 
 settings.corporafolders.newstexts.svtnews = {
     title: "SVT nyheter",
-    contents: ["svt"]
+    contents: ["svt-2004", "svt-2005", "svt-2006", "svt-2007", "svt-2008", "svt-2009", "svt-2010", "svt-2011",
+               "svt-2012", "svt-2013", "svt-2014", "svt-2015", "svt-2016", "svt-2017", "svt-2018", "svt-2019",
+               "svt-2020", "svt-2021", "svt-2022", "svt-nodate"]
 };
 
 settings.corporafolders.newstexts.webnews = {
@@ -745,9 +747,7 @@ settings.corpora["webbnyheter2013"] = {
     }
 };
 
-settings.corpora["svt"] = {
-    id: "svt",
-    title: "SVT Nyheter 2004-2021",
+svt_settings = {
     description: "Nyhetstexter från svt.se",
     within: spWithin,
     context: spContext,
@@ -767,11 +767,112 @@ settings.corpora["svt"] = {
             extendedComponent: "datasetSelect",
             opts: liteOptions,
             dataset: {
-                "title": "title"
+                "title": "titel",
+                "lead": "ingress"
             }
         }
     }
 };
+
+settings.corpora["svt-nodate"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter okänt datum",
+    id: "svt-nodate"
+});
+
+settings.corpora["svt-2004"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2004",
+    id: "svt-2004"
+});
+
+settings.corpora["svt-2005"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2005",
+    id: "svt-2005"
+});
+
+settings.corpora["svt-2006"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2006",
+    id: "svt-2006"
+});
+
+settings.corpora["svt-2007"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2007",
+    id: "svt-2007"
+});
+
+settings.corpora["svt-2008"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2008",
+    id: "svt-2008"
+});
+
+settings.corpora["svt-2009"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2009",
+    id: "svt-2009"
+});
+
+settings.corpora["svt-2010"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2010",
+    id: "svt-2010"
+});
+
+settings.corpora["svt-2011"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2011",
+    id: "svt-2011"
+});
+
+settings.corpora["svt-2012"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2012",
+    id: "svt-2012"
+});
+
+settings.corpora["svt-2013"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2013",
+    id: "svt-2013"
+});
+
+settings.corpora["svt-2014"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2014",
+    id: "svt-2014"
+});
+
+settings.corpora["svt-2015"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2015",
+    id: "svt-2015"
+});
+
+settings.corpora["svt-2016"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2016",
+    id: "svt-2016"
+});
+
+settings.corpora["svt-2017"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2017",
+    id: "svt-2017"
+});
+
+settings.corpora["svt-2018"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2018",
+    id: "svt-2018"
+});
+
+settings.corpora["svt-2019"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2019",
+    id: "svt-2019"
+});
+
+settings.corpora["svt-2020"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2020",
+    id: "svt-2020"
+});
+
+settings.corpora["svt-2021"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2021",
+    id: "svt-2021"
+});
+
+settings.corpora["svt-2022"] = _.extend({}, svt_settings, {
+    title: "SVT Nyheter 2022",
+    id: "svt-2022"
+});
 
 settings.corpora["gp1994"] = {
     id: "gp1994",
