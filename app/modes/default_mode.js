@@ -4292,7 +4292,11 @@ settings.corpora["asu"] = {
             order: 2,
             extendedComponent: "structServiceSelect"
         },
-        // text_textid: {label: "text_id", order: 3},
+        text_textid: {
+            label: "text_id",
+            order: 3,
+            extendedComponent: "structServiceSelect"
+        },
         // text_filename: {label: "filename"},
         text_person: {
             label: "person",
@@ -4310,11 +4314,12 @@ settings.corpora["asu"] = {
         },
         text_date: {
             label: "date",
-            order: 6
+            order: 7,
+            // extendedComponent: "structServiceSelect"
         },
         text_header: {
             label: "header",
-            order: 7,
+            order: 8,
             extendedComponent: "structServiceSelect"
         },
         text_transcriber: {
