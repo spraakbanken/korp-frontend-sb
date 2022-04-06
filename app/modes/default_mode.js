@@ -4286,7 +4286,7 @@ settings.corpora["asu"] = {
             label: "mode",
             order: 1,
             extendedComponent: "structServiceSelect"
-                },
+        },
         text_category: {
             label: "category",
             order: 2,
@@ -4314,7 +4314,7 @@ settings.corpora["asu"] = {
         },
         text_date: {
             label: "date",
-            order: 7,
+            order: 7
             // extendedComponent: "structServiceSelect"
         },
         text_header: {
