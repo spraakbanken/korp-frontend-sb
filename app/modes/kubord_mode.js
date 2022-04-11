@@ -10,6 +10,7 @@ settings.preselectedCorpora = ["dn", "gp", "svd"];
 kubord_settings = {
     context: {"0 word": "0 word"},
     within: {"word": "word"},
+    description: "",
     attributes: {
         pos: attrs.pos,
         msd: attrs.msd,
@@ -47,6 +48,71 @@ kubord_settings = {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
+// Aftonbladet
+////////////////////////////////////////////////////////////////////////////////
+settings.corporafolders.afb = {
+    title: "Aftonbladet",
+    contents: ["kubord-afb-2010", "kubord-afb-2011", "kubord-afb-2012", "kubord-afb-2013", "kubord-afb-2014",
+               "kubord-afb-2015", "kubord-afb-2016", "kubord-afb-2017", "kubord-afb-2019",
+               "kubord-afb-2020"]
+};
+
+settings.corpora["kubord-afb-2010"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2010",
+    id: "kubord-afb-2010"
+});
+
+settings.corpora["kubord-afb-2011"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2011",
+    id: "kubord-afb-2011"
+});
+
+settings.corpora["kubord-afb-2012"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2012",
+    id: "kubord-afb-2012"
+});
+
+settings.corpora["kubord-afb-2013"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2013",
+    id: "kubord-afb-2013"
+});
+
+settings.corpora["kubord-afb-2014"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2014",
+    id: "kubord-afb-2014"
+});
+
+settings.corpora["kubord-afb-2015"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2015",
+    id: "kubord-afb-2016"
+});
+
+settings.corpora["kubord-afb-2016"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2016",
+    id: "kubord-afb-2016"
+});
+
+settings.corpora["kubord-afb-2017"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2017",
+    id: "kubord-afb-2017"
+});
+
+// settings.corpora["kubord-afb-2018"] = _.extend({}, kubord_settings, {
+//     title: "Ordfrekvenser Aftonbladet 2018",
+//     id: "kubord-afb-2018"
+// });
+
+settings.corpora["kubord-afb-2019"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2019",
+    id: "kubord-afb-2019"
+});
+
+settings.corpora["kubord-afb-2020"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Aftonbladet 2020",
+    id: "kubord-afb-2020"
+});
+
+////////////////////////////////////////////////////////////////////////////////
 // DN
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -58,68 +124,122 @@ settings.corporafolders.dn = {
 
 settings.corpora["kubord-dn-2010"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2010",
-    id: "kubord-dn-2010",
-    description: ""
+    id: "kubord-dn-2010"
 });
 
 settings.corpora["kubord-dn-2011"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2011",
-    id: "kubord-dn-2011",
-    description: ""
+    id: "kubord-dn-2011"
 });
 
 settings.corpora["kubord-dn-2012"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2012",
-    id: "kubord-dn-2012",
-    description: ""
+    id: "kubord-dn-2012"
 });
 
 settings.corpora["kubord-dn-2013"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2013",
-    id: "kubord-dn-2013",
-    description: ""
+    id: "kubord-dn-2013"
 });
 
 settings.corpora["kubord-dn-2014"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2014",
-    id: "kubord-dn-2014",
-    description: ""
+    id: "kubord-dn-2014"
 });
 
 settings.corpora["kubord-dn-2015"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2015",
-    id: "kubord-dn-2015",
-    description: ""
+    id: "kubord-dn-2015"
 });
 
 settings.corpora["kubord-dn-2016"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2016",
-    id: "kubord-dn-2016",
-    description: ""
+    id: "kubord-dn-2016"
 });
 
 settings.corpora["kubord-dn-2017"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2017",
-    id: "kubord-dn-2017",
-    description: ""
+    id: "kubord-dn-2017"
 });
 
 settings.corpora["kubord-dn-2018"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2018",
-    id: "kubord-dn-2018",
-    description: ""
+    id: "kubord-dn-2018"
 });
 
 settings.corpora["kubord-dn-2019"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2019",
-    id: "kubord-dn-2019",
-    description: ""
+    id: "kubord-dn-2019"
 });
 
 settings.corpora["kubord-dn-2020"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Dagens Nyheter 2020",
-    id: "kubord-dn-2020",
-    description: ""
+    id: "kubord-dn-2020"
+});
+
+////////////////////////////////////////////////////////////////////////////////
+// Expressen
+////////////////////////////////////////////////////////////////////////////////
+settings.corporafolders.exp = {
+    title: "Expressen",
+    contents: ["kubord-exp-2010", "kubord-exp-2011", "kubord-exp-2012", "kubord-exp-2013", "kubord-exp-2014",
+               "kubord-exp-2015", "kubord-exp-2016", "kubord-exp-2017", "kubord-exp-2018",
+               "kubord-exp-2020"]
+};
+
+settings.corpora["kubord-exp-2010"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2010",
+    id: "kubord-exp-2010"
+});
+
+settings.corpora["kubord-exp-2011"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2011",
+    id: "kubord-exp-2011"
+});
+
+settings.corpora["kubord-exp-2012"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2012",
+    id: "kubord-exp-2012"
+});
+
+settings.corpora["kubord-exp-2013"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2013",
+    id: "kubord-exp-2013"
+});
+
+settings.corpora["kubord-exp-2014"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2014",
+    id: "kubord-exp-2014"
+});
+
+settings.corpora["kubord-exp-2015"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2015",
+    id: "kubord-exp-2016"
+});
+
+settings.corpora["kubord-exp-2016"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2016",
+    id: "kubord-exp-2016"
+});
+
+settings.corpora["kubord-exp-2017"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2017",
+    id: "kubord-exp-2017"
+});
+
+settings.corpora["kubord-exp-2018"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2018",
+    id: "kubord-exp-2018"
+});
+
+// settings.corpora["kubord-exp-2019"] = _.extend({}, kubord_settings, {
+//     title: "Ordfrekvenser Expressen 2019",
+//     id: "kubord-exp-2019"
+// });
+
+settings.corpora["kubord-exp-2020"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Expressen 2020",
+    id: "kubord-exp-2020"
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -128,50 +248,48 @@ settings.corpora["kubord-dn-2020"] = _.extend({}, kubord_settings, {
 
 settings.corporafolders.gp = {
     title: "Göteborgsposten",
-    contents: ["kubord-gp-2014", "kubord-gp-2015", "kubord-gp-2016", "kubord-gp-2017", "kubord-gp-2018",
-               "kubord-gp-2019", "kubord-gp-2020"]
+    contents: ["kubord-gp-2013", "kubord-gp-2014", "kubord-gp-2015", "kubord-gp-2016", "kubord-gp-2017",
+               "kubord-gp-2018", "kubord-gp-2019", "kubord-gp-2020"]
 };
+
+settings.corpora["kubord-gp-2013"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Göteborgsposten 2013",
+    id: "kubord-gp-2013"
+});
 
 settings.corpora["kubord-gp-2014"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2014",
-    id: "kubord-gp-2014",
-    description: ""
+    id: "kubord-gp-2014"
 });
 
 settings.corpora["kubord-gp-2015"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2015",
-    id: "kubord-gp-2015",
-    description: ""
+    id: "kubord-gp-2015"
 });
 
 settings.corpora["kubord-gp-2016"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2016",
-    id: "kubord-gp-2016",
-    description: ""
+    id: "kubord-gp-2016"
 });
 
 settings.corpora["kubord-gp-2017"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2017",
-    id: "kubord-gp-2017",
-    description: ""
+    id: "kubord-gp-2017"
 });
 
 settings.corpora["kubord-gp-2018"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2018",
-    id: "kubord-gp-2018",
-    description: ""
+    id: "kubord-gp-2018"
 });
 
 settings.corpora["kubord-gp-2019"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2019",
-    id: "kubord-gp-2019",
-    description: ""
+    id: "kubord-gp-2019"
 });
 
 settings.corpora["kubord-gp-2020"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Göteborgsposten 2020",
-    id: "kubord-gp-2020",
-    description: ""
+    id: "kubord-gp-2020"
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -180,62 +298,64 @@ settings.corpora["kubord-gp-2020"] = _.extend({}, kubord_settings, {
 
 settings.corporafolders.svd = {
     title: "Svenska Dagbladet",
-    contents: ["kubord-svd-2011", "kubord-svd-2012", "kubord-svd-2013", "kubord-svd-2014", "kubord-svd-2015",
-               "kubord-svd-2016", "kubord-svd-2017", "kubord-svd-2019", "kubord-svd-2020"]
+    contents: ["kubord-svd-2010", "kubord-svd-2011", "kubord-svd-2012", "kubord-svd-2013", "kubord-svd-2014",
+               "kubord-svd-2015", "kubord-svd-2016", "kubord-svd-2017", "kubord-svd-2018", "kubord-svd-2019",
+               "kubord-svd-2020"]
 };
+
+settings.corpora["kubord-svd-2010"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Svenska Dagbladet 2010",
+    id: "kubord-svd-2010"
+});
 
 settings.corpora["kubord-svd-2011"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2011",
-    id: "kubord-svd-2011",
-    description: ""
+    id: "kubord-svd-2011"
 });
 
 settings.corpora["kubord-svd-2012"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2012",
-    id: "kubord-svd-2012",
-    description: ""
+    id: "kubord-svd-2012"
 });
 
 settings.corpora["kubord-svd-2013"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2013",
-    id: "kubord-svd-2013",
-    description: ""
+    id: "kubord-svd-2013"
 });
 
 settings.corpora["kubord-svd-2014"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2014",
-    id: "kubord-svd-2014",
-    description: ""
+    id: "kubord-svd-2014"
 });
 
 settings.corpora["kubord-svd-2015"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2015",
-    id: "kubord-svd-2015",
-    description: ""
+    id: "kubord-svd-2015"
 });
 
 settings.corpora["kubord-svd-2016"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2016",
-    id: "kubord-svd-2016",
-    description: ""
+    id: "kubord-svd-2016"
 });
 
 settings.corpora["kubord-svd-2017"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2017",
-    id: "kubord-svd-2017",
-    description: ""
+    id: "kubord-svd-2017"
+});
+
+settings.corpora["kubord-svd-2018"] = _.extend({}, kubord_settings, {
+    title: "Ordfrekvenser Svenska Dagbladet 2018",
+    id: "kubord-svd-2018"
 });
 
 settings.corpora["kubord-svd-2019"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2019",
-    id: "kubord-svd-2019",
-    description: ""
+    id: "kubord-svd-2019"
 });
 
 settings.corpora["kubord-svd-2020"] = _.extend({}, kubord_settings, {
     title: "Ordfrekvenser Svenska Dagbladet 2020",
-    id: "kubord-svd-2020",
-    description: ""
+    id: "kubord-svd-2020"
 });
 
 
