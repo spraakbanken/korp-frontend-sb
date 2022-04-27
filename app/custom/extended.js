@@ -49,7 +49,7 @@ export default {
             const template = `
                 <div>
                     <div class="modal-header">
-                        <h3 class="modal-title">{{'msd_long' | loc:lang}}</h3>
+                        <h3 class="modal-title">{{'msd_long' | loc:$root.lang}}</h3>
                         <span ng-click="clickX()" class="close-x">×</span>
                     </div>
                     <div class="modal-body msd-modal" ng-click="msdClick($event)">${msdHTML}</div>
@@ -100,20 +100,20 @@ export default {
     dateInterval: {
         template: `
         <div class="date_interval_arg_type">
-            <h3>{{'simple' | loc}}</h3>
+            <h3>{{'simple' | loc:$root.lang}}</h3>
             <form ng-submit="commitDateInput()">
                 <div class="" style="margin-bottom: 1rem;">
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'from' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="fromDateString" placeholder="'1945' {{'or' | loc}} '1945-08-06'"/>
+                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'from' | loc:$root.lang}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="fromDateString" placeholder="'1945' {{'or' | loc:$root.lang}} '1945-08-06'"/>
                 </div>
                 <div>
-                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'to' | loc}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="toDateString" placeholder="'1968' {{'or' | loc}} '1968-04-04'"/>
+                    <span class="" style="display : inline-block; width: 32px; text-transform: capitalize;">{{'to' | loc:$root.lang}}</span> <input type="text" ng-blur="commitDateInput()" ng-model="toDateString" placeholder="'1968' {{'or' | loc:$root.lang}} '1968-04-04'"/>
                 </div>
                 <button type="submit" class="hidden" />
             </form>
             <div class="section mt-4"> 
-                <h3>{{'advanced' | loc}}</h3>
+                <h3>{{'advanced' | loc:$root.lang}}</h3>
                 <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> 
-                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'from' | loc}} </span>
+                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'from' | loc:$root.lang}} </span>
                 </button> 
                 {{combined.format("YYYY-MM-DD HH:mm")}} 
                 <time-interval 
@@ -128,7 +128,7 @@ export default {
                 
             <div class="section"> 
                 <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> 
-                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'to' | loc}} </span>
+                    <i class="fa fa-calendar"></i> <span style="text-transform: capitalize;">{{'to' | loc:$root.lang}} </span>
                 </button> 
                 {{combined2.format("YYYY-MM-DD HH:mm")}} 
                 
