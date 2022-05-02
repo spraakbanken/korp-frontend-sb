@@ -95,61 +95,6 @@ settings.corporafolders.kubhist = {
 };
 
 
-settings.corporafolders.kubhist.aftonbladet = {
-    title: "Aftonbladet",
-    contents: ["kubhist-aftonbladet-1830", "kubhist-aftonbladet-1840", "kubhist-aftonbladet-1850", "kubhist-aftonbladet-1860"]
-};
-
-settings.corpora["kubhist-aftonbladet-1830"] = {
-    morphology: "saldom|dalinm|swedbergm",
-    id: "kubhist-aftonbladet-1830",
-    title: "Aftonbladet 1830-talet",
-    description: digidailydescription,
-    within: settings.defaultWithin,
-    context: spContext,
-    attributes: settings.kubhistattributes,
-    structAttributes: settings.aftonbladstruct_attributes,
-    customAttributes: aftonbladet_custom_attributes
-};
-
-settings.corpora["kubhist-aftonbladet-1840"] = {
-    morphology: "saldom|dalinm|swedbergm",
-    id: "kubhist-aftonbladet-1840",
-    title: "Aftonbladet 1840-talet",
-    description: digidailydescription,
-    within: settings.defaultWithin,
-    context: spContext,
-    attributes: settings.kubhistattributes,
-    structAttributes: settings.aftonbladstruct_attributes,
-    customAttributes: aftonbladet_custom_attributes
-};
-
-settings.corpora["kubhist-aftonbladet-1850"] = {
-    morphology: "saldom|dalinm|swedbergm",
-    id: "kubhist-aftonbladet-1850",
-    title: "Aftonbladet 1850-talet",
-    description: digidailydescription,
-    within: settings.defaultWithin,
-    context: spContext,
-    attributes: settings.kubhistattributes,
-    structAttributes: settings.aftonbladstruct_attributes,
-    customAttributes: aftonbladet_custom_attributes
-};
-
-settings.corpora["kubhist-aftonbladet-1860"] = {
-    morphology: "saldom|dalinm|swedbergm",
-    id: "kubhist-aftonbladet-1860",
-    title: "Aftonbladet 1860-talet",
-    description: digidailydescription,
-    within: settings.defaultWithin,
-    context: spContext,
-    attributes: settings.kubhistattributes,
-    structAttributes: settings.aftonbladstruct_attributes,
-    customAttributes: aftonbladet_custom_attributes
-};
-
-
-
 settings.corporafolders.kubhist.blekingsposten = {
     title: "Blekingsposten",
     contents: ["kubhist-blekingsposten-1850", "kubhist-blekingsposten-1860", "kubhist-blekingsposten-1870", "kubhist-blekingsposten-1880"]
@@ -1570,14 +1515,47 @@ settings.corporafolders.kubhist2["stockholmsdagblad"] = {
 
 settings.corporafolders.kubhist2["stockholmsposten"] = {
     title: "Stockholmsposten",
-    contents: ["kubhist2-stockholmsposten-1800", "kubhist2-stockholmsposten-1810", "kubhist2-stockholmsposten-1820", "kubhist2-stockholmsposten-1830"]
-    // contents: ["kubhist2-stockholmsposten-1770", "kubhist2-stockholmsposten-1780", "kubhist2-stockholmsposten-1790", "kubhist2-stockholmsposten-1800", "kubhist2-stockholmsposten-1810", "kubhist2-stockholmsposten-1820", "kubhist2-stockholmsposten-1830"]
+    contents: ["kubhist2-stockholmsposten-1770", "kubhist2-stockholmsposten-1780", "kubhist2-stockholmsposten-1790", "kubhist2-stockholmsposten-1800", "kubhist2-stockholmsposten-1810", "kubhist2-stockholmsposten-1820", "kubhist2-stockholmsposten-1830"]
+};
+
+settings.corporafolders.kubhist2["sundsvallstidning"] = {
+    title: "Sundsvalls Tidning",
+    contents: ["kubhist2-sundsvallstidning-1880", "kubhist2-sundsvallstidning-1890"]
+};
+
+settings.corporafolders.kubhist2["tfwbsol"] = {
+    title: "Tidning för Wenersborgs stad och län",
+    contents: ["kubhist2-tfwbsol-1840", "kubhist2-tfwbsol-1850", "kubhist2-tfwbsol-1860", "kubhist2-tfwbsol-1870", "kubhist2-tfwbsol-1880", "kubhist2-tfwbsol-1890"]
+};
+
+settings.corporafolders.kubhist2["umebladet"] = {
+    title: "Umebladet",
+    contents: ["kubhist2-umebladet-1840", "kubhist2-umebladet-1850", "kubhist2-umebladet-1860", "kubhist2-umebladet-1870", "kubhist2-umebladet-1880", "kubhist2-umebladet-1890"]
+};
+
+settings.corporafolders.kubhist2["upsala"] = {
+    title: "Upsala",
+    contents: ["kubhist2-upsala-1840", "kubhist2-upsala-1850", "kubhist2-upsala-1860", "kubhist2-upsala-1870", "kubhist2-upsala-1880", "kubhist2-upsala-1890"]
 };
 
 settings.corporafolders.kubhist2["vestmanlandslanstidning"] = {
     title: "Vestmanlands Läns Tidning",
-    contents: ["kubhist2-vestmanlandslanstidning-1830"]
-    // contents: ["kubhist2-vestmanlandslanstidning-1830", "kubhist2-vestmanlandslanstidning-1840", "kubhist2-vestmanlandslanstidning-1850", "kubhist2-vestmanlandslanstidning-1860", "kubhist2-vestmanlandslanstidning-1870", "kubhist2-vestmanlandslanstidning-1880", "kubhist2-vestmanlandslanstidning-1890"]
+    contents: ["kubhist2-vestmanlandslanstidning-1830", "kubhist2-vestmanlandslanstidning-1840", "kubhist2-vestmanlandslanstidning-1850", "kubhist2-vestmanlandslanstidning-1860", "kubhist2-vestmanlandslanstidning-1870", "kubhist2-vestmanlandslanstidning-1880", "kubhist2-vestmanlandslanstidning-1890"]
+};
+
+settings.corporafolders.kubhist2["wermlandslanstidning"] = {
+    title: "Wermlands läns Tidning",
+    contents: ["kubhist2-wermlandslanstidning-1870"]
+};
+
+settings.corporafolders.kubhist2["wermlandstidningen"] = {
+    title: "Wermlandstidningen",
+    contents: ["kubhist2-wermlandstidningen-1840", "kubhist2-wermlandstidningen-1850"]
+};
+
+settings.corporafolders.kubhist2["wernamotidning"] = {
+    title: "Wernamo Tidning",
+    contents: ["kubhist2-wernamotidning-1870", "kubhist2-wernamotidning-1880"]
 };
 
 settings.corporafolders.kubhist2["wexjobladet"] = {
@@ -1588,7 +1566,7 @@ settings.corporafolders.kubhist2["wexjobladet"] = {
 if(isLab){
   settings.corporafolders.kubhist2["skyddat"] = {
       title: "Kubhist2 - Skyddat",
-      contents: ["kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1900", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1900", "kubhist2-ostgotaposten-1910"]
+      contents: ["kubhist2-dalpilen-1910", "kubhist2-dalpilen-1920", "kubhist2-kalmar-1910", "kubhist2-kalmar-kalmarlanstidning-1910", "kubhist2-ostgotaposten-1910"]
   };
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -3069,6 +3047,21 @@ settings.corpora["kubhist2-stockholmsdagblad-1890"] = _.extend({}, kubhist2_sett
     title: "Stockholms Dagblad 1890-talet"
 });
 
+settings.corpora["kubhist2-stockholmsposten-1770"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1770",
+    title: "Stockholmsposten 1770-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1780"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1780",
+    title: "Stockholmsposten 1780-talet"
+});
+
+settings.corpora["kubhist2-stockholmsposten-1790"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-stockholmsposten-1790",
+    title: "Stockholmsposten 1790-talet"
+});
+
 settings.corpora["kubhist2-stockholmsposten-1800"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-stockholmsposten-1800",
     title: "Stockholmsposten 1800-talet"
@@ -3089,9 +3082,164 @@ settings.corpora["kubhist2-stockholmsposten-1830"] = _.extend({}, kubhist2_setti
     title: "Stockholmsposten 1830-talet"
 });
 
+settings.corpora["kubhist2-sundsvallstidning-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-sundsvallstidning-1880",
+    title: "Sundsvalls Tidning 1880-talet"
+});
+
+settings.corpora["kubhist2-sundsvallstidning-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-sundsvallstidning-1890",
+    title: "Sundsvalls Tidning 1890-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1840",
+    title: "Tidning för Wenersborgs stad och län 1840-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1850",
+    title: "Tidning för Wenersborgs stad och län 1850-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1860",
+    title: "Tidning för Wenersborgs stad och län 1860-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1870",
+    title: "Tidning för Wenersborgs stad och län 1870-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1880",
+    title: "Tidning för Wenersborgs stad och län 1880-talet"
+});
+
+settings.corpora["kubhist2-tfwbsol-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-tfwbsol-1890",
+    title: "Tidning för Wenersborgs stad och län 1890-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1840",
+    title: "Umebladet 1840-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1850",
+    title: "Umebladet 1850-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1860",
+    title: "Umebladet 1860-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1870",
+    title: "Umebladet 1870-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1880",
+    title: "Umebladet 1880-talet"
+});
+
+settings.corpora["kubhist2-umebladet-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-umebladet-1890",
+    title: "Umebladet 1890-talet"
+});
+
+settings.corpora["kubhist2-upsala-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1840",
+    title: "Upsala 1840-talet"
+});
+
+settings.corpora["kubhist2-upsala-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1850",
+    title: "Upsala 1850-talet"
+});
+
+settings.corpora["kubhist2-upsala-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1860",
+    title: "Upsala 1860-talet"
+});
+
+settings.corpora["kubhist2-upsala-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1870",
+    title: "Upsala 1870-talet"
+});
+
+settings.corpora["kubhist2-upsala-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1880",
+    title: "Upsala 1880-talet"
+});
+
+settings.corpora["kubhist2-upsala-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-upsala-1890",
+    title: "Upsala 1890-talet"
+});
+
 settings.corpora["kubhist2-vestmanlandslanstidning-1830"] = _.extend({}, kubhist2_settings, {
     id: "kubhist2-vestmanlandslanstidning-1830",
     title: "Vestmanlands Läns Tidning 1830-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1840",
+    title: "Vestmanlands Läns Tidning 1840-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1850",
+    title: "Vestmanlands Läns Tidning 1850-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1860"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1860",
+    title: "Vestmanlands Läns Tidning 1860-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1870",
+    title: "Vestmanlands Läns Tidning 1870-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1880",
+    title: "Vestmanlands Läns Tidning 1880-talet"
+});
+
+settings.corpora["kubhist2-vestmanlandslanstidning-1890"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-vestmanlandslanstidning-1890",
+    title: "Vestmanlands Läns Tidning 1890-talet"
+});
+
+settings.corpora["kubhist2-wermlandslanstidning-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wermlandslanstidning-1870",
+    title: "Wermlands läns Tidning 1870-talet"
+});
+
+settings.corpora["kubhist2-wermlandstidningen-1840"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wermlandstidningen-1840",
+    title: "Wermlandstidningen 1840-talet"
+});
+
+settings.corpora["kubhist2-wermlandstidningen-1850"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wermlandstidningen-1850",
+    title: "Wermlandstidningen 1850-talet"
+});
+
+settings.corpora["kubhist2-wernamotidning-1870"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wernamotidning-1870",
+    title: "Wernamo Tidning 1870-talet"
+});
+
+settings.corpora["kubhist2-wernamotidning-1880"] = _.extend({}, kubhist2_settings, {
+    id: "kubhist2-wernamotidning-1880",
+    title: "Wernamo Tidning 1880-talet"
 });
 
 settings.corpora["kubhist2-wexjobladet-1810"] = _.extend({}, kubhist2_settings, {
@@ -3118,6 +3266,7 @@ settings.corpora["kubhist2-wexjobladet-1850"] = _.extend({}, kubhist2_settings, 
     id: "kubhist2-wexjobladet-1850",
     title: "Wexjöbladet 1850-talet"
 });
+
 
 /////////////////////////////////////////////////////////////////////////////////////
 settings.corpora = _(settings.corpora)
