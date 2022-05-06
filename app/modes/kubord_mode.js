@@ -29,12 +29,12 @@ kubord_settings = {
         }
     },
     structAttributes: {
-        edition_name: {
+        text_name: {
             label: "name",
             extendedComponent: "structServiceSelect"
         },
-        edition_date: {label: "date"},
-        edition_year: {
+        text_date: {label: "date"},
+        text_year: {
             label: "year",
             hideSidebar: true,
             opts: liteOptions,
