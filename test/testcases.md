@@ -13,7 +13,7 @@ Ideally all of these would be tested automatically, but that is future work.
 
 "Related words" should appear when searching for a lemgram in simple search.
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&page=0&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&page=0&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
 
 - Go to link
 - **Check that a "Related words"-button appears on the right**
@@ -51,7 +51,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 **Case insensitivity settings should not be preserved when switching 
 search attribute**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=en&search=cqp
+https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=eng&search=cqp
 
 - Follow link
 - A case-insensitive search has been performed
@@ -62,7 +62,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5
 
 ### Advanced
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search_tab=2&search=cqp%7C%5Bword%20%3D%20%22national.*%22%20%26%20word%20!%3D%20%22nationaliteter%22%20%25c%5D
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search_tab=2&search=cqp%7C%5Bword%20%3D%20%22national.*%22%20%26%20word%20!%3D%20%22nationaliteter%22%20%25c%5D
 
 - Follow link
 - **It should open "Advanced" tab for searching**
@@ -73,7 +73,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search_tab=
 
 **Escaping values**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=aspacsv&global_filter=eyJ0ZXh0X2F1dGhvciI6WyJKLlIuUi4gVG9sa2llbiJdfQ%3D%3D&page=0&search=word%7CSmaug
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=aspacsv&global_filter=eyJ0ZXh0X2F1dGhvciI6WyJKLlIuUi4gVG9sa2llbiJdfQ%3D%3D&page=0&search=word%7CSmaug
 
 - Go to link or filter on author J.R.R. Tolkien in *ASPAC svenska* and search for e.g. Smaug in simple search.
 - Go to the advanced tab
@@ -83,7 +83,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=aspacsv&global_f
 
 **Empty values**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=spin-source&global_filter=eyJ0ZXh0X3RleHRfdHlwZXMiOlsiIl19&search=word%7Cbil&page=0
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&global_filter=eyJ0ZXh0X3RleHRfdHlwZXMiOlsiIl19&search=word%7Cbil&page=0
 
 - (Search for "bil" with filter "-" in Spin)
 - Should give two hits and in the advanced tab we should see: \
@@ -111,7 +111,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=spin-source&glob
 
 **Downloading in context view**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&search=word%7Cframtid&page=0&reading_mode
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&search=word%7Cframtid&page=0&reading_mode
 
 - Follow link
 - Download as "One sentence per row (TSV)"
@@ -121,7 +121,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&search=wo
 
 **Downloading when "in order" is disabled**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&page=0&in_order=false&search=word%7Cframtid%20m%C3%A4nniskor
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&page=0&in_order=false&search=word%7Cframtid%20m%C3%A4nniskor
 
 - Follow link
 - Download as "One sentence per row (TSV)"
@@ -135,7 +135,7 @@ word or more that matches.
 
 **Download from KWIC opened from word picture**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=4&word_pic&corpus=aspacsv,romi,romii,rom99,storsuc,romg&search=lemgram%7Chund%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=4&word_pic&corpus=aspacsv,romi,romii,rom99,storsuc,romg&search=lemgram%7Chund%5C.%5C.nn%5C.1
 
 - Follow link
 - Click any word to get a new KWIC
@@ -144,7 +144,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=4&wor
 
 **Context view look**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=vivill&search=word%7Cframtid&page=0&reading_mode
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&search=word%7Cframtid&page=0&reading_mode
 
 - Follow link
 - Check that the hits are bold, the hit sentences are black and the rest of the contexts are grey
@@ -172,14 +172,14 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&reading_mode&word_pic&co
 
 **Word picture works when statistics is disabled**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&page=0&result_tab=3&hide_stats&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&page=0&result_tab=3&hide_stats&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1
 
 - Follow link
 - Check that the word picture works, but statistics is turned off
 
 **Pagination when opening KWIC from word picture**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=3&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1&corpus=aspacsv,romi,romii,rom99,storsuc,romg
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=3&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1&corpus=aspacsv,romi,romii,rom99,storsuc,romg
 
 - Follow link
 - Click the first result in wordpicture, "med" with 200 occurences
@@ -261,7 +261,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 
 **Should be disabled when no rows are selected**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&corpus=suc3&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&result_tab=2
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&result_tab=2
 
 - Follow link
 - Deselect all rows in statistics
@@ -288,7 +288,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=sv&cqp=%5B%5D&corpus=rd-anf&search=wo
 
 **Dependency graph**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&page=0&lang=en
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&page=0&lang=eng
 
 - Follow link
 - If sidebar does not show, click a word
@@ -346,7 +346,7 @@ Note: This only applies when "Remember me" have been checked
 
 **Word links should work**
 
-https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=en&parallel_corpora=swe&cqp_swe=%5Bword%20%3D%20%22katt%22%5D&cqp_null=%5B%5D&corpus=saltnld-sv&search=cqp%7C%5Bword%20%3D%20%22katt%22%5D
+https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=eng&parallel_corpora=swe&cqp_swe=%5Bword%20%3D%20%22katt%22%5D&cqp_null=%5B%5D&corpus=saltnld-sv&search=cqp%7C%5Bword%20%3D%20%22katt%22%5D
 
 - Follow link
 - **Click some words and make sure that the corresponding word in 
@@ -393,7 +393,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 
 **i18n for download buttons**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
 
 - Follow link
 - Click "Show Trend Diagram"
@@ -406,7 +406,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&cqp=%5B%5D&page=0&result_tab=2&cor
 
 **Trend diagram width**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=en&corpus=familjeliv-adoption,familjeliv-allmanna-ekonomi,familjeliv-allmanna-familjeliv,familjeliv-allmanna-fritid,familjeliv-allmanna-hushem&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=eng&corpus=familjeliv-adoption,familjeliv-allmanna-ekonomi,familjeliv-allmanna-familjeliv,familjeliv-allmanna-fritid,familjeliv-allmanna-hushem&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
 
 - Follow link
 - Click "Show trend diagram" then immediately switch back to statistics
@@ -436,7 +436,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=en&cor
 
 **Linking to corpus folder**
 
-https://spraakbanken.gu.se/korplabb/#?lang=en&corpus=fisk
+https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 
 - Follow link
 - **Only the corpora under "Finlandssvenska texter" should be selected**
@@ -449,7 +449,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=en&corpus=fisk
 
 **Disabling "in order"**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=false&lang=en&search=word%7Ckatt%20svart
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=false&lang=eng&search=word%7Ckatt%20svart
 
 - Follow link
 - **Search words, "katt" and "svart" should be highlighted in the result
