@@ -151,8 +151,6 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&search=w
 
 **Short KWIC rows should not cut off corpus names**
 
-Currently broken: https://github.com/spraakbanken/korp-frontend/issues/25
-
 https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22och%22%20%26%20lbound(sentence)%20%26%20rbound(sentence)%5D&corpus=drama&search_tab=1&search=cqp
 
 - Follow link
