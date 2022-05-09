@@ -273,7 +273,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lem
 
 **Long sidebar with scroll**
 
-https://spraakbanken.gu.se/korplabb/#?lang=sv&cqp=%5B%5D&corpus=rd-anf&search=word%7Cinkomstbortfall&reading_mode
+https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-anf&search=word%7Cinkomstbortfall&reading_mode
 
 >Not sure if this test is good anymore, but check that all information is visible!
 
@@ -291,8 +291,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Follow link
 - If sidebar does not show, click a word
 - Click "Show Dependency Tree" in the sidebar
-- **Check that the dependency tree pops up and looks ok** (might
-  take a second)
+- **Check that the dependency tree pops up and looks ok**
 
 ## Comparison
 
@@ -362,7 +361,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 
 **KWIC alignment**
 
-https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=sv&parallel_corpora=swe&cqp_null=%5Bword%20%3D%20%22%C3%A4r%22%5D&cqp_dan=%5B%5D&cqp_swe=%5Bword%20%3D%20%22Mexiko%22%5D&corpus=europarl-fi&cqp=%5Bprefix%20contains%20%22l%C3%A4%5C.%5C.nn%5C.1%22%5D&search=cqp%7C%5Bword%20%3D%20%22Mexiko%22%5D
+https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=swe&parallel_corpora=swe&cqp_null=%5Bword%20%3D%20%22%C3%A4r%22%5D&cqp_dan=%5B%5D&cqp_swe=%5Bword%20%3D%20%22Mexiko%22%5D&corpus=europarl-fi&cqp=%5Bprefix%20contains%20%22l%C3%A4%5C.%5C.nn%5C.1%22%5D&search=cqp%7C%5Bword%20%3D%20%22Mexiko%22%5D
 
 - Follow link (important that the search result is a short sentence first and longer sentences later in the KWIC)
 - **For each row, check that linked sentence starts at around the same place as the hit sentence**
@@ -374,7 +373,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?parallel_corpora=swe&cqp_swe=%5Bword%20%5E%3D%20%22s%C3%A5gsp%C3%A5n%22%5D&cqp_null=%5B%5D&corpus=aspacsven-sv&cqp_eng=%5Bword%20%3D%20%22sawdust%22%5D&page=0&search=cqp%7C%5Bword%20%3D%20%22s%C3%A5gsp%C3%A5n.*%22%5D
 
 - Open both links
-- Click on sågspån in every occurence on the two pages (six in total)
+- Click on sågspån in every occurence on the two pages
 - Compare dependency highlighting on the sentences that are the same
 - **Should be the same no matter if the search was in English or Swedish**
 
@@ -442,7 +441,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 **About-view layout**
 
 - Go to Korp
-- Click the cog wheel and open the About-view
+- Click the right upper MENU-button and open the About-view
 - **Check that everything looks OK, no overflow errors or weird scrolls**
 
 **Disabling "in order"**
