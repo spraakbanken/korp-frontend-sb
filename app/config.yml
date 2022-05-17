@@ -107,52 +107,6 @@ word_picture_conf:
         css_class: color_green
 
 visible_modes: 6
-mode_config:
-  - localekey: modern_texts
-    mode: default
-  - localekey: parallel_texts
-    mode: parallel
-    parallel: true
-  - localekey: old_swedish_texts
-    mode: old_swedish
-  - localekey: lb_texts
-    mode: lb
-  - localekey: kubhist
-    mode: kubhist
-  - localekey: all_hist
-    mode: all_hist
-  - localekey: spf_texts
-    mode: spf
-  - localekey: fisk1800_texts
-    mode: fisk1800
-  - localekey: faroese_texts
-    mode: faroe
-  - localekey: siberian_texts
-    mode: siberian_german
-  - localekey: kioping_texts
-    mode: kioping_books
-  - localekey: runeberg
-    mode: runeberg
-  - localekey: bible_texts
-    mode: bible
-  - localekey: lawroom
-    mode: law
-  - localekey: spanish_texts
-    mode: spanish
-  - localekey: interfra
-    mode: interfra
-  - localekey: bellman
-    mode: bellman
-  - localekey: eddan
-    mode: eddan
-  - localekey: lsi
-    mode: lsi
-  - localekey: dream
-    mode: dream
-  - localekey: somali
-    mode: somali
-  - localekey: kubord
-    mode: kubord
 
 default_overview_context: 1 sentence
 default_reading_context: 1 paragraph
