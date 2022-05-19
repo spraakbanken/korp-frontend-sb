@@ -131,3 +131,14 @@ map_center:
   zoom: 4
 
 reading_mode_field: sentence_id
+
+commonStructTypes:
+  date_interval:
+    label: 
+      eng: time interval
+      swe: tidsintervall
+    hide_sidebar: 'true'
+    hide_compare: 'true'
+    hide_statistics: 'true'
+    opts: false
+    extended_component: dateInterval
