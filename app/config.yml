@@ -1,6 +1,5 @@
 # lemma => grundform, base form
 # lexem => lemgram, lemgram
-
 autocomplete: true
 map_enabled: false
 hits_per_page_values:
@@ -122,6 +121,8 @@ default_options:
   matches_not: '!*='
 
 korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/v8'
+
+mink_backend_url: 'https://ws.spraakbanken.gu.se/ws/min-sb'
 
 map_center:
   lat: 62.99515845212052
