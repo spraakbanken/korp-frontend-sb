@@ -15,8 +15,10 @@ enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
 languages:
-  - swe
-  - eng
+  - value: swe
+    label: Svenska
+  - value: eng
+    label: English
 default_language: swe
 
 word_label:
@@ -39,7 +41,7 @@ reduce_struct_attribute_selector: intersection
 
 news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
 
-wordpicture_tagset:
+word_picture_tagset:
     # supported pos-tags
     verb: vb
     noun: nn
@@ -132,7 +134,7 @@ map_center:
 
 reading_mode_field: sentence_id
 
-commonStructTypes:
+common_struct_types:
   date_interval:
     label: 
       eng: time interval
