@@ -14,16 +14,12 @@ hits_per_page_values:
 enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
+default_language: swe
 languages:
-  - value: swe
-    label: Svenska
   - value: eng
     label: English
-default_language: swe
-
-word_label:
-  swe: ord
-  eng: word
+  - value: swe
+    label: Svenska
 
 group_statistics:
   - saldo
@@ -107,8 +103,6 @@ word_picture_conf:
     - - _
       - rel: preposition_rel
         css_class: color_green
-
-visible_modes: 6
 
 default_overview_context: 1 sentence
 default_reading_context: 1 paragraph
