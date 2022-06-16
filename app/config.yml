@@ -14,14 +14,12 @@ hits_per_page_values:
 enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
-languages:
-  - swe
-  - eng
 default_language: swe
-
-word_label:
-  swe: ord
-  eng: word
+languages:
+  - value: eng
+    label: English
+  - value: swe
+    label: Svenska
 
 group_statistics:
   - saldo
@@ -39,7 +37,7 @@ reduce_struct_attribute_selector: intersection
 
 news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
 
-wordpicture_tagset:
+word_picture_tagset:
     # supported pos-tags
     verb: vb
     noun: nn
@@ -106,8 +104,6 @@ word_picture_conf:
       - rel: preposition_rel
         css_class: color_green
 
-visible_modes: 6
-
 default_overview_context: 1 sentence
 default_reading_context: 1 paragraph
 
@@ -130,9 +126,7 @@ map_center:
   lng: 16.69921875
   zoom: 4
 
-reading_mode_field: sentence_id
-
-commonStructTypes:
+common_struct_types:
   date_interval:
     label: 
       eng: time interval
