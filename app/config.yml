@@ -126,8 +126,6 @@ map_center:
   lng: 16.69921875
   zoom: 4
 
-reading_mode_field: sentence_id
-
 common_struct_types:
   date_interval:
     label: 
