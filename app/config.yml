@@ -1,0 +1,138 @@
+# lemma => grundform, base form
+# lexem => lemgram, lemgram
+
+autocomplete: true
+map_enabled: false
+hits_per_page_values:
+  - 25
+  - 50
+  - 75
+  - 100
+  - 500
+  - 1000
+
+enable_backend_kwic_download: false
+enable_frontend_kwic_download: true
+
+default_language: swe
+languages:
+  - value: eng
+    label: English
+  - value: swe
+    label: Svenska
+
+group_statistics:
+  - saldo
+  - prefix
+  - suffix
+  - lex
+  - lemma
+  - sense
+  - text_swefn
+  - text_blingbring
+
+# for 'compile statistics by' selector, can be 'union' or 'intersection'
+reduce_word_attribute_selector: intersection
+reduce_struct_attribute_selector: intersection
+
+news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
+
+word_picture_tagset:
+    # supported pos-tags
+    verb: vb
+    noun: nn
+    adjective: jj
+    adverb: ab
+    preposition: pp
+
+    # dependency releations
+    subject: ss
+    object: obj
+    adverbial: adv
+    preposition_rel: pa
+    pre_modifier: at
+    post_modifier: et
+    adverbial2: aa
+
+word_picture_conf:
+  verb:
+    - - rel: subject
+        css_class: color_blue
+      - _
+      - rel: object
+        css_class: color_purple
+      - rel: adverbial
+        css_class: color_green
+  noun:
+    - - rel: preposition_rel
+        css_class: color_yellow
+        field_reverse: true
+      - rel: pre_modifier
+        css_class: color_azure
+      - _
+      - rel: post_modifier
+        css_class: color_red
+    - - _
+      - rel: subject
+        css_class: color_blue
+        field_reverse: true
+        alt_label: vb
+    - - rel: object
+        css_class: color_purple
+        field_reverse: true
+        alt_label: vb
+      - _
+  adjective:
+    - - _
+      - rel: pre_modifier
+        css_class: color_yellow
+        field_reverse: true
+    - - rel: adverbial2
+        css_class: color_purple
+      - _
+  adverb:
+    - - _
+      - rel: adverbial
+        css_class: color_yellow
+        field_reverse: true
+    - - _
+      - rel: adverbial2
+        css_class: color_purple
+        field_reverse: true
+  preposition:
+    - - _
+      - rel: preposition_rel
+        css_class: color_green
+
+default_overview_context: 1 sentence
+default_reading_context: 1 paragraph
+
+default_within:
+  sentence: sentence
+
+default_options:
+  is: =
+  is_not: '!='
+  starts_with: ^=
+  contains: _=
+  ends_with: '&='
+  matches: '*='
+  matches_not: '!*='
+
+korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/v8'
+
+map_center:
+  lat: 62.99515845212052
+  lng: 16.69921875
+  zoom: 4
+
+common_struct_types:
+  date_interval:
+    label: 
+      eng: time interval
+      swe: tidsintervall
+    hide_sidebar: 'true'
+    hide_compare: 'true'
+    hide_statistics: 'true'
+    opts: false
+    extended_component: dateInterval
