@@ -119,7 +119,7 @@ default_options:
   matches: '*='
   matches_not: '!*='
 
-korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/dev'
+korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/v8'
 
 map_center:
   lat: 62.99515845212052
