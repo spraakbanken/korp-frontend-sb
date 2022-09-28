@@ -33,7 +33,7 @@ export default {
                 scope.docColors = {}
                 let colorIdx = 0
                 for (let sentence of  scope.data.document.tokens) {
-                    if (sentence.attrs.id == scope.data.sentenceId) {
+                    if (sentence.attrs.id == scope.data.sentenceData["sentence_id"]) {
                         scope.mediaStartTime = sentence.attrs.start / 1000
                     }
                     // map each speaker to a unique color
