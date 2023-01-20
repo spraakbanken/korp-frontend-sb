@@ -31,6 +31,8 @@ group_statistics:
   - text_swefn
   - text_blingbring
 
+statistics_search_default: false
+
 # for 'compile statistics by' selector, can be 'union' or 'intersection'
 reduce_word_attribute_selector: intersection
 reduce_struct_attribute_selector: intersection
