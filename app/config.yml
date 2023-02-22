@@ -1,5 +1,9 @@
-# lemma => grundform, base form
-# lexem => lemgram, lemgram
+auth_module:
+  module: "basic_auth"
+  options:
+    default_value_remember: true
+
+
 autocomplete: true
 map_enabled: false
 hits_per_page_values:

@@ -4,10 +4,14 @@ import { getOtherCredentials } from "@/components/auth/federatedauth/fed_auth"
 
 const minkImgPath = require("custom/mink-309dbbc5.svg")
 
-settings["auth_module"] = "federated_auth"
-settings["federated_auth_jwt_url"] = "https://sp.spraakbanken.gu.se/auth/jwt"
-settings["federated_auth_login_service"] = "https://sp.spraakbanken.gu.se/auth/login"
-settings["federated_auth_logout_service"] = "https://sp.spraakbanken.gu.se/Shibboleth.sso/Logout"
+settings["auth_module"] = {
+    module: "federated_auth",
+    options: {
+        jwt_url: "https://sp.spraakbanken.gu.se/auth/jwt",
+        login_service: "https://sp.spraakbanken.gu.se/auth/login",
+        logout_service: "https://sp.spraakbanken.gu.se/Shibboleth.sso/Logout",
+    },
+}
 
 settings["korp_backend_url"] = "https://ws.spraakbanken.gu.se/ws/korp/mink"
 
