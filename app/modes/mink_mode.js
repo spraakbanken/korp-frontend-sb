@@ -33,9 +33,10 @@ settings["corpus_config_url"] = async () => {
 }
 
 let html = String.raw
-settings["initalization_checks"] = (s) => {
-    const minkLink = "https://spraakbanken.gu.se/mink/"
 
+const minkLink = "https://spraakbanken.gu.se/mink/"
+
+settings["initalization_checks"] = (s) => {
     const sweDesc = "Det här är Mink-läget i Korp. "
     const engDesc = "This is the Mink mode in Korp. "
     const translations = {
@@ -63,12 +64,12 @@ settings["initalization_checks"] = (s) => {
         },
     }
 
-    const minkImg = html`<div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>`
     const readMore = html`<div>
         {{translations.readMore | locObj:lang}}
         <a href="${minkLink}">{{translations['here'] | locObj:lang}}</a>.
     </div>`
 
+    const minkImg = html`<div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>`
     if (!authenticationProxy.isLoggedIn()) {
         s.openErrorModal({
             content: html`${minkImg}
@@ -103,3 +104,80 @@ settings["initalization_checks"] = (s) => {
     }
     return false
 }
+
+// *mode*-description
+settings["description"] = {
+    swe: html`<div class="p-5 mt-3">
+        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+        <div class="text-lg">
+            <div class="mt-2">Det här är Mink-läget i Korp.</div>
+            <div class="mt-2">
+                Här kan du söka i de korpusar som du har laddat upp och installerat via Mink. Alla korpusar i läget är
+                privata och kan endast ses av dig.
+            </div>
+            <div class="mt-2">Klicka i korpusväljaren ovanför för att göra ditt materialurval.</div>
+            <div class="mt-2">Läs mer om Mink <a href="${minkLink}">här</a>.</div>
+        </div>
+    </div>`,
+    eng: html`<div class="p-5 mt-3">
+        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+        <div class="text-lg">
+            <div class="mt-2">This is the Mink mode in Korp.</div>
+            <div class="mt-2">
+                Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this
+                mode is private and can only be seen by you.
+            </div>
+            <div class="mt-2">Click in the corpus chooser above to make your corpus selection.</div>
+            <div class="mt-2">Read more about Mink <a href="${minkLink}">here</a>.</div>
+        </div>
+    </div>`,
+}
+
+function createStartupComponent() {
+    return {
+        template: html`<div class="border-2 w-fit p-5 mt-3">
+            <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+            <div class="text-lg">
+                <div class="mt-2">{{$ctrl.desc | locObj:$root.lang}}</div>
+                <div class="mt-2">{{$ctrl.desc2 | locObj:$root.lang}}</div>
+                <div class="mt-2">{{$ctrl.searchTip | locObj:$root.lang}}</div>
+                <div class="mt-2">
+                    {{$ctrl.readMore | locObj:$root.lang}}
+                    <a href="${minkLink}">{{$ctrl.here | locObj:$root.lang}}</a>.
+                </div>
+            </div>
+        </div>`,
+        controller: [
+            function () {
+                const $ctrl = this
+
+                $ctrl.desc = {
+                    swe: "Det här är Mink-läget i Korp.",
+                    eng: "This is the Mink mode in Korp.",
+                }
+
+                $ctrl.desc2 = {
+                    swe: "Här kan du söka i de korpusar som du har laddat upp och installerat via Mink. Alla korpusar i läget är privata och kan endast ses av dig.",
+                    eng: "Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this mode is private and can only be seen by you.",
+                }
+
+                $ctrl.readMore = {
+                    swe: `Läs mer om Mink `,
+                    eng: `Read more about Mink `,
+                }
+
+                $ctrl.searchTip = {
+                    swe: "Klicka i korpusväljaren ovanför för att göra ditt materialurval.",
+                    eng: "Click in the corpus chooser above to make your corpus selection.",
+                }
+
+                $ctrl.here = {
+                    swe: "här",
+                    eng: "here",
+                }
+            },
+        ],
+    }
+}
+
+settings["startup_component"] = createStartupComponent()
