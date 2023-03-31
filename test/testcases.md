@@ -140,7 +140,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=4&wo
 - Follow link
 - Click any word to get a new KWIC
 - Click "Download hit page" as... -> "One sentence per row (CSV)"
-- **The correc data should be in the downloaded document**
+- **The correct data should be in the downloaded document**
 
 **Context view look**
 
@@ -191,7 +191,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=3&wo
 
 **It should be possible to make column sizes indefinitely bigger**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2003,gp2004,gp2005,gp2006,gp2007,gp2008,gp2009,gp2010,gp2011,gp2012,gp2013,gp2d&search=word%7Cnyhet&page=0&result_tab=2
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2003,gp2004,gp2005,gp2006,gp2007,gp2008,gp2009,gp2010,gp2011,gp2012,gp2013,gp2d&search=word%7Cnyhet&page=0&result_tab=2&show_stats
 
 - Search in all GP-corpora for "nyhet" and go to statistics or follow link above
 - **Check that all columns have the same size (except checkbox and pie chart)**
@@ -201,18 +201,18 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2
 
 **Table should use the available space**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=[]&corpus=vivill&page=0&search=word|nyhet
+https://spraakbanken.gu.se/korplabb/#?cqp=[]&corpus=vivill&page=0&search=word|nyhet&show_stats
 
 - Search in "Svenska partiprogram och valmanifest" for
   "nyhet" or follow link above
 - The point here is that the statistics table load in the background
   while the KWIC is viewed
 - When the search is done, go to the statistics tab
-- **Check that the table use (almost) all the available space**
+- **Check that the table uses (almost) all the available space**
 
 **Opening a KWIC from statistics should use the same search settings**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=word%7Cframtid
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=word%7Cframtid&show_stats
 
 - Go to link
 - Deselect "Svenska partiprogram och valmanifest" and select another
@@ -224,7 +224,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivi
 **"Compile based on" should not be empty after switching to corpus 
 with other attributes**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party_name&show_stats
 
 - Follow link
 - "Compile based on" is `party`
@@ -233,7 +233,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 
 **JSON button should link to the correct search**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party_name&show_stats
 
 - Follow link
 - **Click the statistics JSON-button and check that the result is for the same search**
@@ -259,7 +259,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 
 **Should be disabled when no rows are selected**
 
-https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&result_tab=2
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&result_tab=2&show_stats
 
 - Follow link
 - Deselect all rows in statistics
@@ -289,9 +289,12 @@ https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-anf&search=w
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&page=0&lang=eng
 
 - Follow link
-- If sidebar does not show, click a word
+- Sidebar should show
 - Click "Show Dependency Tree" in the sidebar
 - **Check that the dependency tree pops up and looks ok**
+
+--------------------------------- CONTINUE HERE
+
 
 ## Comparison
 
