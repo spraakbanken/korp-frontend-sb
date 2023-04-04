@@ -10,7 +10,7 @@ Begin with:
 ## Deploy Korplabb
 - Always use `dev` branch!
 ```
-yarn build
+yarn build:labb
 rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korplabb
 ```
 
