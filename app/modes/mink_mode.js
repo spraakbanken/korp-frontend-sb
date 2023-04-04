@@ -18,7 +18,7 @@ settings["korp_backend_url"] = "https://ws.spraakbanken.gu.se/ws/korp/mink"
 settings["config_dependent_on_authentication"] = true
 
 settings["corpus_config_url"] = async () => {
-    const minkUrl = "https://ws.spraakbanken.gu.se/ws/min-sb"
+    const minkUrl = "https://ws.spraakbanken.gu.se/ws/mink"
     const creds = authenticationProxy.getAuthorizationHeader()
     const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${window.currentMode}`
     if (!_.isEmpty(creds)) {
