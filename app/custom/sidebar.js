@@ -165,7 +165,17 @@ export default {
                         val: value,
                     })
                 }
-            }     
+            }
        }]
-    })
-}   
+    }),
+    copyRowButton: (options = {}) => ({
+        template: `<span class="cursor-pointer" ng-click="click()"><i class="fa-solid fa-copy"></i> Kopiera rad</span>`,
+        controller: ["$scope", function($scope) {
+            $scope.copyStr = _.map(options["attributes"] || ["word"], (attribute) =>
+                _.map($scope.tokens, (token) => token[attribute]).join("\t")
+            ).join("\n")
+
+            $scope.click = () => navigator.clipboard.writeText($scope.copyStr)
+       }]
+    }),
+}
