@@ -126,8 +126,6 @@ default_options:
 
 korp_backend_url: 'https://ws.spraakbanken.gu.se/ws/korp/v8'
 
-mink_backend_url: 'https://ws.spraakbanken.gu.se/ws/min-sb'
-
 map_center:
   lat: 62.99515845212052
   lng: 16.69921875
