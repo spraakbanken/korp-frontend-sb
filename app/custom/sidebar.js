@@ -169,7 +169,7 @@ export default {
        }]
     }),
     copyRowButton: (options = {}) => ({
-        template: `<span class="cursor-pointer" ng-click="click()"><i class="fa-solid fa-copy"></i> Kopiera rad</span>`,
+        template: `<span class="cursor-pointer" ng-click="click()"><i class="fa-solid fa-copy"></i> {{ 'copy_row' | loc:lang }}</span>`,
         controller: ["$scope", function($scope) {
             $scope.click = () => {
                 const copyStr = _.map(options["attributes"] || ["word"], (attribute) =>
