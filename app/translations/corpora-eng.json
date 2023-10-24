@@ -252,5 +252,6 @@
     "tag_paragraph": "paragraph",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "context"
+    "tag_text": "context",
+    "copy_row": "Copy row"
 }

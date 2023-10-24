@@ -253,5 +253,6 @@
     "tag_paragraph": "stycke",
     "tag_np": "np",
     "tag_e": "e",
-    "tag_text": "kontext"
+    "tag_text": "kontext",
+    "copy_row": "Kopiera rad"
 }
