@@ -83,15 +83,6 @@ settings["initalization_checks"] = (s) => {
             translations,
         })
         return true
-    } else if (!getOtherCredentials().includes("MINK-APP")) {
-        s.openErrorModal({
-            content: html`${minkImg}
-                <div>{{translations.noAccess | locObj:lang}}</div>
-                ${readMore}`,
-            resolvable: false,
-            translations,
-        })
-        return true
     } else if (_.isEmpty(settings["corpora"])) {
         s.openErrorModal({
             content: html`${minkImg}
