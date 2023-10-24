@@ -33,6 +33,7 @@ group_statistics:
   - sense
   - text_swefn
   - text_blingbring
+  - e_cat
 
 statistics_search_default: false
 
