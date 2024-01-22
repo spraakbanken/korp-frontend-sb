@@ -1,8 +1,7 @@
 /** @format */
 import statemachine from "@/statemachine"
-import { getOtherCredentials } from "@/components/auth/federatedauth/fed_auth"
 
-const minkImgPath = require("custom/mink-309dbbc5.svg")
+const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
     module: "federated_auth",
@@ -73,7 +72,7 @@ settings["initalization_checks"] = (s) => {
     if (!authenticationProxy.isLoggedIn()) {
         s.openErrorModal({
             content: html`${minkImg}
-                <div class="my-5">{{translations.notAuthenticated | locObj:lang}}</div>
+                <div class="my-3">{{translations.notAuthenticated | locObj:lang}}</div>
                 ${readMore}
                 <div class="mt-3">{{translations.login | locObj:lang}}</div>`,
             onClose: () => {

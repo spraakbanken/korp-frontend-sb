@@ -9,16 +9,18 @@ Begin with:
 
 ## Deploy Korplabb
 - Always use `dev` branch!
-```
+```bash
 yarn build:labb
 rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korplabb
+# OR:
+ssh -A fkkorp@k2.spraakdata.gu.se deploy-korp-frontend/deploy-labb.sh
 ```
 
 ## Deploy Korp (production)
 - Make sure you're on `master` branch
 - Tag latest release (skip this step for config-changes)
 - Build and deploy:
-```
+```bash
 yarn build
 rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korp
 ```
