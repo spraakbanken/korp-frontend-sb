@@ -293,9 +293,6 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Click "Show Dependency Tree" in the sidebar
 - **Check that the dependency tree pops up and looks ok**
 
---------------------------------- CONTINUE HERE
-
-
 ## Comparison
 
 **Use context from the correct corpora**
@@ -393,7 +390,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 
 **i18n for download buttons**
 
-https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&corpus=vivill&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&show_stats
 
 - Follow link
 - Click "Show Trend Diagram"
@@ -406,7 +403,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&co
 
 **Trend diagram width**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=eng&corpus=familjeliv-adoption,familjeliv-allmanna-ekonomi,familjeliv-allmanna-familjeliv,familjeliv-allmanna-fritid,familjeliv-allmanna-hushem&search=lemgram%7Cframtid%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=eng&corpus=familjeliv-adoption,familjeliv-allmanna-ekonomi,familjeliv-allmanna-familjeliv,familjeliv-allmanna-fritid,familjeliv-allmanna-hushem&search=lemgram%7Cframtid%5C.%5C.nn%5C.1&show_stats
 
 - Follow link
 - Click "Show trend diagram" then immediately switch back to statistics
