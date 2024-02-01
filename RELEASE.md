@@ -1,26 +1,41 @@
 # Release manual
-- Note: `yarn` and `rsync` commands are run from `korp-frontend` repository. Branch instructions are meant for both repositories.
-- Note: if the `.htaccess` file is accidentally deleted from the server it can be copy-pasted from this repository.
 
-Begin with:
-- Make sure that all changes are commited and pushed!
-- Run `yarn test`
+For the `korp-frontend` repo, checkout the [README](https://github.com/spraakbanken/korp-frontend/blob/dev/README.md#branches-releases-and-versions) on how to manifest new versions of the code.
+
+For this repo (`korp-frontend-sb`), do the same but skip `package.json` and `CHANGELOG.md`.
+
+(TODO: Should we tag commits in this repo?)
 
 
-## Deploy Korplabb
-- Always use `dev` branch!
-```bash
-yarn build:labb
-rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korplabb
-# OR:
+## Instances
+
+- **Production:** `master` branch at [/korp](https://spraakbanken.gu.se/korp/)
+- **Staging:** `dev` branch at [/korp](https://spraakbanken.gu.se/korplabb/)
+
+See [Instanser.md](https://github.com/spraakbanken/dev-docs/blob/main/Instanser.md)
+
+## Deploy scripts
+
+To ensure consistent deployments, there are scripts in `k2:~fkkorp/deploy-korp-frontend/` that pull and build the code for Production and Staging, respectively. Please read them and make sure you understand what they do.
+
+```sh
+# Staging - do this after pushing dev
 ssh -A fkkorp@k2.spraakdata.gu.se deploy-korp-frontend/deploy-labb.sh
+
+# Production - do this after releasing on master
+ssh -A fkkorp@k2.spraakdata.gu.se deploy-korp-frontend/deploy-prod.sh
 ```
 
-## Deploy Korp (production)
-- Make sure you're on `master` branch
-- Tag latest release (skip this step for config-changes)
-- Build and deploy:
-```bash
-yarn build
-rsync --delete --exclude ".htaccess" -r dist/ fkkorp@k2.spraakdata.gu.se:/var/www/html_sb/korp
-```
+## Deploying manually
+
+If you really need to deploy something out of the ordinary, you can build the frontend locally and copy the built files to the server.
+
+Note:
+
+- For both repositories, use the `dev` branch for `/korplabb` and the `master` branch for `/korp`
+- `yarn` and `rsync` commands are run from `korp-frontend` repository
+
+## General notes
+
+- If the `.htaccess` file is accidentally deleted from the server it can be copy-pasted from this repository
+- Please run `yarn test` before deploying (although the tests are not quite reliable)
