@@ -41,6 +41,14 @@ statistics_search_default: false
 reduce_word_attribute_selector: intersection
 reduce_struct_attribute_selector: intersection
 
+matomo:
+  url: https://spraakbanken.gu.se/stats/
+  # Enable real reporting only on live sites
+  staging:
+    site: 3
+  production:
+    site: 3
+
 news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
 
 word_picture_tagset:
