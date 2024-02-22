@@ -29,7 +29,7 @@ There are also some manual test cases in [test/testcases.md](./test/testcases.md
 
 There are two backends (at least):
 https://ws.spraakbanken.gu.se/ws/korp/v8/ (korpsrv)
-https://ws.spraakbanken.gu.se/ws/korp/mink/ (gu-it)
+https://ws.spraakbanken.gu.se/ws/korp/mink/ (gu-it, direct url: https://spraakbanken3.it.gu.se/korp/)
 
 ## Custom code / plugins
 

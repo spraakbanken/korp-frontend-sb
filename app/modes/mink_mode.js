@@ -12,12 +12,12 @@ settings["auth_module"] = {
     },
 }
 
-settings["korp_backend_url"] = "https://ws.spraakbanken.gu.se/ws/korp/mink"
+settings["korp_backend_url"] = "https://spraakbanken3.it.gu.se/korp"
 
 settings["config_dependent_on_authentication"] = true
 
 settings["corpus_config_url"] = async () => {
-    const minkUrl = "https://ws.spraakbanken.gu.se/ws/mink"
+    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
     const creds = authenticationProxy.getAuthorizationHeader()
     const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${window.currentMode}`
     if (!_.isEmpty(creds)) {
