@@ -35,6 +35,10 @@ https://ws.spraakbanken.gu.se/ws/korp/mink/ (gu-it, direct url: https://spraakba
 
 A rudimentary plugin system exists for parts of the application. Sometimes the code is written in a modes file and sometimes in the folder `app/custom`  (`korp-frontend-sb` ).
 
+## Static `corpus_config` response
+
+If the servers are slow, waiting for the `corpus_config` response when developing can be frustrating. To skip that request, save the response to `app/modes/<mode>_corpus_config.json` and it will be loaded directly from there instead.
+
 ## Angular.js
 
 ### Directives/components binding
