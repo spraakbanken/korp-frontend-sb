@@ -29,11 +29,15 @@ There are also some manual test cases in [test/testcases.md](./test/testcases.md
 
 There are two backends (at least):
 https://ws.spraakbanken.gu.se/ws/korp/v8/ (korpsrv)
-https://ws.spraakbanken.gu.se/ws/korp/mink/ (gu-it)
+https://ws.spraakbanken.gu.se/ws/korp/mink/ (gu-it, direct url: https://spraakbanken3.it.gu.se/korp/)
 
 ## Custom code / plugins
 
 A rudimentary plugin system exists for parts of the application. Sometimes the code is written in a modes file and sometimes in the folder `app/custom`  (`korp-frontend-sb` ).
+
+## Static `corpus_config` response
+
+If the servers are slow, waiting for the `corpus_config` response when developing can be frustrating. To skip that request, save the response to `app/modes/<mode>_corpus_config.json` and it will be loaded directly from there instead.
 
 ## Angular.js
 
