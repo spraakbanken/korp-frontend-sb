@@ -12,6 +12,7 @@ settings["auth_module"] = {
     },
 }
 
+settings["frontpage"]["corpus_updates"] = false
 settings["korp_backend_url"] = "https://spraakbanken3.it.gu.se/korp"
 
 settings["config_dependent_on_authentication"] = true
@@ -97,8 +98,8 @@ settings["initalization_checks"] = (s) => {
 
 // *mode*-description
 settings["description"] = {
-    swe: html`<div class="p-5 mt-3">
-        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+    swe: html`<div class="mt-3">
+        <img src="${minkImgPath}" class="block h-32 my-5 mx-auto" />
         <div class="text-lg">
             <div class="mt-2">Det här är Mink-läget i Korp.</div>
             <div class="mt-2">
@@ -109,65 +110,16 @@ settings["description"] = {
             <div class="mt-2">Läs mer om Mink <a href="${minkLink}">här</a>.</div>
         </div>
     </div>`,
-    eng: html`<div class="p-5 mt-3">
-        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+    eng: html`<div class="mt-3">
+        <img src="${minkImgPath}" class="block h-32 my-5 mx-auto" />
         <div class="text-lg">
             <div class="mt-2">This is the Mink mode in Korp.</div>
             <div class="mt-2">
                 Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this
-                mode is private and can only be seen by you.
+                mode are private and can only be seen by you.
             </div>
             <div class="mt-2">Click in the corpus chooser above to make your corpus selection.</div>
             <div class="mt-2">Read more about Mink <a href="${minkLink}">here</a>.</div>
         </div>
     </div>`,
 }
-
-function createStartupComponent() {
-    return {
-        template: html`<div class="border-2 w-fit p-5 mt-3">
-            <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
-            <div class="text-lg">
-                <div class="mt-2">{{$ctrl.desc | locObj:$root.lang}}</div>
-                <div class="mt-2">{{$ctrl.desc2 | locObj:$root.lang}}</div>
-                <div class="mt-2">{{$ctrl.searchTip | locObj:$root.lang}}</div>
-                <div class="mt-2">
-                    {{$ctrl.readMore | locObj:$root.lang}}
-                    <a href="${minkLink}">{{$ctrl.here | locObj:$root.lang}}</a>.
-                </div>
-            </div>
-        </div>`,
-        controller: [
-            function () {
-                const $ctrl = this
-
-                $ctrl.desc = {
-                    swe: "Det här är Mink-läget i Korp.",
-                    eng: "This is the Mink mode in Korp.",
-                }
-
-                $ctrl.desc2 = {
-                    swe: "Här kan du söka i de korpusar som du har laddat upp och installerat via Mink. Alla korpusar i läget är privata och kan endast ses av dig.",
-                    eng: "Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this mode is private and can only be seen by you.",
-                }
-
-                $ctrl.readMore = {
-                    swe: `Läs mer om Mink `,
-                    eng: `Read more about Mink `,
-                }
-
-                $ctrl.searchTip = {
-                    swe: "Klicka i korpusväljaren ovanför för att göra ditt materialurval.",
-                    eng: "Click in the corpus chooser above to make your corpus selection.",
-                }
-
-                $ctrl.here = {
-                    swe: "här",
-                    eng: "here",
-                }
-            },
-        ],
-    }
-}
-
-settings["startup_component"] = createStartupComponent()
