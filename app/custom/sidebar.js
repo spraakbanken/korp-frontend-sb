@@ -148,7 +148,7 @@ export default {
             $scope.listLimit = options.showAll ? $scope.values.length : 1
 
             $scope.showAll = options.showAll
-            $scope.internalSearch = options.internalSearch
+            $scope.internalSearch = options.internal_search
 
             $scope.stringify = stringifyFunc($scope.key)
 
