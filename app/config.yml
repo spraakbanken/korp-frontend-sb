@@ -59,6 +59,7 @@ group_statistics:
   - sense
   - text_swefn
   - text_blingbring
+  - transformer-neighbour
   - e_cat
 
 statistics_search_default: false
