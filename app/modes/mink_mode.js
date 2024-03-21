@@ -36,7 +36,7 @@ let html = String.raw
 
 const minkLink = "https://spraakbanken.gu.se/mink/"
 
-settings["initalization_checks"] = (s) => {
+settings["initialization_checks"] = async (s) => {
     const sweDesc = "Det här är Mink-läget i Korp. "
     const engDesc = "This is the Mink mode in Korp. "
     const translations = {
