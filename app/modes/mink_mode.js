@@ -1,6 +1,4 @@
 /** @format */
-import statemachine from "@/statemachine"
-
 const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
@@ -19,6 +17,7 @@ settings["config_dependent_on_authentication"] = true
 
 settings["corpus_config_url"] = async () => {
     const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
+    const authenticationProxy = await import("@/components/auth/auth")
     const creds = authenticationProxy.getAuthorizationHeader()
     const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${window.currentMode}`
     if (!_.isEmpty(creds)) {
@@ -37,6 +36,10 @@ let html = String.raw
 const minkLink = "https://spraakbanken.gu.se/mink/"
 
 settings["initialization_checks"] = async (s) => {
+    // Import only when needed, because it depends on the auth_module setting defined here
+    const {default: statemachine} = await import("@/statemachine")
+    const authenticationProxy = await import("@/components/auth/auth")
+
     const sweDesc = "Det här är Mink-läget i Korp. "
     const engDesc = "This is the Mink mode in Korp. "
     const translations = {
@@ -96,7 +99,6 @@ settings["initialization_checks"] = async (s) => {
     return false
 }
 
-// *mode*-description
 settings["description"] = {
     swe: html`<div class="mt-3">
         <img src="${minkImgPath}" class="block h-32 my-5 mx-auto" />
