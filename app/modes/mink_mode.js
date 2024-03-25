@@ -1,4 +1,6 @@
 /** @format */
+import currentMode from "@/mode"
+import settings from "@/settings"
 const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
@@ -19,7 +21,7 @@ settings["corpus_config_url"] = async () => {
     const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
     const authenticationProxy = await import("@/components/auth/auth")
     const creds = authenticationProxy.getAuthorizationHeader()
-    const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${window.currentMode}`
+    const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${currentMode}`
     if (!_.isEmpty(creds)) {
         const response = await fetch(`${minkUrl}/list-korp-corpora`, {
             headers: authenticationProxy.getAuthorizationHeader(),
