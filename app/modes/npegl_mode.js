@@ -1,3 +1,4 @@
+import settings from "@/settings"
 import { catToString } from 'custom/npegl.js'
 
 // We've got to extend the stats data postprocessing with some custom merging of stats table rows. 

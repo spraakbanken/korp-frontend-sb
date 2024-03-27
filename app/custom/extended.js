@@ -1,3 +1,5 @@
+import settings from "@/settings"
+
 export default {
     complemgramExtended: {
         template: `<autoc
