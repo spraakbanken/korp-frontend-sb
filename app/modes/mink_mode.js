@@ -12,6 +12,10 @@ settings["auth_module"] = {
     },
 }
 
+settings["corpus_info_link"] = {
+    url_template: "https://spraakbanken.gu.se/mink/library/corpus/%s",
+    label: {swe: "Öppna i Mink", eng: "Open in Mink"}
+}
 settings["frontpage"]["corpus_updates"] = false
 settings["korp_backend_url"] = "https://spraakbanken3.it.gu.se/korp"
 

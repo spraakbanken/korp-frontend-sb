@@ -37,6 +37,14 @@ hits_per_page_values:
   - 500
   - 1000
 
+corpus_info_link:
+  url_template:
+    swe: https://spraakbanken.gu.se/resurser/%s
+    eng: https://spraakbanken.gu.se/en/resources/%s
+  label:
+    swe: Resurssida
+    eng: Resource page
+
 enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
