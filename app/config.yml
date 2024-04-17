@@ -84,7 +84,7 @@ matomo:
   production:
     site: 3
 
-news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
+news_desk_url: https://raw.githubusercontent.com/spraakbanken/newsdesk/main/data/korp.yaml
 
 word_picture_tagset:
     # supported pos-tags
