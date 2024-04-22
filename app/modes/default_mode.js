@@ -15,9 +15,9 @@ settings["frontpage"]["examples"] = [
       eng: 'Word starting with "covid" in news',
     },
     params: {
+      search_tab: 1,
       search: "cqp",
       cqp: '[word ^= "covid" & word != "covid-19"]',
-      search_tab: 1,
       corpus:
         "attasidor,da,svt-2004,svt-2005,svt-2006,svt-2007,svt-2008,svt-2009,svt-2010,svt-2011,svt-2012,svt-2013,svt-2014,svt-2015,svt-2016,svt-2017,svt-2018,svt-2019,svt-2020,svt-2021,svt-2022,svt-2023,svt-nodate,webbnyheter2001,webbnyheter2002,webbnyheter2003,webbnyheter2004,webbnyheter2005,webbnyheter2006,webbnyheter2007,webbnyheter2008,webbnyheter2009,webbnyheter2010,webbnyheter2011,webbnyheter2012,webbnyheter2013",
     },
@@ -28,8 +28,8 @@ settings["frontpage"]["examples"] = [
       eng: "Repeated adverbs in August Strindberg's novels and letters",
     },
     params: {
-      search: 'cqp|a:[pos = "AB"] [word=a.word]+',
       search_tab: 2,
+      search: 'cqp|a:[pos = "AB"] [word=a.word]+',
       corpus: "strindbergbrev,strindbergromaner",
     },
   },
@@ -52,9 +52,9 @@ settings["frontpage"]["examples"] = [
     label: "Grattis på (substantiv)",
     hint: 'Tips: Spara sökningen och jämför med en liknande men med "till" istället, se avsnittet <em>Jämförelser</em> i <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning">användarhandledningen</a>',
     params: {
-      cqp: '[word = "grattis"] [word = "på"] [pos = "NN"]',
       search_tab: 1,
       search: "cqp",
+      cqp: '[word = "grattis"] [word = "på"] [pos = "NN"]',
     },
   },
   {
@@ -69,11 +69,11 @@ settings["frontpage"]["examples"] = [
   {
     label: 'Ordet "örfil" i finlandssvenska texter',
     params: {
+      search_tab: 1,
       search: "cqp",
       cqp: '[lemma contains "örfil"]',
       corpus:
         "abounderrattelser2012,abounderrattelser2013,astra1960-1979,astranova,at2012,barnlitteratur,borgabladet,bullen,fanbararen,finsktidskrift,fnb1999,fnb2000,forumfeot,fsbbloggvuxna,fsbessaistik,fsbsakprosa,fsbskonlit1960-1999,fsbskonlit2000tal,hankeiten,hanken,hbl1991,hbl1998,hbl1999,hbl20122013,hbl2014,informationstidningar,jakobstadstidning1999,jakobstadstidning2000,jft,kallan,lagtexter,magmakolumner,meddelanden,myndighet,nyaargus,osterbottenstidning2011,osterbottenstidning2012,osterbottenstidning2013,osterbottenstidning2014,ostranyland,pargaskungorelser2011,pargaskungorelser2012,propositioner,studentbladet,svenskbygden,sydosterbotten2012,sydosterbotten2013,sydosterbotten2014,ungdomslitteratur,vasabladet1991,vasabladet2012,vasabladet2013,vasabladet2014,vastranyland,sydosterbotten2011,sydosterbotten2010",
-      search_tab: 1,
       reading_mode: 1,
     },
   },
@@ -81,11 +81,11 @@ settings["frontpage"]["examples"] = [
     label: 'Jämför "orkar", "ids" och "tyar"',
     hint: "Kryssa i alla rader och öppna kartan över författarens hemort",
     params: {
+      search_tab: 1,
       search: "cqp",
       cqp: '[(word = "orkar" | word = "ids" | word = "tyar")]',
       corpus:
         "bloggmix1998,bloggmix1999,bloggmix2000,bloggmix2001,bloggmix2002,bloggmix2003,bloggmix2004,bloggmix2005,bloggmix2006,bloggmix2007,bloggmix2008,bloggmix2009,bloggmix2010,bloggmix2011,bloggmix2012,bloggmix2013,bloggmix2014,bloggmix2015,bloggmix2016,bloggmix2017,bloggmixodat",
-      search_tab: 1,
       show_stats: 1,
       result_tab: 2,
     },
@@ -113,10 +113,10 @@ settings["frontpage"]["examples"] = [
   {
     label: "Mörker i poesi",
     params: {
+      search_tab: 1,
       search: "cqp",
       cqp: '[word _= "mörk" %c]',
       corpus: "poeter",
-      search_tab: 1,
       show_stats: 1,
       result_tab: 2,
       stats_reduce: "lemma",
@@ -126,13 +126,39 @@ settings["frontpage"]["examples"] = [
     label: "Krig i nyheterna",
     hint: "Testa trenddiagrammet!",
     params: {
+      search_tab: 1,
       search: "cqp",
       cqp: '[word _= "krig"]',
       corpus:
         "attasidor,da,gp1994,gp2001,gp2002,gp2003,gp2004,gp2005,gp2006,gp2007,gp2008,gp2009,gp2010,gp2011,gp2012,gp2013,gp2d,press95,press96,press97,press98,svt-2004,svt-2005,svt-2006,svt-2007,svt-2008,svt-2009,svt-2010,svt-2011,svt-2012,svt-2013,svt-2014,svt-2015,svt-2016,svt-2017,svt-2018,svt-2019,svt-2020,svt-2021,svt-2022,svt-2023,webbnyheter2001,webbnyheter2002,webbnyheter2003,webbnyheter2004,webbnyheter2005,webbnyheter2006,webbnyheter2007,webbnyheter2008,webbnyheter2009,webbnyheter2010,webbnyheter2011,webbnyheter2012,webbnyheter2013",
-      search_tab: 1,
       show_stats: 1,
       result_tab: 2,
+    },
+  },
+  {
+    label: "De tre första orden i varje mening",
+    params: {
+      search_tab: 1,
+      search: "cqp",
+      cqp: "<sentence> []{3,3}",
+    },
+  },
+  {
+    label: "Futurum preteritum i kursböcker",
+    hint: 'Läs mer om <a href="https://spraakbanken.gu.se/resurser/coctaill" target="_blank">COCTAILL-korpusen</a>',
+    params: {
+      search_tab: 1,
+      search: "cqp",
+      cqp: '[lex contains "skola..vb.2" & msd = "VB.PRT.AKT" & _.lesson_cefr_level = "C1"] [pos != "VB"]{0,6} [pos = "VB"]',
+      corpus: "coctaill-ae,coctaill-lt",
+    },
+  },
+  {
+    label: 'den + singular ("den värsta sjukdom")',
+    params: {
+      search_tab: 1,
+      search: "cqp",
+      cqp: '[msd *= "DT\\..*\\.SIN\\.DEF" & lex contains "en..al.1"] [pos = "AB" & word !*= "här|där" %c]{0,1} [pos = "JJ" | pos = "PC" | pos = "RO"]{1,2} [msd *= "NN\\..*\\.SIN\\.IND\\..*" & word !*= "januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december" %c]',
     },
   },
 ];
