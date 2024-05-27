@@ -1,3 +1,5 @@
+import settings from "@/settings"
+
 export default {
     complemgramExtended: {
         template: `<autoc
@@ -124,7 +126,7 @@ export default {
                     "Present participle (Md.Aj.Lx.Pre)",
                     "Other derived adjective (Md.Aj.Lx.Der)",
                     "Prototypical adjective (Md.Aj.Lx.Pro)",
-                    "IXP (IXP)",
+                    "Noun phrase (NP)",
                     "Adjectival associate (Assoc)",
                     "Genitival phrase (GenP)",
                     "Prepositional phrase (PP)",
@@ -142,7 +144,7 @@ export default {
                     "Bare complement of degree element (Dgcm.Br)",
                     "Marked complement of degree element (Dgcm.Mk)",
                     "Coordinator (&)",
-                    "Coordinator of IXPs (&.IXP)",
+                    "Coordinator of Noun phrases (&.NP)",
                     "Coordinator of Nouns (&.N)",
                     "Coordinator of Possessives (&.Poss)",
                     "Coordinator of Adjectives (&.Aj)",
@@ -175,7 +177,7 @@ export default {
                     "Md[.]Aj[.]Lx[.]Pre:[0-9]+",
                     "Md[.]Aj[.]Lx[.]Der:[0-9]+",
                     "Md[.]Aj[.]Lx[.]Pro:[0-9]+",
-                    "IXP:[0-9]+",
+                    "NP:[0-9]+",
                     "Assoc:[0-9]+",
                     "GenP:[0-9]+",
                     "PP:[0-9]+",
@@ -193,7 +195,7 @@ export default {
                     "Dgcm[.]Br:[0-9]+",
                     "Dgcm[.]Mk:[0-9]+",
                     "&:[0-9]+",
-                    "&[.]IXP:[0-9]+",
+                    "&[.]NP:[0-9]+",
                     "&[.]N:[0-9]+",
                     "&[.]Poss:[0-9]+",
                     "&[.]Aj:[0-9]+",
@@ -226,7 +228,7 @@ export default {
                     "Md[.]Aj[.]Lx[.]Pre:[0-9]+",
                     "Md[.]Aj[.]Lx[.]Der:[0-9]+",
                     "Md[.]Aj[.]Lx[.]Pro:[0-9]+",
-                    "IXP:[0-9]+",
+                    "NP:[0-9]+",
                     "Assoc:[0-9]+",
                     "GenP:[0-9]+",
                     "PP:[0-9]+",
@@ -244,7 +246,7 @@ export default {
                     "Dgcm[.]Br:[0-9]+",
                     "Dgcm[.]Mk:[0-9]+",
                     "&([.][^:]+)?:[0-9]+",
-                    "&[.]IXP:[0-9]+",
+                    "&[.]NP:[0-9]+",
                     "&[.]N:[0-9]+",
                     "&[.]Poss:[0-9]+",
                     "&[.]Aj:[0-9]+",

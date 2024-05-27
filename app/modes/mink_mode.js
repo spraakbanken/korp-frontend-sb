@@ -1,6 +1,6 @@
 /** @format */
-import statemachine from "@/statemachine"
-
+import currentMode from "@/mode"
+import settings from "@/settings"
 const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
@@ -12,14 +12,20 @@ settings["auth_module"] = {
     },
 }
 
+settings["corpus_info_link"] = {
+    url_template: "https://spraakbanken.gu.se/mink/library/corpus/%s",
+    label: {swe: "Öppna i Mink", eng: "Open in Mink"}
+}
+settings["frontpage"]["corpus_updates"] = false
 settings["korp_backend_url"] = "https://spraakbanken3.it.gu.se/korp"
 
 settings["config_dependent_on_authentication"] = true
 
 settings["corpus_config_url"] = async () => {
     const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
+    const authenticationProxy = await import("@/components/auth/auth")
     const creds = authenticationProxy.getAuthorizationHeader()
-    const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${window.currentMode}`
+    const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${currentMode}`
     if (!_.isEmpty(creds)) {
         const response = await fetch(`${minkUrl}/list-korp-corpora`, {
             headers: authenticationProxy.getAuthorizationHeader(),
@@ -35,7 +41,11 @@ let html = String.raw
 
 const minkLink = "https://spraakbanken.gu.se/mink/"
 
-settings["initalization_checks"] = (s) => {
+settings["initialization_checks"] = async (s) => {
+    // Import only when needed, because it depends on the auth_module setting defined here
+    const {default: statemachine} = await import("@/statemachine")
+    const authenticationProxy = await import("@/components/auth/auth")
+
     const sweDesc = "Det här är Mink-läget i Korp. "
     const engDesc = "This is the Mink mode in Korp. "
     const translations = {
@@ -95,10 +105,9 @@ settings["initalization_checks"] = (s) => {
     return false
 }
 
-// *mode*-description
 settings["description"] = {
-    swe: html`<div class="p-5 mt-3">
-        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+    swe: html`<div class="mt-3">
+        <img src="${minkImgPath}" class="block h-32 my-5 mx-auto" />
         <div class="text-lg">
             <div class="mt-2">Det här är Mink-läget i Korp.</div>
             <div class="mt-2">
@@ -109,13 +118,13 @@ settings["description"] = {
             <div class="mt-2">Läs mer om Mink <a href="${minkLink}">här</a>.</div>
         </div>
     </div>`,
-    eng: html`<div class="p-5 mt-3">
-        <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
+    eng: html`<div class="mt-3">
+        <img src="${minkImgPath}" class="block h-32 my-5 mx-auto" />
         <div class="text-lg">
             <div class="mt-2">This is the Mink mode in Korp.</div>
             <div class="mt-2">
                 Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this
-                mode is private and can only be seen by you.
+                mode are private and can only be seen by you.
             </div>
             <div class="mt-2">Click in the corpus chooser above to make your corpus selection.</div>
             <div class="mt-2">Read more about Mink <a href="${minkLink}">here</a>.</div>
@@ -123,51 +132,53 @@ settings["description"] = {
     </div>`,
 }
 
-function createStartupComponent() {
-    return {
-        template: html`<div class="border-2 w-fit p-5 mt-3">
-            <div class="p-5"><img src="${minkImgPath}" class="h-32" /></div>
-            <div class="text-lg">
-                <div class="mt-2">{{$ctrl.desc | locObj:$root.lang}}</div>
-                <div class="mt-2">{{$ctrl.desc2 | locObj:$root.lang}}</div>
-                <div class="mt-2">{{$ctrl.searchTip | locObj:$root.lang}}</div>
-                <div class="mt-2">
-                    {{$ctrl.readMore | locObj:$root.lang}}
-                    <a href="${minkLink}">{{$ctrl.here | locObj:$root.lang}}</a>.
-                </div>
-            </div>
-        </div>`,
-        controller: [
-            function () {
-                const $ctrl = this
-
-                $ctrl.desc = {
-                    swe: "Det här är Mink-läget i Korp.",
-                    eng: "This is the Mink mode in Korp.",
-                }
-
-                $ctrl.desc2 = {
-                    swe: "Här kan du söka i de korpusar som du har laddat upp och installerat via Mink. Alla korpusar i läget är privata och kan endast ses av dig.",
-                    eng: "Here you can search in the corpora that you have uploaded and installed with Mink. All corpora in this mode is private and can only be seen by you.",
-                }
-
-                $ctrl.readMore = {
-                    swe: `Läs mer om Mink `,
-                    eng: `Read more about Mink `,
-                }
-
-                $ctrl.searchTip = {
-                    swe: "Klicka i korpusväljaren ovanför för att göra ditt materialurval.",
-                    eng: "Click in the corpus chooser above to make your corpus selection.",
-                }
-
-                $ctrl.here = {
-                    swe: "här",
-                    eng: "here",
-                }
-            },
-        ],
-    }
-}
-
-settings["startup_component"] = createStartupComponent()
+settings["frontpage"]["examples"] = [
+    {
+        label: {
+            swe: "Alla adjektiv",
+            eng: "All adjectives",
+        },
+        params: {
+            search: "cqp",
+            cqp: '[pos = "JJ"]',
+            search_tab: 1,
+            show_stats: 1,
+        },
+    },
+    {
+        label: {
+            swe: "Fördelning över olika verb",
+            eng: "Distribution of different verbs",
+        },
+        params: {
+            search: "cqp",
+            cqp: '[pos = "VB"]',
+            search_tab: 1,
+            show_stats: 1,
+            stats_reduce: "word,lemma",
+            result_tab: 2,
+        },
+    },
+    {
+        label: {
+            swe: 'Verb följt av "inte"',
+            eng: 'Verbs followed by "inte" ("not")',
+        },
+        params: {
+            search: "cqp",
+            cqp: '[pos = "VB"] [word = "inte" %c]',
+            search_tab: 1,
+        },
+    },
+    {
+        label: {
+            swe: 'Ordbild för "jobb"',
+            eng: 'Word picture for "jobb" ("work")',
+        },
+        params: {
+            search: "lemgram|jobb..nn.1",
+            word_pic: 1,
+            result_tab: 3,
+        },
+    },
+  ]

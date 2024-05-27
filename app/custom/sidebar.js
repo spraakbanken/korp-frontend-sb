@@ -1,5 +1,6 @@
 import { stringifyFunc } from "@/stringify"
 import statemachine from "@/statemachine"
+import { lemgramToHtml, regescape } from "@/util"
 
 export default {
     complemgram: {
@@ -20,7 +21,7 @@ export default {
         `,
         controller: ["$scope", function($scope) {
             $scope.listLimit = 1
-            $scope.stringify = (lemgram) => util.lemgramToString(lemgram, true)
+            $scope.stringify = (lemgram) => lemgramToHtml(lemgram, true)
             $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
             $scope.onItemClick = (value, isPrefix, isSuffix) => {
                 let isMiddle = !(isPrefix || isSuffix)
@@ -148,7 +149,7 @@ export default {
             $scope.listLimit = options.showAll ? $scope.values.length : 1
 
             $scope.showAll = options.showAll
-            $scope.internalSearch = options.internalSearch
+            $scope.internalSearch = options.internal_search
 
             $scope.stringify = stringifyFunc($scope.key)
 

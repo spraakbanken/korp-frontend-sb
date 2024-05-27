@@ -1,8 +1,31 @@
+description:
+  eng: |
+    <p><strong>Korp</strong> is Språkbanken's word research platform.</p>
+    <p>
+      Search in large amounts of texts, including newspapers, novels and social media.
+      The text collections, <em>corpora</em>, are annotated for linguistic features and other attributes.
+      Please refer to the <a href="https://spraakbanken.gu.se/en/tools/korp/user-manual" target="_blank">User manual</a> for more information.
+    </p>
+    <p>
+      If you are using Korp in your work, please <a href="https://spraakbanken.gu.se/en/about/howtocite" target="_blank">cite us</a>.
+      For questions or comments, contact us at <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
+    </p>
+  swe: |
+    <p><strong>Korp</strong> är Språkbankens ordforskningsplattform.</p>
+    <p>
+      Här kan du söka i stora mängder text från bland annat dagstidningar, skönlitteratur och sociala medier.
+      Textsamlingarna, <em>korpusarna</em>, är annoterade med språkliga och andra attribut.
+      Se gärna <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning" target="_blank">Användarhandledningen</a> för mer information.
+    </p>
+    <p>
+      Om du använder Korp i ditt arbete ber vi dig <a href="https://spraakbanken.gu.se/om/referera">referera till oss</a>.
+      För frågor och kommentarer, kontakta <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
+    </p>
+
 auth_module:
   module: "basic_auth"
   options:
     default_value_remember: true
-
 
 autocomplete: true
 map_enabled: false
@@ -14,6 +37,14 @@ hits_per_page_values:
   - 500
   - 1000
 
+corpus_info_link:
+  url_template:
+    swe: https://spraakbanken.gu.se/resurser/%s
+    eng: https://spraakbanken.gu.se/en/resources/%s
+  label:
+    swe: Resurssida
+    eng: Resource page
+
 enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
@@ -24,6 +55,9 @@ languages:
   - value: swe
     label: Svenska
 
+frontpage:
+  corpus_updates: true
+
 group_statistics:
   - saldo
   - prefix
@@ -33,6 +67,7 @@ group_statistics:
   - sense
   - text_swefn
   - text_blingbring
+  - transformer-neighbour
   - e_cat
 
 statistics_search_default: false
@@ -49,7 +84,7 @@ matomo:
   production:
     site: 3
 
-news_desk_url: 'https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json'
+news_url: https://raw.githubusercontent.com/spraakbanken/newsdesk/main/data/korp.yaml
 
 word_picture_tagset:
     # supported pos-tags
