@@ -1,4 +1,6 @@
 /** @format */
+import settings from "@/settings";
+
 settings["frontpage"]["examples"] = [
   {
     label: 'Former av ordet "fågel" i skönlitteratur',
