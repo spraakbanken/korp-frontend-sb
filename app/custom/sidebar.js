@@ -52,7 +52,7 @@ export default {
     },
     ivipVideo: (options) => ({
         template: String.raw`
-            <span class="link" ng-click="showVideoModal()">visa inspelning</span>
+            <span class="link" ng-click="showVideoModal()">{{'ivip_show_video' | loc:$root.lang}}</span>
             <div id="video-modal" ng-controller="VideoCtrl"></div>
         `,
         controller: ["$scope", function($scope) {

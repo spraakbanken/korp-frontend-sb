@@ -249,6 +249,7 @@
     "text_id": "text-ID",
     "filename": "filnamn",
     "ivip_follow_video": "Följ videon med autoscroll",
+    "ivip_show_video": "visa inspelning",
     "tag_sentence": "mening",
     "tag_paragraph": "stycke",
     "tag_np": "np",
