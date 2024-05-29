@@ -5,7 +5,7 @@ import { lemgramToHtml, regescape } from "@/util"
 export default {
     complemgram: {
         template: String.raw`
-            <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:lang }}</i>
+            <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
             <ul ng-show="value != '|'">
                 <li ng-repeat="comp in values | limitTo:listLimit">
                     
@@ -15,7 +15,7 @@ export default {
                     </span>
                 </li>
                 <li class="link" ng-show="values.length > 1" ng-click="listLimit = listLimit < 10 ? 10 : 1">
-                    {{listLimit < 10 ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
+                    {{listLimit < 10 ? 'complemgram_show_all': 'complemgram_show_one' | loc:$root.lang}} ({{values.length - 1}})
                 </li>
             </ul>
         `,
@@ -113,7 +113,7 @@ export default {
     },
     expandList: (options = {}) => ({
         template: `
-        <i ng-if="value == '|'" style="color : grey">{{ 'empty' | loc:lang }}</i>
+        <i ng-if="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
         <ul ng-if="value != '|'" style="list-style: initial;">
             <li ng-repeat="value in values | limitTo:listLimit">
                 <span 
@@ -130,7 +130,7 @@ export default {
             </li>
         </ul>
         <span class="link" ng-show="values.length > 1 && !showAll" ng-click="listLimit = listLimit != $scope.values.length ? $scope.values.length : 1">
-            {{listLimit != $scope.values.length ? 'complemgram_show_all': 'complemgram_show_one' | loc:lang}} ({{values.length - 1}})
+            {{listLimit != $scope.values.length ? 'complemgram_show_all': 'complemgram_show_one' | loc:$root.lang}} ({{values.length - 1}})
         </span>
         `,
         controller: ["$scope", function($scope) {
@@ -170,7 +170,7 @@ export default {
        }]
     }),
     copyRowButton: (options = {}) => ({
-        template: `<span class="cursor-pointer" ng-click="click()"><i class="fa-solid fa-copy"></i> {{ 'copy_row' | loc:lang }}</span>`,
+        template: `<span class="cursor-pointer" ng-click="click()"><i class="fa-solid fa-copy"></i> {{ 'copy_row' | loc:$root.lang }}</span>`,
         controller: ["$scope", function($scope) {
             $scope.click = () => {
                 const copyStr = _.map(options["attributes"] || ["word"], (attribute) =>

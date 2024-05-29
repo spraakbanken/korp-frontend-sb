@@ -74,17 +74,17 @@ settings["initialization_checks"] = async (s) => {
     }
 
     const readMore = html`<div>
-        {{translations.readMore | locObj:lang}}
-        <a href="${minkLink}">{{translations['here'] | locObj:lang}}</a>.
+        {{translations.readMore | locObj:$root.lang}}
+        <a href="${minkLink}">{{translations['here'] | locObj:$root.lang}}</a>.
     </div>`
 
     const minkImg = html`<div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>`
     if (!authenticationProxy.isLoggedIn()) {
         s.openErrorModal({
             content: html`${minkImg}
-                <div class="my-3">{{translations.notAuthenticated | locObj:lang}}</div>
+                <div class="my-3">{{translations.notAuthenticated | locObj:$root.lang}}</div>
                 ${readMore}
-                <div class="mt-3">{{translations.login | locObj:lang}}</div>`,
+                <div class="mt-3">{{translations.login | locObj:$root.lang}}</div>`,
             onClose: () => {
                 s.waitForLogin = true
                 statemachine.send("LOGIN_NEEDED")
@@ -95,8 +95,8 @@ settings["initialization_checks"] = async (s) => {
     } else if (_.isEmpty(settings["corpora"])) {
         s.openErrorModal({
             content: html`${minkImg}
-                <div class="my-5">{{translations.noCorpora | locObj:lang}}</div>
-                <div class="my-5">{{translations.goTo | locObj:lang}} <a href="${minkLink}">Mink</a></div>`,
+                <div class="my-5">{{translations.noCorpora | locObj:$root.lang}}</div>
+                <div class="my-5">{{translations.goTo | locObj:$root.lang}} <a href="${minkLink}">Mink</a></div>`,
             resolvable: false,
             translations,
         })
