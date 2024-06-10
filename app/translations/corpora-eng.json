@@ -248,6 +248,7 @@
     "text_id": "text ID",
     "filename": "file name",
     "ivip_follow_video": "Follow video with autoscroll",
+    "ivip_show_video": "show recording",
     "tag_sentence": "sentence",
     "tag_paragraph": "paragraph",
     "tag_np": "np",
