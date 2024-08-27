@@ -122,7 +122,7 @@ export default {
                     ng-bind-html="stringify(value.value) | trust"
                     ng-click="internalSearch && onItemClick(value.value)"></span>
                 <a
-                    ng-if="attrs.externalSearch"
+                    ng-if="attrs.external_search"
                     ng-href="{{ externalLink(value.value) }}"
                     class="external_link"
                     target="_blank"
@@ -146,9 +146,9 @@ export default {
                 $scope.values = _.map(valueArray, (value) => ({ value: value }))
             }
 
-            $scope.listLimit = options.showAll ? $scope.values.length : 1
+            $scope.listLimit = options.show_all ? $scope.values.length : 1
 
-            $scope.showAll = options.showAll
+            $scope.showAll = options.show_all
             $scope.internalSearch = options.internal_search
 
             $scope.stringify = stringifyFunc($scope.key)
@@ -160,9 +160,9 @@ export default {
                 statemachine.send("SEARCH_CQP", {cqp})
             }
  
-            if ($scope.attrs.externalSearch) {
+            if ($scope.attrs.external_search) {
                 $scope.externalLink = (value) => {
-                    return _.template($scope.attrs.externalSearch)({
+                    return _.template($scope.attrs.external_search)({
                         val: value,
                     })
                 }
