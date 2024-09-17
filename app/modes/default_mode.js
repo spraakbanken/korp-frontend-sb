@@ -41,8 +41,8 @@ settings["frontpage"]["examples"] = [
       eng: "Present perfects using dependency structure",
     },
     hint: {
-      swe: 'Se Ariannas <a href="https://spraakbanken.gu.se/blogg/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blogginlägg</a>',
-      eng: 'See Arianna\'s <a href="https://spraakbanken.gu.se/en/blog/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blog post</a>',
+      swe: 'Se <a href="https://spraakbanken.gu.se/blogg/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blogginlägg</a>',
+      eng: 'See <a href="https://spraakbanken.gu.se/en/blog/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blog post</a>',
     },
     params: {
       search_tab: 2,

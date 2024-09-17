@@ -42,7 +42,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 - Go to link
 - Go to Extended search
 - Select "lemgram" and type something
-- Do not select a lemgram and click outside the box
+- Do not select a lemgram and click outside the token box
 - **"Choose a value" should appear**
 - Type an actual wordform and select a lemgram
 - **"Choose a value" should disappear**
@@ -51,7 +51,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 **Case insensitivity settings should not be preserved when switching 
 search attribute**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=eng&search=cqp
+https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=eng&search=cqp&show_stats
 
 - Follow link
 - A case-insensitive search has been performed
@@ -85,7 +85,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=aspacsv&global_
 
 https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&global_filter=eyJ0ZXh0X3RleHRfdHlwZXMiOlsiIl19&search=word%7Cbil&page=0
 
-- (Search for "bil" with filter "-" in Spin)
+- (Search for "bil" with filter Genre = "-" in SpIn)
 - Should give two hits and in the advanced tab we should see: \
   `[word = "bil" & _.text_text_types = ""]`
 
@@ -104,8 +104,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&glo
 **JSON button is available**
 
 - Do a simple search in any corpus, SUC3 for example
-- **JSON button should appear and link to the correct search (compare
-  hits for example**
+- **JSON button should appear and link to the correct search (compare hits for example**
 - Switch to another result tab and back
 - **JSON button should still be available**
 
@@ -138,7 +137,7 @@ word or more that matches.
 https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=4&word_pic&corpus=aspacsv,romi,romii,rom99,storsuc,romg&search=lemgram%7Chund%5C.%5C.nn%5C.1
 
 - Follow link
-- Click any word to get a new KWIC
+- Click the icon by any word to get a new KWIC
 - Click "Download hit page" as... -> "One sentence per row (CSV)"
 - **The correct data should be in the downloaded document**
 
@@ -156,11 +155,22 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22och%22%20%26%20lbou
 - Follow link
 - **Check that the hit corpus name in the KWIC is completely visible**
 
+**Keyboard navigation**
+
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5Bword%20%3D%20%22f%C3%B6r%22%5D%20%5B%5D%7B0,2%7D%20%5Bpos%20%3D%20%22VB%22%5D&corpus=suc3&search_tab=1&search=cqp
+
+- Follow link to get a KWIC
+- Select any token by clicking on it
+- Navigate around with arrow keys
+- **Navigation should correspond to what keys are pressed. Edge cases (first/last token/row) should feel natural and make sense.**
+- Swich to context view
+- **Navigation should correspond to what keys are pressed. Edge cases (first/last token/row) should feel natural and make sense.**
+
 ### Word picture
 
 **Word picture does not support filtering**
 
-https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&reading_mode&word_pic&corpus=aspacsv&search=lemgram%7Chund%5C.%5C.nn%5C.1
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&reading_mode&word_pic&corpus=aspacsv&search=lemgram%7Chund%5C.%5C.nn%5C.1&result_tab=3
 
 - Follow link
 - **Check that a word picture is generated**
@@ -180,7 +190,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&page=0&res
 https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=3&word_pic&search=lemgram%7Chund%5C.%5C.nn%5C.1&corpus=aspacsv,romi,romii,rom99,storsuc,romg
 
 - Follow link
-- Click the first result in wordpicture, "med" with 200 occurences
+- Click the first result in wordpicture, "med" with about 200 occurences
 - A KWIC should open up
 - Go to page 6 using the "Go to page" input box
 - **First hit on this page should be the two last hits from "Bonniersromaner II"**
@@ -196,8 +206,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2
 - Search in all GP-corpora for "nyhet" and go to statistics or follow link above
 - **Check that all columns have the same size (except checkbox and pie chart)**
 - **Check that resizing a corpus column to be super big works**
-- **Check that resizing the value column to be super big works and also
-  that it doesn't affect the corpus column sizes**
+- **Check that resizing the value column to be super big works and also that it doesn't affect the corpus column sizes**
 
 **Table should use the available space**
 
@@ -218,11 +227,9 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivi
 - Deselect "Svenska partiprogram och valmanifest" and select another
   corpus (do not search)
 - Click the result row in the statistics to open a KWIC
-- **Check that the result is the same as in the actual KWIC to make 
-  sure that se search is still done in "Svenska partiprogram och valmanifest"**
+- **Check that the result count is the same as in the actual KWIC to make sure that search is still done in "Svenska partiprogram och valmanifest"**
 
-**"Compile based on" should not be empty after switching to corpus 
-with other attributes**
+**"Compile based on" should not be empty after switching to corpus with other attributes**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&search=word%7Cframtid&stats_reduce=text_party_name&show_stats
 
@@ -254,8 +261,10 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 - Do the test above
 - Click any marker
 - **Check that the map doesn't zoom**
-- **Check that the info box (or boxes) about the mark becomes 
-  permanent and not just appear on hover**
+- **Check that the info box (or boxes) about the mark becomes permanent and not just appear on hover**
+- Check the number of absolute occurrences in the info box
+- Click the info box
+- **An example search should be performed and yield the same amount of hits**
 
 **Should be disabled when no rows are selected**
 
@@ -275,14 +284,11 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lem
 
 https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-anf&search=word%7Cinkomstbortfall&reading_mode
 
->Not sure if this test is good anymore, but check that all information is visible!
-
 - Follow link, we need a result view where the sidebar is very long
 - (You might have to make your browser window smaller for this one)
 - Select a word in the KWIC so that sidebar appears
-- ~~Scroll down, when the sidebar hits the top of the window, a scrollbar should appear~~
-- **Check that it is possible to view all info in the sidebar, dependency
-  graph should be at the bottom**
+- Scroll down to the bottom
+- **Check that it is possible to view all info in the sidebar, dependency graph should be at the bottom**
 
 **Dependency graph**
 
@@ -300,13 +306,12 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Select "Svenska partiprogram och valmanifest"
 - Save a simple search on "jämlikhet" as a lemgram
 - Save a simple search on "frihet" as a lemgram
-- Change corpus to "August Strindbergs samlade verk"
+- Change corpus to "August Strindbergs romaner"
 - Go to comparision tab and execute the comparison on jämlikhet
   and frihet (attribute party is the best).
 - Click on any row in the result
 - Click on "Show context"
-- **Check that this works. Each result row should consist of five 
-  sentences.**
+- **Check that this works. Each result row should consist of five sentences.**
 
 ## Authentication
 
@@ -321,7 +326,8 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 - Switch to another page in the KWIC
 - Copy link and then log out
 - Open link in a new tab
-- Login prompt should appear - login
+- **Login prompt should appear**
+- Login
 - Check that these things are restored to the same as before:
   - Selected corpora
   - The actual search
@@ -346,9 +352,10 @@ Note: This only applies when "Remember me" have been checked
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=eng&parallel_corpora=swe&cqp_swe=%5Bword%20%3D%20%22katt%22%5D&cqp_null=%5B%5D&corpus=saltnld-sv&search=cqp%7C%5Bword%20%3D%20%22katt%22%5D
 
 - Follow link
-- **Click some words and make sure that the corresponding word in 
-  the linked sentence is highlighted**
+- **Click some words and make sure that the corresponding word in the linked sentence is highlighted**
 - Also check that dependency highlighting works, for the first sentence, "katt" is linked to "och".
+- Move around with arrow keys
+- **Navigation should correspond to what keys are pressed**
 
 Hint: in Dutch, the Swedish word "katt" is "kat"!
 
@@ -364,7 +371,7 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_c
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=swe&parallel_corpora=swe&cqp_null=%5Bword%20%3D%20%22%C3%A4r%22%5D&cqp_dan=%5B%5D&cqp_swe=%5Bword%20%3D%20%22Mexiko%22%5D&corpus=europarl-fi&cqp=%5Bprefix%20contains%20%22l%C3%A4%5C.%5C.nn%5C.1%22%5D&search=cqp%7C%5Bword%20%3D%20%22Mexiko%22%5D
 
 - Follow link (important that the search result is a short sentence first and longer sentences later in the KWIC)
-- **For each row, check that linked sentence starts at around the same place as the hit sentence**
+- **For each row, check that linked sentence is roughly center-aligned with the hit sentence**
 
 **Dependency highlighting**
 
@@ -382,8 +389,9 @@ https://spraakbanken.gu.se/korplabb/?mode=parallel#?parallel_corpora=swe&cqp_swe
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?stats_reduce=word&parallel_corpora=eng&cqp_swe=%5B%5D&cqp_null=%5B%5D&corpus=aspacsven-sv&cqp_eng=%5Bword%20%3D%20%22sawdust%22%5D&search=cqp%7C%5Bword%20%3D%20%22sawdust%22%5D
 
 - Follow link
-- Download "One senence per row (CSV)"
+- Download "One sentence per row (CSV)"
 - **Check that it looks ok**
+  - The linked sentence is always fully in the left context column
 - "One token per row ..." should be disabled.
 
 ## Trend diagram
@@ -396,8 +404,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&co
 - Click "Show Trend Diagram"
 - Press "Table"
 - Switch language back and forth
-- **Check that all texts are updated to the correct language
-  immediately**
+- **Check that all texts are updated to the correct language immediately**
 - Click "Export"
 - **Downloaded document should contain correct data**
 
@@ -411,8 +418,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=eng&co
 - Wait until the progress bar is done
 - Wait some more :)
 - Go back to the trend diagram tab
-- **The width of the diagram should be the same as the width
-  of the window**
+- **The width of the diagram should be the same as the width of the window**
 
 ## Miscellaneous
 
@@ -443,10 +449,13 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 - Go to Korp
 - Click the right upper MENU-button and open the About-view
 - **Check that everything looks OK, no overflow errors or weird scrolls**
+- Leave the modal open and refresh the page
+- **The modal should open on load, and be translated correctly**
 
-**Disabling "in order"**
+**Free order**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=false&lang=eng&search=word%7Ckatt%20svart
 
 - Follow link
-- **Search words, "katt" and "svart" should be highlighted in the result
+- **Search words, "katt" and "svart" should be highlighted in the result**
+- **Some hits should have the words non-adjacent ("svart ... katt")**
