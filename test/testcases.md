@@ -104,8 +104,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&glo
 **JSON button is available**
 
 - Do a simple search in any corpus, SUC3 for example
-- **JSON button should appear and link to the correct search (compare
-  hits for example**
+- **JSON button should appear and link to the correct search (compare hits for example**
 - Switch to another result tab and back
 - **JSON button should still be available**
 
@@ -156,6 +155,17 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22och%22%20%26%20lbou
 - Follow link
 - **Check that the hit corpus name in the KWIC is completely visible**
 
+**Keyboard navigation**
+
+https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5Bword%20%3D%20%22f%C3%B6r%22%5D%20%5B%5D%7B0,2%7D%20%5Bpos%20%3D%20%22VB%22%5D&corpus=suc3&search_tab=1&search=cqp
+
+- Follow link to get a KWIC
+- Select any token by clicking on it
+- Navigate around with arrow keys
+- **Navigation should correspond to what keys are pressed. Edge cases (first/last token/row) should feel natural and make sense.**
+- Swich to context view
+- **Navigation should correspond to what keys are pressed. Edge cases (first/last token/row) should feel natural and make sense.**
+
 ### Word picture
 
 **Word picture does not support filtering**
@@ -196,8 +206,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=gp1994,gp2001,gp2002,gp2
 - Search in all GP-corpora for "nyhet" and go to statistics or follow link above
 - **Check that all columns have the same size (except checkbox and pie chart)**
 - **Check that resizing a corpus column to be super big works**
-- **Check that resizing the value column to be super big works and also
-  that it doesn't affect the corpus column sizes**
+- **Check that resizing the value column to be super big works and also that it doesn't affect the corpus column sizes**
 
 **Table should use the available space**
 
@@ -218,8 +227,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&corpus=vivi
 - Deselect "Svenska partiprogram och valmanifest" and select another
   corpus (do not search)
 - Click the result row in the statistics to open a KWIC
-- **Check that the result count is the same as in the actual KWIC to make 
-  sure that se search is still done in "Svenska partiprogram och valmanifest"**
+- **Check that the result count is the same as in the actual KWIC to make sure that search is still done in "Svenska partiprogram och valmanifest"**
 
 **"Compile based on" should not be empty after switching to corpus with other attributes**
 
@@ -253,8 +261,10 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&result_tab=2&corpus=vivill&sear
 - Do the test above
 - Click any marker
 - **Check that the map doesn't zoom**
-- **Check that the info box (or boxes) about the mark becomes 
-  permanent and not just appear on hover**
+- **Check that the info box (or boxes) about the mark becomes permanent and not just appear on hover**
+- Check the number of absolute occurrences in the info box
+- Click the info box
+- **An example search should be performed and yield the same amount of hits**
 
 **Should be disabled when no rows are selected**
 
@@ -278,8 +288,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-anf&search=w
 - (You might have to make your browser window smaller for this one)
 - Select a word in the KWIC so that sidebar appears
 - Scroll down to the bottom
-- **Check that it is possible to view all info in the sidebar, dependency
-  graph should be at the bottom**
+- **Check that it is possible to view all info in the sidebar, dependency graph should be at the bottom**
 
 **Dependency graph**
 
@@ -302,8 +311,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
   and frihet (attribute party is the best).
 - Click on any row in the result
 - Click on "Show context"
-- **Check that this works. Each result row should consist of five 
-  sentences.**
+- **Check that this works. Each result row should consist of five sentences.**
 
 ## Authentication
 
@@ -344,9 +352,10 @@ Note: This only applies when "Remember me" have been checked
 https://spraakbanken.gu.se/korplabb/?mode=parallel#?lang=eng&parallel_corpora=swe&cqp_swe=%5Bword%20%3D%20%22katt%22%5D&cqp_null=%5B%5D&corpus=saltnld-sv&search=cqp%7C%5Bword%20%3D%20%22katt%22%5D
 
 - Follow link
-- **Click some words and make sure that the corresponding word in 
-  the linked sentence is highlighted**
+- **Click some words and make sure that the corresponding word in the linked sentence is highlighted**
 - Also check that dependency highlighting works, for the first sentence, "katt" is linked to "och".
+- Move around with arrow keys
+- **Navigation should correspond to what keys are pressed**
 
 Hint: in Dutch, the Swedish word "katt" is "kat"!
 
@@ -395,8 +404,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&page=0&result_tab=2&co
 - Click "Show Trend Diagram"
 - Press "Table"
 - Switch language back and forth
-- **Check that all texts are updated to the correct language
-  immediately**
+- **Check that all texts are updated to the correct language immediately**
 - Click "Export"
 - **Downloaded document should contain correct data**
 
@@ -410,8 +418,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&page=0&result_tab=2&lang=eng&co
 - Wait until the progress bar is done
 - Wait some more :)
 - Go back to the trend diagram tab
-- **The width of the diagram should be the same as the width
-  of the window**
+- **The width of the diagram should be the same as the width of the window**
 
 ## Miscellaneous
 
@@ -442,10 +449,13 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 - Go to Korp
 - Click the right upper MENU-button and open the About-view
 - **Check that everything looks OK, no overflow errors or weird scrolls**
+- Leave the modal open and refresh the page
+- **The modal should open on load, and be translated correctly**
 
-**Disabling "in order"**
+**Free order**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=romi,romii&in_order=false&lang=eng&search=word%7Ckatt%20svart
 
 - Follow link
 - **Search words, "katt" and "svart" should be highlighted in the result**
+- **Some hits should have the words non-adjacent ("svart ... katt")**
