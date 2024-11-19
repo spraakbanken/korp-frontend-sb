@@ -319,13 +319,14 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=spinv1&show_stats&stats_reduce=pos&word_pic&search=word%7Char&page=1
 
-- Login
-- Select a restricted corpora
-- Search in simple
-- Select a non-default "compile based on"-attribute
-- Turn on word picture
-- Perform search
-- Switch to another page in the KWIC
+- Follow link, or:
+  - Login
+  - Select a restricted corpora
+  - Search in simple
+  - Select a non-default "compile based on"-attribute
+  - Turn on word picture
+  - Perform search
+  - Switch to another page in the KWIC
 - Copy link and then log out
 - Open link in a new tab
 - **Login prompt should appear**
