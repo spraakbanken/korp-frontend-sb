@@ -447,6 +447,11 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 - Follow link
 - **Only the corpora under "Finlandssvenska texter" should be selected**
 
+https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=socialmedia.forum
+
+- Follow link
+- **Only the corpora under "Internet forums" should be selected**
+
 **About-view layout**
 
 - Go to Korp
