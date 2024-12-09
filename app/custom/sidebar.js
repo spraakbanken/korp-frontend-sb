@@ -1,4 +1,4 @@
-import { stringifyFunc } from "@/stringify"
+import { getStringifier } from "@/stringify"
 import statemachine from "@/statemachine"
 import { lemgramToHtml, regescape } from "@/util"
 
@@ -151,7 +151,7 @@ export default {
             $scope.showAll = options.show_all
             $scope.internalSearch = options.internal_search
 
-            $scope.stringify = stringifyFunc($scope.key)
+            $scope.stringify = getStringifier($scope.key)
 
             const op = options.op ? options.op : "contains"
 

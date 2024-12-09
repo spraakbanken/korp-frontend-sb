@@ -18,6 +18,7 @@ settings["corpus_info_link"] = {
 }
 settings["frontpage"]["corpus_updates"] = false
 settings["korp_backend_url"] = "https://spraakbanken3.it.gu.se/korp"
+settings["map_enabled"] = true
 
 settings["config_dependent_on_authentication"] = true
 

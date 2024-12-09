@@ -282,7 +282,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=suc3&search=lem
 
 **Long sidebar with scroll**
 
-https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-anf&search=word%7Cinkomstbortfall&reading_mode
+https://spraakbanken.gu.se/korplabb/#?lang=swe&cqp=%5B%5D&corpus=rd-mot&search=word%7Cinkomstbortfall&reading_mode
 
 - Follow link, we need a result view where the sidebar is very long
 - (You might have to make your browser window smaller for this one)
@@ -317,13 +317,16 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=vivill&search=lemgram%7C
 
 **Links to restricted corpora**
 
-- Login
-- Select a restricted corpora
-- Search in simple
-- Select a non-default "compile based on"-attribute
-- Turn on word picture
-- Perform search
-- Switch to another page in the KWIC
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=spinv1&show_stats&stats_reduce=pos&word_pic&search=word%7Char&page=1
+
+- Follow link, or:
+  - Login
+  - Select a restricted corpora
+  - Search in simple
+  - Select a non-default "compile based on"-attribute
+  - Turn on word picture
+  - Perform search
+  - Switch to another page in the KWIC
 - Copy link and then log out
 - Open link in a new tab
 - **Login prompt should appear**
@@ -443,6 +446,11 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=fisk
 
 - Follow link
 - **Only the corpora under "Finlandssvenska texter" should be selected**
+
+https://spraakbanken.gu.se/korplabb/#?lang=eng&corpus=socialmedia.forum
+
+- Follow link
+- **Only the corpora under "Internet forums" should be selected**
 
 **About-view layout**
 
