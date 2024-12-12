@@ -1,5 +1,4 @@
 /** @format */
-import currentMode from "@/mode"
 import settings from "@/settings"
 const minkImgPath = require("custom/mink.svg")
 
@@ -22,20 +21,15 @@ settings["map_enabled"] = true
 
 settings["config_dependent_on_authentication"] = true
 
-settings["corpus_config_url"] = async () => {
+settings["get_corpus_ids"] = async () => {
+    const auth = await import("@/components/auth/auth")
+    if (!auth.isLoggedIn()) return undefined
+    // Fetch user's corpus ids from Mink
     const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
-    const authenticationProxy = await import("@/components/auth/auth")
-    const creds = authenticationProxy.getAuthorizationHeader()
-    const baseUrl = `${settings["korp_backend_url"]}/corpus_config?mode=${currentMode}`
-    if (!_.isEmpty(creds)) {
-        const response = await fetch(`${minkUrl}/list-korp-corpora`, {
-            headers: authenticationProxy.getAuthorizationHeader(),
-        })
-        const data = await response.json()
-        return `${baseUrl}&corpus=${data.corpora.join(",")}`
-    } else {
-        return baseUrl
-    }
+    const conf = {headers: auth.getAuthorizationHeader()}
+    const response = await fetch(`${minkUrl}/list-korp-corpora`, conf)
+    const data = await response.json()
+    return data.corpora
 }
 
 let html = String.raw
