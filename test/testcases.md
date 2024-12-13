@@ -89,6 +89,23 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&glo
 - Should give two hits and in the advanced tab we should see: \
   `[word = "bil" & _.text_text_types = ""]`
 
+### Controls
+
+**Abort**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=wikipedia-sv&search=lemgram%7Cf%C3%B6da%5C.%5C.vb%5C.1&lang=eng
+
+- Make a search with several pages of hits
+- Press the Escape button immediately after pressing Search
+- **The search should be aborted with a message**
+- Open the Network tab in the Developer tools
+- Press Search twice, quickly
+- **There should be two GET `/query` requests, the first one aborted**
+  - (This behaviour will probably change with https://github.com/spraakbanken/korp-frontend/issues/88)
+- **No abort message should be showing**
+- In the pagination bar, press the next page button "&gt;" twice, quickly
+- **Same as above**
+
 ## Results
 
 ### KWIC (keyword in context)
