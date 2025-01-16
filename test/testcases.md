@@ -48,8 +48,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 - **"Choose a value" should disappear**
 - Redo the test for *compounds*
 
-**Case insensitivity settings should not be preserved when switching 
-search attribute**
+**Case insensitivity settings should not be preserved when switching search attribute**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=eng&search=cqp&show_stats
 
@@ -135,7 +134,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&search=w
 - **Check that there is correct data in each column**
 - Redo for "One token per row with annotations (CSV)"
 
-**Downloading when "in order" is disabled**
+**Downloading when "in free order" is enabled**
 
 https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&page=0&in_order=false&search=word%7Cframtid%20m%C3%A4nniskor
 
