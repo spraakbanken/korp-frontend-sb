@@ -56,8 +56,8 @@ export default {
             <div id="video-modal" ng-controller="VideoCtrl"></div>
         `,
         controller: ["$scope", function($scope) {
-            const startTime = $scope.sentenceData["sentence_start"]
-            const endTime = $scope.sentenceData["sentence_end"]
+            const startTime = $scope.wordData["sentence_start"];
+            const endTime = $scope.wordData["sentence_end"];
             const path = $scope.sentenceData["text_mediafilepath"]
             const file = $scope.sentenceData["text_mediafile"]
             const ext = $scope.sentenceData["text_mediafileext"]

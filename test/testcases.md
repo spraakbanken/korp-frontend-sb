@@ -48,8 +48,7 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3
 - **"Choose a value" should disappear**
 - Redo the test for *compounds*
 
-**Case insensitivity settings should not be preserved when switching 
-search attribute**
+**Case insensitivity settings should not be preserved when switching search attribute**
 
 https://spraakbanken.gu.se/korplabb/#?cqp=%5Bword%20%3D%20%22framtid%22%20%25c%5D&result_tab=2&corpus=vivill&search_tab=1&lang=eng&search=cqp&show_stats
 
@@ -89,6 +88,23 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=spin-source&glo
 - Should give two hits and in the advanced tab we should see: \
   `[word = "bil" & _.text_text_types = ""]`
 
+### Controls
+
+**Abort**
+
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=wikipedia-sv&search=lemgram%7Cf%C3%B6da%5C.%5C.vb%5C.1&lang=eng
+
+- Make a search with several pages of hits
+- Press the Escape button immediately after pressing Search
+- **The search should be aborted with a message**
+- Open the Network tab in the Developer tools
+- Press Search twice, quickly
+- **There should be two GET `/query` requests, the first one aborted**
+  - (This behaviour will probably change with https://github.com/spraakbanken/korp-frontend/issues/88)
+- **No abort message should be showing**
+- In the pagination bar, press the next page button "&gt;" twice, quickly
+- **Same as above**
+
 ## Results
 
 ### KWIC (keyword in context)
@@ -118,7 +134,7 @@ https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&search=w
 - **Check that there is correct data in each column**
 - Redo for "One token per row with annotations (CSV)"
 
-**Downloading when "in order" is disabled**
+**Downloading when "in free order" is enabled**
 
 https://spraakbanken.gu.se/korplabb/#?lang=eng&cqp=%5B%5D&corpus=vivill&page=0&in_order=false&search=word%7Cframtid%20m%C3%A4nniskor
 
