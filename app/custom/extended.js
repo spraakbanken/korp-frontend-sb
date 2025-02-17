@@ -62,6 +62,8 @@ export default {
                     template: template,
                     scope: $scope
                 })
+                // Ignore rejection from dismissing the modal
+                modal.result.catch(() => {})
             }
 
             $scope.clickX = () => modal.close()
