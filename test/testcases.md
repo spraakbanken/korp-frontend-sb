@@ -119,6 +119,8 @@ https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=wikipedia-sv&search=lemg
 
 **JSON button is available**
 
+https://spraakbanken.gu.se/korplabb/#?cqp=%5B%5D&corpus=suc3&lang=eng&search=word%7Cf%C3%B6r%20att
+
 - Do a simple search in any corpus, SUC3 for example
 - **JSON button should appear and link to the correct search (compare hits for example**
 - Switch to another result tab and back

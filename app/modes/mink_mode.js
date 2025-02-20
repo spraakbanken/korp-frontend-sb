@@ -1,5 +1,6 @@
 /** @format */
 import settings from "@/settings"
+import { getService } from "@/util";
 const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
@@ -41,26 +42,20 @@ settings["initialization_checks"] = async (s) => {
     const {default: statemachine} = await import("@/statemachine")
     const authenticationProxy = await import("@/components/auth/auth")
 
-    const sweDesc = "Det här är Mink-läget i Korp. "
-    const engDesc = "This is the Mink mode in Korp. "
     const translations = {
         readMore: { eng: "Read more about Mink", swe: "Läs mer om Mink" },
         here: { eng: "here", swe: "här" },
-        noAccess: {
-            eng: `${engDesc}Mink is in a test phase and you do not have access right know.`,
-            swe: `${sweDesc}Mink är i en testfas och du har inte tillgång just nu.`,
-        },
         notAuthenticated: {
-            eng: `${engDesc}Only logged in users with access to Mink can use this mode.`,
-            swe: `${sweDesc}Bara inloggande användare kan använda det här läget.`,
+            eng: "This is the Mink mode in Korp. Only logged in users with access to Mink can use this mode.",
+            swe: "Det här är Mink-läget i Korp. Bara inloggande användare kan använda det här läget.",
         },
         login: {
             eng: "Do you want to log in?",
             swe: "Vill du logga in?",
         },
         noCorpora: {
-            eng: `${engDesc}You do not have any corpora to explore.`,
-            swe: `${sweDesc}Du har inga korpusar att undersöka.`,
+            eng: "This is the Mink mode in Korp. You do not have any corpora to explore.",
+            swe: "Det här är Mink-läget i Korp. Du har inga korpusar att undersöka.",
         },
         goTo: {
             eng: "If you want to create your own corpora, go to",
@@ -68,34 +63,43 @@ settings["initialization_checks"] = async (s) => {
         },
     }
 
-    const readMore = html`<div>
-        {{translations.readMore | locObj:$root.lang}}
-        <a href="${minkLink}">{{translations['here'] | locObj:$root.lang}}</a>.
-    </div>`
+    function openModal(template) {
+        const $uibModal = getService("$uibModal");
+        const scope = s.$new();
+        scope.translations = translations;
+        return $uibModal.open({
+            template,
+            scope,
+            backdrop: "static",
+            keyboard: false,
+        });
+    }
 
-    const minkImg = html`<div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>`
     if (!authenticationProxy.isLoggedIn()) {
-        s.openErrorModal({
-            content: html`${minkImg}
+        const modal = openModal(html`<div class="modal-body">
+                <div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>
                 <div class="my-3">{{translations.notAuthenticated | locObj:$root.lang}}</div>
-                ${readMore}
-                <div class="mt-3">{{translations.login | locObj:$root.lang}}</div>`,
-            onClose: () => {
-                s.waitForLogin = true
-                statemachine.send("LOGIN_NEEDED")
-            },
-            translations,
-        })
-        return true
+                <div>
+                    {{translations.readMore | locObj:$root.lang}}
+                    <a href="${minkLink}">{{translations.here | locObj:$root.lang}}</a>.
+                </div>
+                <div class="mt-3">{{translations.login | locObj:$root.lang}}</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="$close()">{{'log_in' | loc:$root.lang}}</button>
+            </div>`);
+        modal.result.finally(() => {
+            s.waitForLogin = true;
+            statemachine.send("LOGIN_NEEDED");
+        });
+        return true;
     } else if (_.isEmpty(settings["corpora"])) {
-        s.openErrorModal({
-            content: html`${minkImg}
-                <div class="my-5">{{translations.noCorpora | locObj:$root.lang}}</div>
-                <div class="my-5">{{translations.goTo | locObj:$root.lang}} <a href="${minkLink}">Mink</a></div>`,
-            resolvable: false,
-            translations,
-        })
-        return true
+        openModal(html`<div class="modal-body">
+            <div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>
+            <div class="my-5">{{translations.noCorpora | locObj:$root.lang}}</div>
+            <div class="my-5">{{translations.goTo | locObj:$root.lang}} <a href="${minkLink}">Mink</a></div>
+        </div>`);
+        return true;
     }
     return false
 }
