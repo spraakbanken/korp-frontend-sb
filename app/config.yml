@@ -69,7 +69,7 @@ group_statistics:
   - text_blingbring
   - word-prediction--kb-bert
   - e_cat
-
+statistics_limit: 100000
 statistics_search_default: false
 
 # for 'compile statistics by' selector, can be 'union' or 'intersection'
