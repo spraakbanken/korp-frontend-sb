@@ -67,7 +67,7 @@ group_statistics:
   - sense
   - text_swefn
   - text_blingbring
-  - transformer-neighbour
+  - word-prediction--kb-bert
   - e_cat
 
 statistics_search_default: false
