@@ -22,6 +22,23 @@ description:
       För frågor och kommentarer, kontakta <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
     </p>
 
+logo:
+  korp: |
+    <img ng-if="$root.lang == 'swe'" src="img/korp_slogan.svg" height="300" width="300" />
+    <img ng-if="$root.lang != 'swe'" src="img/korp_slogan_en.svg" height="300" width="300" />
+  organization: |
+    <a
+        class="hidden min-[1150px]:flex h-20 shrink flex-col justify-end"
+        href="https://spraakbanken.gu.se/"
+        target="_blank"
+    >
+        <img ng-if="$root.lang == 'swe'" src="img/sprakbanken_text_slogan.svg" />
+        <img ng-if="$root.lang != 'swe'" src="img/sprakbanken_text_slogan_en.svg" />
+    </a>
+    <a class="hidden xl:block shrink-0 h-32 -mt-2" href="https://gu.se/" target="_blank">
+        <img src="img/gu_logo_sv_head.svg" class="h-full" />
+    </a>
+
 auth_module:
   module: "basic_auth"
   options:
