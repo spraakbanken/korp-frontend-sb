@@ -8,10 +8,9 @@ export default {
             <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
             <ul ng-show="value != '|'">
                 <li ng-repeat="comp in values | limitTo:listLimit">
-                    
                     <span ng-repeat="value in comp.split('+') track by $index">
                         <span ng-if="!$first"> + </span>
-                        <a ng-click="onItemClick(value, $first, $last)" ng-bind-html="stringify(value) | trust"></a>
+                        <a ng-click="onItemClick(value)" ng-bind-html="stringify(value) | trust"></a>
                     </span>
                 </li>
                 <li class="link" ng-show="values.length > 1" ng-click="listLimit = listLimit < 10 ? 10 : 1">
@@ -19,34 +18,14 @@ export default {
                 </li>
             </ul>
         `,
-        controller: ["$scope", function($scope) {
+        controller: ["$location", "$scope", function($location, $scope) {
             $scope.listLimit = 1
             $scope.stringify = (lemgram) => lemgramToHtml(lemgram, true)
             $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
-            $scope.onItemClick = (value, isPrefix, isSuffix) => {
-                let isMiddle = !(isPrefix || isSuffix)
-
-                let p = new URLSearchParams(location.hash.slice(1))
-                if(isPrefix) {
-                    p.set("prefix", "")
-                    p.delete("mid_comp")
-                    p.delete("suffix")
-                }
-                if(isMiddle) {
-                    p.set("mid_comp", "")
-                    p.delete("suffix")
-                    p.delete("prefix")
-                }
-                if(isSuffix) {
-                    p.set("suffix", "")
-                    p.delete("mid_comp")
-                    p.delete("prefix")
-                }
-                statemachine.send("SEARCH_LEMGRAM", {value})
-                p.set("search", "lemgram|" + value)
-
-                window.location.hash = "#?" + p.toString().replace("=&", "&").replace(/=$/, "")
-                
+            $scope.onItemClick = (value) => {
+                statemachine.send("SEARCH_LEMGRAM", { value })
+                $location.search("prefix", true)
+                $location.search("suffix", true)
             }
         }]
     },

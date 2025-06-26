@@ -141,7 +141,6 @@ settings["frontpage"]["examples"] = [
             search: "cqp",
             cqp: '[pos = "JJ"]',
             search_tab: 1,
-            show_stats: 1,
         },
     },
     {
@@ -153,7 +152,6 @@ settings["frontpage"]["examples"] = [
             search: "cqp",
             cqp: '[pos = "VB"]',
             search_tab: 1,
-            show_stats: 1,
             stats_reduce: "word,lemma",
             result_tab: 2,
         },
@@ -176,7 +174,6 @@ settings["frontpage"]["examples"] = [
         },
         params: {
             search: "lemgram|jobb..nn.1",
-            word_pic: 1,
             result_tab: 3,
         },
     },
