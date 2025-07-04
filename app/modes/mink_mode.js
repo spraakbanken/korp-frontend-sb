@@ -26,7 +26,7 @@ settings["get_corpus_ids"] = async () => {
     const auth = await import("@/components/auth/auth")
     if (!auth.isLoggedIn()) return undefined
     // Fetch user's corpus ids from Mink
-    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink"
+    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink/v1"
     const conf = {headers: auth.getAuthorizationHeader()}
     const response = await fetch(`${minkUrl}/list-korp-corpora`, conf)
     const data = await response.json()
