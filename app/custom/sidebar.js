@@ -35,20 +35,15 @@ export default {
             <div id="video-modal" ng-controller="VideoCtrl"></div>
         `,
         controller: ["$scope", function($scope) {
-            const startTime = $scope.wordData["sentence_start"];
-            const endTime = $scope.wordData["sentence_end"];
+            const startMs = $scope.wordData["sentence_start"];
+            const endMs = $scope.wordData["sentence_end"];
             const path = $scope.sentenceData["text_mediafilepath"]
             const file = $scope.sentenceData["text_mediafile"]
             const ext = $scope.sentenceData["text_mediafileext"]
 
             $scope.showVideoModal = function () {
-                const url = options.baseURL + path +  file + "." + ext
-
-                const modalScope = angular.element("#video-modal").scope()
-                modalScope.videos = [{"url": url, "type": "video/mp4"}]
-                modalScope.fileName = file + "." + ext
-                modalScope.startTime = startTime / 1000
-                modalScope.endTime = endTime / 1000
+                const fileName = `${file}.${ext}`
+                const url = options.baseURL + path + fileName
 
                 // find start of sentence
                 let startIdx = 0
@@ -68,8 +63,21 @@ export default {
                     }
                 }
 
-                modalScope.sentence = _.map($scope.tokens.slice(startIdx, endIdx + 1), "word").join(" ")
-                modalScope.open()
+                const sentence = _.map($scope.tokens.slice(startIdx, endIdx + 1), "word").join(" ")
+
+                store.modal = {
+                    content: html`<video-player items="items" start="start" end="end" file="fileName" sentence="sentence"></video-player>`,
+                    scopeData: {
+                        items: [{"url": url, "type": "video/mp4"}],
+                        start: startMs / 1000,
+                        end: endMs / 1000,
+                        fileName,
+                        sentence,
+                    },
+                    size: "lg",
+                    title: fileName,
+                    // TODO windowClass: "video-modal-bootstrap",
+                }
             }
         }]
     }),

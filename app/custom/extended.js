@@ -45,7 +45,7 @@ export default {
             <input ng-model="model" class="arg_value" ng-model-options='{debounce : {default : 300, blur : 0}, updateOn: "default blur"}'>
             <span ng-click="onIconClick()" class="fa fa-info-circle"></span>
         `,
-        controller: ["$scope", "$uibModal", function($scope, $uibModal) {
+        controller: ["$scope", function($scope) {
             let modal = null
             const msdHTML = settings.markup.msd
             const template = `
@@ -58,12 +58,12 @@ export default {
                 </div>`
 
             $scope.onIconClick = () => {
-                modal = $uibModal.open({
-                    template: template,
-                    scope: $scope
-                })
-                // Ignore rejection from dismissing the modal
-                modal.result.catch(() => {})
+                // modal = $uibModal.open({
+                //     template: template,
+                //     scope: $scope
+                // })
+                // // Ignore rejection from dismissing the modal
+                // modal.result.catch(() => {})
             }
 
             $scope.clickX = () => modal.close()
