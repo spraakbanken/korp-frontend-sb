@@ -37,7 +37,7 @@ let html = String.raw
 
 const minkLink = "https://spraakbanken.gu.se/mink/"
 
-settings["initialization_checks"] = async (s) => {
+settings["initialization_checks"] = async () => {
     // Import only when needed, because it depends on the auth_module setting defined here
     const {default: statemachine} = await import("@/statemachine")
     const authenticationProxy = await import("@/components/auth/auth")
@@ -65,7 +65,8 @@ settings["initialization_checks"] = async (s) => {
 
     function openModal(template) {
         const $uibModal = getService("$uibModal");
-        const scope = s.$new();
+        const $rootScope = getService("$rootScope")
+        const scope = $rootScope.$new();
         scope.translations = translations;
         return $uibModal.open({
             template,
@@ -89,7 +90,6 @@ settings["initialization_checks"] = async (s) => {
                 <button class="btn btn-primary" ng-click="$close()">{{'log_in' | loc:$root.lang}}</button>
             </div>`);
         modal.result.finally(() => {
-            s.waitForLogin = true;
             statemachine.send("LOGIN_NEEDED");
         });
         return true;
