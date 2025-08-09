@@ -1,6 +1,7 @@
 import { getStringifier } from "@/stringify"
 import statemachine from "@/statemachine"
-import { lemgramToHtml, regescape } from "@/util"
+import { regescape } from "@/util"
+import { Lemgram } from "@/lemgram"
 
 export default {
     complemgram: {
@@ -20,7 +21,7 @@ export default {
         `,
         controller: ["$location", "$scope", function($location, $scope) {
             $scope.listLimit = 1
-            $scope.stringify = (lemgram) => lemgramToHtml(lemgram, true)
+            $scope.stringify = (lemgram) => Lemgram.parse(lemgram)?.toHtml() || lemgram
             $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
             $scope.onItemClick = (value) => {
                 statemachine.send("SEARCH_LEMGRAM", { value })
