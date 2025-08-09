@@ -1,7 +1,8 @@
-import { lemgramToHtml, saldoToHtml } from "@/util"
+import { Lemgram } from "@/lemgram"
+import { Saldo } from "@/saldo"
 
 export default {
-    sense: (sense) => saldoToHtml(sense, true),
-    lemgram: (str) => lemgramToHtml(str, true),
-    complemgram: (str) => str.split('+').map((lemgram) => lemgramToHtml(lemgram, true)).join('+')
+    sense: (sense) => Saldo.parse(sense).toHtml() || sense,
+    lemgram: (str) => Lemgram.parse(str)?.toHtml() || str,
+    complemgram: (str) => str.split('+').map((s) => Lemgram.parse(s)?.toHtml() || s).join('+')
 }
