@@ -1,6 +1,6 @@
 /** @format */
 import settings from "@/settings"
-import { getService } from "@/util";
+import { getService } from "@/angular-util";
 const minkImgPath = require("custom/mink.svg")
 
 settings["auth_module"] = {
