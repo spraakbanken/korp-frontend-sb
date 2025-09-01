@@ -23,7 +23,7 @@ settings["map_enabled"] = true
 settings["config_dependent_on_authentication"] = true
 
 settings["get_corpus_ids"] = async () => {
-    const auth = await import("@/components/auth/auth")
+    const {auth} = await import("@/components/auth/auth")
     if (!auth.isLoggedIn()) return undefined
     // Fetch user's corpus ids from Mink
     const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink/v1"
@@ -40,7 +40,7 @@ const minkLink = "https://spraakbanken.gu.se/mink/"
 settings["initialization_checks"] = async () => {
     // Import only when needed, because it depends on the auth_module setting defined here
     const {default: statemachine} = await import("@/statemachine")
-    const authenticationProxy = await import("@/components/auth/auth")
+    const {auth} = await import("@/components/auth/auth")
 
     const translations = {
         readMore: { eng: "Read more about Mink", swe: "Läs mer om Mink" },
@@ -76,7 +76,7 @@ settings["initialization_checks"] = async () => {
         });
     }
 
-    if (!authenticationProxy.isLoggedIn()) {
+    if (!auth.isLoggedIn()) {
         const modal = openModal(html`<div class="modal-body">
                 <div class="text-center my-5"><img src="${minkImgPath}" class="h-16" /></div>
                 <div class="my-3">{{translations.notAuthenticated | locObj:$root.lang}}</div>
