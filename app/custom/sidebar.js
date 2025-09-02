@@ -6,7 +6,7 @@ import { Lemgram } from "@/lemgram"
 export default {
     complemgram: {
         template: String.raw`
-            <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
+            <span ng-if="value == '|'" class="opacity-50">&empty;</span>
             <ul ng-show="value != '|'">
                 <li ng-repeat="comp in values | limitTo:listLimit">
                     <span ng-repeat="value in comp.split('+') track by $index">
@@ -93,8 +93,8 @@ export default {
     },
     expandList: (options = {}) => ({
         template: `
-        <i ng-if="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
-        <ul ng-if="value != '|'" style="list-style: initial;">
+        <span ng-if="value == '|'" class="opacity-50">&empty;</span>
+        <ul ng-if="value != '|'">
             <li ng-repeat="value in values | limitTo:listLimit">
                 <span 
                     ng-class="{link: internalSearch}"
