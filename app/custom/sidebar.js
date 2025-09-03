@@ -1,4 +1,4 @@
-import { getStringifier } from "@/stringify"
+import { getStringifier } from "@/services/stringify"
 import statemachine from "@/statemachine"
 import { regescape } from "@/util"
 import { Lemgram } from "@/lemgram"
