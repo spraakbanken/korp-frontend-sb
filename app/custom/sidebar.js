@@ -1,11 +1,12 @@
-import { getStringifier } from "@/stringify"
+import { getStringifier } from "@/services/stringify"
 import statemachine from "@/statemachine"
-import { lemgramToHtml, regescape } from "@/util"
+import { regescape } from "@/util"
+import { Lemgram } from "@/lemgram"
 
 export default {
     complemgram: {
         template: String.raw`
-            <i ng-show="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
+            <span ng-if="value == '|'" class="opacity-50">&empty;</span>
             <ul ng-show="value != '|'">
                 <li ng-repeat="comp in values | limitTo:listLimit">
                     <span ng-repeat="value in comp.split('+') track by $index">
@@ -20,7 +21,7 @@ export default {
         `,
         controller: ["$location", "$scope", function($location, $scope) {
             $scope.listLimit = 1
-            $scope.stringify = (lemgram) => lemgramToHtml(lemgram, true)
+            $scope.stringify = (lemgram) => Lemgram.parse(lemgram)?.toHtml() || lemgram
             $scope.values = $scope.value.split("|").filter(Boolean).map((item) => item.replace(/:.*$/, ""))
             $scope.onItemClick = (value) => {
                 statemachine.send("SEARCH_LEMGRAM", { value })
@@ -92,8 +93,8 @@ export default {
     },
     expandList: (options = {}) => ({
         template: `
-        <i ng-if="value == '|'" style="color : grey">{{ 'empty' | loc:$root.lang }}</i>
-        <ul ng-if="value != '|'" style="list-style: initial;">
+        <span ng-if="value == '|'" class="opacity-50">&empty;</span>
+        <ul ng-if="value != '|'">
             <li ng-repeat="value in values | limitTo:listLimit">
                 <span 
                     ng-class="{link: internalSearch}"

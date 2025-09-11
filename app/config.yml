@@ -1,24 +1,18 @@
 description:
   eng: |
-    <p><strong>Korp</strong> is Språkbanken's word research platform.</p>
     <p>
-      Search in large amounts of texts, including newspapers, novels and social media.
-      The text collections, <em>corpora</em>, are annotated for linguistic features and other attributes.
-      Please refer to the <a href="https://spraakbanken.gu.se/en/tools/korp/user-manual" target="_blank">User manual</a> for more information.
-    </p>
-    <p>
+      <strong>Korp</strong> is Språkbanken's word research platform.
+      Search large amounts of texts, <em>corpora</em>, annotated for linguistic features and other attributes.
+      Please refer to the <a href="https://spraakbanken.gu.se/en/tools/korp/user-manual" target="_blank">User manual</a> for help.
       If you are using Korp in your work, please <a href="https://spraakbanken.gu.se/en/about/howtocite" target="_blank">cite us</a>.
       For questions or comments, contact us at <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
     </p>
   swe: |
-    <p><strong>Korp</strong> är Språkbankens ordforskningsplattform.</p>
     <p>
-      Här kan du söka i stora mängder text från bland annat dagstidningar, skönlitteratur och sociala medier.
-      Textsamlingarna, <em>korpusarna</em>, är annoterade med språkliga och andra attribut.
-      Se gärna <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning" target="_blank">Användarhandledningen</a> för mer information.
-    </p>
-    <p>
-      Om du använder Korp i ditt arbete ber vi dig <a href="https://spraakbanken.gu.se/om/referera">referera till oss</a>.
+      <strong>Korp</strong> är Språkbankens ordforskningsplattform.
+      Här kan du söka i stora mängder text, <em>korpusar</em>, som är annoterade med språkliga attribut med mera.
+      Se <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning" target="_blank">användarhandledningen</a> för hjälp.
+      Om du använder Korp i ditt arbete ber vi dig <a href="https://spraakbanken.gu.se/om/referera" target="_blank">referera till oss</a>.
       För frågor och kommentarer, kontakta <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
     </p>
 

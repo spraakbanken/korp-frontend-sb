@@ -1,6 +1,6 @@
 import { catToString } from "custom/npegl.js";
 
-settings["stats_rewrite"] = (result) => {
+settings["statistics_postprocess"] = (result) => {
     const { rows, params } = result;
 
     // Group rows that have the same representation of the e_cat attribute (e.g. [a:1 a:1] == [a:1])

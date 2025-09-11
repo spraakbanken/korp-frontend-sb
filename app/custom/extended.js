@@ -1,5 +1,3 @@
-import settings from "@/settings"
-
 export default {
     complemgramExtended: {
         template: `<autoc
@@ -47,7 +45,7 @@ export default {
         `,
         controller: ["$scope", "$uibModal", function($scope, $uibModal) {
             let modal = null
-            const msdHTML = settings.markup.msd
+            const msdHTML = require("custom/msd.html")
             const template = `
                 <div>
                     <div class="modal-header">
