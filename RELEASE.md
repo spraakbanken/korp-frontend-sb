@@ -2,40 +2,33 @@
 
 For the `korp-frontend` repo, checkout the [README](https://github.com/spraakbanken/korp-frontend/blob/dev/README.md#branches-releases-and-versions) on how to manifest new versions of the code.
 
-For this repo (`korp-frontend-sb`), do the same but skip `package.json` and `CHANGELOG.md`.
-
-(TODO: Should we tag commits in this repo?)
+For this repo (`korp-frontend-sb`), do the same but skip `package.json` and `CHANGELOG.md`. If nothing has changed between two releases, optionally add the new version tag to the same commit.
 
 
 ## Instances
 
 - **Production:** `master` branch at [/korp](https://spraakbanken.gu.se/korp/)
-- **Staging:** `dev` branch at [/korp](https://spraakbanken.gu.se/korplabb/)
+- **Staging:** `dev` branch at [/korplabb](https://spraakbanken.gu.se/korplabb/)
 
 See [Instanser.md](https://github.com/spraakbanken/dev-docs/blob/main/Instanser.md)
 
-## Deploy scripts
 
-To ensure consistent deployments, there are scripts in `k2:~fkkorp/deploy-korp-frontend/` that pull and build the code for Production and Staging, respectively. Please read them and make sure you understand what they do.
+## Deploying
 
-```sh
-# Staging - do this after pushing dev
-ssh -A fkkorp@k2.spraakdata.gu.se deploy-korp-frontend/deploy-labb.sh
+You can build the frontend locally and copy the built files to the server.
 
-# Production - do this after releasing on master
-ssh -A fkkorp@k2.spraakdata.gu.se deploy-korp-frontend/deploy-prod.sh
-```
+1. Check out the correct branch in both repos
+2. `cd korp-frontend`
+3. `yarn install`
+4. Build
+5. `rsync --delete --exclude .htaccess -r dist/` to destination
 
-## Deploying manually
+|            | Branch | Build command     | Destination                            |
+|------------|--------|-------------------|----------------------------------------|
+| Staging    | dev    | `yarn build:labb` | `fkkorp@k2:/var/www/html_sb/korplabb/` |
+| Production | master | `yarn build`      | `fkkorp@k2:/var/www/html_sb/korp/`     |
 
-If you really need to deploy something out of the ordinary, you can build the frontend locally and copy the built files to the server.
-
-Note:
-
-- For both repositories, use the `dev` branch for `/korplabb` and the `master` branch for `/korp`
-- `yarn` and `rsync` commands are run from `korp-frontend` repository
 
 ## General notes
 
 - If the `.htaccess` file is accidentally deleted from the server it can be copy-pasted from this repository
-- Please run `yarn test` before deploying (although the tests are not quite reliable)
