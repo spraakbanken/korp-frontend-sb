@@ -39,7 +39,6 @@ corpus_info_link:
     swe: Mer information
     eng: More information
 
-enable_backend_kwic_download: false
 enable_frontend_kwic_download: true
 
 default_language: swe
