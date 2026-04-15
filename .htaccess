@@ -6,6 +6,8 @@ RewriteCond %{HTTP_USER_AGENT} !Konqueror
 RewriteCond %{REQUEST_FILENAME}.gz -f
 RewriteRule ^(.*\.(css|js|html))$ $1.gz [QSA,L]
 
+RewriteRule ^markup/msdtags.html https://spraakbanken.gu.se/verktyg/korp/msdtags [R=301]
+
 <Files *.css.gz>
 ForceType text/css
 </Files>
