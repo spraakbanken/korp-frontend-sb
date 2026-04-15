@@ -29,7 +29,7 @@ settings["get_corpus_ids"] = async () => {
     const conf = {headers: auth.getAuthorizationHeader()}
     const response = await fetch(`${minkUrl}/list-korp-corpora`, conf)
     const data = await response.json()
-    return data.corpora
+    return data.resources
 }
 
 let html = String.raw
