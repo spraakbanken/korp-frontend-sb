@@ -202,7 +202,7 @@ export default {
                     "&[.]Nu:[0-9]+",
                     "&[.]Init:[0-9]+",
                     "&[.]Other:[0-9]+"
-                ].map((elem, idx) => [elem, idx]));
+                ].map((elem, idx) => [elem, String(idx)]));
     
                 const matching = _.fromPairs([
                     "N([.][^:]+)?:[0-9]+",
@@ -253,7 +253,7 @@ export default {
                     "&[.]Nu:[0-9]+",
                     "&[.]Init:[0-9]+",
                     "&[.]Other:[0-9]+"
-                ].map((elem, idx) => [elem, idx]));
+                ].map((elem, idx) => [elem, String(idx)]));
     
                 const data = { "=": exactMatching, "*=": matching, "!=": exactMatching, "!*=": matching }
     
@@ -274,7 +274,7 @@ export default {
                     $scope.input = 0
                 }
     
-                $scope.dataset = labels.map((value, idx) => [idx, value])
+                $scope.dataset = labels.map((value, idx) => [String(idx), value])
         }],
         template: `<select ng-model="input" ng-options="tuple[0] as tuple[1] for tuple in dataset"></select>`,
     }
